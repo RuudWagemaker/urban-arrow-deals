@@ -216,3 +216,25 @@ def test_unrelated_long_text_is_ignored():
     from uatracker.sources.marktplaats import full_description
     page = '<script>{"description":"' + "Marktplaats is de grootste ... " * 20 + '"}</script>'
     assert full_description(page, SNIP[:200]) is None
+
+
+def test_empty_search_is_retried(monkeypatch):
+    from uatracker.sources import marktplaats
+    calls = []
+
+    class R:
+        def __init__(self, d): self.d = d
+        def json(self): return self.d
+    ads = [{"itemId": f"m{i}", "title": "Urban Arrow Family", "priceInfo": {"priceCents": 300000, "priceType": "FIXED"}}
+           for i in range(30)]
+
+    def fake_get(s, url, **kw):
+        calls.append(url)
+        return R({"listings": [], "totalResultCount": 0} if len(calls) == 1 else {"listings": ads, "totalResultCount": 30})
+    monkeypatch.setattr(marktplaats, "get", fake_get)
+    monkeypatch.setattr(marktplaats, "polite_sleep", lambda *a: None)
+    monkeypatch.setattr(marktplaats.time, "sleep", lambda *a: None)
+    known = {f"marktplaats:m{i}": {"source": "marktplaats", "active": True, "title": "Urban Arrow Family"} for i in range(30)}
+    stats = []
+    out = marktplaats.fetch({"host": "https://x", "queries": ["urban arrow"], "fetch_details": False}, {}, "marktplaats", known, stats)
+    assert len(out) == 30 and stats[0]["retries"] == 1

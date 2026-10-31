@@ -8,6 +8,7 @@ from __future__ import annotations
 import json
 import logging
 import re
+import time
 from urllib.parse import urlencode
 
 from .http import SourceError, get, json_ld_objects, meta_content, polite_sleep, session, strip_html
@@ -36,6 +37,14 @@ def fetch(cfg: dict, home: dict, source: str, known: dict[str, dict],
     results: dict[str, dict] = {}
     stats = stats if stats is not None else []
 
+    # how many ads each query found last time, to recognise a suspiciously empty answer
+    expected: dict[str, int] = {}
+    for l in known.values():
+        if l.get("source") == source and l.get("active"):
+            for q in cfg.get("queries", []):
+                if q.replace(" ", "") in (l.get("title", "") + " " + l.get("description", "")).lower().replace(" ", ""):
+                    expected[q] = expected.get(q, 0) + 1
+
     for q, cat in _searches(cfg):
         offset, seen_here, total = 0, 0, None
         entry = {"query": q, "category": cat, "pages": 0, "listings": 0, "total": None, "error": None}
@@ -54,13 +63,26 @@ def fetch(cfg: dict, home: dict, source: str, known: dict[str, dict],
                 params["l1CategoryId"] = cat
             if home.get("postcode") and source == "marktplaats":
                 params["postcode"] = home["postcode"]
-            try:
-                r = get(s, f"{host}/lrp/api/search?{urlencode(params)}",
-                        headers={"Accept": "application/json"})
-                data = r.json()
-            except (SourceError, ValueError) as e:
-                entry["error"] = str(e)[:300]
-                log.warning("%s %r cat=%s failed: %s", source, q, cat, e)
+            data = None
+            for attempt in range(3):
+                try:
+                    r = get(s, f"{host}/lrp/api/search?{urlencode(params)}",
+                            headers={"Accept": "application/json"})
+                    data = r.json()
+                except (SourceError, ValueError) as e:
+                    entry["error"] = str(e)[:300]
+                    log.warning("%s %r cat=%s failed: %s", source, q, cat, e)
+                    break
+                # An empty first page for a search that normally has hundreds of results is
+                # usually a hiccup or throttling: wait and ask again.
+                if offset == 0 and not data.get("listings") and expected.get(q, 0) >= 20 and attempt < 2:
+                    log.warning("%s %r returned nothing (expected ~%d); retrying in a minute",
+                                source, q, expected[q])
+                    entry["retries"] = attempt + 1
+                    time.sleep(60)
+                    continue
+                break
+            if data is None:
                 break
             page = data.get("listings") or []
             for raw in page:
