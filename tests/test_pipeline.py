@@ -160,3 +160,33 @@ def test_cheap_accessories_skip_claude():
     assert not worth_reading({"price_eur": 150, "rule_attrs": {"is_complete_bike": False}})
     assert worth_reading({"price_eur": None, "rule_attrs": {"is_complete_bike": False}})
     assert worth_reading({"price_eur": 3000, "rule_attrs": {"is_complete_bike": False}})
+
+
+def test_ntfy_messages(monkeypatch):
+    from uatracker import notify
+    posts = []
+
+    class R:
+        status_code = 200
+        text = ""
+    monkeypatch.setattr(notify.requests, "post", lambda url, json, timeout: posts.append(json) or R())
+    monkeypatch.setenv("NTFY_TOPIC", "ua-deals-test")
+    monkeypatch.delenv("GMAIL_ADDRESS", raising=False)
+    L = {}
+    for i in range(14):
+        l = _listing(i, 2022, 3000 - i)
+        l.update(url=f"https://m/{i}", image="https://img/1.jpg", distance_km=5,
+                 deal={"pct": 25, "label": "great deal", "flags": []},
+                 fair={"price": 4000, "low": 3800, "high": 4200, "confidence": "high"})
+        L[l["id"]] = l
+    notify.send(L, {"min_deal_pct": 10}, "https://site")
+    assert posts[0]["title"].startswith("Urban Arrow tracker is running: 14") and len(posts) == 6
+    assert all(p["topic"] == "ua-deals-test" for p in posts)
+    assert posts[1]["click"].startswith("https://m/") and posts[1]["attach"] == "https://img/1.jpg"
+    # second scan: nothing new -> nothing sent; a price drop -> one notification
+    posts.clear()
+    notify.send(L, {"min_deal_pct": 10}, "https://site")
+    assert posts == []
+    L["t:3"]["price_eur"] = 2500
+    notify.send(L, {"min_deal_pct": 10}, "https://site")
+    assert len(posts) == 1 and posts[0]["title"].startswith("Price drop: €2.500 (was €2.997)")

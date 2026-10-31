@@ -9,7 +9,7 @@ three times a day (GitHub Actions)
   → Claude Haiku 5.5 reads each new listing → variant, year, motor, battery, gear hub, km, extras, red flags
   → price history, sold/removed detection, relist detection   (data/listings.json, committed daily)
   → fair price + deal score for every second-hand bike
-  → website on GitHub Pages  +  email with new deals and price drops
+  → website on GitHub Pages  +  phone/email alerts for new deals and price drops
 ```
 
 ## What you get
@@ -63,18 +63,26 @@ This costs well under €1 a month at this volume.
 
 Without either, the tracker still works using only built-in text rules, but it's less accurate.
 
-### 3. Email alerts (optional)
-Alerts are sent from your own Gmail account to itself.
-1. Gmail needs an **app password** for this, which requires 2-Step Verification on your
-   Google account. Go to https://myaccount.google.com/apppasswords, create one named
-   "Urban Arrow tracker", and copy the 16 characters.
-2. Add two repository secrets: **`GMAIL_ADDRESS`** (your Gmail address) and
-   **`GMAIL_APP_PASSWORD`** (the app password). Optionally add **`EMAIL_TO`** to send the
-   alerts to a different address.
+### 3. Alerts (optional)
+Choose either or both.
 
-The first email lists the best current deals. After that you only get an email when a new
-listing is at least 10% below its fair price within 120 km, or when a deal you were
-told about drops in price. Change these thresholds in `config.yaml`.
+**Phone notifications with ntfy (no account, no password)**
+1. Install the free **ntfy** app (iOS App Store / Google Play).
+2. Make up a long random channel name, e.g. `ua-deals-` followed by 16 random letters and
+   numbers. Anyone who knows the name can read the alerts, so keep it unguessable.
+3. In the app, tap **+**, enter the name, and subscribe (server: ntfy.sh).
+4. Add the name as repository secret **`NTFY_TOPIC`**.
+
+Each new deal arrives as its own notification with a photo. Tap it to open the listing.
+
+**Email through Gmail**
+1. Create an app password (needs 2-Step Verification) at
+   https://myaccount.google.com/apppasswords.
+2. Add secrets **`GMAIL_ADDRESS`** and **`GMAIL_APP_PASSWORD`**. Optionally add **`EMAIL_TO`**.
+
+The first alert lists the best current deals. After that you're only alerted when a new
+listing is at least 10% below its fair price within 120 km, or when a deal you were told
+about drops in price. Change these thresholds in `config.yaml`.
 
 ### 4. First run
 Go to **Actions → Daily Urban Arrow scan → Run workflow**. After that it runs three times a

@@ -1,9 +1,12 @@
-"""Email alerts for new good deals and price drops, sent through Gmail.
+"""Alerts for new good deals and price drops. Two channels, use either or both:
 
-Needs two repository secrets:
+ntfy (phone push notifications, no account or password):
+  NTFY_TOPIC          a long random channel name; subscribe to the same name in the ntfy app
+
+Email through Gmail:
   GMAIL_ADDRESS       your Gmail address (mail is sent from and to this address)
   GMAIL_APP_PASSWORD  a Gmail app password (not your normal password)
-Optional: EMAIL_TO to send to a different address.
+  EMAIL_TO            optional, to send to a different address
 """
 from __future__ import annotations
 
@@ -14,10 +17,13 @@ import ssl
 from email.message import EmailMessage
 from html import escape
 
+import requests
+
 log = logging.getLogger(__name__)
 
 MAX_NEW = 15
 MAX_DROPS = 10
+MAX_PUSH = 10  # individual phone notifications per scan; the rest are summarised
 
 MOTOR = {
     "bosch_cargo_line_speed": "Cargo Line Speed", "bosch_cargo_line": "Cargo Line",
@@ -147,18 +153,65 @@ def build(new: list[dict], drops: list[dict], site_url: str | None, first: bool)
     return subject, "\n\n".join(text), "".join(html)
 
 
-def send(listings: dict[str, dict], cfg: dict, site_url: str | None = None) -> None:
-    sender = os.environ.get("GMAIL_ADDRESS")
-    password = (os.environ.get("GMAIL_APP_PASSWORD") or "").replace(" ", "")
-    to = os.environ.get("EMAIL_TO") or sender
-    new, drops = pick(listings, cfg)
-    first = not any("alerted_price" in l for l in listings.values())
-    log.info("alerts: %d new deals, %d price drops%s", len(new), len(drops), " (first email)" if first else "")
-    if not (sender and password) or not (new or drops):
-        if not (sender and password):
-            log.info("email not configured (GMAIL_ADDRESS / GMAIL_APP_PASSWORD); skipping alerts")
-        return
+def _push_one(l: dict, was: float | None) -> dict:
+    f, d, a = l.get("fair") or {}, l.get("deal") or {}, l.get("attrs") or {}
+    what = " ".join(x for x in [str(a.get("model_year") or ""),
+                                (a.get("variant") or "").title() if a.get("variant") not in (None, "unknown", "other") else "Urban Arrow"] if x)
+    if was:
+        title = f"Price drop: {eur(l['price_eur'])} (was {eur(was)}) · {what}"
+    else:
+        title = f"{eur(l['price_eur'])} · {what} · {d.get('pct', 0):.0f}% below fair"
+    lines = [l.get("title", ""), _facts(l),
+             f"Fair ≈ {eur(f.get('price'))} ({eur(f.get('low'))}–{eur(f.get('high'))}), {f.get('confidence', '')} confidence"]
+    lines += [f"⚠️ {x}" for x in d.get("flags") or []]
+    msg = {
+        "title": title[:250],
+        "message": "\n".join(lines),
+        "tags": ["chart_with_downwards_trend"] if was else ["bike"],
+        "priority": 4 if d.get("pct", 0) >= 20 else 3,
+        "click": l["url"],
+        "actions": [{"action": "view", "label": "Open listing", "url": l["url"]}],
+    }
+    if l.get("image"):
+        msg["attach"] = l["image"]
+    return msg
 
+
+def _send_ntfy(topic: str, new: list[dict], drops: list[dict], site_url: str | None, first: bool, was) -> bool:
+    server = os.environ.get("NTFY_SERVER", "https://ntfy.sh").rstrip("/")
+    msgs = []
+    if first:
+        best = new[0] if new else drops[0]
+        msgs.append({"title": f"Urban Arrow tracker is running: {len(new)} good deals now",
+                     "message": f"Best: {eur(best['price_eur'])}, {best['deal']['pct']:.0f}% below fair. "
+                                "From now on you'll get a notification for each new deal.",
+                     "tags": ["white_check_mark"], "click": site_url or best["url"]})
+        msgs += [_push_one(l, None) for l in new[:5]]
+    else:
+        items = [(l, None) for l in new] + [(l, was(l)) for l in drops]
+        msgs += [_push_one(l, w) for l, w in items[:MAX_PUSH]]
+        if len(items) > MAX_PUSH:
+            msgs.append({"title": f"+{len(items) - MAX_PUSH} more Urban Arrow deals",
+                         "message": "See them all on the site.", "click": site_url or ""})
+    ok = False
+    for m in msgs:
+        m["topic"] = topic
+        if not m.get("click"):
+            m.pop("click", None)
+        try:
+            r = requests.post(server, json=m, timeout=20)
+            if r.status_code == 200:
+                ok = True
+            else:
+                log.warning("ntfy: HTTP %s %s", r.status_code, r.text[:200])
+        except requests.RequestException as e:
+            log.warning("ntfy failed: %s", e)
+    if ok:
+        log.info("ntfy: sent %d notifications", len(msgs))
+    return ok
+
+
+def _send_email(sender: str, password: str, to: str, new, drops, site_url, first) -> bool:
     subject, text, html = build(new, drops, site_url, first)
     msg = EmailMessage()
     msg["Subject"], msg["From"], msg["To"] = subject, f"Urban Arrow tracker <{sender}>", to
@@ -170,8 +223,34 @@ def send(listings: dict[str, dict], cfg: dict, site_url: str | None = None) -> N
             s.send_message(msg)
     except (smtplib.SMTPException, OSError) as e:
         log.warning("email failed: %s", e)
-        return
+        return False
     log.info("email sent: %s", subject)
-    # everything that qualified now counts as notified, so the first email doesn't repeat tomorrow
-    for l in new + drops:
-        l["alerted_price"] = l["price_eur"]
+    return True
+
+
+def send(listings: dict[str, dict], cfg: dict, site_url: str | None = None) -> None:
+    topic = (os.environ.get("NTFY_TOPIC") or "").strip()
+    sender = os.environ.get("GMAIL_ADDRESS")
+    password = (os.environ.get("GMAIL_APP_PASSWORD") or "").replace(" ", "")
+    new, drops = pick(listings, cfg)
+    first = not any("alerted_price" in l for l in listings.values())
+    log.info("alerts: %d new deals, %d price drops%s", len(new), len(drops), " (first alert)" if first else "")
+    if not (topic or (sender and password)):
+        log.info("no alert channel configured (NTFY_TOPIC or GMAIL_*); skipping alerts")
+        return
+    if not (new or drops):
+        return
+
+    def was(l):
+        h = [p for _, p in (l.get("price_history") or []) if p]
+        return l.get("alerted_price") or (h[-2] if len(h) >= 2 else None)
+
+    sent = False
+    if topic:
+        sent |= _send_ntfy(topic, new, drops, site_url, first, was)
+    if sender and password:
+        sent |= _send_email(sender, password, os.environ.get("EMAIL_TO") or sender, new, drops, site_url, first)
+    if sent:
+        # everything that qualified now counts as notified, so nothing repeats next scan
+        for l in new + drops:
+            l["alerted_price"] = l["price_eur"]
