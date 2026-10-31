@@ -48,6 +48,7 @@
     const dist = l.distance_km != null ? ` · ${Math.round(l.distance_km)} km` : "";
     const meta = [];
     if (where) meta.push(where + dist);
+    if (l.relist_of) meta.push("relisted");
     if (l.first_seen) {
       const d = daysBetween(l.first_seen, l.active ? DATA.generated_at.slice(0, 10) : (l.removed_on || l.last_seen));
       meta.push(l.active ? (d <= 0 ? "listed today" : `listed ${d} d`) : `gone after ${d} d`);
@@ -180,6 +181,59 @@
   }
   form.addEventListener("input", renderUsed);
 
+  // ---------- today ----------
+  const adDay = (l) => l.new_ad_on || l.first_seen || "";
+  const shiftDay = (iso, n) => { const t = new Date(iso + "T12:00:00Z"); t.setUTCDate(t.getUTCDate() - n); return t.toISOString().slice(0, 10); };
+  const dayName = (iso) => {
+    if (iso === DATA.today) return "Today";
+    if (iso === shiftDay(DATA.today, 1)) return "Yesterday";
+    return new Date(iso + "T12:00:00Z").toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" });
+  };
+  const timeOf = (l) => l.new_ad_at ? new Date(l.new_ad_at).toLocaleTimeString("nl-NL", { hour: "2-digit", minute: "2-digit" }) : "";
+  let todayDays = 0;
+  function renderToday() {
+    const days = todayDays;
+    const from = days === 1 ? shiftDay(DATA.today, 1) : shiftDay(DATA.today, days);
+    const to = days === 1 ? shiftDay(DATA.today, 1) : DATA.today;
+    const maxKm = +$("#today-dist").value;
+    const gone = $("#today-gone").checked;
+    const all = [...DATA.used.map((l) => [l, "used"]), ...DATA.new.map((l) => [l, "new"])];
+    const rows = all.filter(([l]) => adDay(l) >= from && adDay(l) <= to && (gone || l.active) &&
+      (l.distance_km == null || l.distance_km <= maxKm));
+    rows.sort(([a], [b]) => adDay(b).localeCompare(adDay(a)) || (b.new_ad_at || "").localeCompare(a.new_ad_at || "") ||
+      ((b.deal?.pct ?? -999) - (a.deal?.pct ?? -999)));
+    const list = $("#today-list");
+    const out = [];
+    let cur = null;
+    for (const [l, mode] of rows) {
+      if (adDay(l) !== cur) {
+        cur = adDay(l);
+        const n = rows.filter(([x]) => adDay(x) === cur).length;
+        const h = document.createElement("h2");
+        h.className = "dayhead";
+        h.textContent = `${dayName(cur)} · ${n} new ad${n === 1 ? "" : "s"}`;
+        out.push(h);
+      }
+      const c = card(l, mode);
+      const t = timeOf(l);
+      if (t) $(".chips", c).insertAdjacentHTML("afterbegin", `<span class="chip fresh">found ${t}</span>`);
+      out.push(c);
+    }
+    list.replaceChildren(...out);
+    if (!rows.length) list.innerHTML = `<div class="empty">No new Urban Arrow ads ${days === 0 ? "yet today" : days === 1 ? "yesterday" : "in the last 7 days"} within ${maxKm >= 99999 ? "any distance" : maxKm + " km"}. Scans run around 07:20, 13:20 and 19:20.</div>`;
+    const first = DATA.tracking_since;
+    $("#today-note").textContent = from <= first && first <= to
+      ? `${dayName(first)} was the tracker's first day, so every ad found then counts as new.` : "";
+    store.set("today", { days, dist: $("#today-dist").value, gone });
+  }
+  document.querySelectorAll(".seg button").forEach((b) => b.addEventListener("click", () => {
+    todayDays = +b.dataset.days;
+    document.querySelectorAll(".seg button").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+    renderToday();
+  }));
+  $("#today-dist").addEventListener("input", renderToday);
+  $("#today-gone").addEventListener("input", renderToday);
+
   // ---------- new ----------
   function renderNew() {
     const rows = DATA.new.filter((l) => l.active).sort((a, b) => (a.variant_group || "").localeCompare(b.variant_group || "") || a.price_eur - b.price_eur);
@@ -255,8 +309,10 @@
     DATA = d;
     const active = d.used.filter((l) => l.active);
     const good = active.filter((l) => l.deal && l.deal.pct >= 5).length;
-    const today = d.generated_at.slice(0, 10);
-    const fresh = active.filter((l) => l.first_seen === today).length;
+    d.today ||= d.generated_at.slice(0, 10);
+    d.tracking_since ||= d.today;
+    const fresh = [...d.used, ...d.new].filter((l) => l.active && adDay(l) === d.today).length;
+    $("#today-count").textContent = fresh ? String(fresh) : "";
     $("#summary").textContent = `${active.length} second-hand for sale · ${good} good deals · ${fresh} new today · from ${d.home.name || "home"}`;
     $("#updated").textContent = `Updated ${new Date(d.generated_at).toLocaleString("nl-NL")}. Prices are asking prices; "fair" is an estimate from collected listings.`;
 
@@ -265,8 +321,16 @@
     if (saved) { form.elements.dealers.checked = "dealers" in saved; form.elements.removed.checked = "removed" in saved; }
     else form.elements.dist.value = String(d.default_max_distance_km >= 250 ? 250 : d.default_max_distance_km);
 
+    const st = store.get("today");
+    if (st) {
+      todayDays = st.days ?? 0;
+      $("#today-dist").value = st.dist || "250";
+      $("#today-gone").checked = st.gone !== false;
+      document.querySelectorAll(".seg button").forEach((x) => x.setAttribute("aria-pressed", String(+x.dataset.days === todayDays)));
+    }
+    renderToday();
     renderUsed();
     renderNew();
-    showTab(store.get("tab") || "used");
+    showTab(store.get("tab") || "today");
   }).catch((e) => { $("#summary").textContent = "Could not load data.json: " + e.message; });
 })();

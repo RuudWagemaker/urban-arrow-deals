@@ -48,6 +48,15 @@ h2 { font-size: 16px; margin: 0 0 4px; }
   border: 0; background: none; color: var(--muted); font: inherit; font-weight: 600;
   padding: 8px 12px 10px; border-bottom: 2px solid transparent; cursor: pointer;
 }
+.count { font-size: 11px; font-weight: 700; background: var(--accent); color: var(--surface); border-radius: 999px; padding: 1px 6px; margin-left: 2px; }
+.count:empty { display: none; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--surface); }
+.seg button { font: inherit; font-size: 14px; border: 0; background: none; color: var(--text); padding: 6px 12px; cursor: pointer; }
+.seg button + button { border-left: 1px solid var(--line); }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--surface); font-weight: 600; }
+.dayhead { font-size: 14px; font-weight: 700; margin: 14px 0 0; color: var(--muted); }
+.dayhead:first-child { margin-top: 0; }
+.chip.fresh { background: color-mix(in srgb, var(--accent) 18%, transparent); color: var(--text); font-weight: 600; }
 .tabs button[aria-selected="true"] { color: var(--text); border-bottom-color: var(--accent); }
 
 main { padding-top: 16px; padding-bottom: 32px; }
@@ -112,5 +121,6 @@ footer { padding-bottom: 32px; }
   .card { grid-template-columns: 96px 1fr; gap: 10px; padding: 10px; }
   .ask { font-size: 18px; }
   .filters select, .filters input[type=number] { width: 104px; }
-  .tabs { width: 100%; }
+  .tabs { width: 100%; overflow-x: auto; }
+  .tabs button { white-space: nowrap; padding: 8px 9px 10px; }
 }

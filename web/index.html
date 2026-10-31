@@ -16,15 +16,38 @@
         <p id="summary" class="muted">Loading…</p>
       </div>
       <nav class="tabs" role="tablist">
-        <button role="tab" data-tab="used" aria-selected="true">Second-hand</button>
-        <button role="tab" data-tab="new" aria-selected="false">New</button>
+        <button role="tab" data-tab="today" aria-selected="true">Today <span id="today-count" class="count"></span></button>
+        <button role="tab" data-tab="used" aria-selected="false">Second-hand</button>
+        <button role="tab" data-tab="new" aria-selected="false">New bikes</button>
         <button role="tab" data-tab="market" aria-selected="false">Market</button>
       </nav>
     </div>
   </header>
 
   <main class="wrap">
-    <section id="tab-used" class="tab">
+    <section id="tab-today" class="tab">
+      <div class="filters">
+        <div class="seg" role="group" aria-label="Period">
+          <button type="button" data-days="0" aria-pressed="true">Today</button>
+          <button type="button" data-days="1" aria-pressed="false">Yesterday</button>
+          <button type="button" data-days="7" aria-pressed="false">Last 7 days</button>
+        </div>
+        <label>Max distance
+          <select id="today-dist">
+            <option value="25">25 km</option>
+            <option value="50">50 km</option>
+            <option value="100">100 km</option>
+            <option value="250" selected>250 km</option>
+            <option value="99999">Anywhere</option>
+          </select>
+        </label>
+        <label class="check"><input type="checkbox" id="today-gone" checked> Include already sold</label>
+      </div>
+      <p id="today-note" class="muted small"></p>
+      <div id="today-list" class="list"></div>
+    </section>
+
+    <section id="tab-used" class="tab" hidden>
       <form id="filters" class="filters" onsubmit="return false">
         <label>Variant
           <select name="variant">
