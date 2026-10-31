@@ -147,3 +147,16 @@ def test_other_brands_and_project_bikes_are_not_emailed():
     l["attrs"]["condition"] = "needs_work"
     l.update(deal={"pct": 60, "label": "needs work", "flags": []}, fair={"price": 3000, "confidence": "high"})
     assert notify.pick({"p": l}, {"min_deal_pct": 10}) == ([], [])
+
+
+def test_embedded_description_is_found():
+    from uatracker.sources.marktplaats import _longest_embedded_description
+    html = '<script>window.__CONFIG__={"a":{"description":"kort"},"listing":{"description":"Urban Arrow 2021\\nKilometerstand 4.000 km \\"top\\""}}</script>'
+    assert _longest_embedded_description(html) == 'Urban Arrow 2021\nKilometerstand 4.000 km "top"'
+
+
+def test_cheap_accessories_skip_claude():
+    from uatracker.__main__ import worth_reading
+    assert not worth_reading({"price_eur": 150, "rule_attrs": {"is_complete_bike": False}})
+    assert worth_reading({"price_eur": None, "rule_attrs": {"is_complete_bike": False}})
+    assert worth_reading({"price_eur": 3000, "rule_attrs": {"is_complete_bike": False}})

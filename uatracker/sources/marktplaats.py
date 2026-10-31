@@ -5,7 +5,9 @@ pauses between requests, for personal use. If they block it, see README for alte
 """
 from __future__ import annotations
 
+import json
 import logging
+import re
 from urllib.parse import urlencode
 
 from .http import SourceError, get, json_ld_objects, meta_content, polite_sleep, session, strip_html
@@ -137,9 +139,14 @@ def _fetch_details(s, cfg: dict, results: dict[str, dict], known: dict[str, dict
     budget = cfg.get("max_detail_fetches_per_run", 50)
     for lid, item in results.items():
         prev = known.get(lid)
-        if prev and prev.get("full_description"):
-            item["description"] = prev["description"]
-            item["full_description"] = True
+        if prev and (prev.get("full_description") or prev.get("details_tried")):
+            if len(prev.get("description") or "") > len(item.get("description") or ""):
+                item["description"] = prev["description"]
+            item["full_description"] = prev.get("full_description", False)
+            item["details_tried"] = True
+            continue
+        # cheap accessories don't need their full text
+        if item.get("price_eur") is not None and item["price_eur"] < 800:
             continue
         if budget <= 0 or not item.get("url"):
             continue
@@ -154,7 +161,21 @@ def _fetch_details(s, cfg: dict, results: dict[str, dict], known: dict[str, dict
         for obj in json_ld_objects(html):
             if obj.get("description") and len(obj["description"]) > len(desc or ""):
                 desc = obj["description"]
-        desc = desc or meta_content(html, "og:description")
+        desc = desc or _longest_embedded_description(html) or meta_content(html, "og:description")
+        item["details_tried"] = True
         if desc and len(desc) >= len(item.get("description") or ""):
             item["description"] = strip_html(desc)
             item["full_description"] = True
+
+
+def _longest_embedded_description(html: str) -> str | None:
+    """The listing page embeds its data as JSON in a script; take the longest description in it."""
+    best = None
+    for m in re.finditer(r'"description"\s*:\s*"((?:[^"\\]|\\.)*)"', html):
+        try:
+            text = json.loads('"' + m.group(1) + '"')
+        except ValueError:
+            continue
+        if len(text) > len(best or ""):
+            best = text
+    return best

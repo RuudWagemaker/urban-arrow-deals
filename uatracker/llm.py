@@ -12,6 +12,7 @@ import logging
 import os
 import shutil
 import subprocess
+from concurrent.futures import ThreadPoolExecutor
 
 from pydantic import BaseModel, ValidationError
 
@@ -146,11 +147,13 @@ def extract(listings: list[dict], cfg: dict) -> dict[str, dict]:
     model = cfg.get("model", "claude-haiku-5-5")
     size = max(1, int(cfg.get("batch_size", 8)))
     call = _via_api if backend == "api" else _via_cli
+    chunks = [listings[i:i + size] for i in range(0, len(listings), size)]
     results: dict[str, dict] = {}
-    for i in range(0, len(listings), size):
-        chunk = listings[i:i + size]
-        for item in call(chunk, model):
-            d = item.model_dump()
-            results[d.pop("ref")] = d
-        log.info("Claude (%s, %s): %d/%d listings extracted", backend, model, len(results), len(listings))
+    # a few requests at a time: much faster, still gentle on rate limits
+    with ThreadPoolExecutor(max_workers=int(cfg.get("parallel_requests", 4))) as pool:
+        for items in pool.map(lambda c: call(c, model), chunks):
+            for item in items:
+                d = item.model_dump()
+                results[d.pop("ref")] = d
+            log.info("Claude (%s, %s): %d/%d listings extracted", backend, model, len(results), len(listings))
     return results

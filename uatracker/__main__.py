@@ -67,6 +67,13 @@ def _haversine(lat1, lon1, lat2, lon2) -> float:
     return 12742 * math.asin(math.sqrt(a))
 
 
+def worth_reading(l: dict) -> bool:
+    """Cheap accessories (rain tents, seats, covers) don't need Claude: the text rules
+    already know they aren't bikes. Everything that could be a bike gets read."""
+    price = l.get("price_eur")
+    return bool(l["rule_attrs"].get("is_complete_bike")) or price is None or price >= 800
+
+
 def enrich(listings: dict, cfg: dict) -> None:
     home = cfg.get("home", {})
     todo = []
@@ -83,12 +90,13 @@ def enrich(listings: dict, cfg: dict) -> None:
             l["attrs_version"] = EXTRACT_VERSION
             l["attrs_source"] = "rules"
             l.pop("llm_attrs", None)
-        if l.get("active") and l.get("attrs_source") != "claude":
+        if l.get("active") and l.get("attrs_source") != "claude" and worth_reading(l):
             todo.append(l)
 
     llm_cfg = cfg.get("llm", {})
     # likely bikes first, then newest
     todo.sort(key=lambda l: (not l["rule_attrs"].get("is_complete_bike"), l.get("first_seen") or ""), reverse=False)
+    log.info("Claude will read %d listings", min(len(todo), llm_cfg.get("max_listings_per_run", 120)))
     todo = todo[: llm_cfg.get("max_listings_per_run", 120)]
     results = llm.extract(todo, llm_cfg)
     for l in todo:
