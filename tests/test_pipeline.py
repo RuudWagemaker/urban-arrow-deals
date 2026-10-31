@@ -106,3 +106,22 @@ def test_merge_tracks_prices_and_removals():
     stats = store.merge(L, [dict(a, id="s:2", price_eur=3700)], {"s"})
     assert stats["relists"] == 1 and L["s:2"]["relist_of"] == "s:1"
     assert [p for _, p in L["s:2"]["price_history"]] == [4000, 3800, 3700]
+
+
+def test_alerts_only_once_and_on_price_drop():
+    from uatracker import notify
+    l = _listing("a", 2022, 3000)
+    l["deal"] = {"pct": 20, "label": "great deal", "flags": []}
+    l["distance_km"] = 10
+    L = {"a": l}
+    new, drops = notify.pick(L, {"min_deal_pct": 10, "max_distance_km": 100})
+    assert new == [l] and drops == []
+    l["alerted_price"] = 3000
+    assert notify.pick(L, {"min_deal_pct": 10, "max_distance_km": 100}) == ([], [])
+    l["price_eur"] = 2800
+    assert notify.pick(L, {"min_deal_pct": 10, "max_distance_km": 100}) == ([], [l])
+
+
+def test_search_plan_covers_category_and_all():
+    from uatracker.sources.marktplaats import _searches
+    assert _searches({"queries": ["urban arrow"], "category_l1": 445}) == [("urban arrow", 445), ("urban arrow", None)]

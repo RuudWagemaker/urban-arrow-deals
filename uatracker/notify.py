@@ -7,7 +7,6 @@ from html import escape
 
 import requests
 
-from .store import today
 
 log = logging.getLogger(__name__)
 
@@ -30,7 +29,7 @@ def _line(l: dict) -> str:
 
 
 def pick(listings: dict[str, dict], cfg: dict) -> tuple[list[dict], list[dict]]:
-    t = today()
+    """New good deals not alerted before, and price drops since the last alert."""
     min_pct = cfg.get("min_deal_pct", 10)
     max_km = cfg.get("max_distance_km", 9999)
 
@@ -40,14 +39,15 @@ def pick(listings: dict[str, dict], cfg: dict) -> tuple[list[dict], list[dict]]:
         return (l.get("active") and l.get("price_eur") and d.get("pct") is not None
                 and d["pct"] >= min_pct and (dist is None or dist <= max_km))
 
-    new = [l for l in listings.values() if ok(l) and l.get("first_seen") == t and not l.get("relist_of")]
-    drops = []
-    if cfg.get("notify_price_drops", True):
-        for l in listings.values():
-            h = l.get("price_history") or []
-            if ok(l) and len(h) >= 2 and h[-1][0] == t and h[-2][1] and h[-1][1] and h[-1][1] < h[-2][1] \
-                    and l.get("first_seen") != t:
-                drops.append(l)
+    new, drops = [], []
+    for l in listings.values():
+        if not ok(l):
+            continue
+        sent = l.get("alerted_price")
+        if sent is None:
+            new.append(l)
+        elif cfg.get("notify_price_drops", True) and l["price_eur"] < sent:
+            drops.append(l)
     key = lambda l: -(l["deal"]["pct"])
     return sorted(new, key=key), sorted(drops, key=key)
 
@@ -72,5 +72,8 @@ def send(listings: dict[str, dict], cfg: dict, site_url: str | None = None) -> N
         })
         if r.status_code != 200:
             log.warning("telegram: HTTP %s %s", r.status_code, r.text[:300])
+            return
+        for l in new[:8] + drops[:5]:
+            l["alerted_price"] = l["price_eur"]
     except requests.RequestException as e:
         log.warning("telegram failed: %s", e)

@@ -40,6 +40,14 @@ def save(listings: dict[str, dict], data_dir: Path = DATA_DIR) -> None:
     tmp.replace(p)
 
 
+def save_report(report: dict, data_dir: Path = DATA_DIR) -> None:
+    """Small summary of the last run (what each search returned), committed with the data."""
+    p = Path(data_dir) / "last_run.json"
+    p.parent.mkdir(parents=True, exist_ok=True)
+    with open(p, "w", encoding="utf-8") as f:
+        json.dump(report, f, ensure_ascii=False, indent=1)
+
+
 def _norm_title(t: str) -> str:
     return re.sub(r"[^a-z0-9]+", " ", (t or "").lower()).strip()
 

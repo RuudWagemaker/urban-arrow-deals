@@ -10,9 +10,11 @@ home:
 marktplaats:
   enabled: true
   host: "https://www.marktplaats.nl"
-  queries: ["urban arrow", "urbanarrow"]
+  queries: ["urban arrow", "urbanarrow", "urban arrow bakfiets"]
   category_l1: 445          # "Fietsen en Brommers"
-  max_pages_per_query: 5    # 100 listings per page
+  also_search_all_categories: true  # sellers sometimes pick the wrong category
+  page_size: 100
+  max_pages_per_query: 6
   fetch_details: true       # open each new listing once to read the full description
   max_detail_fetches_per_run: 60
   delay_seconds: [2.0, 5.0] # random pause between requests (be polite)

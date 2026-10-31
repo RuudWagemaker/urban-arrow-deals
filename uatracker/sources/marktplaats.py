@@ -15,39 +15,63 @@ log = logging.getLogger(__name__)
 PRICE_TYPES_WITH_PRICE = {"FIXED", "MIN_BID", "FAST_BID", "NEGOTIABLE"}
 
 
-def fetch(cfg: dict, home: dict, source: str, known: dict[str, dict]) -> list[dict]:
+def _searches(cfg: dict) -> list[tuple[str, int | None]]:
+    """Each query is run inside the bike category and (by default) across all categories,
+    because sellers don't always pick the right category."""
+    cats = []
+    if cfg.get("category_l1"):
+        cats.append(cfg["category_l1"])
+    if cfg.get("also_search_all_categories", True) or not cats:
+        cats.append(None)
+    return [(q, c) for q in cfg.get("queries", ["urban arrow"]) for c in cats]
+
+
+def fetch(cfg: dict, home: dict, source: str, known: dict[str, dict],
+          stats: list | None = None) -> list[dict]:
     s = session()
     host = cfg["host"].rstrip("/")
+    page_size = int(cfg.get("page_size", 100))
     results: dict[str, dict] = {}
+    stats = stats if stats is not None else []
 
-    for q in cfg.get("queries", ["urban arrow"]):
-        offset = 0
-        for _ in range(cfg.get("max_pages_per_query", 3)):
+    for q, cat in _searches(cfg):
+        offset, seen_here, total = 0, 0, None
+        entry = {"query": q, "category": cat, "pages": 0, "listings": 0, "total": None, "error": None}
+        stats.append(entry)
+        for _ in range(cfg.get("max_pages_per_query", 5)):
             params = {
                 "query": q,
-                "limit": 100,
+                "limit": page_size,
                 "offset": offset,
                 "searchInTitleAndDescription": "true",
                 "sortBy": "SORT_INDEX",
                 "sortOrder": "DECREASING",
                 "viewOptions": "list-view",
             }
-            if cfg.get("category_l1"):
-                params["l1CategoryId"] = cfg["category_l1"]
+            if cat:
+                params["l1CategoryId"] = cat
             if home.get("postcode") and source == "marktplaats":
                 params["postcode"] = home["postcode"]
-            r = get(s, f"{host}/lrp/api/search?{urlencode(params)}",
-                    headers={"Accept": "application/json"})
-            data = r.json()
+            try:
+                r = get(s, f"{host}/lrp/api/search?{urlencode(params)}",
+                        headers={"Accept": "application/json"})
+                data = r.json()
+            except (SourceError, ValueError) as e:
+                entry["error"] = str(e)[:300]
+                log.warning("%s %r cat=%s failed: %s", source, q, cat, e)
+                break
             page = data.get("listings") or []
             for raw in page:
                 item = normalize(raw, host, source)
                 if item:
                     results[item["id"]] = item
-            total = data.get("totalResultCount") or 0
-            offset += 100
-            log.info("%s %r: %d listings (offset %d of %d)", source, q, len(page), offset, total)
-            if not page or offset >= total:
+            total = data.get("totalResultCount")
+            seen_here += len(page)
+            entry.update(pages=entry["pages"] + 1, listings=seen_here, total=total)
+            # the server may return fewer than we asked for, so step by what we actually got
+            offset += len(page)
+            log.info("%s %r cat=%s: page of %d (have %d of %s)", source, q, cat, len(page), seen_here, total)
+            if not page or (total is not None and offset >= total):
                 break
             polite_sleep(cfg.get("delay_seconds"))
         polite_sleep(cfg.get("delay_seconds"))

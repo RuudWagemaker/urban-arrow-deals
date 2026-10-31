@@ -22,20 +22,34 @@ from .sources.http import SourceError
 log = logging.getLogger("uatracker")
 
 
-def scrape(cfg: dict, known: dict) -> tuple[list[dict], set[str]]:
+def scrape(cfg: dict, known: dict, report: dict) -> tuple[list[dict], set[str]]:
+    """Returns (listings, sources that are complete enough to mark missing ads as removed)."""
     out, ok = [], set()
     home = cfg.get("home", {})
     for key, source in (("marktplaats", "marktplaats"), ("tweedehands_be", "2dehands")):
         sc = cfg.get(key) or {}
         if not sc.get("enabled"):
             continue
+        stats: list = []
+        rep = report.setdefault("sources", {})[source] = {"searches": stats}
         try:
-            items = marktplaats.fetch(sc, home, source, known)
-            out += items
-            ok.add(source)
-            log.info("%s: %d listings", source, len(items))
+            items = marktplaats.fetch(sc, home, source, known, stats)
         except SourceError as e:
-            log.error("%s failed, keeping yesterday's data: %s", source, e)
+            rep["error"] = str(e)[:300]
+            log.error("%s failed, keeping previous data: %s", source, e)
+            continue
+        out += items
+        rep["unique_listings"] = len(items)
+        log.info("%s: %d listings", source, len(items))
+        # Only treat missing ads as sold/removed when today's search looks complete.
+        before = sum(1 for l in known.values() if l.get("source") == source and l.get("active"))
+        partial = any(s.get("error") for s in stats) or len(items) < 0.5 * before
+        rep["complete"] = not partial
+        if partial:
+            log.warning("%s: search looks incomplete (%d now vs %d active before); not marking removals",
+                        source, len(items), before)
+        else:
+            ok.add(source)
     pages = cfg.get("new_bike_pages") or []
     if pages:
         items = shops.fetch(pages)
@@ -99,10 +113,10 @@ def main(argv=None) -> int:
 
     if args.command == "run":
         if not args.no_scrape:
-            scraped, ok = scrape(cfg, listings)
-            if not ok:
-                log.error("every source failed; not touching stored data")
+            report = {"started_at": store.now_iso()}
+            scraped, ok = scrape(cfg, listings, report)
             stats = store.merge(listings, scraped, ok)
+            report["merge"] = stats
             log.info("merge: %s", stats)
         enrich(listings, cfg)
 
@@ -112,12 +126,22 @@ def main(argv=None) -> int:
     log.info("pricing: %s used bikes, %s comparables, regression=%s",
              model_info["n_used"], model_info["n_comparables"], bool(model_info["regression"]))
 
+    if args.command == "run" and not args.no_alerts:
+        notify.send(listings, cfg.get("alerts", {}), os.environ.get("SITE_URL"))
+
     store.save(listings, DATA_DIR)
+    if args.command == "run" and not args.no_scrape:
+        active = [l for l in listings.values() if l.get("active")]
+        report.update(
+            finished_at=store.now_iso(),
+            active_listings=len(active),
+            active_bikes=sum(1 for l in active if (l.get("attrs") or {}).get("is_complete_bike")),
+            llm_backend=llm.pick_backend(cfg.get("llm", {})),
+        )
+        store.save_report(report, DATA_DIR)
     site.build(listings, model_info, cfg, SITE_DIR)
     log.info("site written to %s", SITE_DIR)
 
-    if args.command == "run" and not args.no_alerts:
-        notify.send(listings, cfg.get("alerts", {}), os.environ.get("SITE_URL"))
     return 0
 
 
