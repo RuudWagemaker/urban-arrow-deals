@@ -1,0 +1,70 @@
+{
+ "started_at": "2026-10-31T16:08:01+00:00",
+ "sources": {
+  "marktplaats": {
+   "searches": [
+    {
+     "query": "urban arrow",
+     "category": 445,
+     "pages": 6,
+     "listings": 600,
+     "total": 867,
+     "error": null
+    },
+    {
+     "query": "urban arrow",
+     "category": null,
+     "pages": 6,
+     "listings": 600,
+     "total": 972,
+     "error": null
+    },
+    {
+     "query": "urbanarrow",
+     "category": 445,
+     "pages": 1,
+     "listings": 22,
+     "total": 22,
+     "error": null
+    },
+    {
+     "query": "urbanarrow",
+     "category": null,
+     "pages": 1,
+     "listings": 23,
+     "total": 23,
+     "error": null
+    },
+    {
+     "query": "urban arrow bakfiets",
+     "category": 445,
+     "pages": 6,
+     "listings": 600,
+     "total": 729,
+     "error": null
+    },
+    {
+     "query": "urban arrow bakfiets",
+     "category": null,
+     "pages": 6,
+     "listings": 600,
+     "total": 795,
+     "error": null
+    }
+   ],
+   "unique_listings": 769,
+   "complete": true
+  }
+ },
+ "merge": {
+  "new": 747,
+  "updated": 22,
+  "price_changes": 0,
+  "removed": 0,
+  "relists": 0
+ },
+ "finished_at": "2026-10-31T16:19:00+00:00",
+ "active_listings": 769,
+ "active_bikes": 300,
+ "llm_backend": "cli"
+}
