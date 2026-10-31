@@ -1,49 +1,11 @@
-# Urban Arrow deal tracker — settings you're likely to change.
+# Deal tracker — settings you're likely to change.
+# Shared settings first, then one section per product under `products`.
 
 home:
   name: "'s-Hertogenbosch"
   postcode: "5211"          # used for Marktplaats distance sorting
   lat: 51.6978
   lon: 5.3037
-  max_distance_km: 250      # listings further away are still stored, but hidden by default on the site
-
-marktplaats:
-  enabled: true
-  host: "https://www.marktplaats.nl"
-  queries: ["urban arrow", "urbanarrow"]
-  # Search all categories: that already includes the bike category ("Fietsen en Brommers" = 445)
-  # and also catches sellers who picked the wrong one. Set a number to limit it to one category.
-  category_l1: null
-  page_size: 100
-  max_pages_per_query: 12   # 1,200 results per search; "urban arrow" currently has ~1,000
-  fetch_details: true       # open each new listing once to read the full description
-  max_detail_fetches_per_run: 400
-  delay_seconds: [2.0, 5.0] # random pause between requests (be polite)
-
-# Belgian sister site (same platform). Off by default; Antwerp is ~1h from Den Bosch.
-tweedehands_be:
-  enabled: false
-  host: "https://www.2dehands.be"
-  queries: ["urban arrow"]
-  category_l1: 0
-  max_pages_per_query: 2
-
-# Product pages of shops that sell NEW Urban Arrows. Any page with schema.org
-# Product data (almost every web shop) works. Add one URL per model you care about.
-# Example:
-#   - url: "https://www.example-fietsenwinkel.nl/urban-arrow-family-cargo-line"
-#     variant: family
-new_bike_pages: []
-
-# Approximate Dutch list prices (adviesprijs) for a current new bike, in EUR.
-# Only used as a starting point for the price model when there's too little
-# second-hand data. These are rough estimates — check urbanarrow.com and adjust.
-msrp_estimate:
-  family: 7500
-  shorty: 6900
-  tender: 8500
-  cargo: 8000
-  other: 7000
 
 llm:
   # Which backend extracts structured details from listing text:
@@ -56,9 +18,70 @@ llm:
   parallel_requests: 4
   max_listings_per_run: 1000 # safety cap; normally only new or changed listings are sent
 
+# Default alert settings (ntfy and/or email, see README). Products can override these.
 alerts:
-  # Email alerts: set GMAIL_ADDRESS and GMAIL_APP_PASSWORD as repository secrets (see README)
-  min_deal_pct: 10          # email when a listing is at least this % below fair price
+  min_deal_pct: 10          # alert when an ad is at least this % below fair price
   max_distance_km: 120
-  min_confidence: medium    # skip listings with too little info to price reliably
+  min_confidence: medium    # skip ads with too little info to price reliably
   notify_price_drops: true
+
+products:
+
+  urban-arrow:
+    name: Urban Arrow
+    profile: cargo_bike
+    max_distance_km: 250    # ads further away are stored, but hidden by default on the site
+    marktplaats:
+      enabled: true
+      host: "https://www.marktplaats.nl"
+      queries: ["urban arrow", "urbanarrow"]
+      # Search all categories: that already includes the bike category ("Fietsen en Brommers" = 445)
+      # and also catches sellers who picked the wrong one. Set a number to limit it to one category.
+      category_l1: null
+      page_size: 100
+      max_pages_per_query: 12   # 1,200 results per search; "urban arrow" currently has ~1,000
+      fetch_details: true       # open each new ad once to read the full description
+      max_detail_fetches_per_run: 400
+      delay_seconds: [2.0, 5.0] # random pause between requests (be polite)
+    # Belgian sister site (same platform). Off by default; Antwerp is ~1h from Den Bosch.
+    tweedehands_be:
+      enabled: false
+      host: "https://www.2dehands.be"
+      queries: ["urban arrow"]
+      category_l1: 0
+      max_pages_per_query: 2
+    # Product pages of shops that sell NEW Urban Arrows (any page with schema.org Product data).
+    #   - url: "https://www.example-fietsenwinkel.nl/urban-arrow-family-cargo-line"
+    #     variant: family
+    new_item_pages: []
+    # Rough Dutch list prices for a current new bike, in EUR. Only used as a starting point
+    # until enough second-hand ads are collected. Check urbanarrow.com and adjust.
+    msrp_estimate:
+      family: 7500
+      shorty: 6900
+      tender: 8500
+      cargo: 8000
+      other: 7000
+
+  honeywell-t6:
+    name: Honeywell T6
+    profile: thermostat
+    max_distance_km: 99999  # thermostats are often shipped, so show all of the Netherlands
+    marktplaats:
+      enabled: true
+      host: "https://www.marktplaats.nl"
+      queries: ["honeywell t6", "honeywell t6r", "lyric t6", "t6r thermostaat"]
+      category_l1: null
+      page_size: 100
+      max_pages_per_query: 3
+      fetch_details: true
+      max_detail_fetches_per_run: 150
+      delay_seconds: [2.0, 5.0]
+    # Rough Dutch shop prices for a new unit, in EUR (starting point only; adjust if you know better).
+    msrp_estimate:
+      t6_wired: 150
+      t6r_wireless: 200
+      unknown: 175
+    alerts:
+      min_deal_pct: 15        # small amounts: only alert on clearly good deals
+      max_distance_km: 99999  # shipping is common

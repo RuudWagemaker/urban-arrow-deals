@@ -174,7 +174,7 @@ def _fetch_details(s, cfg: dict, results: dict[str, dict], known: dict[str, dict
             item["details_version"] = prev.get("details_version")
             continue
         # cheap accessories don't need their full text
-        if item.get("price_eur") is not None and item["price_eur"] < 800:
+        if item.get("price_eur") is not None and item["price_eur"] < cfg.get("detail_min_price", 800):
             continue
         if budget <= 0 or not item.get("url"):
             continue

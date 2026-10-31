@@ -10,6 +10,74 @@
   };
   const HUB = { enviolo_automatiq: "Enviolo AutomatiQ", enviolo: "Enviolo", nexus: "Nexus", rohloff: "Rohloff" };
   const COND = { new: "new", like_new: "as new", good: "good", fair: "fair", needs_work: "needs work" };
+  const T_MODEL = { t6r_wireless: "T6R (wireless)", t6_wired: "T6 (wired)", unknown: "Type unknown" };
+  const T_COND = { sealed_new: "sealed new", new_open_box: "new, box opened", like_new: "as new", used: "used", defect: "defect" };
+
+  // Everything that differs per kind of product lives here.
+  const PROFILES = {
+    cargo_bike: {
+      item: "bike", items: "bikes", usedTab: "Second-hand", usedLabel: "second-hand", groupLabel: "Variant",
+      groups: { family: "Family", shorty: "Shorty", tender: "Tender", cargo: "Cargo" },
+      groupOf: (l) => ({ unknown: "family", other: "family" }[l.attrs.variant] || l.attrs.variant),
+      hasYear: true, yearPanels: true, newTab: true,
+      similarHow: "(same variant, close in age, battery, motor, mileage)",
+      chips(l) {
+        const a = l.attrs || {}, c = [];
+        if (a.model_year) c.push(String(a.model_year));
+        c.push(VARIANT[a.variant] || "Variant ?");
+        if (MOTOR[a.motor]) c.push(MOTOR[a.motor]);
+        if (a.battery_wh) c.push(a.battery_wh + " Wh" + (a.dual_battery ? " (2 batteries)" : ""));
+        if (HUB[a.gear_hub]) c.push(HUB[a.gear_hub]);
+        if (a.mileage_km != null) c.push(a.mileage_km.toLocaleString("nl-NL") + " km");
+        if (COND[a.condition] && l.kind !== "new") c.push(COND[a.condition]);
+        if (a.rain_tent) c.push("rain tent");
+        if (a.child_seat_extras) c.push("child seat extras");
+        if (a.seller_type === "dealer") c.push(a.warranty ? "dealer + warranty" : "dealer");
+        return c;
+      },
+      compName: (u) => `${u.attrs.model_year || "?"} · ${u.title.slice(0, 48)}`,
+      rows: { label: "Year", key: (l) => l.attrs.model_year, order: (a, b) => b - a },
+      effects: {
+        age: "Each year older", shorty: "Shorty vs Family", tender: "Tender vs Family", cargo: "Cargo vs Family",
+        motor_new: "Cargo Line / CX motor", motor_old: "Older motor (Active Plus / Shimano)", battery_kwh: "+1 kWh battery",
+        dual_battery: "Two batteries", enviolo: "Enviolo hub", log_km: "Higher mileage (per log-step)", rain_tent: "Rain tent included",
+        child_extras: "Child seat extras", dealer: "Sold by a dealer", like_new: "As-new condition", needs_work: "Needs work", speed: "Speed pedelec (45 km/h)",
+      },
+      hiddenEffects: ["age_sq"],
+    },
+    thermostat: {
+      item: "thermostat", items: "thermostats", usedTab: "All ads", usedLabel: "", groupLabel: "Type",
+      groups: { t6r_wireless: "T6R (wireless)", t6_wired: "T6 (wired)", unknown: "Type unknown" },
+      groupOf: (l) => l.attrs.model || "unknown",
+      hasYear: false, yearPanels: false, newTab: false,
+      similarHow: "(same type, similar condition, receiver and extras)",
+      chips(l) {
+        const a = l.attrs || {}, c = [];
+        if ((a.quantity || 1) > 1) c.push(a.quantity + "×");
+        c.push(T_MODEL[a.model] || "Type unknown");
+        if (T_COND[a.condition]) c.push(T_COND[a.condition]);
+        if (a.includes_receiver === true) c.push("with receiver");
+        if (a.includes_receiver === false) c.push("no receiver");
+        if (a.table_stand) c.push("table stand");
+        if (a.original_box) c.push("in box");
+        if (a.shipping) c.push("ships");
+        if (a.seller_type === "dealer") c.push("dealer");
+        return c;
+      },
+      compName: (u) => `${T_COND[u.attrs.condition] || "?"} · ${u.title.slice(0, 48)}`,
+      rows: { label: "Condition", key: (l) => T_COND[l.attrs.condition],
+              order: (a, b) => Object.values(T_COND).indexOf(a) - Object.values(T_COND).indexOf(b) },
+      effects: {
+        t6r: "T6R (wireless) vs T6 (wired)", unknown_model: "Type not stated", sealed: "Sealed new", open_box: "New, box opened",
+        like_new: "As new", defect: "Defect", receiver_missing: "T6R without receiver", table_stand: "Table stand included",
+        original_box: "Original box", dealer: "Sold by a dealer",
+      },
+      hiddenEffects: [],
+    },
+  };
+  let P = PROFILES.cargo_bike;
+  let PRODUCTS = [];
+
   const LABEL_CLASS = { "needs work": "pricey", "great deal": "great", "good deal": "good", "fair price": "fair", "a bit pricey": "pricey", "overpriced": "over" };
   const daysBetween = (a, b) => Math.round((new Date(b) - new Date(a)) / 864e5);
   const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
@@ -23,6 +91,7 @@
   // ---------- tabs ----------
   const tabs = document.querySelectorAll(".tabs button");
   function showTab(name) {
+    if (name === "new" && $("#new-tab").hidden) name = "today";
     tabs.forEach((b) => b.setAttribute("aria-selected", String(b.dataset.tab === name)));
     document.querySelectorAll(".tab").forEach((s) => (s.hidden = s.id !== "tab-" + name));
     if (name === "market") renderMarket();
@@ -32,18 +101,7 @@
 
   // ---------- cards ----------
   function chips(l) {
-    const a = l.attrs || {};
-    const c = [];
-    if (a.model_year) c.push(String(a.model_year));
-    c.push(VARIANT[a.variant] || "Variant ?");
-    if (MOTOR[a.motor]) c.push(MOTOR[a.motor]);
-    if (a.battery_wh) c.push(a.battery_wh + " Wh" + (a.dual_battery ? " (2 batteries)" : ""));
-    if (HUB[a.gear_hub]) c.push(HUB[a.gear_hub]);
-    if (a.mileage_km != null) c.push(a.mileage_km.toLocaleString("nl-NL") + " km");
-    if (COND[a.condition] && l.kind !== "new") c.push(COND[a.condition]);
-    if (a.rain_tent) c.push("rain tent");
-    if (a.child_seat_extras) c.push("child seat extras");
-    if (a.seller_type === "dealer") c.push(a.warranty ? "dealer + warranty" : "dealer");
+    const c = P.chips(l);
     const where = l.shop || l.city;
     const dist = l.distance_km != null ? ` · ${Math.round(l.distance_km)} km` : "";
     const meta = [];
@@ -127,10 +185,10 @@
     if (sp) det.push(`<div><b>Price history</b>${sp}</div>`);
     if (f && f.comps && f.comps.length) {
       const byId = Object.fromEntries(DATA.used.map((u) => [u.id, u]));
-      det.push(`<div><b>Compared with</b> (${f.n_comps} similar bikes, method: ${esc(f.method)})<table>${f.comps.map((cp) => {
+      det.push(`<div><b>Compared with</b> (${f.n_comps} similar ${P.items}, method: ${esc(f.method)})<table>${f.comps.map((cp) => {
         const u = byId[cp.id];
-        const name = u ? `${u.attrs.model_year || "?"} · ${esc(u.title.slice(0, 48))}` : esc(cp.id);
-        return `<tr><td>${u ? `<a href="${esc(u.url)}" target="_blank" rel="noopener">${name}</a>` : name}</td><td>${eur(cp.price)}</td><td class="muted">≈ ${eur(cp.adjusted)} for this bike</td></tr>`;
+        const name = u ? esc(P.compName(u)) : esc(cp.id);
+        return `<tr><td>${u ? `<a href="${esc(u.url)}" target="_blank" rel="noopener">${name}</a>` : name}</td><td>${eur(cp.price)}</td><td class="muted">≈ ${eur(cp.adjusted)} for this ${P.item}</td></tr>`;
       }).join("")}</table></div>`);
     } else if (f) {
       det.push(`<div class="muted">Fair price from: ${esc(f.method)}.</div>`);
@@ -157,8 +215,8 @@
   const rank = (l) => (l.deal?.label === "needs work" ? 3 : 0) + (l.fair?.confidence === "low" ? 1 : 0) + ((l.attrs?.red_flags || []).length ? 1 : 0);
   function renderUsed() {
     const F = filters();
-    store.set("filters", Object.fromEntries(new FormData(form)));
-    const group = (l) => ({ unknown: "family", other: "family" }[l.attrs.variant] || l.attrs.variant);
+    store.set("filters:" + DATA.id, Object.fromEntries(new FormData(form)));
+    const group = P.groupOf;
     let rows = DATA.used.filter((l) =>
       (F.removed || l.active) &&
       (!F.variant || group(l) === F.variant) &&
@@ -220,15 +278,17 @@
       out.push(c);
     }
     list.replaceChildren(...out);
-    if (!rows.length) list.innerHTML = `<div class="empty">No new Urban Arrow ads ${days === 0 ? "yet today" : days === 1 ? "yesterday" : "in the last 7 days"} within ${maxKm >= 99999 ? "any distance" : maxKm + " km"}. Scans run around 07:20, 13:20 and 19:20.</div>`;
+    if (!rows.length) list.innerHTML = `<div class="empty">No new ${esc(DATA.name)} ads ${days === 0 ? "yet today" : days === 1 ? "yesterday" : "in the last 7 days"} within ${maxKm >= 99999 ? "any distance" : maxKm + " km"}. Scans run around 07:20, 13:20 and 19:20.</div>`;
     const first = DATA.tracking_since;
     $("#today-note").textContent = from <= first && first <= to
       ? `${dayName(first)} was the tracker's first day, so every ad found then counts as new.` : "";
-    store.set("today", { days, dist: $("#today-dist").value, gone });
+    store.set("today:" + DATA.id, { dist: $("#today-dist").value, gone });
+    store.set("todayDays", days);
   }
-  document.querySelectorAll(".seg button").forEach((b) => b.addEventListener("click", () => {
+  const periodButtons = document.querySelectorAll(".seg[aria-label=Period] button");
+  periodButtons.forEach((b) => b.addEventListener("click", () => {
     todayDays = +b.dataset.days;
-    document.querySelectorAll(".seg button").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+    periodButtons.forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
     renderToday();
   }));
   $("#today-dist").addEventListener("input", renderToday);
@@ -239,22 +299,48 @@
     const rows = DATA.new.filter((l) => l.active).sort((a, b) => (a.variant_group || "").localeCompare(b.variant_group || "") || a.price_eur - b.price_eur);
     const list = $("#new-list");
     list.replaceChildren(...rows.map((l) => card(l, "new")));
-    if (!rows.length) list.innerHTML = `<div class="empty">No new bikes tracked yet. Add shop product pages under <code>new_bike_pages</code> in config.yaml.</div>`;
+    if (!rows.length) list.innerHTML = `<div class="empty">No new ${P.items} tracked yet. Add shop product pages under <code>new_item_pages</code> in config.yaml.</div>`;
   }
 
   // ---------- market ----------
   let charts = [];
+  function resetMarket() { charts.forEach((c) => c.destroy()); charts = []; marketDone = false; }
+  let marketDone = false;
+  const med = (a) => { const s = [...a].sort((x, y) => x - y); const m = s.length >> 1; return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2; };
   function renderMarket() {
-    if (!DATA || charts.length || typeof Chart === "undefined") return;
+    if (!DATA || marketDone) return;
+    marketDone = true;
+    $("#year-panels").hidden = !P.yearPanels;
+    $("#similar-how").textContent = P.similarHow;
+
+    // median asking price: rows from the profile (year / condition) x groups
+    const groups = {};
+    DATA.used.filter((l) => l.price_eur && P.rows.key(l) != null).forEach((l) => {
+      const k = P.rows.key(l), g = P.groupOf(l);
+      ((groups[k] ||= {})[g] ||= []).push(l.price_eur / ((l.attrs.quantity || 1)));
+    });
+    const vs = Object.keys(P.groups).filter((g) => Object.values(groups).some((r) => r[g]));
+    const rows = Object.keys(groups).sort((a, b) => P.rows.order(isNaN(a) ? a : +a, isNaN(b) ? b : +b));
+    $("#median-note").textContent = P.hasYear ? "" : "Per unit, all ads collected so far (number of ads in brackets).";
+    $("#year-table").innerHTML = rows.length ? `<table class="data"><tr><th>${P.rows.label}</th>${vs.map((g) => `<th>${P.groups[g]}</th>`).join("")}</tr>${rows.map((y) =>
+      `<tr><td>${esc(y)}</td>${vs.map((g) => { const a = groups[y][g]; return `<td>${a ? `${eur(med(a))} <span class="muted">(${a.length})</span>` : "–"}</td>`; }).join("")}</tr>`).join("")}</table>`
+      : `<p class="muted">No data yet.</p>`;
+
+    const eff = DATA.model.regression && DATA.model.regression.effects_pct;
+    $("#effects").innerHTML = eff ? `<table class="data">${Object.entries(eff).filter(([k]) => !P.hiddenEffects.includes(k)).map(([k, v]) =>
+      `<tr><td>${P.effects[k] || k}</td><td class="${v >= 0 ? "pos" : "neg"}">${v > 0 ? "+" : ""}${v}%</td></tr>`).join("")}</table>
+      <p class="muted small">Based on ${DATA.model.regression.n} listings. Typical error ±${Math.round(DATA.model.regression.sigma * 100)}%.</p>`
+      : `<p class="muted">Appears once about 25 listings with a price have been collected (${DATA.model.n_comparables} so far).</p>`;
+
+    if (!P.yearPanels || typeof Chart === "undefined") return;
     const text = css("--muted"), grid = css("--line");
     Chart.defaults.color = text; Chart.defaults.borderColor = grid; Chart.defaults.font.family = "system-ui, sans-serif";
     const colors = { family: "#2a78c2", shorty: "#d1762a", tender: "#7b5cc4", cargo: "#2f9c78" };
-    const groupOf = (v) => ({ unknown: "family", other: "family" }[v] || v);
     const pts = DATA.used.filter((l) => l.price_eur && l.attrs.model_year);
     const ds = Object.keys(colors).map((g) => {
-      const p = pts.filter((l) => groupOf(l.attrs.variant) === g);
+      const p = pts.filter((l) => P.groupOf(l) === g);
       return p.length && {
-        label: VARIANT[g], data: p.map((l) => ({ x: l.attrs.model_year + (Math.random() - .5) * .35, y: l.price_eur, l })),
+        label: P.groups[g], data: p.map((l) => ({ x: l.attrs.model_year + (Math.random() - .5) * .35, y: l.price_eur, l })),
         backgroundColor: p.map((l) => l.active ? colors[g] : "transparent"), borderColor: colors[g], pointRadius: 4, pointHoverRadius: 6,
       };
     }).filter(Boolean);
@@ -267,7 +353,6 @@
         onClick: (_, els) => { if (els[0]) window.open(ds[els[0].datasetIndex].data[els[0].index].l.url, "_blank", "noopener"); },
       },
     }));
-
     const curve = DATA.model.family_curve || [];
     $("#curve-note").textContent = curve.length
       ? "Model estimate for a privately sold Family with Enviolo, average mileage (Cargo Line motor up to 3 years old, Performance CX after that)."
@@ -277,60 +362,73 @@
       data: { labels: curve.map((c) => c.age === 0 ? "new" : c.age + " yr"), datasets: [{ data: curve.map((c) => c.price), borderColor: css("--accent"), tension: .25, pointRadius: 3 }] },
       options: { maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { callbacks: { label: (c) => eur(c.raw) } } }, scales: { y: { ticks: { callback: (v) => eur(v) } } } },
     }));
-
-    // median by year x variant
-    const groups = {};
-    DATA.used.filter((l) => l.price_eur && l.attrs.model_year).forEach((l) => {
-      const k = l.attrs.model_year, g = groupOf(l.attrs.variant);
-      ((groups[k] ||= {})[g] ||= []).push(l.price_eur);
-    });
-    const med = (a) => { const s = [...a].sort((x, y) => x - y); const m = s.length >> 1; return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2; };
-    const vs = Object.keys(colors).filter((g) => Object.values(groups).some((r) => r[g]));
-    const years = Object.keys(groups).sort().reverse();
-    $("#year-table").innerHTML = years.length ? `<table class="data"><tr><th>Year</th>${vs.map((g) => `<th>${VARIANT[g]}</th>`).join("")}</tr>${years.map((y) =>
-      `<tr><td>${y}</td>${vs.map((g) => { const a = groups[y][g]; return `<td>${a ? `${eur(med(a))} <span class="muted">(${a.length})</span>` : "–"}</td>`; }).join("")}</tr>`).join("")}</table>`
-      : `<p class="muted">No data yet.</p>`;
-
-    const eff = DATA.model.regression && DATA.model.regression.effects_pct;
-    const NAMES = {
-      age: "Each year older", age_sq: "(age curve)", shorty: "Shorty vs Family", tender: "Tender vs Family", cargo: "Cargo vs Family",
-      motor_new: "Cargo Line / CX motor", motor_old: "Older motor (Active Plus / Shimano)", battery_kwh: "+1 kWh battery",
-      dual_battery: "Two batteries", enviolo: "Enviolo hub", log_km: "Higher mileage (per log-step)", rain_tent: "Rain tent included",
-      child_extras: "Child seat extras", dealer: "Sold by a dealer", like_new: "As-new condition", needs_work: "Needs work", speed: "Speed pedelec (45 km/h)",
-    };
-    $("#effects").innerHTML = eff ? `<table class="data">${Object.entries(eff).filter(([k]) => k !== "age_sq").map(([k, v]) =>
-      `<tr><td>${NAMES[k] || k}</td><td class="${v >= 0 ? "pos" : "neg"}">${v > 0 ? "+" : ""}${v}%</td></tr>`).join("")}</table>
-      <p class="muted small">Based on ${DATA.model.regression.n} listings. Typical error ±${Math.round(DATA.model.regression.sigma * 100)}%.</p>`
-      : `<p class="muted">Appears once about 25 listings with a price have been collected (${DATA.model.n_comparables} so far).</p>`;
   }
 
-  // ---------- boot ----------
-  fetch("data.json", { cache: "no-cache" }).then((r) => r.json()).then((d) => {
-    DATA = d;
-    const active = d.used.filter((l) => l.active);
-    const good = active.filter((l) => l.deal && l.deal.pct >= 5).length;
+  // ---------- products ----------
+  function setupForProduct() {
+    P = PROFILES[DATA.profile] || PROFILES.cargo_bike;
+    document.title = `${DATA.name} Deals`;
+    $("#title").textContent = `${DATA.name} Deals`;
+    $("#used-tab").textContent = P.usedTab;
+    $("#new-tab").hidden = !P.newTab && !DATA.new.some((l) => l.active);
+    $("#minyear-field").hidden = !P.hasYear;
+    $("#variant-label").textContent = P.groupLabel;
+    $("#sort-year").hidden = !P.hasYear;
+    $("#variant-select").innerHTML = `<option value="">All</option>` +
+      Object.entries(P.groups).map(([k, v]) => `<option value="${k}">${esc(v)}</option>`).join("");
+    document.querySelectorAll("#products button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.id === DATA.id)));
+
+    const d = DATA;
     d.today ||= d.generated_at.slice(0, 10);
     d.tracking_since ||= d.today;
+    const active = d.used.filter((l) => l.active);
+    const good = active.filter((l) => l.deal && l.deal.pct >= 5).length;
     const fresh = [...d.used, ...d.new].filter((l) => l.active && adDay(l) === d.today).length;
     $("#today-count").textContent = fresh ? String(fresh) : "";
-    $("#summary").textContent = `${active.length} second-hand for sale · ${good} good deals · ${fresh} new today · from ${d.home.name || "home"}`;
+    $("#summary").textContent = `${active.length} ${P.usedLabel ? P.usedLabel + " " : ""}for sale · ${good} good deals · ${fresh} new today · from ${d.home.name || "home"}`;
     $("#updated").textContent = `Updated ${new Date(d.generated_at).toLocaleString("nl-NL")}. Prices are asking prices; "fair" is an estimate from collected listings.`;
 
-    const saved = store.get("filters");
-    if (saved) for (const [k, v] of Object.entries(saved)) { const el = form.elements[k]; if (el && el.type !== "checkbox") el.value = v; }
-    if (saved) { form.elements.dealers.checked = "dealers" in saved; form.elements.removed.checked = "removed" in saved; }
-    else form.elements.dist.value = String(d.default_max_distance_km >= 250 ? 250 : d.default_max_distance_km);
-
-    const st = store.get("today");
-    if (st) {
-      todayDays = st.days ?? 0;
-      $("#today-dist").value = st.dist || "250";
-      $("#today-gone").checked = st.gone !== false;
-      document.querySelectorAll(".seg button").forEach((x) => x.setAttribute("aria-pressed", String(+x.dataset.days === todayDays)));
+    form.reset();
+    const saved = store.get("filters:" + d.id);
+    const defDist = d.default_max_distance_km >= 99999 ? "99999" : d.default_max_distance_km >= 250 ? "250" : String(d.default_max_distance_km);
+    form.elements.dist.value = defDist;
+    if (saved) {
+      for (const [k, v] of Object.entries(saved)) { const el = form.elements[k]; if (el && el.type !== "checkbox") el.value = v; }
+      form.elements.dealers.checked = "dealers" in saved;
+      form.elements.removed.checked = "removed" in saved;
     }
+    if (!P.hasYear && form.elements.sort.value === "year") form.elements.sort.value = "deal";
+    const st = store.get("today:" + d.id) || {};
+    $("#today-dist").value = st.dist || defDist;
+    $("#today-gone").checked = st.gone !== false;
+    resetMarket();
     renderToday();
     renderUsed();
     renderNew();
-    showTab(store.get("tab") || "today");
-  }).catch((e) => { $("#summary").textContent = "Could not load data.json: " + e.message; });
+    if (!$("#tab-market").hidden) renderMarket();
+    if (!$("#tab-new").hidden && $("#new-tab").hidden) showTab("today");
+  }
+
+  function loadProduct(id) {
+    const prod = PRODUCTS.find((p) => p.id === id) || PRODUCTS[0];
+    store.set("product", prod.id);
+    if (location.hash !== "#" + prod.id) history.replaceState(null, "", "#" + prod.id);
+    return fetch(`data/${prod.id}.json`, { cache: "no-cache" }).then((r) => r.json()).then((d) => { DATA = d; setupForProduct(); });
+  }
+
+  // ---------- boot ----------
+  fetch("products.json", { cache: "no-cache" }).then((r) => r.json()).then((idx) => {
+    PRODUCTS = idx.products;
+    $("#products").innerHTML = PRODUCTS.map((p) =>
+      `<button type="button" data-id="${esc(p.id)}" aria-pressed="false">${esc(p.name)}${p.new_today ? `<span class="count">${p.new_today}</span>` : ""}</button>`).join("");
+    $("#products").hidden = PRODUCTS.length < 2;
+    document.querySelectorAll("#products button").forEach((b) => b.addEventListener("click", () => loadProduct(b.dataset.id)));
+    window.addEventListener("hashchange", () => { const id = location.hash.slice(1); if (id && id !== DATA?.id) loadProduct(id); });
+    const st = store.get("todayDays");
+    if (st != null) {
+      todayDays = st;
+      document.querySelectorAll(".seg[aria-label=Period] button").forEach((x) => x.setAttribute("aria-pressed", String(+x.dataset.days === todayDays)));
+    }
+    return loadProduct(location.hash.slice(1) || store.get("product")).then(() => showTab(store.get("tab") || "today"));
+  }).catch((e) => { $("#summary").textContent = "Could not load data: " + e.message; });
 })();

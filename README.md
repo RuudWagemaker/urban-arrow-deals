@@ -1,27 +1,44 @@
-# Urban Arrow Deals
+# Deal Tracker
 
-A daily tracker of new and second-hand Urban Arrow cargo bikes in the Netherlands, with a
-fair-price estimate for every second-hand listing. It runs on GitHub for free:
+Tracks Marktplaats ads for the products you follow and estimates a fair price for every
+listing. It currently follows **Urban Arrow** cargo bikes and the **Honeywell T6** smart
+thermostat, with one website and a product switcher. It runs on GitHub for free:
 
 ```
-three times a day (GitHub Actions)
-  → Marktplaats search (+ optional shop pages for new bikes, + optional 2dehands.be)
-  → Claude Haiku 5.5 reads each new listing → variant, year, motor, battery, gear hub, km, extras, red flags
-  → price history, sold/removed detection, relist detection   (data/listings.json, committed daily)
-  → fair price + deal score for every second-hand bike
+three times a day (GitHub Actions), for every product in config.yaml
+  → Marktplaats search (+ optional shop pages for new items, + optional 2dehands.be)
+  → Claude Haiku 5.5 reads each new ad → the product's details (bike: variant, year, motor,
+    battery, km...; thermostat: T6 or T6R, condition, receiver, box...) and red flags
+  → price history, sold/removed detection, relist detection   (data/<product>/listings.json)
+  → fair price + deal score for every ad
   → website on GitHub Pages  +  phone/email alerts for new deals and price drops
 ```
 
-## What you get
+## Products and profiles
 
-- **Second-hand tab:** every listing with its asking price, a fair-price range and a label
+Each product in `config.yaml` (under `products`) has a **profile** that says what Claude
+extracts from an ad and how ads are compared:
+
+| Profile | Used for | Compared on |
+|---|---|---|
+| `cargo_bike` | Urban Arrow | variant, age, motor, battery, mileage, extras, dealer |
+| `thermostat` | Honeywell T6 | T6 (wired) or T6R (wireless), condition (sealed → used), receiver, stand, box; per unit for multi-packs |
+
+To follow another product of a kind that already has a profile, copy a product block in
+`config.yaml` and change its name, searches and list prices. A new kind of product needs a
+new profile in `uatracker/profiles/`.
+
+## What you get (per product)
+
+- **Today tab:** the ads that appeared today, yesterday or in the last 7 days.
+- **Second-hand tab** ("All ads" for thermostats): every listing with its asking price, a fair-price range and a label
   (great deal / good deal / fair price / a bit pricey / overpriced). It also shows distance
   from Den Bosch, price drops and warning signs. Under "Details" you can see which similar
   bikes the estimate is based on.
 - **New tab:** new bikes from shops you add, plus new bikes listed on Marktplaats. Each is
   compared with the list price and the cheapest offer for that variant.
-- **Market tab:** price by model year, a depreciation curve, and how much each feature
-  (age, motor, battery, Enviolo, rain tent, dealer) adds or removes.
+- **Market tab:** median prices, how much each feature adds or removes and, for bikes,
+  price by model year and a depreciation curve.
 
 ## How the fair price is calculated
 
@@ -91,11 +108,15 @@ day (around 07:20, 13:20 and 19:20).
 ## Settings (`config.yaml`)
 
 - `home` – Den Bosch is set. Distance is calculated from here.
-- `new_bike_pages` – add product pages of shops selling new Urban Arrows (any web shop
-  with standard product data works). Find dealers via the dealer locator on urbanarrow.com.
-- `msrp_estimate` – **rough guesses**, only used before enough data exists. Please check
-  and correct them against current list prices.
-- `tweedehands_be.enabled` – also search 2dehands.be (Belgium).
+- `alerts` – default alert thresholds; each product can override them (the Honeywell T6
+  alerts at 15% below fair price, anywhere in the country, since thermostats are shipped).
+- Per product, under `products:`
+  - `marktplaats.queries` – the searches to run.
+  - `new_item_pages` – product pages of shops selling the item new (any web shop with
+    standard product data works).
+  - `msrp_estimate` – **rough guesses** of new prices, only used before enough data exists.
+    Please check and correct them.
+  - `tweedehands_be.enabled` – also search 2dehands.be (Belgium).
 - `llm.model` – `claude-haiku-5-5` by default. You can switch to `claude-sonnet-5-5` if
   extraction quality ever disappoints, but Haiku handles this task well.
 

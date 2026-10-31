@@ -1,15 +1,16 @@
-"""Fair-price model for second-hand Urban Arrows.
+"""Fair-price model for second-hand items (any product profile).
 
 How the fair price is found, in order of preference:
-1. Adjusted comparables — the most similar bikes (same variant, close in age, battery,
-   motor, mileage), each price corrected for its differences using the regression below,
-   then a weighted median. This is how a car appraiser works and it's easy to explain.
-2. Regression — log(price) explained by age, variant, motor, battery, gear hub, mileage,
-   extras and seller type (ridge regression, fitted on all collected listings).
-3. Prior — a list-price × depreciation curve, used until enough data is collected.
+1. Adjusted comparables — the most similar ads (same group, e.g. variant or model; close
+   on the profile's similarity measure), each price corrected for its differences using
+   the regression below, then a weighted median. This is how an appraiser works.
+2. Regression — log(price) explained by the profile's features (ridge regression,
+   fitted on all collected ads).
+3. Prior — a list-price based estimate from the profile, until enough data is collected.
 
-Asking prices are not sale prices, so comparables are weighted: listings that vanished
-quickly (probably sold) count more, listings that have sat for months count less.
+Asking prices are not sale prices, so comparables are weighted: ads that vanished
+quickly (probably sold) count more, ads that have sat for months count less.
+Prices are compared per unit when an ad sells several items.
 """
 from __future__ import annotations
 
@@ -17,17 +18,10 @@ from datetime import date
 
 import numpy as np
 
-COMP_PRICE_TYPES = {"FIXED", "MIN_BID", "NEGOTIABLE"}
-VARIANT_GROUPS = {"family": "family", "unknown": "family", "other": "family",
-                  "shorty": "shorty", "tender": "tender", "cargo": "cargo"}
-NEW_MOTORS = {"bosch_cargo_line", "bosch_cargo_line_speed", "bosch_performance_cx"}
-OLD_MOTORS = {"bosch_active_plus", "shimano_steps"}
+from . import profiles
+from .profiles import Profile, is_item
 
-FEATURES = [
-    "intercept", "age", "age_sq", "shorty", "tender", "cargo", "motor_new", "motor_old",
-    "battery_kwh", "dual_battery", "enviolo", "log_km", "rain_tent", "child_extras",
-    "dealer", "like_new", "needs_work", "speed",
-]
+COMP_PRICE_TYPES = {"FIXED", "MIN_BID", "NEGOTIABLE"}
 
 
 def _d(s: str | None) -> date | None:
@@ -37,66 +31,30 @@ def _d(s: str | None) -> date | None:
         return None
 
 
-def _age(l: dict, year_fallback: float) -> tuple[float, bool]:
+def is_used_item(l: dict, p: Profile) -> bool:
     a = l.get("attrs") or {}
-    ref = (_d(l.get("last_seen")) or date.today())
-    y = a.get("model_year")
-    if y:
-        return max(0.0, ref.year + (ref.month - 6) / 12 - y), False
-    return max(0.0, ref.year - year_fallback), True
+    if not is_item(a):
+        return False
+    if p.new_counts_as_used:
+        return l.get("source") != "shop"
+    return l.get("kind") != "new" and a.get("condition") != "new"
 
 
-def _battery_default(age: float) -> float:
-    return 0.4 if age > 7 else 0.5 if age > 3 else 0.545
+def unit_price(l: dict, p: Profile) -> float | None:
+    price = l.get("price_eur")
+    return price / max(1, p.quantity(l)) if price else None
 
 
-def features(l: dict, year_fallback: float) -> np.ndarray:
-    a = l.get("attrs") or {}
-    age, _ = _age(l, year_fallback)
-    group = VARIANT_GROUPS.get(a.get("variant") or "unknown", "family")
-    motor = a.get("motor") or "unknown"
-    wh = a.get("battery_wh")
-    kwh = wh / 1000 if wh and 250 <= wh <= 2000 else _battery_default(age)
-    km = a.get("mileage_km")
-    if km is None:
-        km = 1500 * max(age, 0.3)
-    v = {
-        "intercept": 1.0,
-        "age": age,
-        "age_sq": age * age / 10,
-        "shorty": group == "shorty",
-        "tender": group == "tender",
-        "cargo": group == "cargo",
-        "motor_new": motor in NEW_MOTORS,
-        "motor_old": motor in OLD_MOTORS,
-        "battery_kwh": kwh,
-        "dual_battery": bool(a.get("dual_battery")),
-        "enviolo": (a.get("gear_hub") or "").startswith("enviolo"),
-        "log_km": float(np.log1p(km / 1000)),
-        "rain_tent": bool(a.get("rain_tent")),
-        "child_extras": bool(a.get("child_seat_extras")),
-        "dealer": a.get("seller_type") == "dealer",
-        "like_new": a.get("condition") in ("like_new", "new"),
-        "needs_work": a.get("condition") == "needs_work",
-        "speed": motor == "bosch_cargo_line_speed",
-    }
-    return np.array([float(v[f]) for f in FEATURES])
-
-
-def is_used_bike(l: dict) -> bool:
-    a = l.get("attrs") or {}
-    return bool(a.get("is_complete_bike")) and l.get("kind") != "new" and a.get("condition") != "new"
-
-
-def is_comparable(l: dict, today: date) -> bool:
+def is_comparable(l: dict, today: date, p: Profile) -> bool:
     last = _d(l.get("last_seen"))
+    up = unit_price(l, p)
+    lo, hi = p.comp_price_range
     return (
-        is_used_bike(l)
+        is_used_item(l, p)
         and not l.get("superseded_by")
         and l.get("price_type") in COMP_PRICE_TYPES
-        and l.get("price_eur") is not None
-        and 600 <= l["price_eur"] <= 20000
-        and (l.get("attrs") or {}).get("condition") != "needs_work"
+        and up is not None and lo <= up <= hi
+        and (l.get("attrs") or {}).get("condition") not in p.bad_conditions
         and last is not None and (today - last).days <= 365
     )
 
@@ -109,15 +67,6 @@ def sold_weight(l: dict) -> float:
     if l.get("active") and days > 60:
         return 0.6  # still unsold after two months: probably too high
     return 1.0
-
-
-def prior_price(l: dict, msrp: dict, year_fallback: float) -> float:
-    a = l.get("attrs") or {}
-    group = VARIANT_GROUPS.get(a.get("variant") or "unknown", "family")
-    base = msrp.get(group) or msrp.get("other") or 7000
-    age, _ = _age(l, year_fallback)
-    # rough Dutch cargo e-bike curve: ~-20% when it leaves the shop, then ~-9% per year
-    return base * 0.85 * (0.91 ** max(age, 0.25))
 
 
 def fit_ridge(X: np.ndarray, y: np.ndarray, w: np.ndarray, lam: float = 2.0):
@@ -138,20 +87,6 @@ def _wquantile(values: np.ndarray, weights: np.ndarray, q: float) -> float:
     return float(np.interp(q * w.sum(), cw, v))
 
 
-def _similarity_distance(fi: np.ndarray, fj: np.ndarray) -> float:
-    ix = {f: k for k, f in enumerate(FEATURES)}
-    return (
-        abs(fi[ix["age"]] - fj[ix["age"]])
-        + 2.0 * abs(fi[ix["battery_kwh"]] - fj[ix["battery_kwh"]])
-        + 0.5 * (fi[ix["motor_new"]] != fj[ix["motor_new"]])
-        + 0.5 * (fi[ix["motor_old"]] != fj[ix["motor_old"]])
-        + 0.4 * abs(fi[ix["log_km"]] - fj[ix["log_km"]])
-        + 0.5 * (fi[ix["dealer"]] != fj[ix["dealer"]])
-        + 0.3 * (fi[ix["enviolo"]] != fj[ix["enviolo"]])
-        + 1.0 * (fi[ix["speed"]] != fj[ix["speed"]])
-    )
-
-
 def deal_label(pct: float) -> str:
     if pct >= 15:
         return "great deal"
@@ -164,48 +99,46 @@ def deal_label(pct: float) -> str:
     return "overpriced"
 
 
-def run(listings: dict[str, dict], msrp: dict, min_regression_n: int = 25, k: int = 12) -> dict:
-    """Adds `fair` and `deal` to every used bike. Returns model info for the website."""
+def run(listings: dict[str, dict], msrp: dict, profile: Profile | None = None,
+        min_regression_n: int = 25, k: int = 12) -> dict:
+    """Adds `fair` and `deal` to every used item. Returns model info for the website."""
+    p = profile or profiles.get("cargo_bike")
     today = date.today()
-    used = [l for l in listings.values() if is_used_bike(l)]
-    years = [l["attrs"]["model_year"] for l in used if (l.get("attrs") or {}).get("model_year")]
-    year_fallback = float(np.median(years)) if years else today.year - 4
-
-    comps = [l for l in used if is_comparable(l, today)]
-    F = {l["id"]: features(l, year_fallback) for l in used}
+    used = [l for l in listings.values() if is_used_item(l, p)]
+    ctx = p.make_ctx(used)
+    comps = [l for l in used if is_comparable(l, today, p)]
+    F = {l["id"]: p.feature_fn(l, ctx) for l in used}
 
     beta = sigma = None
     if len(comps) >= min_regression_n:
         X = np.array([F[l["id"]] for l in comps])
-        y = np.log([l["price_eur"] for l in comps])
+        y = np.log([unit_price(l, p) for l in comps])
         w = np.array([sold_weight(l) for l in comps])
         beta, sigma = fit_ridge(X, y, w)
-
-    group_of = lambda l: VARIANT_GROUPS.get((l.get("attrs") or {}).get("variant") or "unknown", "family")
 
     for l in used:
         fi = F[l["id"]]
         chain = {l["id"], l.get("relist_of"), l.get("superseded_by")}
         cands = []
         for c in comps:
-            if c["id"] in chain or group_of(c) != group_of(l):
+            if c["id"] in chain or p.group(c) != p.group(l):
                 continue
-            dist = _similarity_distance(fi, F[c["id"]])
-            if dist <= 4.0:
+            dist = p.similarity(fi, F[c["id"]])
+            if dist <= p.max_similarity:
                 cands.append((dist, c))
         cands.sort(key=lambda t: t[0])
         cands = cands[:k]
 
-        method, lo, hi, used_comps = None, None, None, []
+        used_comps = []
         if len(cands) >= 4:
             vals, ws = [], []
             for dist, c in cands:
-                p = c["price_eur"]
+                up = unit_price(c, p)
                 if beta is not None:
-                    p = p * float(np.exp(beta @ (fi - F[c["id"]])))
-                vals.append(p)
+                    up = up * float(np.exp(beta @ (fi - F[c["id"]])))
+                vals.append(up)
                 ws.append(sold_weight(c) / (1.0 + dist))
-                used_comps.append({"id": c["id"], "price": c["price_eur"], "adjusted": round(p)})
+                used_comps.append({"id": c["id"], "price": c["price_eur"], "adjusted": round(up * p.quantity(l))})
             vals, ws = np.array(vals), np.array(ws)
             fair = _wquantile(vals, ws, 0.5)
             lo, hi = _wquantile(vals, ws, 0.25), _wquantile(vals, ws, 0.75)
@@ -215,63 +148,54 @@ def run(listings: dict[str, dict], msrp: dict, min_regression_n: int = 25, k: in
             lo, hi = fair * np.exp(-sigma * 0.67), fair * np.exp(sigma * 0.67)
             method = "regression"
         else:
-            fair = prior_price(l, msrp, year_fallback)
+            fair = p.prior(l, msrp, ctx)
             lo, hi = fair * 0.82, fair * 1.18
             method = "list-price estimate"
 
-        lo, hi = min(lo, fair * 0.95), max(hi, fair * 1.05)
-        _, year_imputed = _age(l, year_fallback)
-        conf = ("high" if len(used_comps) >= 8 and not year_imputed
-                else "medium" if (len(used_comps) >= 4 or beta is not None) and not year_imputed
+        q = p.quantity(l)
+        fair, lo, hi = fair * q, min(lo, fair * 0.95) * q, max(hi, fair * 1.05) * q
+        missing = p.key_info_missing(l, ctx)
+        conf = ("high" if len(used_comps) >= 8 and not missing
+                else "medium" if (len(used_comps) >= 4 or beta is not None) and not missing
                 else "low")
+        rnd = -1 if fair >= 500 else 0
         l["fair"] = {
-            "price": round(fair, -1), "low": round(lo, -1), "high": round(hi, -1),
+            "price": round(fair, rnd), "low": round(lo, rnd), "high": round(hi, rnd),
             "method": method, "confidence": conf, "n_comps": len(used_comps),
             "comps": used_comps[:6],
         }
         ask = l.get("price_eur")
+        flags = list((l.get("attrs") or {}).get("red_flags") or [])
         if ask:
             pct = (fair - ask) / fair * 100
-            flags = list((l.get("attrs") or {}).get("red_flags") or [])
             if pct > 40:
                 flags.append("price far below market: check carefully (scam/stolen/defect?)")
-            label = "needs work" if (l.get("attrs") or {}).get("condition") == "needs_work" else deal_label(pct)
-            l["deal"] = {"pct": round(pct, 1), "label": label, "flags": flags}
+            bad = (l.get("attrs") or {}).get("condition") in p.bad_conditions
+            l["deal"] = {"pct": round(pct, 1), "label": "needs work" if bad else deal_label(pct), "flags": flags}
         else:
-            l["deal"] = {"pct": None, "label": "no price", "flags": list((l.get("attrs") or {}).get("red_flags") or [])}
-
-    curve = []
-    if beta is not None:
-        ref = {"attrs": {"variant": "family", "motor": "bosch_cargo_line", "gear_hub": "enviolo",
-                         "battery_wh": 545, "condition": "good", "seller_type": "private"},
-               "last_seen": today.isoformat()}
-        for age in range(0, 11):
-            ref["attrs"]["model_year"] = today.year - age
-            ref["attrs"]["mileage_km"] = int(1500 * max(age, 0.3))
-            if age > 3:
-                ref["attrs"]["motor"] = "bosch_performance_cx"
-                ref["attrs"]["battery_wh"] = 500
-            curve.append({"age": age, "price": round(float(np.exp(beta @ features(ref, year_fallback))), -1)})
+            l["deal"] = {"pct": None, "label": "no price", "flags": flags}
 
     return {
         "n_used": len(used),
         "n_comparables": len(comps),
         "regression": None if beta is None else {
             "n": len(comps), "sigma": round(sigma, 3),
-            "effects_pct": {f: round((float(np.exp(b)) - 1) * 100, 1) for f, b in zip(FEATURES, beta) if f != "intercept"},
+            "effects_pct": {f: round((float(np.exp(b)) - 1) * 100, 1) for f, b in zip(p.features, beta) if f != "intercept"},
         },
-        "family_curve": curve,
+        "family_curve": p.curve(beta, ctx) if (beta is not None and p.curve) else [],
     }
 
 
-def score_new(listings: dict[str, dict], msrp: dict) -> None:
-    """New bikes: compare with the estimated list price and the cheapest offer per variant."""
+def score_new(listings: dict[str, dict], msrp: dict, profile: Profile | None = None) -> None:
+    """New items from shops (or new-condition ads): compare with the list price and the cheapest offer."""
+    p = profile or profiles.get("cargo_bike")
     new = [l for l in listings.values()
-           if l.get("active") and l.get("price_eur") and (l.get("kind") == "new" or (l.get("attrs") or {}).get("condition") == "new")
-           and (l.get("attrs") or {}).get("is_complete_bike", True)]
+           if l.get("active") and l.get("price_eur") and not is_used_item(l, p)
+           and (l.get("kind") == "new" or (l.get("attrs") or {}).get("condition") == "new" or l.get("source") == "shop")
+           and is_item(l.get("attrs")) is not False]
     cheapest: dict[str, int] = {}
     for l in new:
-        g = VARIANT_GROUPS.get((l.get("attrs") or {}).get("variant") or l.get("variant_hint") or "unknown", "family")
+        g = p.group(l)
         l["variant_group"] = g
         cheapest[g] = min(cheapest.get(g, 10**9), l["price_eur"])
     for l in new:

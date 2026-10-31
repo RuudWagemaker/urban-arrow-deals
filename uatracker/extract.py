@@ -203,6 +203,7 @@ def combine(rule_d: dict, llm_d: dict | None) -> dict:
         out["red_flags"] = sorted(set(rule_d.get("red_flags", [])) | set(llm_d.get("red_flags") or []))
     # only complete Urban Arrows count as bikes on the site and in the price model
     out["is_complete_bike"] = bool(out.get("is_complete_bike")) and out.get("is_urban_arrow", True) is not False
+    out["is_item"] = out["is_complete_bike"]
     # a bike can't be from this year (or later) and already have done thousands of km
     y, km = out.get("model_year"), out.get("mileage_km")
     if y and (y > date.today().year or (y >= date.today().year and km and km > 3000)):

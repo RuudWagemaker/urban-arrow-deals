@@ -3,22 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Urban Arrow Deals</title>
-  <meta name="description" content="Daily tracker of new and second-hand Urban Arrow cargo bikes in the Netherlands, with a fair-price estimate for every listing.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚲</text></svg>">
+  <title>Deal Tracker</title>
+  <meta name="description" content="Tracks Marktplaats ads for the products you follow, with a fair-price estimate for every listing.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏷️</text></svg>">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="top">
     <div class="wrap">
       <div class="brand">
-        <h1>Urban Arrow Deals</h1>
+        <div class="titlerow">
+          <h1 id="title">Deals</h1>
+          <div id="products" class="seg products" role="group" aria-label="Product"></div>
+        </div>
         <p id="summary" class="muted">Loading…</p>
       </div>
       <nav class="tabs" role="tablist">
         <button role="tab" data-tab="today" aria-selected="true">Today <span id="today-count" class="count"></span></button>
-        <button role="tab" data-tab="used" aria-selected="false">Second-hand</button>
-        <button role="tab" data-tab="new" aria-selected="false">New bikes</button>
+        <button role="tab" data-tab="used" aria-selected="false" id="used-tab">Second-hand</button>
+        <button role="tab" data-tab="new" aria-selected="false" id="new-tab">New</button>
         <button role="tab" data-tab="market" aria-selected="false">Market</button>
       </nav>
     </div>
@@ -49,13 +52,9 @@
 
     <section id="tab-used" class="tab" hidden>
       <form id="filters" class="filters" onsubmit="return false">
-        <label>Variant
-          <select name="variant">
+        <label><span id="variant-label">Variant</span>
+          <select name="variant" id="variant-select">
             <option value="">All</option>
-            <option value="family">Family</option>
-            <option value="shorty">Shorty</option>
-            <option value="tender">Tender</option>
-            <option value="cargo">Cargo</option>
           </select>
         </label>
         <label>Max distance
@@ -70,7 +69,7 @@
         <label>Max price
           <input name="maxprice" type="number" inputmode="numeric" step="250" placeholder="€ any">
         </label>
-        <label>Min. year
+        <label id="minyear-field">Min. year
           <input name="minyear" type="number" inputmode="numeric" placeholder="any">
         </label>
         <label>Sort
@@ -79,7 +78,7 @@
             <option value="price">Lowest price</option>
             <option value="newest">Newest listing</option>
             <option value="distance">Nearest</option>
-            <option value="year">Newest bike</option>
+            <option value="year" id="sort-year">Newest bike</option>
           </select>
         </label>
         <label class="check"><input type="checkbox" name="dealers" checked> Dealers</label>
@@ -90,13 +89,13 @@
     </section>
 
     <section id="tab-new" class="tab" hidden>
-      <p class="muted">New bikes from shops you track (add product pages in <code>config.yaml</code>) and new bikes listed on Marktplaats.
-        "vs. list price" compares with the rough list prices in <code>config.yaml</code>.</p>
+      <p class="muted">New items from shops you track (add product pages under <code>new_item_pages</code> in <code>config.yaml</code>) and new items listed on Marktplaats.
+        "vs. list" compares with the rough list prices in <code>config.yaml</code>.</p>
       <div id="new-list" class="list"></div>
     </section>
 
     <section id="tab-market" class="tab" hidden>
-      <div class="grid2">
+      <div class="grid2" id="year-panels">
         <div class="panel">
           <h2>Asking price by model year</h2>
           <p class="muted small">Every second-hand listing collected. Hollow dots = sold or removed.</p>
@@ -111,6 +110,7 @@
       <div class="grid2">
         <div class="panel">
           <h2>Median asking price</h2>
+          <p class="muted small" id="median-note"></p>
           <div id="year-table"></div>
         </div>
         <div class="panel">
@@ -122,9 +122,9 @@
       <div class="panel">
         <h2>How the fair price works</h2>
         <ol class="small">
-          <li><b>Comparables:</b> the most similar listings (same variant, close in age, battery, motor, mileage) are found and each price is corrected for its differences. The fair price is their weighted median, and the range is the middle 50%.</li>
+          <li><b>Comparables:</b> the most similar listings <span id="similar-how">(same variant, close in age, battery, motor, mileage)</span> are found and each price is corrected for its differences. The fair price is their weighted median, and the range is the middle 50%.</li>
           <li>Listings that disappeared within a month (probably sold) count more. Listings still unsold after two months count less, because asking prices aren't sale prices.</li>
-          <li>With too few comparables it falls back to the price model, and before enough data exists, to a list price × depreciation estimate (marked <i>low confidence</i>).</li>
+          <li>With too few comparables it falls back to the price model, and before enough data exists, to an estimate based on the list price (marked <i>low confidence</i>).</li>
         </ol>
       </div>
     </section>

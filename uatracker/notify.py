@@ -19,36 +19,32 @@ from html import escape
 
 import requests
 
+from .profiles import Profile, get as get_profile, is_item
+
 log = logging.getLogger(__name__)
 
 MAX_NEW = 15
 MAX_DROPS = 10
 MAX_PUSH = 10  # individual phone notifications per scan; the rest are summarised
 
-MOTOR = {
-    "bosch_cargo_line_speed": "Cargo Line Speed", "bosch_cargo_line": "Cargo Line",
-    "bosch_performance_cx": "Performance CX", "bosch_performance": "Performance",
-    "bosch_active_plus": "Active Plus", "shimano_steps": "Shimano STEPS",
-}
-
-
 def eur(n) -> str:
     return "€" + f"{n:,.0f}".replace(",", ".") if n is not None else "–"
 
 
-def pick(listings: dict[str, dict], cfg: dict) -> tuple[list[dict], list[dict]]:
+def pick(listings: dict[str, dict], cfg: dict, profile=None) -> tuple[list[dict], list[dict]]:
     """New good deals not alerted before, and price drops since the last alert."""
     min_pct = cfg.get("min_deal_pct", 10)
     max_km = cfg.get("max_distance_km", 9999)
 
     min_conf = {"low": 0, "medium": 1, "high": 2}[cfg.get("min_confidence", "medium")]
+    bad = profile.bad_conditions if profile else ("needs_work", "defect")
 
     def ok(l):
         d, a, f = l.get("deal") or {}, l.get("attrs") or {}, l.get("fair") or {}
         dist = l.get("distance_km")
         return (l.get("active") and l.get("price_eur") and d.get("pct") is not None
                 and d["pct"] >= min_pct and (dist is None or dist <= max_km)
-                and a.get("is_complete_bike") and a.get("condition") != "needs_work"
+                and is_item(a) and a.get("condition") not in bad
                 and {"low": 0, "medium": 1, "high": 2}.get(f.get("confidence"), 0) >= min_conf)
 
     new, drops = [], []
@@ -65,19 +61,15 @@ def pick(listings: dict[str, dict], cfg: dict) -> tuple[list[dict], list[dict]]:
     return sorted(new, key=key), sorted(drops, key=key)
 
 
+_P = None  # profile of the product being alerted (set in send)
+
+
+def _prof() -> Profile:
+    return _P or get_profile("cargo_bike")
+
+
 def _facts(l: dict) -> str:
-    a = l.get("attrs") or {}
-    bits = [
-        str(a["model_year"]) if a.get("model_year") else None,
-        (a.get("variant") or "").title() if a.get("variant") not in (None, "unknown", "other") else None,
-        MOTOR.get(a.get("motor")),
-        f"{a['battery_wh']} Wh" if a.get("battery_wh") else None,
-        f"{a['mileage_km']:,} km".replace(",", ".") if a.get("mileage_km") else None,
-        "rain tent" if a.get("rain_tent") else None,
-        "dealer" if a.get("seller_type") == "dealer" else None,
-        f"{l['distance_km']:.0f} km away" if l.get("distance_km") is not None else l.get("city"),
-    ]
-    return " · ".join(b for b in bits if b)
+    return _prof().facts(l)
 
 
 def _row_html(l: dict, was: float | None = None) -> str:
@@ -96,7 +88,7 @@ def _row_html(l: dict, was: float | None = None) -> str:
   {price} &nbsp; <span style="background:#127a3e;color:#fff;border-radius:10px;padding:2px 8px;font-size:12px">{d.get('pct', 0):.0f}% below fair</span>
   <div style="color:#5d6b64;font-size:13px">fair ≈ {eur(f.get('price'))} ({eur(f.get('low'))}–{eur(f.get('high'))}), {escape(f.get('confidence', ''))} confidence</div>
   {flags}
-  <a href="{escape(l['url'])}" style="color:#1f7a4d;font-size:13px">Open on Marktplaats →</a>
+  <a href="{escape(l['url'])}" style="color:#1f7a4d;font-size:13px">Open listing →</a>
 </td></tr>"""
 
 
@@ -110,10 +102,11 @@ def _row_text(l: dict, was: float | None = None) -> str:
     return "\n".join(lines)
 
 
-def build(new: list[dict], drops: list[dict], site_url: str | None, first: bool) -> tuple[str, str, str]:
+def build(new: list[dict], drops: list[dict], site_url: str | None, first: bool,
+          product: str = "Urban Arrow") -> tuple[str, str, str]:
     n_new, n_drop = len(new), len(drops)
     if first:
-        subject = f"Urban Arrow tracker is running: {n_new} good deals right now"
+        subject = f"{product} tracker is running: {n_new} good deals right now"
         intro = (f"Your tracker is set up. These are the best of the {n_new} current listings that are at least "
                  f"10% below their fair price. From now on you'll only get an email when something new appears.")
     else:
@@ -123,7 +116,7 @@ def build(new: list[dict], drops: list[dict], site_url: str | None, first: bool)
         if n_drop:
             parts.append(f"{n_drop} price drop{'s' if n_drop != 1 else ''}")
         top = (new or drops)[0]
-        subject = f"Urban Arrow: {' + '.join(parts)} — best {eur(top['price_eur'])}, {top['deal']['pct']:.0f}% below fair"
+        subject = f"{product}: {' + '.join(parts)} — best {eur(top['price_eur'])}, {top['deal']['pct']:.0f}% below fair"
         intro = ""
 
     def hist_was(l):
@@ -149,14 +142,13 @@ def build(new: list[dict], drops: list[dict], site_url: str | None, first: bool)
         html.append(f'<p style="margin-top:20px"><a href="{escape(site_url)}" style="color:#1f7a4d;font-weight:600">See all listings →</a></p>')
         text.append(f"All listings: {site_url}")
     html.append('<p style="color:#888;font-size:12px">Fair prices are estimates from asking prices of similar listings. '
-                'Always check the bike, frame number and proof of purchase.</p></div>')
+                'Always check the item and proof of purchase before paying.</p></div>')
     return subject, "\n\n".join(text), "".join(html)
 
 
 def _push_one(l: dict, was: float | None) -> dict:
     f, d, a = l.get("fair") or {}, l.get("deal") or {}, l.get("attrs") or {}
-    what = " ".join(x for x in [str(a.get("model_year") or ""),
-                                (a.get("variant") or "").title() if a.get("variant") not in (None, "unknown", "other") else "Urban Arrow"] if x)
+    what = _prof().short_name(l)
     if was:
         title = f"Price drop: {eur(l['price_eur'])} (was {eur(was)}) · {what}"
     else:
@@ -167,7 +159,7 @@ def _push_one(l: dict, was: float | None) -> dict:
     msg = {
         "title": title[:250],
         "message": "\n".join(lines),
-        "tags": ["chart_with_downwards_trend"] if was else ["bike"],
+        "tags": ["chart_with_downwards_trend"] if was else (["bike"] if _prof().item == "bike" else ["moneybag"]),
         "priority": 4 if d.get("pct", 0) >= 20 else 3,
         "click": l["url"],
         "actions": [{"action": "view", "label": "Open listing", "url": l["url"]}],
@@ -177,12 +169,13 @@ def _push_one(l: dict, was: float | None) -> dict:
     return msg
 
 
-def _send_ntfy(topic: str, new: list[dict], drops: list[dict], site_url: str | None, first: bool, was) -> bool:
+def _send_ntfy(topic: str, new: list[dict], drops: list[dict], site_url: str | None, first: bool, was,
+               product: str = "Urban Arrow") -> bool:
     server = os.environ.get("NTFY_SERVER", "https://ntfy.sh").rstrip("/")
     msgs = []
     if first:
         best = new[0] if new else drops[0]
-        msgs.append({"title": f"Urban Arrow tracker is running: {len(new)} good deals now",
+        msgs.append({"title": f"{product} tracker is running: {len(new)} good deals now",
                      "message": f"Best: {eur(best['price_eur'])}, {best['deal']['pct']:.0f}% below fair. "
                                 "From now on you'll get a notification for each new deal.",
                      "tags": ["white_check_mark"], "click": site_url or best["url"]})
@@ -191,7 +184,7 @@ def _send_ntfy(topic: str, new: list[dict], drops: list[dict], site_url: str | N
         items = [(l, None) for l in new] + [(l, was(l)) for l in drops]
         msgs += [_push_one(l, w) for l, w in items[:MAX_PUSH]]
         if len(items) > MAX_PUSH:
-            msgs.append({"title": f"+{len(items) - MAX_PUSH} more Urban Arrow deals",
+            msgs.append({"title": f"+{len(items) - MAX_PUSH} more {product} deals",
                          "message": "See them all on the site.", "click": site_url or ""})
     ok = False
     for m in msgs:
@@ -211,10 +204,10 @@ def _send_ntfy(topic: str, new: list[dict], drops: list[dict], site_url: str | N
     return ok
 
 
-def _send_email(sender: str, password: str, to: str, new, drops, site_url, first) -> bool:
-    subject, text, html = build(new, drops, site_url, first)
+def _send_email(sender: str, password: str, to: str, new, drops, site_url, first, product="Urban Arrow") -> bool:
+    subject, text, html = build(new, drops, site_url, first, product)
     msg = EmailMessage()
-    msg["Subject"], msg["From"], msg["To"] = subject, f"Urban Arrow tracker <{sender}>", to
+    msg["Subject"], msg["From"], msg["To"] = subject, f"Deal tracker <{sender}>", to
     msg.set_content(text)
     msg.add_alternative(html, subtype="html")
     try:
@@ -228,11 +221,14 @@ def _send_email(sender: str, password: str, to: str, new, drops, site_url, first
     return True
 
 
-def send(listings: dict[str, dict], cfg: dict, site_url: str | None = None) -> None:
+def send(listings: dict[str, dict], cfg: dict, site_url: str | None = None,
+         product: str = "Urban Arrow", profile: Profile | None = None) -> None:
+    global _P
+    _P = profile or get_profile("cargo_bike")
     topic = (os.environ.get("NTFY_TOPIC") or "").strip()
     sender = os.environ.get("GMAIL_ADDRESS")
     password = (os.environ.get("GMAIL_APP_PASSWORD") or "").replace(" ", "")
-    new, drops = pick(listings, cfg)
+    new, drops = pick(listings, cfg, _P)
     first = not any("alerted_price" in l for l in listings.values())
     log.info("alerts: %d new deals, %d price drops%s", len(new), len(drops), " (first alert)" if first else "")
     if not (topic or (sender and password)):
@@ -247,9 +243,9 @@ def send(listings: dict[str, dict], cfg: dict, site_url: str | None = None) -> N
 
     sent = False
     if topic:
-        sent |= _send_ntfy(topic, new, drops, site_url, first, was)
+        sent |= _send_ntfy(topic, new, drops, site_url, first, was, product)
     if sender and password:
-        sent |= _send_email(sender, password, os.environ.get("EMAIL_TO") or sender, new, drops, site_url, first)
+        sent |= _send_email(sender, password, os.environ.get("EMAIL_TO") or sender, new, drops, site_url, first, product)
     if sent:
         # everything that qualified now counts as notified, so nothing repeats next scan
         for l in new + drops:

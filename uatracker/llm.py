@@ -1,4 +1,4 @@
-"""Claude-powered extraction of bike details from listing text.
+"""Claude-powered extraction of item details from listing text (fields come from the product profile).
 
 Backends:
 - api: Anthropic API (needs ANTHROPIC_API_KEY, billed per token — pennies per month)
@@ -14,47 +14,25 @@ import shutil
 import subprocess
 from concurrent.futures import ThreadPoolExecutor
 
-from pydantic import BaseModel, ValidationError
+from pydantic import BaseModel, ValidationError, create_model
 
-from .extract import BikeDetails
+from . import profiles
+from .profiles import Profile
 
 log = logging.getLogger(__name__)
 
 MAX_DESCRIPTION_CHARS = 6000  # listings are almost always far shorter
 
-
-class ExtractedItem(BikeDetails):
-    ref: str
+_MODELS: dict[str, tuple[type[BaseModel], type[BaseModel]]] = {}
 
 
-class Batch(BaseModel):
-    items: list[ExtractedItem]
-
-
-SYSTEM = """You extract structured facts from Dutch (sometimes Belgian or English) second-hand and \
-new listings for Urban Arrow electric cargo bikes ("bakfiets"). You receive several listings as JSON \
-and return one item per listing, with `ref` copied exactly.
-
-Background:
-- Variants: "family" (the classic two-wheel family bakfiets with EPP foam box and bench; includes \
-  Family Performance / Family Cargo Line), "shorty" (shorter box, 1 bench), "tender" (Tender \
-  1500/2500 business models), "cargo" (Cargo L/XL, flatbed, pick-up business models). "other" for \
-  anything else Urban Arrow, "unknown" if the text doesn't say.
-- Motors: Bosch Cargo Line (2021+), Cargo Line Speed (45 km/h S-pedelec), Performance Line CX, \
-  Performance Line, Active Line Plus (older/cheaper), Shimano STEPS (older models).
-- Batteries are usually 400, 500, 545, 625, 725 or 800 Wh. With two batteries, give the total.
-- Gear hubs: Enviolo (also called NuVinci, stepless/traploos), Enviolo AutomatiQ, Shimano Nexus.
-- mileage_km is the odometer reading ("kilometerstand", "gereden", "teller"). Never use range \
-  ("bereik", "actieradius") or top speed ("25 km/u").
-- seller_type "dealer" when it is a shop/company (warranty, VAT/BTW, trade-in, "wij", showroom).
-- is_urban_arrow=false when the bike for sale is another brand (Babboe, Bakfiets.nl, Johnny Loco, \
-  Christiania, ...) and Urban Arrow is only mentioned for comparison or compatibility.
-- is_complete_bike=false for parts or accessories only (rain tent, battery, bench), wanted ads \
-  ("gezocht"), rentals and lease offers.
-- red_flags: only real warning signs, e.g. price far too low for the year, payment up front or \
-  shipping only, no keys/proof of ownership, frame number missing, serious damage not reflected in price.
-Use null / "unknown" / false when the listing doesn't say. Do not guess the model year from photos \
-or from the motor generation."""
+def models(p: Profile) -> tuple[type[BaseModel], type[BaseModel]]:
+    """(item model, batch model) for a profile: the profile's details plus `ref`."""
+    if p.name not in _MODELS:
+        item = create_model(f"{p.Details.__name__}Item", __base__=p.Details, ref=(str, ...))
+        batch = create_model(f"{p.Details.__name__}Batch", items=(list[item], ...))
+        _MODELS[p.name] = (item, batch)
+    return _MODELS[p.name]
 
 
 def pick_backend(cfg: dict) -> str:
@@ -80,7 +58,7 @@ def _payload(listings: list[dict]) -> str:
     return "Extract the details for each of these listings:\n" + json.dumps(rows, ensure_ascii=False, indent=1)
 
 
-def _via_api(listings: list[dict], model: str) -> list[ExtractedItem]:
+def _via_api(listings: list[dict], model: str, p: Profile) -> list[BaseModel]:
     import anthropic
 
     client = anthropic.Anthropic()
@@ -88,9 +66,9 @@ def _via_api(listings: list[dict], model: str) -> list[ExtractedItem]:
         resp = client.messages.parse(
             model=model,
             max_tokens=16000,
-            system=SYSTEM,
+            system=p.system_prompt,
             messages=[{"role": "user", "content": _payload(listings)}],
-            output_format=Batch,
+            output_format=models(p)[1],
         )
     except anthropic.RateLimitError as e:
         log.warning("rate limited by Claude API: %s", e)
@@ -107,14 +85,15 @@ def _via_api(listings: list[dict], model: str) -> list[ExtractedItem]:
     return resp.parsed_output.items
 
 
-def _via_cli(listings: list[dict], model: str) -> list[ExtractedItem]:
+def _via_cli(listings: list[dict], model: str, p: Profile) -> list[BaseModel]:
+    Batch = models(p)[1]
     cmd = [
         "claude", "-p",
         "--model", model,
         "--output-format", "json",
         "--tools", "",
         "--no-session-persistence",
-        "--system-prompt", SYSTEM,
+        "--system-prompt", p.system_prompt,
         "--json-schema", json.dumps(Batch.model_json_schema()),
     ]
     try:
@@ -137,8 +116,9 @@ def _via_cli(listings: list[dict], model: str) -> list[ExtractedItem]:
         return []
 
 
-def extract(listings: list[dict], cfg: dict) -> dict[str, dict]:
+def extract(listings: list[dict], cfg: dict, profile: Profile | None = None) -> dict[str, dict]:
     """Returns {listing_id: details_dict} for the listings Claude handled."""
+    p = profile or profiles.get("cargo_bike")
     backend = pick_backend(cfg)
     if backend == "none" or not listings:
         if listings:
@@ -151,7 +131,7 @@ def extract(listings: list[dict], cfg: dict) -> dict[str, dict]:
     results: dict[str, dict] = {}
     # a few requests at a time: much faster, still gentle on rate limits
     with ThreadPoolExecutor(max_workers=int(cfg.get("parallel_requests", 4))) as pool:
-        for items in pool.map(lambda c: call(c, model), chunks):
+        for items in pool.map(lambda c: call(c, model, p), chunks):
             for item in items:
                 d = item.model_dump()
                 results[d.pop("ref")] = d

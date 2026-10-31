@@ -27,6 +27,7 @@
 }
 
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0; background: var(--bg); color: var(--text);
@@ -124,3 +125,8 @@ footer { padding-bottom: 32px; }
   .tabs { width: 100%; overflow-x: auto; }
   .tabs button { white-space: nowrap; padding: 8px 9px 10px; }
 }
+
+.titlerow { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; }
+.products button { font-size: 13px; padding: 4px 10px; }
+.products .count { margin-left: 4px; }
+.products button[aria-pressed="true"] .count { background: var(--surface); color: var(--accent); }

@@ -238,3 +238,53 @@ def test_empty_search_is_retried(monkeypatch):
     stats = []
     out = marktplaats.fetch({"host": "https://x", "queries": ["urban arrow"], "fetch_details": False}, {}, "marktplaats", known, stats)
     assert len(out) == 30 and stats[0]["retries"] == 1
+
+
+# ---------- multi-product / thermostat ----------
+
+def _t6(title, desc="", price=100, cond="Gebruikt"):
+    return {"id": "x", "title": title, "description": desc, "price_eur": price, "condition_raw": cond}
+
+
+@pytest.mark.parametrize("title,desc,price,cond,expect", [
+    ("Honeywell T6R geseald", "ongeopend, kan verzonden worden", 150, "Nieuw",
+     {"is_item": True, "model": "t6r_wireless", "condition": "sealed_new", "shipping": True}),
+    ("Honeywell T6 bedraad", "werkt prima", 70, "Gebruikt", {"is_item": True, "model": "t6_wired", "condition": "used"}),
+    ("Honeywell T6R zonder ontvanger", "", 55, "Gebruikt", {"includes_receiver": False}),
+    ("2x Honeywell T6R thermostaat", "", 190, "Gebruikt", {"quantity": 2}),
+    ("Honeywell Round thermostaat", "", 25, "Gebruikt", {"is_item": False}),
+    ("Ontvanger Honeywell T6R", "losse ontvanger", 30, "Gebruikt", {"is_item": False}),
+    ("Gezocht: Honeywell T6R", "", None, "Gebruikt", {"is_item": False}),
+])
+def test_thermostat_rules(title, desc, price, cond, expect):
+    from uatracker import profiles
+    d = profiles.get("thermostat").rules(_t6(title, desc, price, cond))
+    for k, v in expect.items():
+        assert d[k] == v, (k, d[k])
+
+
+def test_thermostat_pricing_per_unit_and_receiver():
+    from uatracker import profiles
+    p = profiles.get("thermostat")
+    L = {}
+    for i in range(30):
+        a = {"is_item": True, "model": "t6r_wireless", "condition": "used", "includes_receiver": True, "quantity": 1}
+        L[f"t:{i}"] = {"id": f"t:{i}", "source": "marktplaats", "price_eur": 95 + (i % 5) * 4, "price_type": "FIXED",
+                       "active": True, "first_seen": date.today().isoformat(), "last_seen": date.today().isoformat(), "attrs": a}
+    two = dict(L["t:0"], id="t:two", price_eur=150, attrs=dict(L["t:0"]["attrs"], quantity=2))
+    L["t:two"] = two
+    info = pricing.run(L, {"t6r_wireless": 200}, p)
+    assert info["regression"] is not None
+    # two units at €75 each against ~€100 per unit: a great deal, fair price is for both
+    assert 180 <= two["fair"]["price"] <= 230 and two["deal"]["label"] == "great deal"
+
+
+def test_products_config_and_legacy_layout():
+    from uatracker.config import products
+    legacy = {"home": {"name": "x"}, "alerts": {"min_deal_pct": 10}, "marktplaats": {"enabled": True}}
+    (pid, pc), = products(legacy)
+    assert pid == "urban-arrow" and pc["profile"] == "cargo_bike" and pc["alerts"]["min_deal_pct"] == 10
+    cfg = {"alerts": {"min_deal_pct": 10, "max_distance_km": 120},
+           "products": {"a": {"profile": "cargo_bike"}, "b": {"profile": "thermostat", "alerts": {"min_deal_pct": 15}}}}
+    out = dict(products(cfg))
+    assert out["b"]["alerts"] == {"min_deal_pct": 15, "max_distance_km": 120}
