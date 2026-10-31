@@ -72,6 +72,8 @@ def merge(listings: dict[str, dict], scraped: list[dict], sources_ok: set[str]) 
         if cur is None:
             cur = dict(s)
             cur["first_seen"] = t
+            cur["new_ad_on"] = t            # date this ad appeared (also for relists)
+            cur["new_ad_at"] = now_iso()
             cur["price_history"] = [[t, s.get("price_eur")]]
             relist = _find_relist(listings, s)
             if relist:
