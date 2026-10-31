@@ -11,8 +11,9 @@ marktplaats:
   enabled: true
   host: "https://www.marktplaats.nl"
   queries: ["urban arrow", "urbanarrow"]
-  category_l1: 445          # "Fietsen en Brommers"
-  also_search_all_categories: true  # sellers sometimes pick the wrong category
+  # Search all categories: that already includes the bike category ("Fietsen en Brommers" = 445)
+  # and also catches sellers who picked the wrong one. Set a number to limit it to one category.
+  category_l1: null
   page_size: 100
   max_pages_per_query: 12   # 1,200 results per search; "urban arrow" currently has ~1,000
   fetch_details: true       # open each new listing once to read the full description
