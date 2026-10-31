@@ -125,3 +125,13 @@ def test_alerts_only_once_and_on_price_drop():
 def test_search_plan_covers_category_and_all():
     from uatracker.sources.marktplaats import _searches
     assert _searches({"queries": ["urban arrow"], "category_l1": 445}) == [("urban arrow", 445), ("urban arrow", None)]
+
+
+def test_email_content():
+    from uatracker import notify
+    l = _listing("a", 2022, 3000)
+    l.update(url="https://www.marktplaats.nl/v/x", deal={"pct": 18, "label": "great deal", "flags": ["check km"]},
+             fair={"price": 3650, "low": 3400, "high": 3900, "confidence": "high"}, distance_km=4)
+    subject, text, html = notify.build([l], [], "https://site", first=False)
+    assert "1 new deal" in subject and "€3.000" in subject
+    assert "check km" in text and "https://www.marktplaats.nl/v/x" in html

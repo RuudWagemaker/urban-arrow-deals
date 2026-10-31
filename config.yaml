@@ -55,6 +55,7 @@ llm:
   max_listings_per_run: 250 # safety cap (only new/changed listings are sent)
 
 alerts:
-  min_deal_pct: 10          # notify when a listing is at least this % below fair price
+  # Email alerts: set GMAIL_ADDRESS and GMAIL_APP_PASSWORD as repository secrets (see README)
+  min_deal_pct: 10          # email when a listing is at least this % below fair price
   max_distance_km: 120
   notify_price_drops: true

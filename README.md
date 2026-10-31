@@ -4,12 +4,12 @@ A daily tracker of new and second-hand Urban Arrow cargo bikes in the Netherland
 fair-price estimate for every second-hand listing. It runs on GitHub for free:
 
 ```
-every morning (GitHub Actions)
+three times a day (GitHub Actions)
   → Marktplaats search (+ optional shop pages for new bikes, + optional 2dehands.be)
   → Claude Haiku 5.5 reads each new listing → variant, year, motor, battery, gear hub, km, extras, red flags
   → price history, sold/removed detection, relist detection   (data/listings.json, committed daily)
   → fair price + deal score for every second-hand bike
-  → website on GitHub Pages  +  Telegram message with new deals and price drops
+  → website on GitHub Pages  +  email with new deals and price drops
 ```
 
 ## What you get
@@ -63,18 +63,22 @@ This costs well under €1 a month at this volume.
 
 Without either, the tracker still works using only built-in text rules, but it's less accurate.
 
-### 3. Telegram alerts (optional)
-1. In Telegram, message **@BotFather**, send `/newbot` and copy the token.
-2. Send any message to your new bot, then open
-   `https://api.telegram.org/bot<TOKEN>/getUpdates` and copy `chat.id`.
-3. Add secrets **`TELEGRAM_BOT_TOKEN`** and **`TELEGRAM_CHAT_ID`**.
+### 3. Email alerts (optional)
+Alerts are sent from your own Gmail account to itself.
+1. Gmail needs an **app password** for this, which requires 2-Step Verification on your
+   Google account. Go to https://myaccount.google.com/apppasswords, create one named
+   "Urban Arrow tracker", and copy the 16 characters.
+2. Add two repository secrets: **`GMAIL_ADDRESS`** (your Gmail address) and
+   **`GMAIL_APP_PASSWORD`** (the app password). Optionally add **`EMAIL_TO`** to send the
+   alerts to a different address.
 
-You'll get a message when a new listing is at least 10% below its fair price within
-120 km, or when a good deal drops in price. Change these thresholds in `config.yaml`.
+The first email lists the best current deals. After that you only get an email when a new
+listing is at least 10% below its fair price within 120 km, or when a deal you were
+told about drops in price. Change these thresholds in `config.yaml`.
 
 ### 4. First run
-Go to **Actions → Daily Urban Arrow scan → Run workflow**. After that it runs every
-morning around 06:30.
+Go to **Actions → Daily Urban Arrow scan → Run workflow**. After that it runs three times a
+day (around 07:20, 13:20 and 19:20).
 
 ## Settings (`config.yaml`)
 
