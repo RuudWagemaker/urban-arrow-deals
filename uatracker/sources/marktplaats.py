@@ -134,16 +134,22 @@ def normalize(raw: dict, host: str, source: str) -> dict | None:
     }
 
 
+DETAILS_VERSION = 2   # bump to re-open listing pages after improving the description reader
+DEBUG_SAMPLES: list[dict] = []   # page snippets saved to last_run.json when the reader fails
+MIN_FULL = 220               # search snippets are cut at 200 characters
+
+
 def _fetch_details(s, cfg: dict, results: dict[str, dict], known: dict[str, dict]) -> None:
     """Search results only carry a short snippet. Open each listing once for the full text."""
     budget = cfg.get("max_detail_fetches_per_run", 50)
+    tried = found = 0
     for lid, item in results.items():
         prev = known.get(lid)
-        if prev and (prev.get("full_description") or prev.get("details_tried")):
+        if prev and (prev.get("full_description") or prev.get("details_version") == DETAILS_VERSION):
             if len(prev.get("description") or "") > len(item.get("description") or ""):
                 item["description"] = prev["description"]
             item["full_description"] = prev.get("full_description", False)
-            item["details_tried"] = True
+            item["details_version"] = prev.get("details_version")
             continue
         # cheap accessories don't need their full text
         if item.get("price_eur") is not None and item["price_eur"] < 800:
@@ -157,15 +163,104 @@ def _fetch_details(s, cfg: dict, results: dict[str, dict], known: dict[str, dict
         except SourceError as e:
             log.warning("detail fetch failed: %s", e)
             continue
-        desc = None
-        for obj in json_ld_objects(html):
-            if obj.get("description") and len(obj["description"]) > len(desc or ""):
-                desc = obj["description"]
-        desc = desc or _longest_embedded_description(html) or meta_content(html, "og:description")
-        item["details_tried"] = True
-        if desc and len(desc) >= len(item.get("description") or ""):
-            item["description"] = strip_html(desc)
+        tried += 1
+        item["details_version"] = DETAILS_VERSION
+        snippet = item.get("description") or ""
+        desc = full_description(html, snippet)
+        if desc and len(desc) > len(snippet):
+            item["description"] = desc
             item["full_description"] = True
+            found += 1
+        elif len(DEBUG_SAMPLES) < 3:
+            DEBUG_SAMPLES.append(_debug_sample(html, snippet, item["url"]))
+    log.info("listing pages: opened %d, full description found in %d", tried, found)
+
+
+def _needle_regex(snippet: str, words: int = 7) -> re.Pattern | None:
+    """Regex for the start of the snippet that tolerates any whitespace, <br>, &nbsp; or
+    JSON escapes between the words."""
+    all_words = re.findall(r"\w+", snippet)
+    # use plain-ASCII words: accented letters may be encoded differently in the page
+    ws = []
+    for w in all_words:
+        if w.isascii():
+            ws.append(w)
+            if len(ws) == words:
+                break
+        elif ws:
+            ws = []
+    if len(ws) < 4:
+        return None
+    gap = r"(?:[^\w<]|\\[nrtu]|\\u00a0|&nbsp;|&#\d+;|<br\s*/?>|<[^>]{0,40}>)+"
+    return re.compile(gap.join(re.escape(w) for w in ws), re.I)
+
+
+def _enclosing_json_string(html: str, pos: int) -> str | None:
+    """If position `pos` is inside a JSON string, return that whole string decoded."""
+    i = pos
+    while i > 0 and pos - i < 50000:
+        i -= 1
+        if html[i] == '"' and html[i - 1] != "\\":
+            break
+    else:
+        return None
+    j = pos
+    while j < len(html) and j - pos < 50000:
+        if html[j] == '"' and html[j - 1] != "\\":
+            break
+        j += 1
+    try:
+        return json.loads(html[i:j + 1])
+    except ValueError:
+        return None
+
+
+def full_description(html: str, snippet: str) -> str | None:
+    best = None
+
+    def consider(text):
+        nonlocal best
+        if text:
+            text = strip_html(text)
+            if len(text) > len(best or ""):
+                best = text
+
+    for obj in json_ld_objects(html):
+        if isinstance(obj.get("description"), str):
+            consider(obj["description"])
+    consider(_longest_embedded_description(html))
+
+    # Find where the snippet's text sits in the page, whatever the field is called.
+    rx = _needle_regex(snippet)
+    if rx:
+        for m in list(rx.finditer(html))[:20]:
+            consider(_enclosing_json_string(html, m.start()))
+        # visible page text: from the snippet to the next section heading
+        body = re.sub(r"<(script|style|noscript)[^>]*>.*?</\1>", " ", html, flags=re.S | re.I)
+        text = strip_html(body)
+        m = rx.search(text)
+        if m:
+            rest = text[m.start(): m.start() + 8000]
+            stop = re.search(r"(?<=.{80})\b(Kenmerken|Bekijk ook|Advertentienummer|Meer van deze adverteerder|"
+                             r"Deel deze advertentie|Bied of stel een vraag|Vergelijkbare advertenties)\b", rest, re.S)
+            consider(rest[: stop.start()] if stop else None)
+    if best and snippet and rx and not rx.search(best):
+        # whatever we found must contain the snippet, otherwise it's some other text on the page
+        best = None
+    return best
+
+
+def _debug_sample(html: str, snippet: str, url: str) -> dict:
+    rx = _needle_regex(snippet)
+    hits = [m.start() for m in rx.finditer(html)][:3] if rx else []
+    return {
+        "url": url,
+        "page_length": len(html),
+        "snippet_found_at": hits,
+        "context": [html[max(0, h - 400): h + 600] for h in hits[:2]],
+        "script_tags": re.findall(r"<script[^>]{0,120}>", html)[:15],
+        "has_json_ld": "application/ld+json" in html,
+    }
 
 
 def _longest_embedded_description(html: str) -> str | None:

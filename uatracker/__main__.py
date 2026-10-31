@@ -40,6 +40,9 @@ def scrape(cfg: dict, known: dict, report: dict) -> tuple[list[dict], set[str]]:
             continue
         out += items
         rep["unique_listings"] = len(items)
+        if marktplaats.DEBUG_SAMPLES:
+            rep["description_debug"] = list(marktplaats.DEBUG_SAMPLES)
+            marktplaats.DEBUG_SAMPLES.clear()
         log.info("%s: %d listings", source, len(items))
         # Only treat missing ads as sold/removed when today's search looks complete.
         before = sum(1 for l in known.values() if l.get("source") == source and l.get("active"))

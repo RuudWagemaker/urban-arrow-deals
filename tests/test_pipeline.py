@@ -190,3 +190,29 @@ def test_ntfy_messages(monkeypatch):
     L["t:3"]["price_eur"] = 2500
     notify.send(L, {"min_deal_pct": 10}, "https://site")
     assert len(posts) == 1 and posts[0]["title"].startswith("Price drop: €2.500 (was €2.997)")
+
+
+SNIP = "Te koop: Urban Arrow Family uit 2021 in nette staat. Bosch Performance CX motor met 500Wh accu, " \
+       "Enviolo naaf. Inclusief regenhuif en kussens. Altijd binnen gestald en goed onderhouden door de"
+FULL = SNIP + " dealer.\nKilometerstand: 4.250 km\nBouwjaar 2021, aankoopbon aanwezig. Café-ophalen in Rosmalen."
+
+
+@pytest.mark.parametrize("page", [
+    # description in an embedded JSON blob under an unknown key, with escapes
+    '<script>window.__STATE__ = {"ad":{"body":' + json.dumps(FULL) + ',"x":1}};</script><p>' + SNIP[:120] + '</p>',
+    # description only as visible HTML
+    '<html><body><h1>Urban Arrow</h1><div class="desc">' + FULL.replace("\n", "<br>") +
+    '</div><div>Kenmerken</div><div>Merk: Urban Arrow</div></body></html>',
+    # JSON-LD
+    '<script type="application/ld+json">' + json.dumps({"@type": "Product", "description": FULL}) + '</script>',
+])
+def test_full_description_found(page):
+    from uatracker.sources.marktplaats import full_description
+    d = full_description(page, SNIP[:200])
+    assert d and "Kilometerstand: 4.250 km" in d and "Rosmalen" in d and "Merk:" not in d
+
+
+def test_unrelated_long_text_is_ignored():
+    from uatracker.sources.marktplaats import full_description
+    page = '<script>{"description":"' + "Marktplaats is de grootste ... " * 20 + '"}</script>'
+    assert full_description(page, SNIP[:200]) is None
