@@ -1,0 +1,61 @@
+name: Daily Urban Arrow scan
+
+on:
+  schedule:
+    - cron: "23 5 * * *"   # every day ~06:23/07:23 Dutch time
+  workflow_dispatch: {}     # "Run workflow" button in the Actions tab
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: daily-scan
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    env:
+      # Pick ONE way to give Claude access (see README):
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}  # Pro/Max subscription
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}              # or pay-per-use API key
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Install Claude Code (subscription mode)
+        if: env.CLAUDE_CODE_OAUTH_TOKEN != '' && env.ANTHROPIC_API_KEY == ''
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Scan, analyse, build site
+        run: python -m uatracker run
+
+      - name: Save collected data
+        run: |
+          git config user.name "ua-tracker bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "data: $(date -u +%F)"
+          git push
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deploy
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,37 @@
+{
+  "_comment": "Hand-written test fixture in the shape of the Marktplaats search API. Not real listings.",
+  "totalResultCount": 3,
+  "listings": [
+    {
+      "itemId": "m1000000001",
+      "title": "Urban Arrow Family Cargo Line 2022 incl. regentent",
+      "description": "Bouwjaar 2022, Bosch Cargo Line, 545Wh, enviolo. Kilometerstand 3.150 km. Actieradius ca 60 km.",
+      "priceInfo": {"priceCents": 425000, "priceType": "FIXED"},
+      "location": {"cityName": "Vught", "countryAbbreviation": "NL", "distanceMeters": 5400, "latitude": 51.65, "longitude": 5.29},
+      "date": "2026-10-30T09:12:00Z",
+      "sellerInformation": {"sellerId": 1, "sellerName": "x", "showWebsiteUrl": false, "isVerified": false},
+      "pictures": [{"mediumUrl": "//images.example/1.jpg"}],
+      "vipUrl": "/v/fietsen-en-brommers/fietsen-bakfietsen/m1000000001-urban-arrow-family",
+      "attributes": [{"key": "condition", "value": "Gebruikt"}]
+    },
+    {
+      "itemId": "m1000000002",
+      "title": "Regentent voor Urban Arrow Family",
+      "description": "Nette regentent, past op de family.",
+      "priceInfo": {"priceCents": 15000, "priceType": "FIXED"},
+      "location": {"cityName": "Tilburg", "countryAbbreviation": "NL", "distanceMeters": 21000},
+      "vipUrl": "/v/x/m1000000002-regentent",
+      "attributes": [{"key": "condition", "value": "Gebruikt"}]
+    },
+    {
+      "itemId": "m1000000003",
+      "title": "Urban Arrow Shorty Performance CX nieuw",
+      "description": "Nieuw uit voorraad, incl. btw en 2 jaar garantie. 625Wh. Nexus 5.",
+      "priceInfo": {"priceCents": 0, "priceType": "SEE_DESCRIPTION"},
+      "location": {"cityName": "Utrecht", "countryAbbreviation": "NL", "distanceMeters": 52000},
+      "sellerInformation": {"showWebsiteUrl": true},
+      "vipUrl": "/v/x/m1000000003-shorty",
+      "attributes": [{"key": "condition", "value": "Nieuw"}]
+    }
+  ]
+}
