@@ -58,4 +58,5 @@ alerts:
   # Email alerts: set GMAIL_ADDRESS and GMAIL_APP_PASSWORD as repository secrets (see README)
   min_deal_pct: 10          # email when a listing is at least this % below fair price
   max_distance_km: 120
+  min_confidence: medium    # skip listings with too little info to price reliably
   notify_price_drops: true

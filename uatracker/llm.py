@@ -46,6 +46,8 @@ Background:
 - mileage_km is the odometer reading ("kilometerstand", "gereden", "teller"). Never use range \
   ("bereik", "actieradius") or top speed ("25 km/u").
 - seller_type "dealer" when it is a shop/company (warranty, VAT/BTW, trade-in, "wij", showroom).
+- is_urban_arrow=false when the bike for sale is another brand (Babboe, Bakfiets.nl, Johnny Loco, \
+  Christiania, ...) and Urban Arrow is only mentioned for comparison or compatibility.
 - is_complete_bike=false for parts or accessories only (rain tent, battery, bench), wanted ads \
   ("gezocht"), rentals and lease offers.
 - red_flags: only real warning signs, e.g. price far too low for the year, payment up front or \

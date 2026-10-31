@@ -23,8 +23,12 @@ Condition = Literal["new", "like_new", "good", "fair", "needs_work", "unknown"]
 SellerType = Literal["private", "dealer", "unknown"]
 
 
+EXTRACT_VERSION = 2  # bump to make Claude re-read every listing after changing the schema/prompt
+
+
 class BikeDetails(BaseModel):
     is_complete_bike: bool = Field(description="False for parts/accessories, wanted ads, rentals, lease offers")
+    is_urban_arrow: bool = Field(description="The bike for sale is itself an Urban Arrow (false for other brands that only mention Urban Arrow, e.g. 'like an Urban Arrow')")
     variant: Variant
     model_year: int | None = Field(description="Build year / model year, null if not stated")
     motor: Motor
@@ -71,6 +75,7 @@ def rules(listing: dict) -> dict:
     d: dict = {}
 
     mentions_ua = _has(r"urban\s*-?\s*arrow", text)
+    d["is_urban_arrow"] = mentions_ua
     accessory_title = _has(ACCESSORY, title) and not _has(BIKE_WORDS, title)
     d["is_complete_bike"] = bool(
         mentions_ua
@@ -189,12 +194,17 @@ def _mileage(low: str) -> int | None:
 
 def combine(rule_d: dict, llm_d: dict | None) -> dict:
     """LLM wins where it gives a concrete answer, rules fill the gaps."""
-    if not llm_d:
-        return dict(rule_d)
     out = dict(rule_d)
-    for k, v in llm_d.items():
-        if v in (None, "unknown", "", []):
-            continue
-        out[k] = v
-    out["red_flags"] = sorted(set(rule_d.get("red_flags", [])) | set(llm_d.get("red_flags") or []))
+    if llm_d:
+        for k, v in llm_d.items():
+            if v in (None, "unknown", "", []):
+                continue
+            out[k] = v
+        out["red_flags"] = sorted(set(rule_d.get("red_flags", [])) | set(llm_d.get("red_flags") or []))
+    # only complete Urban Arrows count as bikes on the site and in the price model
+    out["is_complete_bike"] = bool(out.get("is_complete_bike")) and out.get("is_urban_arrow", True) is not False
+    # a bike can't be from this year (or later) and already have done thousands of km
+    y, km = out.get("model_year"), out.get("mileage_km")
+    if y and (y > date.today().year or (y >= date.today().year and km and km > 3000)):
+        out["model_year"] = None
     return out

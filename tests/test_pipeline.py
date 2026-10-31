@@ -112,6 +112,7 @@ def test_alerts_only_once_and_on_price_drop():
     from uatracker import notify
     l = _listing("a", 2022, 3000)
     l["deal"] = {"pct": 20, "label": "great deal", "flags": []}
+    l["fair"] = {"price": 3750, "confidence": "high"}
     l["distance_km"] = 10
     L = {"a": l}
     new, drops = notify.pick(L, {"min_deal_pct": 10, "max_distance_km": 100})
@@ -135,3 +136,14 @@ def test_email_content():
     subject, text, html = notify.build([l], [], "https://site", first=False)
     assert "1 new deal" in subject and "€3.000" in subject
     assert "check km" in text and "https://www.marktplaats.nl/v/x" in html
+
+
+def test_other_brands_and_project_bikes_are_not_emailed():
+    from uatracker import notify
+    from uatracker.extract import combine
+    a = combine({"is_complete_bike": True, "is_urban_arrow": True}, {"is_urban_arrow": False})
+    assert not a["is_complete_bike"]
+    l = _listing("p", 2020, 900)
+    l["attrs"]["condition"] = "needs_work"
+    l.update(deal={"pct": 60, "label": "needs work", "flags": []}, fair={"price": 3000, "confidence": "high"})
+    assert notify.pick({"p": l}, {"min_deal_pct": 10}) == ([], [])

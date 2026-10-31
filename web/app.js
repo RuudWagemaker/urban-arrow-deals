@@ -10,7 +10,7 @@
   };
   const HUB = { enviolo_automatiq: "Enviolo AutomatiQ", enviolo: "Enviolo", nexus: "Nexus", rohloff: "Rohloff" };
   const COND = { new: "new", like_new: "as new", good: "good", fair: "fair", needs_work: "needs work" };
-  const LABEL_CLASS = { "great deal": "great", "good deal": "good", "fair price": "fair", "a bit pricey": "pricey", "overpriced": "over" };
+  const LABEL_CLASS = { "needs work": "pricey", "great deal": "great", "good deal": "good", "fair price": "fair", "a bit pricey": "pricey", "overpriced": "over" };
   const daysBetween = (a, b) => Math.round((new Date(b) - new Date(a)) / 864e5);
   const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
 
@@ -88,7 +88,7 @@
     const badge = $(".badge", el);
     if (mode === "used") {
       const d = l.deal || {};
-      badge.textContent = !l.active ? "sold / removed" : d.pct == null ? "no price" : `${d.label} ${d.pct > 0 ? "−" : "+"}${Math.abs(Math.round(d.pct))}%`;
+      badge.textContent = !l.active ? "sold / removed" : d.pct == null ? "no price" : d.label === "needs work" ? "needs work" : `${d.label} ${d.pct > 0 ? "−" : "+"}${Math.abs(Math.round(d.pct))}%`;
       badge.className = "badge " + (l.active ? (LABEL_CLASS[d.label] || "none") : "none");
     } else {
       const n = l.new_deal || {};
@@ -152,6 +152,8 @@
       minyear: +f.get("minyear") || 0, sort: f.get("sort"), dealers: f.get("dealers") === "on", removed: f.get("removed") === "on",
     };
   }
+  // "Best deal" order: trustworthy listings first, then ones with warnings, needs-work last
+  const rank = (l) => (l.deal?.label === "needs work" ? 3 : 0) + (l.fair?.confidence === "low" ? 1 : 0) + ((l.attrs?.red_flags || []).length ? 1 : 0);
   function renderUsed() {
     const F = filters();
     store.set("filters", Object.fromEntries(new FormData(form)));
@@ -164,7 +166,7 @@
       (!F.minyear || (l.attrs.model_year || 0) >= F.minyear) &&
       (F.dealers || l.attrs.seller_type !== "dealer"));
     const by = {
-      deal: (a, b) => (b.active - a.active) || ((b.deal?.pct ?? -999) - (a.deal?.pct ?? -999)),
+      deal: (a, b) => (b.active - a.active) || (rank(a) - rank(b)) || ((b.deal?.pct ?? -999) - (a.deal?.pct ?? -999)),
       price: (a, b) => (a.price_eur ?? 1e9) - (b.price_eur ?? 1e9),
       newest: (a, b) => (b.first_seen || "").localeCompare(a.first_seen || ""),
       distance: (a, b) => (a.distance_km ?? 1e9) - (b.distance_km ?? 1e9),

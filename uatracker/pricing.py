@@ -235,7 +235,8 @@ def run(listings: dict[str, dict], msrp: dict, min_regression_n: int = 25, k: in
             flags = list((l.get("attrs") or {}).get("red_flags") or [])
             if pct > 40:
                 flags.append("price far below market: check carefully (scam/stolen/defect?)")
-            l["deal"] = {"pct": round(pct, 1), "label": deal_label(pct), "flags": flags}
+            label = "needs work" if (l.get("attrs") or {}).get("condition") == "needs_work" else deal_label(pct)
+            l["deal"] = {"pct": round(pct, 1), "label": label, "flags": flags}
         else:
             l["deal"] = {"pct": None, "label": "no price", "flags": list((l.get("attrs") or {}).get("red_flags") or [])}
 

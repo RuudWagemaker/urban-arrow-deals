@@ -35,11 +35,15 @@ def pick(listings: dict[str, dict], cfg: dict) -> tuple[list[dict], list[dict]]:
     min_pct = cfg.get("min_deal_pct", 10)
     max_km = cfg.get("max_distance_km", 9999)
 
+    min_conf = {"low": 0, "medium": 1, "high": 2}[cfg.get("min_confidence", "medium")]
+
     def ok(l):
-        d = l.get("deal") or {}
+        d, a, f = l.get("deal") or {}, l.get("attrs") or {}, l.get("fair") or {}
         dist = l.get("distance_km")
         return (l.get("active") and l.get("price_eur") and d.get("pct") is not None
-                and d["pct"] >= min_pct and (dist is None or dist <= max_km))
+                and d["pct"] >= min_pct and (dist is None or dist <= max_km)
+                and a.get("is_complete_bike") and a.get("condition") != "needs_work"
+                and {"low": 0, "medium": 1, "high": 2}.get(f.get("confidence"), 0) >= min_conf)
 
     new, drops = [], []
     for l in listings.values():
@@ -50,7 +54,8 @@ def pick(listings: dict[str, dict], cfg: dict) -> tuple[list[dict], list[dict]]:
             new.append(l)
         elif cfg.get("notify_price_drops", True) and l["price_eur"] < sent:
             drops.append(l)
-    key = lambda l: -(l["deal"]["pct"])
+    # listings without warning signs first, then by size of the discount
+    key = lambda l: (bool((l.get("attrs") or {}).get("red_flags")), -(l["deal"]["pct"]))
     return sorted(new, key=key), sorted(drops, key=key)
 
 

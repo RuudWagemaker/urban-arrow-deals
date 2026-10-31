@@ -15,7 +15,7 @@ import sys
 
 from . import llm, notify, pricing, site, store
 from .config import DATA_DIR, SITE_DIR, load_config
-from .extract import combine, rules, text_hash
+from .extract import EXTRACT_VERSION, combine, rules, text_hash
 from .sources import marktplaats, shops
 from .sources.http import SourceError
 
@@ -74,13 +74,15 @@ def enrich(listings: dict, cfg: dict) -> None:
         if l.get("distance_km") is None and l.get("lat") and l.get("lon") and home.get("lat"):
             l["distance_km"] = round(_haversine(home["lat"], home["lon"], l["lat"], l["lon"]), 1)
         h = text_hash(l)
-        if l.get("attrs_hash") != h:
+        if l.get("attrs_hash") != h or l.get("attrs_version") != EXTRACT_VERSION:
             l["rule_attrs"] = rules(l)
             l["attrs"] = combine(l["rule_attrs"], None)
             if l.get("variant_hint") and l["attrs"].get("variant") == "unknown":
                 l["attrs"]["variant"] = l["variant_hint"]
             l["attrs_hash"] = h
+            l["attrs_version"] = EXTRACT_VERSION
             l["attrs_source"] = "rules"
+            l.pop("llm_attrs", None)
         if l.get("active") and l.get("attrs_source") != "claude":
             todo.append(l)
 
