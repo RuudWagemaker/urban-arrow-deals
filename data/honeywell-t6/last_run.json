@@ -1,5 +1,5 @@
 {
- "started_at": "2026-11-01T09:07:08+00:00",
+ "started_at": "2026-11-01T09:17:30+00:00",
  "sources": {
   "marktplaats": {
    "searches": [
@@ -7,8 +7,8 @@
      "query": "honeywell t6",
      "category": null,
      "pages": 1,
-     "listings": 87,
-     "total": 87,
+     "listings": 88,
+     "total": 88,
      "error": null
     },
     {
@@ -36,19 +36,19 @@
      "error": null
     }
    ],
-   "unique_listings": 131,
+   "unique_listings": 130,
    "complete": true
   }
  },
  "merge": {
-  "new": 6,
+  "new": 5,
   "updated": 125,
   "price_changes": 0,
   "removed": 7,
   "relists": 0
  },
- "finished_at": "2026-11-01T09:07:57+00:00",
- "active_listings": 131,
+ "finished_at": "2026-11-01T09:18:17+00:00",
+ "active_listings": 130,
  "active_items": 74,
  "llm_backend": "cli"
 }

@@ -45035,21 +45035,19 @@
    "dual_battery": false,
    "gear_hub": "unknown",
    "is_complete_bike": false,
+   "is_item": false,
    "is_urban_arrow": false,
    "mileage_km": 400,
    "model_year": null,
    "motor": "unknown",
    "rain_tent": false,
-   "red_flags": [
-    "brand not stated, Johnny Loco look-alike",
-    "spam list of many brands in text"
-   ],
+   "red_flags": [],
    "seller_type": "private",
-   "summary": "Johnny Loco look-alike electric cargo bike, 400 km, barely used; brand unclear, Urban Arrow only in a brand list.",
+   "summary": "Johnny Loco look-alike electric cargo bike, about 400 km, near new, kept indoors; not an Urban Arrow (brand list in ad is keyword spam).",
    "variant": "unknown",
    "warranty": false
   },
-  "attrs_hash": "746fdcba85c7e9cc",
+  "attrs_hash": "d41233b9ebd0a842",
   "attrs_source": "claude",
   "attrs_version": 2,
   "city": "Zelhem",
@@ -45126,18 +45124,15 @@
    "model_year": null,
    "motor": "unknown",
    "rain_tent": false,
-   "red_flags": [
-    "brand not stated, Johnny Loco look-alike",
-    "spam list of many brands in text"
-   ],
+   "red_flags": [],
    "seller_type": "private",
-   "summary": "Johnny Loco look-alike electric cargo bike, 400 km, barely used; brand unclear, Urban Arrow only in a brand list.",
+   "summary": "Johnny Loco look-alike electric cargo bike, about 400 km, near new, kept indoors; not an Urban Arrow (brand list in ad is keyword spam).",
    "variant": "unknown",
    "warranty": false
   },
   "lon": 6.3714330163954,
   "posted_at": "10 okt 26",
-  "price_eur": 1000,
+  "price_eur": 950,
   "price_history": [
    [
     "2026-10-31",
@@ -45146,6 +45141,10 @@
    [
     "2026-10-31",
     1000
+   ],
+   [
+    "2026-11-01",
+    950
    ]
   ],
   "price_type": "MIN_BID",
@@ -95460,5 +95459,78 @@
   "source": "marktplaats",
   "title": "Maxi-Cosi adapters voor Urban Arrow bakfiets",
   "url": "https://www.marktplaats.nl/v/fietsen-en-brommers/fietsen-bakfietsen/m2460486932-maxi-cosi-adapters-voor-urban-arrow-bakfiets"
+ },
+ {
+  "active": true,
+  "attrs": {
+   "accessories": [],
+   "battery_wh": null,
+   "child_seat_extras": true,
+   "condition": "good",
+   "dual_battery": false,
+   "gear_hub": "unknown",
+   "is_complete_bike": false,
+   "is_item": false,
+   "is_urban_arrow": true,
+   "mileage_km": null,
+   "model_year": null,
+   "motor": "unknown",
+   "rain_tent": false,
+   "red_flags": [],
+   "seller_type": "private",
+   "summary": "",
+   "variant": "family",
+   "warranty": false
+  },
+  "attrs_hash": "9c868102b82ceb8d",
+  "attrs_source": "rules",
+  "attrs_version": 2,
+  "city": "Emmen",
+  "condition_raw": "Gebruikt",
+  "country": "Nederland",
+  "description": "Complete set maxi-cosi adapters voor de urban arrow family next bakfiets. Aangeschaft in mei en in zeer goede staat. Inclusief alle benodigde bevestigingsboutjes en zeer eenvoudig te installeren. Idea",
+  "distance_km": 159.0,
+  "first_seen": "2026-11-01",
+  "id": "marktplaats:m2460492392",
+  "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/84d61483-74f6-4e39-b205-3456ff02a6ad?rule=ecg_mp_eps$_82.jpg",
+  "kind": "used",
+  "last_seen": "2026-11-01",
+  "lat": 52.744509150978,
+  "lon": 6.8849429852219,
+  "new_ad_at": "2026-11-01T09:17:24+00:00",
+  "new_ad_on": "2026-11-01",
+  "posted_at": "Vandaag",
+  "price_eur": 185,
+  "price_history": [
+   [
+    "2026-11-01",
+    185
+   ]
+  ],
+  "price_type": "FIXED",
+  "rule_attrs": {
+   "accessories": [],
+   "battery_wh": null,
+   "child_seat_extras": true,
+   "condition": "good",
+   "dual_battery": false,
+   "gear_hub": "unknown",
+   "is_complete_bike": false,
+   "is_urban_arrow": true,
+   "mileage_km": null,
+   "model_year": null,
+   "motor": "unknown",
+   "rain_tent": false,
+   "red_flags": [],
+   "seller_type": "private",
+   "summary": "",
+   "variant": "family",
+   "warranty": false
+  },
+  "seller_has_website": false,
+  "seller_verified": false,
+  "source": "marktplaats",
+  "title": "Maxi-Cosi adapters Urban Arrow Family Next",
+  "url": "https://www.marktplaats.nl/v/fietsen-en-brommers/fietsaccessoires-fietsstoeltjes/m2460492392-maxi-cosi-adapters-urban-arrow-family-next"
  }
 ]
