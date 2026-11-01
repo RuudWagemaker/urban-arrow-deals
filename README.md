@@ -5,7 +5,7 @@ listing. It currently follows **Urban Arrow** cargo bikes and the **Honeywell T6
 thermostat, with one website and a product switcher. It runs on GitHub for free:
 
 ```
-three times a day (GitHub Actions), for every product in config.yaml
+every 2 hours, 07:00–23:00 (GitHub Actions), for every product in config.yaml
   → Marktplaats search (+ optional shop pages for new items, + optional 2dehands.be)
   → Claude Haiku 5.5 reads each new ad → the product's details (bike: variant, year, motor,
     battery, km...; thermostat: T6 or T6R, condition, receiver, box...) and red flags
@@ -102,8 +102,8 @@ listing is at least 10% below its fair price within 120 km, or when a deal you w
 about drops in price. Change these thresholds in `config.yaml`.
 
 ### 4. First run
-Go to **Actions → Daily Urban Arrow scan → Run workflow**. After that it runs three times a
-day (around 07:20, 13:20 and 19:20).
+Go to **Actions → Daily Urban Arrow scan → Run workflow**. After that it runs every 2 hours
+between about 07:00 and 23:00 Dutch time.
 
 ## Settings (`config.yaml`)
 

@@ -278,7 +278,7 @@
       out.push(c);
     }
     list.replaceChildren(...out);
-    if (!rows.length) list.innerHTML = `<div class="empty">No new ${esc(DATA.name)} ads ${days === 0 ? "yet today" : days === 1 ? "yesterday" : "in the last 7 days"} within ${maxKm >= 99999 ? "any distance" : maxKm + " km"}. Scans run around 07:20, 13:20 and 19:20.</div>`;
+    if (!rows.length) list.innerHTML = `<div class="empty">No new ${esc(DATA.name)} ads ${days === 0 ? "yet today" : days === 1 ? "yesterday" : "in the last 7 days"} within ${maxKm >= 99999 ? "any distance" : maxKm + " km"}. Scans run every 2 hours between about 07:00 and 23:00.</div>`;
     const first = DATA.tracking_since;
     $("#today-note").textContent = from <= first && first <= to
       ? `${dayName(first)} was the tracker's first day, so every ad found then counts as new.` : "";

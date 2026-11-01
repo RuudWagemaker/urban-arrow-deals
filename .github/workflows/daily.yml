@@ -2,7 +2,8 @@ name: Daily Urban Arrow scan
 
 on:
   schedule:
-    - cron: "23 5,11,17 * * *"   # three times a day: ~07:23, 13:23, 19:23 Dutch time (an hour earlier in summer)
+    - cron: "17 6-22/2 * * *"   # every 2 hours, ~07:17–23:17 Dutch winter time (08:17–00:17 in summer).
+                                  # GitHub sometimes starts scheduled runs late or skips one; frequent runs make that harmless.
   workflow_dispatch: {}           # "Run workflow" button in the Actions tab
   push:                           # also run right after a code change
     branches: [main]
