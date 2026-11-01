@@ -1,5 +1,5 @@
 {
- "started_at": "2026-11-01T12:42:29+00:00",
+ "started_at": "2026-11-01T13:14:49+00:00",
  "sources": {
   "marktplaats": {
    "searches": [
@@ -36,19 +36,45 @@
      "error": null
     }
    ],
-   "unique_listings": 133,
+   "unique_listings": 134,
+   "description_debug": [
+    {
+     "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2457480587-honeywell-thermostaat",
+     "page_length": 104004,
+     "snippet_found_at": [],
+     "context": [],
+     "script_tags": [
+      "<script crossorigin=\"anonymous\" async=\"\" src=\"//www.hzcdn.io/bff/static/vendor/ecg-js-ga-tracking/index.c470d0fc.js\">",
+      "<script type=\"application/ld+json\">",
+      "<script type=\"application/ld+json\">",
+      "<script type=\"application/ld+json\">",
+      "<script>",
+      "<script>",
+      "<script crossorigin=\"anonymous\" src=\"//www.hzcdn.io/bff/static/vendor/sourcepoint-lib/index.de2ff0f0.js\">",
+      "<script defer=\"\" src=\"https://consent.marktplaats.nl/unified/wrapperMessagingWithoutDetection.js\">",
+      "<script>",
+      "<script>",
+      "<script>",
+      "<script>",
+      "<script>",
+      "<script>",
+      "<script id=\"intowowMP\">"
+     ],
+     "has_json_ld": true
+    }
+   ],
    "complete": true
   }
  },
  "merge": {
-  "new": 7,
-  "updated": 126,
+  "new": 4,
+  "updated": 130,
   "price_changes": 0,
-  "removed": 7,
+  "removed": 5,
   "relists": 0
  },
- "finished_at": "2026-11-01T12:43:24+00:00",
- "active_listings": 133,
- "active_items": 77,
+ "finished_at": "2026-11-01T13:15:28+00:00",
+ "active_listings": 134,
+ "active_items": 78,
  "llm_backend": "cli"
 }

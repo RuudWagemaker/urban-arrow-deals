@@ -153,7 +153,7 @@
   "url": "https://www.marktplaats.nl/v/auto-onderdelen/dashboard-en-schakelaars/m2032579587-vw-t6-t6-1-airbag-airbagset-dashboard-alles-leverbaar"
  },
  {
-  "active": true,
+  "active": false,
   "attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -209,6 +209,7 @@
    ]
   ],
   "price_type": "FIXED",
+  "removed_on": "2026-11-01",
   "rule_attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -4905,7 +4906,7 @@
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2455974164-honeywell-t6-slimme-thermostaat-met-gateway"
  },
  {
-  "active": true,
+  "active": false,
   "attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -4961,6 +4962,7 @@
    ]
   ],
   "price_type": "FAST_BID",
+  "removed_on": "2026-11-01",
   "rule_attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -5356,7 +5358,7 @@
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2456515851-honeywell-lyric-t6-slimme-thermostaat-nieuw-in-doos"
  },
  {
-  "active": true,
+  "active": false,
   "attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -5418,6 +5420,7 @@
    ]
   ],
   "price_type": "FAST_BID",
+  "removed_on": "2026-11-01",
   "rule_attrs": {
    "condition": "new_open_box",
    "includes_receiver": null,
@@ -5559,7 +5562,7 @@
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2456622754-honeywell-lyric-t6"
  },
  {
-  "active": true,
+  "active": false,
   "attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -5615,6 +5618,7 @@
    ]
   ],
   "price_type": "FAST_BID",
+  "removed_on": "2026-11-01",
   "rule_attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -6454,6 +6458,85 @@
  {
   "active": true,
   "attrs": {
+   "condition": "unknown",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "model_assumed": false,
+   "original_box": false,
+   "quantity": 1,
+   "red_flags": [
+    "no model or condition details"
+   ],
+   "seller_type": "private",
+   "shipping": false,
+   "summary": "Honeywell thermostat, no model or details given (cannot confirm T6)",
+   "table_stand": false
+  },
+  "attrs_hash": "ae902f0e2406ceb2",
+  "attrs_source": "claude",
+  "attrs_version": 1,
+  "city": "Tilburg",
+  "condition_raw": "",
+  "country": "Nederland",
+  "description": "Honeywell thermostaat",
+  "details_version": 2,
+  "distance_km": 22.0,
+  "first_seen": "2026-11-01",
+  "id": "marktplaats:m2457480587",
+  "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/d7d6e47c-f991-49af-bd8d-c9a0b37db0ec?rule=ecg_mp_eps$_82.jpg",
+  "kind": "used",
+  "last_seen": "2026-11-01",
+  "lat": 51.536922664293,
+  "llm_attrs": {
+   "condition": "unknown",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "original_box": false,
+   "quantity": 1,
+   "red_flags": [
+    "no model or condition details"
+   ],
+   "seller_type": "unknown",
+   "shipping": false,
+   "summary": "Honeywell thermostat, no model or details given (cannot confirm T6)",
+   "table_stand": false
+  },
+  "lon": 5.0855666585541,
+  "new_ad_at": "2026-11-01T13:15:17+00:00",
+  "new_ad_on": "2026-11-01",
+  "posted_at": "24 okt 26",
+  "price_eur": null,
+  "price_history": [
+   [
+    "2026-11-01",
+    null
+   ]
+  ],
+  "price_type": "FAST_BID",
+  "rule_attrs": {
+   "condition": "unknown",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "original_box": false,
+   "quantity": 1,
+   "red_flags": [],
+   "seller_type": "private",
+   "shipping": false,
+   "summary": "",
+   "table_stand": false
+  },
+  "seller_has_website": false,
+  "seller_verified": false,
+  "source": "marktplaats",
+  "title": "honeywell thermostaat",
+  "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2457480587-honeywell-thermostaat"
+ },
+ {
+  "active": true,
+  "attrs": {
    "condition": "like_new",
    "includes_receiver": null,
    "is_item": false,
@@ -6855,7 +6938,7 @@
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2457733768-honeywell-t6-smartthermostaat"
  },
  {
-  "active": false,
+  "active": true,
   "attrs": {
    "condition": "like_new",
    "includes_receiver": null,
@@ -6911,7 +6994,6 @@
    ]
   ],
   "price_type": "FIXED",
-  "removed_on": "2026-11-01",
   "rule_attrs": {
    "condition": "like_new",
    "includes_receiver": null,
@@ -7662,7 +7744,7 @@
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/verwarming-en-radiatoren/m2457970736-honeywell-t6-home-slimme-thermostaat"
  },
  {
-  "active": true,
+  "active": false,
   "attrs": {
    "condition": "sealed_new",
    "includes_receiver": true,
@@ -7718,6 +7800,7 @@
    ]
   ],
   "price_type": "MIN_BID",
+  "removed_on": "2026-11-01",
   "rule_attrs": {
    "condition": "new_open_box",
    "includes_receiver": true,
@@ -8174,7 +8257,7 @@
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2458140709-honeywell-t6-ontvanger-wandplaat-nieuw-t6-thermostaat"
  },
  {
-  "active": false,
+  "active": true,
   "attrs": {
    "condition": "like_new",
    "includes_receiver": null,
@@ -8252,7 +8335,7 @@
   "id": "marktplaats:m2458223658",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/278b4f21-ac4f-4a28-b30a-c275158f5b87?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-10-31",
+  "last_seen": "2026-11-01",
   "lat": 52.073887576931,
   "llm_attrs": {
    "condition": "like_new",
@@ -8272,7 +8355,7 @@
   "lon": 4.2804470354545,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
   "new_ad_on": "2026-10-31",
-  "posted_at": "Eergisteren",
+  "posted_at": "29 okt 26",
   "price_eur": null,
   "price_history": [
    [
@@ -8281,7 +8364,6 @@
    ]
   ],
   "price_type": "FAST_BID",
-  "removed_on": "2026-11-01",
   "rule_attrs": {
    "condition": "like_new",
    "includes_receiver": null,
@@ -8376,6 +8458,82 @@
   "source": "marktplaats",
   "title": "Honeywell T6 Gateway",
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2458229586-honeywell-t6-gateway"
+ },
+ {
+  "active": true,
+  "attrs": {
+   "condition": "like_new",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "model_assumed": false,
+   "original_box": false,
+   "quantity": 1,
+   "red_flags": [],
+   "seller_type": "private",
+   "shipping": false,
+   "summary": "Honeywell Home thermostat, white, 230V, used half a year, not identified as a T6",
+   "table_stand": false
+  },
+  "attrs_hash": "df5113f1cf4c127c",
+  "attrs_source": "claude",
+  "attrs_version": 1,
+  "city": "Oisterwijk",
+  "condition_raw": "Zo goed als nieuw",
+  "country": "Nederland",
+  "description": ">Te koop:\nHoneywell Home thermostaat in nette,\nwitte uitvoering.\n\nDeze thermostaat is maar een half jaar gebruikt toen we een spaarpomp hebben geïnstalleerd. Is daarom nog zo goed als nieuw.\n\n Kenmerken: \n\n Merk: Honeywell Home Kleur: wit Aansluiting: 230 V Aansluitklemmen: A, B en C Maximale belasting: 3(1) A Compact en eenvoudig vormgegeven \nDe thermostaat wordt verkocht zoals afgebeeld op de foto’s.\n\nInteresse? Stuur gerust een berichtje! <div id=",
+  "details_version": 2,
+  "distance_km": 14.0,
+  "first_seen": "2026-11-01",
+  "full_description": true,
+  "id": "marktplaats:m2458242014",
+  "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/a6c39117-6d91-4c53-a2b8-593887981374?rule=ecg_mp_eps$_82.jpg",
+  "kind": "used",
+  "last_seen": "2026-11-01",
+  "lat": 51.586040765954,
+  "llm_attrs": {
+   "condition": "like_new",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "original_box": false,
+   "quantity": 1,
+   "red_flags": [],
+   "seller_type": "private",
+   "shipping": false,
+   "summary": "Honeywell Home thermostat, white, 230V, used half a year, not identified as a T6",
+   "table_stand": false
+  },
+  "lon": 5.1808676006653,
+  "new_ad_at": "2026-11-01T13:15:17+00:00",
+  "new_ad_on": "2026-11-01",
+  "posted_at": "26 okt 26",
+  "price_eur": 80,
+  "price_history": [
+   [
+    "2026-11-01",
+    80
+   ]
+  ],
+  "price_type": "MIN_BID",
+  "rule_attrs": {
+   "condition": "like_new",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "original_box": false,
+   "quantity": 1,
+   "red_flags": [],
+   "seller_type": "private",
+   "shipping": false,
+   "summary": "",
+   "table_stand": false
+  },
+  "seller_has_website": false,
+  "seller_verified": false,
+  "source": "marktplaats",
+  "title": "Honeywell Home thermostaat – wit – 230V",
+  "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2458242014-honeywell-home-thermostaat-wit-230v"
  },
  {
   "active": true,
@@ -13212,6 +13370,82 @@
  {
   "active": true,
   "attrs": {
+   "condition": "like_new",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "model_assumed": false,
+   "original_box": true,
+   "quantity": 1,
+   "red_flags": [],
+   "seller_type": "private",
+   "shipping": false,
+   "summary": "Honeywell T3C110AEU programmable thermostat, like new, with original box (not a T6)",
+   "table_stand": false
+  },
+  "attrs_hash": "f7ae9362256c23cc",
+  "attrs_source": "claude",
+  "attrs_version": 1,
+  "city": "Amersfoort",
+  "condition_raw": "Zo goed als nieuw",
+  "country": "Nederland",
+  "description": "Deze Honeywell T3C110AEU thermostaat is een programmeerbare thermostaat voor bedrade installaties. Het apparaat is ontworpen voor eenvoudige bediening en biedt 7-daagse/6-perioden programmering, een vakantiemodus en intelligente verwarmingsregeling. Ideaal voor het efficiënt beheren van uw huisverwarming. De thermostaat is in uitstekende staat en wordt geleverd met de originele verpakking en handleidingen. ... ... ... ... ... ... ... ... ... ... ... ... Amersfoort 7x bekeken 0x bewaard Sinds 31 okt. '26",
+  "details_version": 2,
+  "distance_km": 54.0,
+  "first_seen": "2026-11-01",
+  "full_description": true,
+  "id": "marktplaats:m2460223866",
+  "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/fc780bdd-721f-496f-8fa0-ed17c4e262d2?rule=ecg_mp_eps$_82.jpg",
+  "kind": "used",
+  "last_seen": "2026-11-01",
+  "lat": 52.173651198592,
+  "llm_attrs": {
+   "condition": "like_new",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "original_box": true,
+   "quantity": 1,
+   "red_flags": [],
+   "seller_type": "unknown",
+   "shipping": false,
+   "summary": "Honeywell T3C110AEU programmable thermostat, like new, with original box (not a T6)",
+   "table_stand": false
+  },
+  "lon": 5.386309631541,
+  "new_ad_at": "2026-11-01T13:15:17+00:00",
+  "new_ad_on": "2026-11-01",
+  "posted_at": "Gisteren",
+  "price_eur": 30,
+  "price_history": [
+   [
+    "2026-11-01",
+    30
+   ]
+  ],
+  "price_type": "FIXED",
+  "rule_attrs": {
+   "condition": "like_new",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "original_box": true,
+   "quantity": 7,
+   "red_flags": [],
+   "seller_type": "private",
+   "shipping": false,
+   "summary": "",
+   "table_stand": false
+  },
+  "seller_has_website": false,
+  "seller_verified": false,
+  "source": "marktplaats",
+  "title": "Honeywell T3 Thermostaat T3C110AEU - Programmeerbaar",
+  "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2460223866-honeywell-t3-thermostaat-t3c110aeu-programmeerbaar"
+ },
+ {
+  "active": true,
+  "attrs": {
    "condition": "used",
    "includes_receiver": null,
    "is_item": false,
@@ -14942,6 +15176,82 @@
   "source": "marktplaats",
   "title": "Honeywell draadloze thermostaat",
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/verwarming-en-radiatoren/m2460566124-honeywell-draadloze-thermostaat"
+ },
+ {
+  "active": true,
+  "attrs": {
+   "condition": "new_open_box",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "model_assumed": false,
+   "original_box": true,
+   "quantity": 1,
+   "red_flags": [],
+   "seller_type": "private",
+   "shipping": false,
+   "summary": "Honeywell T3H110A programmable wired thermostat, new, in original packaging (not a T6)",
+   "table_stand": false
+  },
+  "attrs_hash": "a6c93b71dcfd36e8",
+  "attrs_source": "claude",
+  "attrs_version": 1,
+  "city": "Arnhem",
+  "condition_raw": "Nieuw",
+  "country": "Nederland",
+  "description": "Te koop: een nieuwe Honeywell T3H110A programmeerbare thermostaat. Deze bedrade thermostaat is geschikt voor verwarmingssystemen en cv-ketels (aan/uit). Het apparaat is ongebruikt en wordt geleverd in de originele verpakking met handleiding en bevestigingsmateriaal. Ideaal voor het efficiënt regelen van de temperatuur in uw woning. ... ... ... ... ... ... ... ... ... ... ... ... Arnhem 7x bekeken 1x bewaard Sinds 1 nov. '26",
+  "details_version": 2,
+  "distance_km": 54.0,
+  "first_seen": "2026-11-01",
+  "full_description": true,
+  "id": "marktplaats:m2460570967",
+  "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/82bfc440-54ac-43c1-8fca-3ee12acf3796?rule=ecg_mp_eps$_82.jpg",
+  "kind": "new",
+  "last_seen": "2026-11-01",
+  "lat": 52.00279905883,
+  "llm_attrs": {
+   "condition": "new_open_box",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "original_box": true,
+   "quantity": 1,
+   "red_flags": [],
+   "seller_type": "unknown",
+   "shipping": false,
+   "summary": "Honeywell T3H110A programmable wired thermostat, new, in original packaging (not a T6)",
+   "table_stand": false
+  },
+  "lon": 5.9071042627214,
+  "new_ad_at": "2026-11-01T13:15:17+00:00",
+  "new_ad_on": "2026-11-01",
+  "posted_at": "Vandaag",
+  "price_eur": 40,
+  "price_history": [
+   [
+    "2026-11-01",
+    40
+   ]
+  ],
+  "price_type": "MIN_BID",
+  "rule_attrs": {
+   "condition": "new_open_box",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "original_box": true,
+   "quantity": 7,
+   "red_flags": [],
+   "seller_type": "private",
+   "shipping": false,
+   "summary": "",
+   "table_stand": false
+  },
+  "seller_has_website": false,
+  "seller_verified": false,
+  "source": "marktplaats",
+  "title": "Honeywell T3H110A Programmeerbare Thermostaat",
+  "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2460570967-honeywell-t3h110a-programmeerbare-thermostaat"
  },
  {
   "active": true,
