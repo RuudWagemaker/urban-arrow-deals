@@ -1,5 +1,15 @@
 # Running the tracker on a server (Hetzner VPS)
 
+Setup: after the steps in the conversation (user `tracker`, clone to `/opt/deal-tracker/app`,
+venv, data copy), run as root:
+
+```bash
+bash /opt/deal-tracker/app/deploy/install.sh
+```
+
+It asks for the Claude token and ntfy channel, creates the website password, installs the
+services, runs a test scan and starts everything. It can be run again safely.
+
 Layout on the server:
 
 | Path | What |
