@@ -14,7 +14,9 @@ permissions:
   id-token: write
 
 concurrency:
-  group: daily-scan        # never publish while a scan is running
+  # Its own queue: sharing the scan's queue made GitHub cancel a scan that was
+  # triggered at the same moment as a publish.
+  group: publish-site
   cancel-in-progress: false
 
 jobs:
