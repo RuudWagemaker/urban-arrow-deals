@@ -65,6 +65,7 @@ EOF
 else
   echo "already exists, keeping it"
 fi
+chmod 600 "$SITES/deals.caddy"   # holds the password hash; Caddy runs as root and can still read it
 
 say "4/7 Installing services"
 cp "$APP/deploy/deal-tracker-scan.service" "$APP/deploy/deal-tracker-scan.timer" \
