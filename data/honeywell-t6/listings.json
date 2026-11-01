@@ -77,7 +77,7 @@
   "url": "https://www.marktplaats.nl/v/auto-onderdelen/ophanging-en-onderstel/m1540956576-hm-performance-schroefset-vw-transporter-t5-t6-t6-1"
  },
  {
-  "active": true,
+  "active": false,
   "attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -133,6 +133,7 @@
    ]
   ],
   "price_type": "SEE_DESCRIPTION",
+  "removed_on": "2026-11-01",
   "rule_attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -344,7 +345,7 @@
      "price": 100
     },
     {
-     "adjusted": 158,
+     "adjusted": 159,
      "id": "marktplaats:m2454813517",
      "price": 130
     },
@@ -364,17 +365,17 @@
      "price": 110
     },
     {
-     "adjusted": 125,
+     "adjusted": 127,
      "id": "marktplaats:m2424755689",
      "price": 115
     }
    ],
    "confidence": "high",
-   "high": 154.0,
-   "low": 119.0,
+   "high": 157.0,
+   "low": 120.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 126.0
+   "price": 128.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -529,7 +530,7 @@
   "deal": {
    "flags": [],
    "label": "fair price",
-   "pct": -2.3
+   "pct": -2.2
   },
   "description": "Nieuwe Honeywell Home T6 Slimme Thermostaat, bedraad en programmeerbaar. Deze thermostaat is voorzien van een intuïtief touchscreen en biedt geavanceerde programmeerfuncties. Compatibel met iOS en Android, en werkt met Google Assistant en Apple HomeKit. Perfect voor het efficiënt regelen van uw verwarmingssysteem. ... ... ... ... ... ... ... ... ... ... ... ... 's-Gravenhage 634x bekeken 10x bewaard Sinds 27 jul. '26",
   "details_version": 2,
@@ -542,37 +543,37 @@
      "price": 250
     },
     {
-     "adjusted": 112,
+     "adjusted": 111,
      "id": "marktplaats:m2439334401",
      "price": 100
     },
     {
-     "adjusted": 146,
+     "adjusted": 144,
      "id": "marktplaats:m2454813517",
      "price": 130
     },
     {
-     "adjusted": 112,
+     "adjusted": 111,
      "id": "marktplaats:m2457985005",
      "price": 100
     },
     {
-     "adjusted": 107,
+     "adjusted": 106,
      "id": "marktplaats:m2459051245",
      "price": 95
     },
     {
-     "adjusted": 124,
+     "adjusted": 122,
      "id": "marktplaats:m2459738258",
      "price": 110
     }
    ],
    "confidence": "high",
-   "high": 141.0,
-   "low": 105.0,
+   "high": 137.0,
+   "low": 96.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 112.0
+   "price": 113.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -868,11 +869,11 @@
   "fair": {
    "comps": [],
    "confidence": "medium",
-   "high": 111.0,
+   "high": 110.0,
    "low": 68.0,
    "method": "regression",
    "n_comps": 0,
-   "price": 87.0
+   "price": 86.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -1092,32 +1093,32 @@
      "price": 250
     },
     {
-     "adjusted": 112,
+     "adjusted": 111,
      "id": "marktplaats:m2439334401",
      "price": 100
     },
     {
-     "adjusted": 146,
+     "adjusted": 144,
      "id": "marktplaats:m2454813517",
      "price": 130
     },
     {
-     "adjusted": 112,
+     "adjusted": 111,
      "id": "marktplaats:m2457985005",
      "price": 100
     },
     {
-     "adjusted": 107,
+     "adjusted": 106,
      "id": "marktplaats:m2459051245",
      "price": 95
     }
    ],
    "confidence": "high",
-   "high": 138.0,
-   "low": 109.0,
+   "high": 134.0,
+   "low": 108.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 114.0
+   "price": 115.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -1289,8 +1290,8 @@
    "flags": [
     "ad mentions receiver but model Y6H810WF1005 is the wired T6, verify"
    ],
-   "label": "fair price",
-   "pct": 3.8
+   "label": "good deal",
+   "pct": 5.5
   },
   "description": "Te koop aangeboden: een zo goed als nieuwe Honeywell Home T6 Slimme Thermostaat (model Y6H810WF1005). Thermostaat is nog nooit gebruikt en is ca 30 - 40 euro goedkoper dan een nieuw bestelde thermostaat.\n\n\nDeze programmeerbare thermostaat is geschikt voor verwarmingssystemen en cv-ketels, inclusief OpenTherm. De thermostaat is Smart Home voorbereid en biedt functies zoals een begeleide setup via de thermostaat en app, 7-daagse programmering en temperatuurregeling op basis van locatie (Geofencing). Compleet met ontvanger, handleiding en alle benodigde accessoires. Ideaal voor een efficiënte en comfortabele regeling van uw huisverwarming. ... ... ... ... ... ... ... ... ... ... ... ... Culemborg 93x bekeken 1x bewaard Sinds 5 sep. '26",
   "details_version": 2,
@@ -1318,22 +1319,22 @@
      "price": 110
     },
     {
-     "adjusted": 102,
+     "adjusted": 104,
      "id": "marktplaats:m2424755689",
      "price": 115
     },
     {
-     "adjusted": 222,
+     "adjusted": 225,
      "id": "marktplaats:m2457826133",
      "price": 250
     }
    ],
    "confidence": "high",
-   "high": 127.0,
+   "high": 128.0,
    "low": 92.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 104.0
+   "price": 106.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -1489,7 +1490,7 @@
   "deal": {
    "flags": [],
    "label": "overpriced",
-   "pct": -22.7
+   "pct": -21.4
   },
   "description": "Nieuwe Honeywell Home T6R slimme thermostaat in zwarte editie, nog nieuw in doos. Deze draadloze thermostaat is eenvoudig via wifi te bedienen met je telefoon, waar je ook bent. De nieuwprijs bedraagt 185 euro, mijn vraagprijs is 155 euro. Ideaal voor comfort en energiebesparing in huis. ... ... ... ... ... ... ... ... ... ... ... ... Hoofddorp 219x bekeken 2x bewaard Sinds 26 sep. '26",
   "details_version": 2,
@@ -1512,12 +1513,12 @@
      "price": 65
     },
     {
-     "adjusted": 111,
+     "adjusted": 112,
      "id": "marktplaats:m2460267643",
      "price": 110
     },
     {
-     "adjusted": 228,
+     "adjusted": 226,
      "id": "marktplaats:m2447079639",
      "price": 200
     },
@@ -1528,11 +1529,11 @@
     }
    ],
    "confidence": "high",
-   "high": 143.0,
-   "low": 108.0,
+   "high": 144.0,
+   "low": 110.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 126.0
+   "price": 128.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -1610,7 +1611,7 @@
   "deal": {
    "flags": [],
    "label": "overpriced",
-   "pct": -75.3
+   "pct": -71.3
   },
   "description": "Nieuwe Honeywell Home T6R Slimme Thermostaat, draadloos programmeerbaar voor verwarmingssystemen en boilers (incl. OpenTherm). Werkt met Alexa, Google Assistant en Apple Home. Eenvoudig te installeren en te bedienen via de app. Ideaal voor een energiezuinig en comfortabel huis. ... ... ... ... ... ... ... ... ... ... ... ... Amsterdam 439x bekeken 8x bewaard Sinds 26 sep. '26",
   "details_version": 2,
@@ -1618,42 +1619,42 @@
   "fair": {
    "comps": [
     {
-     "adjusted": 58,
+     "adjusted": 59,
      "id": "marktplaats:m2458140709",
      "price": 65
     },
     {
-     "adjusted": 98,
+     "adjusted": 99,
      "id": "marktplaats:m2460267643",
      "price": 110
     },
     {
-     "adjusted": 56,
+     "adjusted": 57,
      "id": "marktplaats:m2451956753",
      "price": 45
     },
     {
-     "adjusted": 124,
+     "adjusted": 127,
      "id": "marktplaats:m2455961152",
      "price": 100
     },
     {
-     "adjusted": 112,
+     "adjusted": 114,
      "id": "marktplaats:m2456732603",
      "price": 90
     },
     {
-     "adjusted": 118,
+     "adjusted": 121,
      "id": "marktplaats:m2458963849",
      "price": 95
     }
    ],
    "confidence": "high",
-   "high": 125.0,
-   "low": 96.0,
+   "high": 128.0,
+   "low": 98.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 114.0
+   "price": 117.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -1854,7 +1855,7 @@
   "deal": {
    "flags": [],
    "label": "good deal",
-   "pct": 7.6
+   "pct": 8.1
   },
   "description": "Honywell T6R slimme thermostaat, draadloos. Gebruikte staat maar werkt nog naar behoren. ... ... ... ... ... ... ... ... ... ... ... ... Driebergen-Rijsenburg 100x bekeken 10x bewaard Sinds 27 sep. '26",
   "details_version": 2,
@@ -1882,18 +1883,18 @@
      "price": 60
     },
     {
-     "adjusted": 45,
+     "adjusted": 46,
      "id": "marktplaats:m2451956753",
      "price": 45
     },
     {
-     "adjusted": 100,
+     "adjusted": 102,
      "id": "marktplaats:m2455961152",
      "price": 100
     }
    ],
    "confidence": "high",
-   "high": 100.0,
+   "high": 102.0,
    "low": 71.0,
    "method": "comparables",
    "n_comps": 12,
@@ -2008,17 +2009,17 @@
      "price": 150
     },
     {
-     "adjusted": 116,
+     "adjusted": 117,
      "id": "marktplaats:m2424755689",
      "price": 115
     }
    ],
    "confidence": "high",
    "high": 150.0,
-   "low": 114.0,
+   "low": 113.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 127.0
+   "price": 130.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -2428,22 +2429,22 @@
      "price": 30
     },
     {
-     "adjusted": 147,
+     "adjusted": 149,
      "id": "marktplaats:m2456502142",
      "price": 165
     },
     {
-     "adjusted": 150,
+     "adjusted": 152,
      "id": "marktplaats:m2439211713",
      "price": 150
     },
     {
-     "adjusted": 60,
+     "adjusted": 61,
      "id": "marktplaats:m2447291319",
      "price": 60
     },
     {
-     "adjusted": 85,
+     "adjusted": 86,
      "id": "marktplaats:m2448829475",
      "price": 85
     },
@@ -2454,11 +2455,11 @@
     }
    ],
    "confidence": "high",
-   "high": 100.0,
-   "low": 50.0,
+   "high": 102.0,
+   "low": 51.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 90.0
+   "price": 91.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -2536,7 +2537,7 @@
   "deal": {
    "flags": [],
    "label": "a bit pricey",
-   "pct": -12.0
+   "pct": -12.3
   },
   "description": "Nieuw in verpakking, ongebruikt. Bon beschikbaar.\nNieuwprijs €168.\nOp te halen in Amsterdam of verzenden. ... ... ... ... ... ... ... ... ... ... ... ... Amsterdam 118x bekeken 2x bewaard Sinds 9 okt. '26",
   "details_version": 2,
@@ -2564,19 +2565,19 @@
      "price": 150
     },
     {
-     "adjusted": 116,
+     "adjusted": 117,
      "id": "marktplaats:m2424755689",
      "price": 115
     },
     {
-     "adjusted": 253,
+     "adjusted": 254,
      "id": "marktplaats:m2457826133",
      "price": 250
     }
    ],
    "confidence": "high",
    "high": 150.0,
-   "low": 114.0,
+   "low": 113.0,
    "method": "comparables",
    "n_comps": 12,
    "price": 125.0
@@ -2693,7 +2694,7 @@
      "price": 80
     },
     {
-     "adjusted": 131,
+     "adjusted": 130,
      "id": "marktplaats:m2455159770",
      "price": 175
     }
@@ -3066,7 +3067,7 @@
     "Ad contradicts itself: says boiler still works but also that it is already dismantled"
    ],
    "label": "overpriced",
-   "pct": -522.1
+   "pct": -518.5
   },
   "description": "Wegens de overstap naar een volledige warmtepomp bieden wij onze complete en perfect onderhouden cv-installatie aan.\n\n📦 Wat zit er allemaal in dit complete totaalpakket?\nU koopt in één klap een volledige, luxe installatie. Ideaal voor een complete woningrenovatie of verbouwing.\n\nIntergas Xtreme 36 CW5 hoogrendementsketel (2019, Hybrid Ready)\n\nHoneywell Home Lyric T6 Smart Thermostaat (Luxe Witte Uitvoering) – inclusief de verplichte Honeywell ketelmodule/ontvanger voor bij de ketel (OpenTherm)\n\nAutomatische Snelontluchter – hoogwaardige messing ontluchter die de installatie continu volledig luchtvrij houdt\n\nComplete Rookgasafvoer – inclusief de originele dakschoorsteen / dakdoorvoer en de aansluitpijp.\n\nExpansievat – inclusief de bijbehorende metalen ophangbeugel/montagebalk.\n\nHet toestel heeft op 13 oktober 2026 nog een volledige onderhoudsbeurt gehad door een erkend installatiebedrijf. Het officiële onderhoudsrapport en de servicesticker zijn uiteraard aanwezig. Altijd laag temperatuur gestookt, dus wisselaar is in topconditie. U koopt dus gegarandeerd een technisch 100% gekeurd, veilig en direct bedrijfsklaar toestel. De ketel is momenteel nog werkend te zien en wordt binnenkort professioneel gedemonteerd.\n\n💶 Prijs & Ophalen:\nDe complete set mag in één koop weg tegen een realistisch bod. Richtprijs voor de totale set is vanaf € 650,-.\n\nOp te halen in overleg direct na de professionele demontage door onze installateur Vanaf 30 oktober. Toestel is inmiddels gedemonteerd en af te halen.\nBij serieuze interesse of vragen, stuur gerust een bericht! ... ... ... ... ... ... ... ... ... ... ... ... Nijmegen 376x bekeken 12x bewaard Sinds 13 okt. '26",
   "details_version": 2,
@@ -3074,7 +3075,7 @@
   "fair": {
    "comps": [
     {
-     "adjusted": 97,
+     "adjusted": 98,
      "id": "marktplaats:m2447453400",
      "price": 80
     },
@@ -3084,12 +3085,12 @@
      "price": 85
     },
     {
-     "adjusted": 164,
+     "adjusted": 165,
      "id": "marktplaats:m2458437608",
      "price": 135
     },
     {
-     "adjusted": 85,
+     "adjusted": 86,
      "id": "marktplaats:m2459978458",
      "price": 70
     },
@@ -3099,17 +3100,17 @@
      "price": 60
     },
     {
-     "adjusted": 160,
+     "adjusted": 163,
      "id": "marktplaats:m2457722079",
      "price": 160
     }
    ],
    "confidence": "high",
-   "high": 122.0,
-   "low": 90.0,
+   "high": 124.0,
+   "low": 89.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 104.0
+   "price": 105.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -3190,7 +3191,7 @@
   "deal": {
    "flags": [],
    "label": "great deal",
-   "pct": 24.7
+   "pct": 25.8
   },
   "description": ">Te koop aangeboden: Honeywell Home T6 Smart Thermostaat. Slimme en programmeerbare thermostaat voor verwarmingssystemen en cv-ketels, inclusief ondersteuning voor OpenTherm.\n\nKenmerken:\n\nSlimme bediening van je verwarming\n7-daags programma instelbaar\nBediening via smartphone\nOndersteunt Apple Home, Google Assistant en Amazon Alexa\nLocation Based Heating Control\nGeschikt voor OpenTherm\nModern touchscreen design\n\nStaat: Nieuw in doos.\n\nIdeaal voor wie zijn verwarming slimmer en efficiënter wil regelen, zowel thuis als op afstand.\n\nBij interesse of vragen kun je gerust een bericht sturen. <div id=",
   "details_version": 2,
@@ -3218,22 +3219,22 @@
      "price": 150
     },
     {
-     "adjusted": 116,
+     "adjusted": 117,
      "id": "marktplaats:m2424755689",
      "price": 115
     },
     {
-     "adjusted": 253,
+     "adjusted": 254,
      "id": "marktplaats:m2457826133",
      "price": 250
     }
    ],
    "confidence": "high",
    "high": 150.0,
-   "low": 116.0,
+   "low": 117.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 133.0
+   "price": 135.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -3397,7 +3398,7 @@
     "price far below typical retail for a new unit"
    ],
    "label": "great deal",
-   "pct": 31.3
+   "pct": 31.2
   },
   "description": "Te koop aangeboden- niet gebruikt , in verpakking ,\neen Honeywell T6 Smart Thermostaat. Dit is een programmeerbare thermostaat voor verwarmingssystemen en boilers, inclusief OpenTherm®. De thermostaat is compatibel met Alexa, Google Assistant en Apple Home. Let op: dit betreft alleen de thermostaat, de ontvanger is niet inbegrepen. ... ... ... ... ... ... ... ... ... ... ... ... Amsterdam 587x bekeken 10x bewaard Sinds 17 okt. '26",
   "details_version": 2,
@@ -3430,14 +3431,14 @@
      "price": 110
     },
     {
-     "adjusted": 195,
+     "adjusted": 194,
      "id": "marktplaats:m2447079639",
      "price": 200
     }
    ],
    "confidence": "medium",
    "high": 133.0,
-   "low": 94.0,
+   "low": 95.0,
    "method": "comparables",
    "n_comps": 7,
    "price": 115.0
@@ -3520,7 +3521,7 @@
   "deal": {
    "flags": [],
    "label": "overpriced",
-   "pct": -29.1
+   "pct": -28.6
   },
   "description": "Nieuwe - aangeboden T6 Smart Wifi Honeywell Thermostat (wit), omdat mijn huidige thermostat ivm thuis werkzaamheden bleek toen niet te werken maar het was vals alarm.\n\nTe laat om naar winkel terug te brengen.\n\nHet prijs is niet te onderhandelen - is vast!\n\nKost in de winkel min 170euro. ... ... ... ... ... ... ... ... ... ... ... ... Alkmaar 155x bekeken 6x bewaard Sinds 17 okt. '26",
   "details_version": 2,
@@ -3548,12 +3549,12 @@
      "price": 110
     },
     {
-     "adjusted": 102,
+     "adjusted": 104,
      "id": "marktplaats:m2424755689",
      "price": 115
     },
     {
-     "adjusted": 222,
+     "adjusted": 225,
      "id": "marktplaats:m2457826133",
      "price": 250
     }
@@ -3674,17 +3675,17 @@
      "price": 110
     },
     {
-     "adjusted": 102,
+     "adjusted": 104,
      "id": "marktplaats:m2424755689",
      "price": 115
     }
    ],
    "confidence": "high",
-   "high": 126.0,
+   "high": 128.0,
    "low": 98.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 103.0
+   "price": 105.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -3763,7 +3764,7 @@
   "deal": {
    "flags": [],
    "label": "fair price",
-   "pct": -2.3
+   "pct": -4.6
   },
   "description": "Te koop aangeboden: een Honeywell T6 slimme thermostaat. Dit is een geavanceerde thermostaat die je helpt energie te besparen en je huis comfortabel te houden. Bedien de thermostaat eenvoudig via de app op je smartphone, waar je ook bent. De T6 leert je voorkeuren en past zich daarop aan. Inclusief alle benodigde onderdelen voor installatie. Het apparaat is gebruikt, maar werkt nog perfect.\n\nMijn kabel is gebroken en moet dus noodgedwongen overstappen op een draadloze variant, deze werkt verder nog perfect! ... ... ... ... ... ... ... ... ... ... ... ... Breda 101x bekeken 5x bewaard Sinds 18 okt. '26",
   "details_version": 2,
@@ -3791,22 +3792,22 @@
      "price": 60
     },
     {
-     "adjusted": 45,
+     "adjusted": 46,
      "id": "marktplaats:m2451956753",
      "price": 45
     },
     {
-     "adjusted": 100,
+     "adjusted": 102,
      "id": "marktplaats:m2455961152",
      "price": 100
     }
    ],
    "confidence": "high",
-   "high": 100.0,
+   "high": 102.0,
    "low": 71.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 83.0
+   "price": 81.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -3885,7 +3886,7 @@
   "deal": {
    "flags": [],
    "label": "good deal",
-   "pct": 5.9
+   "pct": 5.5
   },
   "description": "Nieuw en in originele verpakking. Ongebruikt. Wired Thermostaat plus Ketelmodule - ook voor Modulerende CV. Met Residio App bestuurbaar. ... ... ... ... ... ... ... ... ... ... ... ... Amsterdam 69x bekeken 0x bewaard Sinds 18 okt. '26",
   "details_version": 2,
@@ -3913,22 +3914,22 @@
      "price": 150
     },
     {
-     "adjusted": 116,
+     "adjusted": 117,
      "id": "marktplaats:m2424755689",
      "price": 115
     },
     {
-     "adjusted": 253,
+     "adjusted": 254,
      "id": "marktplaats:m2457826133",
      "price": 250
     }
    ],
    "confidence": "high",
    "high": 150.0,
-   "low": 114.0,
+   "low": 113.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 133.0
+   "price": 132.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -4006,7 +4007,7 @@
   "deal": {
    "flags": [],
    "label": "overpriced",
-   "pct": -44.2
+   "pct": -43.6
   },
   "description": "Te koop: onze goed werkende Honeywell Home T6R draadloze thermostaat. Fijne en slimme thermostaat die je makkelijk op afstand bedient via de app op je telefoon (of gewoon via het touchscreen op het apparaat zelf). Omdat deze uitvoering draadloos is, zet je hem eenvoudig neer waar je wilt op de handige standaard.\n\nIk heb hem alvast netjes teruggezet naar de fabrieksinstellingen , dus hij is helemaal klaar voor de volgende gebruiker!\n\n Wat zit erbij? \n\n\n Honeywell T6R thermostaat met standaard en stroomadapter Ketelmodule / ontvanger (voor aan/uit en OpenTherm) Handleiding \n (Let op: de originele doos zit er niet meer bij) \n\nWerkt top met Apple HomeKit, Google Assistant en Amazon Alexa.\n\nStuur gerust een berichtje als je vragen hebt! ... ... ... ... ... ... ... ... ... ... ... ... Wassenaar 100x bekeken 4x bewaard Sinds 18 okt. '26",
   "details_version": 2,
@@ -4014,7 +4015,7 @@
   "fair": {
    "comps": [
     {
-     "adjusted": 60,
+     "adjusted": 61,
      "id": "marktplaats:m2451956753",
      "price": 45
     },
@@ -4029,7 +4030,7 @@
      "price": 90
     },
     {
-     "adjusted": 127,
+     "adjusted": 128,
      "id": "marktplaats:m2458963849",
      "price": 95
     },
@@ -4039,7 +4040,7 @@
      "price": 100
     },
     {
-     "adjusted": 107,
+     "adjusted": 108,
      "id": "marktplaats:m2460595756",
      "price": 80
     }
@@ -4049,7 +4050,7 @@
    "low": 105.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 121.0
+   "price": 122.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -4249,7 +4250,7 @@
   "deal": {
    "flags": [],
    "label": "overpriced",
-   "pct": -20.0
+   "pct": -20.3
   },
   "description": "Te koop aangeboden: een gloednieuwe Honeywell Home T6 Slimme Thermostaat. Deze thermostaat is nog nooit gebruikt en zit in de originele verpakking. Ideaal voor het efficiënt regelen van uw verwarmingssysteem, compatibel met diverse systemen en ketels (inclusief OpenTherm). Bedien de thermostaat eenvoudig via de app op uw smartphone. Een perfecte upgrade voor een modern en energiezuinig huis. ... ... ... ... ... ... ... ... ... ... ... ... Amersfoort 152x bekeken 10x bewaard Sinds 18 okt. '26",
   "details_version": 2,
@@ -4277,19 +4278,19 @@
      "price": 150
     },
     {
-     "adjusted": 116,
+     "adjusted": 117,
      "id": "marktplaats:m2424755689",
      "price": 115
     },
     {
-     "adjusted": 253,
+     "adjusted": 254,
      "id": "marktplaats:m2457826133",
      "price": 250
     }
    ],
    "confidence": "high",
-   "high": 146.0,
-   "low": 114.0,
+   "high": 145.0,
+   "low": 113.0,
    "method": "comparables",
    "n_comps": 12,
    "price": 125.0
@@ -4410,7 +4411,7 @@
    ],
    "confidence": "high",
    "high": 108.0,
-   "low": 79.0,
+   "low": 78.0,
    "method": "comparables",
    "n_comps": 12,
    "price": 94.0
@@ -4567,7 +4568,7 @@
   "deal": {
    "flags": [],
    "label": "overpriced",
-   "pct": -1651.1
+   "pct": -1645.5
   },
   "description": "Te koop: een complete set bestaande uit een Remeha Quinta 45 condenserende CV-ketel, een Honeywell T6 Smart Thermostat en een UPM2 25-70 130mm pomp. Alle onderdelen zijn nieuw en ongebruikt, nog in de originele verpakking. Ideaal voor het vervangen of installeren van een efficiënt verwarmingssysteem. De ketel is geschikt voor gasverwarming en heeft een hoog rendement. De thermostaat biedt slimme bedieningsmogelijkheden voor optimaal comfort en energiebesparing. ... ... ... ... ... ... ... ... ... ... ... ... 's-Gravenhage 72x bekeken 0x bewaard Sinds 20 okt. '26",
   "details_version": 2,
@@ -4585,32 +4586,32 @@
      "price": 250
     },
     {
-     "adjusted": 112,
+     "adjusted": 111,
      "id": "marktplaats:m2439334401",
      "price": 100
     },
     {
-     "adjusted": 146,
+     "adjusted": 144,
      "id": "marktplaats:m2454813517",
      "price": 130
     },
     {
-     "adjusted": 112,
+     "adjusted": 111,
      "id": "marktplaats:m2457985005",
      "price": 100
     },
     {
-     "adjusted": 107,
+     "adjusted": 106,
      "id": "marktplaats:m2459051245",
      "price": 95
     }
    ],
    "confidence": "high",
-   "high": 138.0,
-   "low": 109.0,
+   "high": 134.0,
+   "low": 108.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 114.0
+   "price": 115.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -4721,14 +4722,14 @@
      "price": 80
     },
     {
-     "adjusted": 131,
+     "adjusted": 130,
      "id": "marktplaats:m2455159770",
      "price": 175
     }
    ],
    "confidence": "high",
    "high": 111.0,
-   "low": 79.0,
+   "low": 78.0,
    "method": "comparables",
    "n_comps": 12,
    "price": 91.0
@@ -5145,17 +5146,17 @@
   "fair": {
    "comps": [
     {
-     "adjusted": 34,
+     "adjusted": 33,
      "id": "marktplaats:m2460504947",
      "price": 30
     },
     {
-     "adjusted": 90,
+     "adjusted": 91,
      "id": "marktplaats:m2458588986",
      "price": 90
     },
     {
-     "adjusted": 65,
+     "adjusted": 66,
      "id": "marktplaats:m2460175549",
      "price": 65
     },
@@ -5165,7 +5166,7 @@
      "price": 150
     },
     {
-     "adjusted": 67,
+     "adjusted": 68,
      "id": "marktplaats:m2447291319",
      "price": 60
     },
@@ -5177,7 +5178,7 @@
    ],
    "confidence": "high",
    "high": 107.0,
-   "low": 57.0,
+   "low": 58.0,
    "method": "comparables",
    "n_comps": 12,
    "price": 91.0
@@ -5261,7 +5262,7 @@
   "deal": {
    "flags": [],
    "label": "overpriced",
-   "pct": -20.0
+   "pct": -20.3
   },
   "description": "Nieuwe Honeywell Lyric T6 Slimme Thermostaat, nog origineel ingepakt in de doos met alle folies aanwezig. Deze programmeerbare thermostaat is geschikt voor verwarmingssystemen en boilers (inclusief OpenTherm) en werkt met de Lyric App en Apple HomeKit. Ideaal voor een energiezuinig en comfortabel huis. ... ... ... ... ... ... ... ... ... ... ... ... Voerendaal 144x bekeken 5x bewaard Sinds 22 okt. '26",
   "details_version": 2,
@@ -5289,19 +5290,19 @@
      "price": 150
     },
     {
-     "adjusted": 116,
+     "adjusted": 117,
      "id": "marktplaats:m2424755689",
      "price": 115
     },
     {
-     "adjusted": 253,
+     "adjusted": 254,
      "id": "marktplaats:m2457826133",
      "price": 250
     }
    ],
    "confidence": "high",
-   "high": 146.0,
-   "low": 114.0,
+   "high": 145.0,
+   "low": 113.0,
    "method": "comparables",
    "n_comps": 12,
    "price": 125.0
@@ -5700,14 +5701,14 @@
      "price": 80
     },
     {
-     "adjusted": 131,
+     "adjusted": 130,
      "id": "marktplaats:m2455159770",
      "price": 175
     }
    ],
    "confidence": "high",
    "high": 111.0,
-   "low": 79.0,
+   "low": 78.0,
    "method": "comparables",
    "n_comps": 12,
    "price": 95.0
@@ -5823,17 +5824,17 @@
      "price": 150
     },
     {
-     "adjusted": 116,
+     "adjusted": 117,
      "id": "marktplaats:m2424755689",
      "price": 115
     }
    ],
    "confidence": "high",
    "high": 150.0,
-   "low": 114.0,
+   "low": 113.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 127.0
+   "price": 130.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -6304,7 +6305,7 @@
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2457295971-honeywell-slimme-thermostaat-set-draadloos"
  },
  {
-  "active": true,
+  "active": false,
   "attrs": {
    "condition": "new_open_box",
    "includes_receiver": null,
@@ -6360,6 +6361,7 @@
    ]
   ],
   "price_type": "MIN_BID",
+  "removed_on": "2026-11-01",
   "rule_attrs": {
    "condition": "new_open_box",
    "includes_receiver": null,
@@ -6483,6 +6485,7 @@
   "details_version": 2,
   "distance_km": 22.0,
   "first_seen": "2026-11-01",
+  "full_description": false,
   "id": "marktplaats:m2457480587",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/d7d6e47c-f991-49af-bd8d-c9a0b37db0ec?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
@@ -6717,7 +6720,7 @@
     "Seller states no warranty and no returns"
    ],
    "label": "overpriced",
-   "pct": -43.5
+   "pct": -43.1
   },
   "description": "Deze Honeywell Home T6R Smart thermostaat met WiFi-functionaliteit biedt geavanceerde temperatuurregeling voor uw huis. Het systeem bestaat uit een draadloze thermostaat en een ontvanger. Bedien de verwarming eenvoudig via de app op uw smartphone, waar u ook bent. Ideaal voor een comfortabel en energiezuinig huis. Het product is kort gebruikt (folie zit er nog op), maar werkt nog perfect.\nGeen garantie geen retour NB geen betaalverzoek ... ... ... ... ... ... ... ... ... ... ... ... IJlst 86x bekeken 6x bewaard Sinds 25 okt. '26",
   "details_version": 2,
@@ -6750,17 +6753,17 @@
      "price": 100
     },
     {
-     "adjusted": 97,
+     "adjusted": 98,
      "id": "marktplaats:m2460595756",
      "price": 80
     }
    ],
    "confidence": "high",
    "high": 122.0,
-   "low": 96.0,
+   "low": 95.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 111.0
+   "price": 112.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -6854,22 +6857,22 @@
      "price": 30
     },
     {
-     "adjusted": 147,
+     "adjusted": 149,
      "id": "marktplaats:m2456502142",
      "price": 165
     },
     {
-     "adjusted": 150,
+     "adjusted": 152,
      "id": "marktplaats:m2439211713",
      "price": 150
     },
     {
-     "adjusted": 60,
+     "adjusted": 61,
      "id": "marktplaats:m2447291319",
      "price": 60
     },
     {
-     "adjusted": 85,
+     "adjusted": 86,
      "id": "marktplaats:m2448829475",
      "price": 85
     },
@@ -6880,11 +6883,11 @@
     }
    ],
    "confidence": "high",
-   "high": 100.0,
-   "low": 50.0,
+   "high": 102.0,
+   "low": 51.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 90.0
+   "price": 91.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -6938,7 +6941,7 @@
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2457733768-honeywell-t6-smartthermostaat"
  },
  {
-  "active": true,
+  "active": false,
   "attrs": {
    "condition": "like_new",
    "includes_receiver": null,
@@ -6994,6 +6997,7 @@
    ]
   ],
   "price_type": "FIXED",
+  "removed_on": "2026-11-01",
   "rule_attrs": {
    "condition": "like_new",
    "includes_receiver": null,
@@ -7038,7 +7042,7 @@
   "deal": {
    "flags": [],
    "label": "overpriced",
-   "pct": -122.3
+   "pct": -122.2
   },
   "description": "Nieuwe Honeywell Lyric T6 slimme thermostaat, programmeerbaar voor verwarmingssystemen en boilers. Werkt met de Lyric App en Apple HomeKit. Compleet in doos met alle toebehoren.\n\nHelemaal nieuw nooit gebruikt ... ... ... ... ... ... ... ... ... ... ... ... Woensdrecht 67x bekeken 1x bewaard Sinds 25 okt. '26",
   "details_version": 2,
@@ -7051,37 +7055,37 @@
      "price": 115
     },
     {
-     "adjusted": 112,
+     "adjusted": 111,
      "id": "marktplaats:m2439334401",
      "price": 100
     },
     {
-     "adjusted": 146,
+     "adjusted": 144,
      "id": "marktplaats:m2454813517",
      "price": 130
     },
     {
-     "adjusted": 112,
+     "adjusted": 111,
      "id": "marktplaats:m2457985005",
      "price": 100
     },
     {
-     "adjusted": 107,
+     "adjusted": 106,
      "id": "marktplaats:m2459051245",
      "price": 95
     },
     {
-     "adjusted": 124,
+     "adjusted": 122,
      "id": "marktplaats:m2459738258",
      "price": 110
     }
    ],
    "confidence": "high",
-   "high": 121.0,
-   "low": 105.0,
+   "high": 120.0,
+   "low": 96.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 112.0
+   "price": 113.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -7160,7 +7164,7 @@
   "deal": {
    "flags": [],
    "label": "great deal",
-   "pct": 19.4
+   "pct": 18.3
   },
   "description": "Te koop aangeboden: een goed werkende en nette Honeywell Lyric T6 slimme thermostaat, compleet met de bijbehorende ketelmodule (Receiver box) compleet in doos!\n\nDe thermostaat verkeert in nette staat en is uiteraard werkend gedemonteerd. Verkoop i.v.m. aanschaf nieuw systeem. ... ... ... ... ... ... ... ... ... ... ... ... Anna Paulowna 64x bekeken 3x bewaard Sinds 25 okt. '26",
   "details_version": 2,
@@ -7168,42 +7172,42 @@
   "fair": {
    "comps": [
     {
-     "adjusted": 51,
+     "adjusted": 50,
      "id": "marktplaats:m2451956753",
      "price": 45
     },
     {
-     "adjusted": 112,
+     "adjusted": 111,
      "id": "marktplaats:m2455961152",
      "price": 100
     },
     {
-     "adjusted": 101,
+     "adjusted": 100,
      "id": "marktplaats:m2456732603",
      "price": 90
     },
     {
-     "adjusted": 107,
+     "adjusted": 106,
      "id": "marktplaats:m2458963849",
      "price": 95
     },
     {
-     "adjusted": 112,
+     "adjusted": 111,
      "id": "marktplaats:m2460060258",
      "price": 100
     },
     {
-     "adjusted": 90,
+     "adjusted": 89,
      "id": "marktplaats:m2460595756",
      "price": 80
     }
    ],
    "confidence": "high",
-   "high": 122.0,
-   "low": 89.0,
+   "high": 120.0,
+   "low": 87.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 105.0
+   "price": 104.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -7380,7 +7384,7 @@
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2457933075-honeywell-slimme-thermostaat-lycric-6"
  },
  {
-  "active": true,
+  "active": false,
   "attrs": {
    "condition": "like_new",
    "includes_receiver": null,
@@ -7481,6 +7485,7 @@
    ]
   ],
   "price_type": "FAST_BID",
+  "removed_on": "2026-11-01",
   "rule_attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -7543,12 +7548,12 @@
      "price": 110
     },
     {
-     "adjusted": 225,
+     "adjusted": 222,
      "id": "marktplaats:m2447079639",
      "price": 200
     },
     {
-     "adjusted": 105,
+     "adjusted": 108,
      "id": "marktplaats:m2457838308",
      "price": 85
     },
@@ -7558,17 +7563,17 @@
      "price": 45
     },
     {
-     "adjusted": 139,
+     "adjusted": 141,
      "id": "marktplaats:m2455961152",
      "price": 100
     }
    ],
    "confidence": "high",
-   "high": 140.0,
-   "low": 106.0,
+   "high": 142.0,
+   "low": 108.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 125.0
+   "price": 126.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -7844,8 +7849,8 @@
   "country": "Nederland",
   "deal": {
    "flags": [],
-   "label": "fair price",
-   "pct": 3.8
+   "label": "good deal",
+   "pct": 5.5
   },
   "description": "Te koop de: een Honeywell Home T6 slimme thermostaat.\n\nVaste prijs.\n\nDit programmeerbare thermostaatsysteem is geschikt voor verwarmingssystemen en boilers (inclusief OpenTherm). Het apparaat werkt met Alexa, Google Assistant en Apple Home, waardoor u uw verwarming eenvoudig kunt bedienen via spraakopdrachten of uw smartphone. De thermostaat is in uitstekende staat. Ideaal voor een energiezuinig en comfortabel huis. ... ... ... ... ... ... ... ... ... ... ... ... Amsterdam 199x bekeken 11x bewaard Sinds 25 okt. '26",
   "details_version": 2,
@@ -7873,22 +7878,22 @@
      "price": 110
     },
     {
-     "adjusted": 102,
+     "adjusted": 104,
      "id": "marktplaats:m2424755689",
      "price": 115
     },
     {
-     "adjusted": 222,
+     "adjusted": 225,
      "id": "marktplaats:m2457826133",
      "price": 250
     }
    ],
    "confidence": "high",
-   "high": 127.0,
+   "high": 128.0,
    "low": 92.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 104.0
+   "price": 106.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -8003,7 +8008,7 @@
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2458043961-r4h910rf1004-rf-module-voor-t4r-en-t6r"
  },
  {
-  "active": true,
+  "active": false,
   "attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -8044,6 +8049,7 @@
    ]
   ],
   "price_type": "MIN_BID",
+  "removed_on": "2026-11-01",
   "rule_attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -8157,7 +8163,7 @@
     "price far below market: check carefully (scam/stolen/defect?)"
    ],
    "label": "great deal",
-   "pct": 49.1
+   "pct": 49.6
   },
   "description": "Nieuwe, ongebruikte onderdelen van een Honeywell Home T6 slimme thermostaatset (Y6H910WF4032), in de originele doos:\n- ontvanger/schakelkastje met achterplaat\n- wandplaat thermostaat\n- stroomkabel met stekker + bedradingskabel\n- schroeven/pluggen en handleidingen (NL)\n\nErbij: mijn oude T6 thermostaat (T6H600WF1015). Werkt prima als gewone thermostaat, maar de wifi werkt niet (bekend probleem met de wifi-chip), dus geen bediening via de app. Lichte verfspatjes aan de rand.\n\nGeschikt voor aan/uit- en OpenTherm-ketels. Ideaal als reserve-ontvanger of goedkope T6 zonder app.\nOphalen in Blaricum of verzenden via PostNL (op kosten koper). ... ... ... ... ... ... ... ... ... ... ... ... Blaricum 154x bekeken 8x bewaard Sinds 25 okt. '26",
   "details_version": 2,
@@ -8170,12 +8176,12 @@
      "price": 110
     },
     {
-     "adjusted": 225,
+     "adjusted": 222,
      "id": "marktplaats:m2447079639",
      "price": 200
     },
     {
-     "adjusted": 105,
+     "adjusted": 108,
      "id": "marktplaats:m2457838308",
      "price": 85
     },
@@ -8185,22 +8191,22 @@
      "price": 45
     },
     {
-     "adjusted": 139,
+     "adjusted": 141,
      "id": "marktplaats:m2455961152",
      "price": 100
     },
     {
-     "adjusted": 125,
+     "adjusted": 127,
      "id": "marktplaats:m2456732603",
      "price": 90
     }
    ],
    "confidence": "high",
    "high": 144.0,
-   "low": 110.0,
+   "low": 111.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 128.0
+   "price": 129.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -8257,7 +8263,7 @@
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2458140709-honeywell-t6-ontvanger-wandplaat-nieuw-t6-thermostaat"
  },
  {
-  "active": true,
+  "active": false,
   "attrs": {
    "condition": "like_new",
    "includes_receiver": null,
@@ -8364,6 +8370,7 @@
    ]
   ],
   "price_type": "FAST_BID",
+  "removed_on": "2026-11-01",
   "rule_attrs": {
    "condition": "like_new",
    "includes_receiver": null,
@@ -8536,7 +8543,7 @@
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2458242014-honeywell-home-thermostaat-wit-230v"
  },
  {
-  "active": true,
+  "active": false,
   "attrs": {
    "condition": "new_open_box",
    "includes_receiver": null,
@@ -8592,6 +8599,7 @@
    ]
   ],
   "price_type": "FAST_BID",
+  "removed_on": "2026-11-01",
   "rule_attrs": {
    "condition": "new_open_box",
    "includes_receiver": null,
@@ -8806,7 +8814,7 @@
      "price": 65
     },
     {
-     "adjusted": 169,
+     "adjusted": 167,
      "id": "marktplaats:m2439211713",
      "price": 150
     },
@@ -8816,22 +8824,22 @@
      "price": 60
     },
     {
-     "adjusted": 96,
+     "adjusted": 94,
      "id": "marktplaats:m2448829475",
      "price": 85
     },
     {
-     "adjusted": 34,
+     "adjusted": 33,
      "id": "marktplaats:m2452199644",
      "price": 30
     }
    ],
    "confidence": "high",
-   "high": 108.0,
+   "high": 106.0,
    "low": 66.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 98.0
+   "price": 95.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -8909,7 +8917,7 @@
   "deal": {
    "flags": [],
    "label": "overpriced",
-   "pct": -66.3
+   "pct": -66.2
   },
   "description": "Te koop aangeboden: een Honeywell Home T6R slimme thermostaat. Dit systeem is ideaal voor het efficiënt regelen van de temperatuur in uw huis. Het betreft een gebruikte set die nog in goede staat verkeert en volledig functioneel is. Inclusief alle benodigde kabels en de draadloze ontvanger. Perfect voor wie zijn huis wil moderniseren met slimme verwarming.\n\nSlechts één jaar gebruikt. We verkopen deze omdat we met de aanschaf van een warmtepomp een nieuwe kregen. ... ... ... ... ... ... ... ... ... ... ... ... Noordwolde 73x bekeken 2x bewaard Sinds 26 okt. '26",
   "details_version": 2,
@@ -8937,18 +8945,18 @@
      "price": 60
     },
     {
-     "adjusted": 45,
+     "adjusted": 46,
      "id": "marktplaats:m2451956753",
      "price": 45
     },
     {
-     "adjusted": 100,
+     "adjusted": 102,
      "id": "marktplaats:m2455961152",
      "price": 100
     }
    ],
    "confidence": "high",
-   "high": 95.0,
+   "high": 96.0,
    "low": 71.0,
    "method": "comparables",
    "n_comps": 12,
@@ -9212,7 +9220,7 @@
   "deal": {
    "flags": [],
    "label": "good deal",
-   "pct": 11.1
+   "pct": 10.0
   },
   "description": "Te koop aangeboden: een z.g.a.n. Honeywell Home T6 Smart Thermostat. Deze programmeerbare thermostaat is geschikt voor verwarmingssystemen en boilers (inclusief OpenTherm). Bedien de thermostaat eenvoudig via de app op uw smartphone. Ideaal voor een energiezuinig en comfortabel huis. De thermostaat is z.g.a.n. in de originele verpakking en kort gebruikt.\nUiteindelijk zelf toch gekozen voor een wit exemplaar ... ... ... ... ... ... ... ... ... ... ... ... Enschede 79x bekeken 4x bewaard Sinds 27 okt. '26",
   "details_version": 2,
@@ -9225,7 +9233,7 @@
      "price": 65
     },
     {
-     "adjusted": 169,
+     "adjusted": 167,
      "id": "marktplaats:m2439211713",
      "price": 150
     },
@@ -9235,27 +9243,27 @@
      "price": 60
     },
     {
-     "adjusted": 96,
+     "adjusted": 94,
      "id": "marktplaats:m2448829475",
      "price": 85
     },
     {
-     "adjusted": 34,
+     "adjusted": 33,
      "id": "marktplaats:m2452199644",
      "price": 30
     },
     {
-     "adjusted": 112,
+     "adjusted": 111,
      "id": "marktplaats:m2455205211",
      "price": 100
     }
    ],
    "confidence": "high",
-   "high": 112.0,
-   "low": 66.0,
+   "high": 111.0,
+   "low": 65.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 101.0
+   "price": 100.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -9823,7 +9831,7 @@
      "price": 80
     },
     {
-     "adjusted": 131,
+     "adjusted": 130,
      "id": "marktplaats:m2455159770",
      "price": 175
     }
@@ -9925,22 +9933,22 @@
      "price": 30
     },
     {
-     "adjusted": 147,
+     "adjusted": 149,
      "id": "marktplaats:m2456502142",
      "price": 165
     },
     {
-     "adjusted": 150,
+     "adjusted": 152,
      "id": "marktplaats:m2439211713",
      "price": 150
     },
     {
-     "adjusted": 60,
+     "adjusted": 61,
      "id": "marktplaats:m2447291319",
      "price": 60
     },
     {
-     "adjusted": 85,
+     "adjusted": 86,
      "id": "marktplaats:m2448829475",
      "price": 85
     },
@@ -9951,11 +9959,11 @@
     }
    ],
    "confidence": "high",
-   "high": 100.0,
-   "low": 50.0,
+   "high": 102.0,
+   "low": 51.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 90.0
+   "price": 91.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -10154,7 +10162,7 @@
   "deal": {
    "flags": [],
    "label": "good deal",
-   "pct": 8.6
+   "pct": 10.3
   },
   "description": "Nieuwe en ongebruikte Honeywell Home T6 Smart Thermostaat. Deze programmeerbare thermostaat is geschikt voor verwarmingssystemen en cv-ketels (incl. OpenTherm). Eenvoudig te installeren en te bedienen via de Honeywell Home app. Geniet van geavanceerde functies zoals 7-daagse programmering, locatiegebaseerde temperatuurregeling en Smart Home-integratie met Alexa, Google Assistant en Apple HomeKit. ... ... ... ... ... ... ... ... ... ... ... ... Huizen 107x bekeken 11x bewaard Sinds 28 okt. '26",
   "details_version": 2,
@@ -10182,22 +10190,22 @@
      "price": 110
     },
     {
-     "adjusted": 102,
+     "adjusted": 104,
      "id": "marktplaats:m2424755689",
      "price": 115
     },
     {
-     "adjusted": 222,
+     "adjusted": 225,
      "id": "marktplaats:m2457826133",
      "price": 250
     }
    ],
    "confidence": "high",
-   "high": 127.0,
-   "low": 96.0,
+   "high": 128.0,
+   "low": 97.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 104.0
+   "price": 106.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -10251,7 +10259,7 @@
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2459051245-honeywell-home-t6-smart-thermostaat-nieuw-ongebruikt"
  },
  {
-  "active": true,
+  "active": false,
   "attrs": {
    "condition": "new_open_box",
    "includes_receiver": null,
@@ -10313,6 +10321,7 @@
    ]
   ],
   "price_type": "MIN_BID",
+  "removed_on": "2026-11-01",
   "rule_attrs": {
    "condition": "new_open_box",
    "includes_receiver": null,
@@ -10570,22 +10579,22 @@
      "price": 30
     },
     {
-     "adjusted": 147,
+     "adjusted": 149,
      "id": "marktplaats:m2456502142",
      "price": 165
     },
     {
-     "adjusted": 150,
+     "adjusted": 152,
      "id": "marktplaats:m2439211713",
      "price": 150
     },
     {
-     "adjusted": 60,
+     "adjusted": 61,
      "id": "marktplaats:m2447291319",
      "price": 60
     },
     {
-     "adjusted": 85,
+     "adjusted": 86,
      "id": "marktplaats:m2448829475",
      "price": 85
     },
@@ -10596,11 +10605,11 @@
     }
    ],
    "confidence": "high",
-   "high": 100.0,
-   "low": 50.0,
+   "high": 102.0,
+   "low": 51.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 90.0
+   "price": 91.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -10952,7 +10961,7 @@
   "deal": {
    "flags": [],
    "label": "a bit pricey",
-   "pct": -9.2
+   "pct": -8.8
   },
   "description": "Te koop aangeboden: een Honeywell Lyric T6 slimme thermostaat inclusief OpenTherm. De thermostaat is enkel uit de verpakking gehaald om de werking te testen en verkeert dus in absolute nieuwstaat. Er zitten geen gebruikssporen op en het folie zit nog op het scherm.\nIk verkoop deze thermostaat omdat dit het verkeerde type is voor mijn installatie.\n\nDe Honeywell Lyric T6 is een van de meest betrouwbare en populaire slimme thermostaten op de markt. Het apparaat leert jouw ritme kennen en helpt je direct te besparen op je energierekening. ... ... ... ... ... ... ... ... ... ... ... ... Beuningen Gld 43x bekeken 1x bewaard Sinds 30 okt. '26",
   "details_version": 2,
@@ -10980,18 +10989,18 @@
      "price": 95
     },
     {
-     "adjusted": 102,
+     "adjusted": 104,
      "id": "marktplaats:m2424755689",
      "price": 115
     },
     {
-     "adjusted": 222,
+     "adjusted": 225,
      "id": "marktplaats:m2457826133",
      "price": 250
     }
    ],
    "confidence": "high",
-   "high": 127.0,
+   "high": 128.0,
    "low": 92.0,
    "method": "comparables",
    "n_comps": 12,
@@ -11126,7 +11135,7 @@
   "url": "https://www.marktplaats.nl/v/auto-onderdelen/carrosserie-en-plaatwerk/m2459846040-portier-2deurs-rechts-van-een-volkswagen-transporter-lr5t"
  },
  {
-  "active": true,
+  "active": false,
   "attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -11182,6 +11191,7 @@
    ]
   ],
   "price_type": "SEE_DESCRIPTION",
+  "removed_on": "2026-11-01",
   "rule_attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -11278,7 +11288,7 @@
   "url": "https://www.marktplaats.nl/v/auto-onderdelen/carrosserie-en-plaatwerk/m2459858748-portier-2deurs-links-van-een-volkswagen-transporter-la7w"
  },
  {
-  "active": false,
+  "active": true,
   "attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -11334,7 +11344,6 @@
    ]
   ],
   "price_type": "SEE_DESCRIPTION",
-  "removed_on": "2026-11-01",
   "rule_attrs": {
    "condition": "like_new",
    "includes_receiver": null,
@@ -11676,7 +11685,7 @@
   "url": "https://www.marktplaats.nl/v/auto-onderdelen/overige-auto-onderdelen/m2459863391-motorkapontgrendeling-vw-transporter-t6-1j1823533c"
  },
  {
-  "active": true,
+  "active": false,
   "attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -11713,22 +11722,22 @@
      "price": 30
     },
     {
-     "adjusted": 147,
+     "adjusted": 149,
      "id": "marktplaats:m2456502142",
      "price": 165
     },
     {
-     "adjusted": 150,
+     "adjusted": 152,
      "id": "marktplaats:m2439211713",
      "price": 150
     },
     {
-     "adjusted": 60,
+     "adjusted": 61,
      "id": "marktplaats:m2447291319",
      "price": 60
     },
     {
-     "adjusted": 85,
+     "adjusted": 86,
      "id": "marktplaats:m2448829475",
      "price": 85
     },
@@ -11739,11 +11748,11 @@
     }
    ],
    "confidence": "high",
-   "high": 100.0,
-   "low": 50.0,
+   "high": 102.0,
+   "low": 51.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 90.0
+   "price": 91.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -11777,6 +11786,7 @@
    ]
   ],
   "price_type": "FAST_BID",
+  "removed_on": "2026-11-01",
   "rule_attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -12161,7 +12171,7 @@
   "deal": {
    "flags": [],
    "label": "great deal",
-   "pct": 19.1
+   "pct": 19.5
   },
   "description": "Deze Honeywell Lyric T6R is een geavanceerde slimme thermostaat die zorgt voor een comfortabel en energiezuinig huis. De thermostaat is draadloos en kan eenvoudig worden bediend via een app op uw smartphone, waar u ook bent. Het systeem is compleet met de bijbehorende AC/DC adapter (TR-VC001) en ontvanger, klaar voor installatie. Ideaal voor wie op zoek is naar moderne klimaatbeheersing met slimme functies zoals geofencing en planning. ... ... ... ... ... ... ... ... ... ... ... ... Swifterbant 45x bekeken 5x bewaard Sinds 30 okt. '26",
   "details_version": 2,
@@ -12189,18 +12199,18 @@
      "price": 60
     },
     {
-     "adjusted": 45,
+     "adjusted": 46,
      "id": "marktplaats:m2451956753",
      "price": 45
     },
     {
-     "adjusted": 100,
+     "adjusted": 102,
      "id": "marktplaats:m2455961152",
      "price": 100
     }
    ],
    "confidence": "high",
-   "high": 100.0,
+   "high": 102.0,
    "low": 79.0,
    "method": "comparables",
    "n_comps": 12,
@@ -12282,7 +12292,7 @@
   "deal": {
    "flags": [],
    "label": "overpriced",
-   "pct": -22.7
+   "pct": -21.4
   },
   "description": "Nieuwe Honeywell Home T6R slimme thermostaat in zwarte editie, nog nieuw in doos. Deze draadloze thermostaat is eenvoudig via wifi te bedienen met je telefoon, waar je ook bent. De nieuwprijs bedraagt 185 euro, mijn vaste prijs is 155 euro. Ideaal voor comfort en energiebesparing in huis. Bedien de verwarming op afstand en bespaar op je energierekening. ... ... ... ... ... ... ... ... ... ... ... ... Hoofddorp 36x bekeken 2x bewaard Sinds 30 okt. '26",
   "details_version": 2,
@@ -12305,12 +12315,12 @@
      "price": 65
     },
     {
-     "adjusted": 111,
+     "adjusted": 112,
      "id": "marktplaats:m2460267643",
      "price": 110
     },
     {
-     "adjusted": 228,
+     "adjusted": 226,
      "id": "marktplaats:m2447079639",
      "price": 200
     },
@@ -12321,11 +12331,11 @@
     }
    ],
    "confidence": "high",
-   "high": 143.0,
-   "low": 108.0,
+   "high": 144.0,
+   "low": 110.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 126.0
+   "price": 128.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -12637,14 +12647,14 @@
      "price": 80
     },
     {
-     "adjusted": 131,
+     "adjusted": 130,
      "id": "marktplaats:m2455159770",
      "price": 175
     }
    ],
    "confidence": "high",
    "high": 111.0,
-   "low": 79.0,
+   "low": 78.0,
    "method": "comparables",
    "n_comps": 12,
    "price": 91.0
@@ -12799,22 +12809,22 @@
      "price": 30
     },
     {
-     "adjusted": 147,
+     "adjusted": 149,
      "id": "marktplaats:m2456502142",
      "price": 165
     },
     {
-     "adjusted": 150,
+     "adjusted": 152,
      "id": "marktplaats:m2439211713",
      "price": 150
     },
     {
-     "adjusted": 60,
+     "adjusted": 61,
      "id": "marktplaats:m2447291319",
      "price": 60
     },
     {
-     "adjusted": 85,
+     "adjusted": 86,
      "id": "marktplaats:m2448829475",
      "price": 85
     },
@@ -12825,11 +12835,11 @@
     }
    ],
    "confidence": "high",
-   "high": 100.0,
-   "low": 50.0,
+   "high": 102.0,
+   "low": 51.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 90.0
+   "price": 91.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -12946,7 +12956,7 @@
     }
    ],
    "confidence": "high",
-   "high": 83.0,
+   "high": 85.0,
    "low": 59.0,
    "method": "comparables",
    "n_comps": 12,
@@ -13004,7 +13014,7 @@
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2460112407-honeywell-lyric-t6r-slimme-thermostaat-zonder-ontvanger"
  },
  {
-  "active": true,
+  "active": false,
   "alerted_price": 65,
   "attrs": {
    "condition": "like_new",
@@ -13029,7 +13039,7 @@
   "deal": {
    "flags": [],
    "label": "great deal",
-   "pct": 35.8
+   "pct": 35.0
   },
   "description": "Te koop: een zo goed als nieuwe Honeywell T6 Smart Thermostaat. Deze programmeerbare thermostaat is geschikt voor verwarmingssystemen en ketels (incl. OpenTherm). Eenvoudig te installeren en te bedienen via de thermostaat zelf of via de Honeywell Home app. De thermostaat biedt 7-daagse programmering, temperatuurregeling op basis van locatie (Geofencing) en is Smart Home ready. Compleet met alle benodigde onderdelen en handleidingen.\nNetwerk verbinding in te stellen via helpdesk. ... ... ... ... ... ... ... ... ... ... ... ... Bennebroek 29x bekeken 2x bewaard Sinds 31 okt. '26",
   "details_version": 2,
@@ -13042,7 +13052,7 @@
      "price": 90
     },
     {
-     "adjusted": 169,
+     "adjusted": 167,
      "id": "marktplaats:m2439211713",
      "price": 150
     },
@@ -13052,27 +13062,27 @@
      "price": 60
     },
     {
-     "adjusted": 96,
+     "adjusted": 94,
      "id": "marktplaats:m2448829475",
      "price": 85
     },
     {
-     "adjusted": 34,
+     "adjusted": 33,
      "id": "marktplaats:m2452199644",
      "price": 30
     },
     {
-     "adjusted": 112,
+     "adjusted": 111,
      "id": "marktplaats:m2455205211",
      "price": 100
     }
    ],
    "confidence": "high",
-   "high": 112.0,
+   "high": 111.0,
    "low": 81.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 101.0
+   "price": 100.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -13106,6 +13116,7 @@
    ]
   ],
   "price_type": "MIN_BID",
+  "removed_on": "2026-11-01",
   "rule_attrs": {
    "condition": "like_new",
    "includes_receiver": null,
@@ -13879,7 +13890,7 @@
   "deal": {
    "flags": [],
    "label": "good deal",
-   "pct": 13.8
+   "pct": 14.8
   },
   "description": "Nieuwe Honeywell T6/T6r slimme thermostaat. Deze thermostaat is nog nooit gebruikt en zit nieuw in de doos. Ideaal voor het efficiënt regelen van je verwarming via een app op je smartphone. Geschikt voor diverse verwarmingssystemen.doos is een beetje beschadigd kleur zwart ... ... ... ... ... ... ... ... ... ... ... ... IJmuiden 26x bekeken 3x bewaard Sinds 31 okt. '26",
   "details_version": 2,
@@ -13892,12 +13903,12 @@
      "price": 65
     },
     {
-     "adjusted": 225,
+     "adjusted": 222,
      "id": "marktplaats:m2447079639",
      "price": 200
     },
     {
-     "adjusted": 105,
+     "adjusted": 108,
      "id": "marktplaats:m2457838308",
      "price": 85
     },
@@ -13907,22 +13918,22 @@
      "price": 45
     },
     {
-     "adjusted": 139,
+     "adjusted": 141,
      "id": "marktplaats:m2455961152",
      "price": 100
     },
     {
-     "adjusted": 125,
+     "adjusted": 127,
      "id": "marktplaats:m2456732603",
      "price": 90
     }
    ],
    "confidence": "high",
    "high": 144.0,
-   "low": 105.0,
+   "low": 108.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 128.0
+   "price": 129.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
@@ -14262,7 +14273,7 @@
    ],
    "confidence": "high",
    "high": 108.0,
-   "low": 79.0,
+   "low": 78.0,
    "method": "comparables",
    "n_comps": 12,
    "price": 94.0
@@ -14331,10 +14342,10 @@
    "red_flags": [],
    "seller_type": "private",
    "shipping": false,
-   "summary": "Honeywell BDR91 on/off relay (loose part, not a thermostat), like new, price via bidding.",
+   "summary": "Honeywell BDR91 on/off relay only (loose part), asking 60 EUR fixed.",
    "table_stand": false
   },
-  "attrs_hash": "e6707e996faa9fa5",
+  "attrs_hash": "fd11dfe37ec4e466",
   "attrs_source": "claude",
   "attrs_version": 1,
   "city": "Bergen (NH)",
@@ -14356,25 +14367,29 @@
    "is_item": false,
    "model": "unknown",
    "original_box": false,
-   "quantity": 0,
+   "quantity": 1,
    "red_flags": [],
    "seller_type": "unknown",
    "shipping": false,
-   "summary": "Honeywell BDR91 on/off relay (loose part, not a thermostat), like new, price via bidding.",
+   "summary": "Honeywell BDR91 on/off relay only (loose part), asking 60 EUR fixed.",
    "table_stand": false
   },
   "lon": 4.7238659682054,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
   "new_ad_on": "2026-10-31",
   "posted_at": "Gisteren",
-  "price_eur": null,
+  "price_eur": 60,
   "price_history": [
    [
     "2026-10-31",
     null
+   ],
+   [
+    "2026-11-01",
+    60
    ]
   ],
-  "price_type": "FAST_BID",
+  "price_type": "FIXED",
   "rule_attrs": {
    "condition": "like_new",
    "includes_receiver": true,
@@ -14395,7 +14410,7 @@
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2460323521-honeywell-bdr91-aan-uit-relais"
  },
  {
-  "active": false,
+  "active": true,
   "attrs": {
    "condition": "like_new",
    "includes_receiver": null,
@@ -14451,7 +14466,6 @@
    ]
   ],
   "price_type": "MIN_BID",
-  "removed_on": "2026-11-01",
   "rule_attrs": {
    "condition": "like_new",
    "includes_receiver": null,
@@ -14470,6 +14484,86 @@
   "source": "marktplaats",
   "title": "Honeywell thermostaat - Zo goed als nieuw",
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2460342046-honeywell-thermostaat-zo-goed-als-nieuw"
+ },
+ {
+  "active": true,
+  "attrs": {
+   "condition": "like_new",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "model_assumed": false,
+   "original_box": false,
+   "quantity": 1,
+   "red_flags": [
+    "model not stated as T6 or T6R"
+   ],
+   "seller_type": "private",
+   "shipping": false,
+   "summary": "Generic Honeywell Home smart thermostat, model not specified, price not stated, Maastricht.",
+   "table_stand": false
+  },
+  "attrs_hash": "d08d0a345f05a700",
+  "attrs_source": "claude",
+  "attrs_version": 1,
+  "city": "Maastricht",
+  "condition_raw": "Zo goed als nieuw",
+  "country": "Nederland",
+  "description": "Te koop: een Honeywell Home thermostaat. Dit is een slimme thermostaat die helpt bij het efficiënt regelen van de temperatuur in huis, wat kan leiden tot energiebesparing. De thermostaat is in goede staat en werkt perfect. Eenvoudig te installeren en te bedienen via een app of direct op het apparaat. Ideaal voor wie op zoek is naar een betrouwbare en moderne oplossing voor huisverwarming.\nEn ideaal om op afstand te kunnen bedienen 🧐 ... ... ... ... ... ... ... ... ... ... ... ... Maastricht 26x bekeken 0x bewaard Sinds 31 okt. '26",
+  "details_version": 2,
+  "distance_km": 97.0,
+  "first_seen": "2026-11-01",
+  "full_description": true,
+  "id": "marktplaats:m2460347886",
+  "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/043a1871-0fe8-45d3-a052-412e40a823bb?rule=ecg_mp_eps$_82.jpg",
+  "kind": "used",
+  "last_seen": "2026-11-01",
+  "lat": 50.842083269875,
+  "llm_attrs": {
+   "condition": "like_new",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "original_box": false,
+   "quantity": 1,
+   "red_flags": [
+    "model not stated as T6 or T6R"
+   ],
+   "seller_type": "private",
+   "shipping": false,
+   "summary": "Generic Honeywell Home smart thermostat, model not specified, price not stated, Maastricht.",
+   "table_stand": false
+  },
+  "lon": 5.6553631365126,
+  "new_ad_at": "2026-11-01T16:51:29+00:00",
+  "new_ad_on": "2026-11-01",
+  "posted_at": "Gisteren",
+  "price_eur": null,
+  "price_history": [
+   [
+    "2026-11-01",
+    null
+   ]
+  ],
+  "price_type": "FAST_BID",
+  "rule_attrs": {
+   "condition": "like_new",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "original_box": false,
+   "quantity": 1,
+   "red_flags": [],
+   "seller_type": "private",
+   "shipping": false,
+   "summary": "",
+   "table_stand": false
+  },
+  "seller_has_website": false,
+  "seller_verified": false,
+  "source": "marktplaats",
+  "title": "Honeywell Home Thermostaat",
+  "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/verwarming-en-radiatoren/m2460347886-honeywell-home-thermostaat"
  },
  {
   "active": true,
@@ -14713,10 +14807,10 @@
    "red_flags": [],
    "seller_type": "private",
    "shipping": false,
-   "summary": "Used Honeywell Home T6R wireless thermostat set including the gateway/relay box and cables, asking 60 EUR (bid-based)",
+   "summary": "Used Honeywell Home T6 thermostat set with gateway/relay box, cables included, asking 60 EUR (min bid).",
    "table_stand": false
   },
-  "attrs_hash": "dada12f9b09fe589",
+  "attrs_hash": "0cc9800e8e92a78b",
   "attrs_source": "claude",
   "attrs_version": 1,
   "city": "Nieuw Beerta",
@@ -14725,7 +14819,7 @@
   "deal": {
    "flags": [],
    "label": "great deal",
-   "pct": 30.7
+   "pct": 31.0
   },
   "description": "T6 smart home. E complete set van de Honeywell Home slimme thermostaat. Deze set bestaat uit de thermostaat zelf en de bijbehorende gateway/relaisbox. Ideaal voor het efficiënt regelen van je verwarming. De set is gebruikt, maar werkt nog perfect. Alle benodigde kabels zijn aanwezig voor installatie.\nWerkt prima. via kastje of via interner en app ... ... ... ... ... ... ... ... ... ... ... ... Nieuw Beerta 4x bekeken 0x bewaard Sinds 1 nov. '26",
   "details_version": 2,
@@ -14753,18 +14847,18 @@
      "price": 70
     },
     {
-     "adjusted": 45,
+     "adjusted": 46,
      "id": "marktplaats:m2451956753",
      "price": 45
     },
     {
-     "adjusted": 100,
+     "adjusted": 102,
      "id": "marktplaats:m2455961152",
      "price": 100
     }
    ],
    "confidence": "high",
-   "high": 100.0,
+   "high": 102.0,
    "low": 79.0,
    "method": "comparables",
    "n_comps": 12,
@@ -14785,9 +14879,9 @@
    "original_box": false,
    "quantity": 1,
    "red_flags": [],
-   "seller_type": "unknown",
+   "seller_type": "private",
    "shipping": false,
-   "summary": "Used Honeywell Home T6R wireless thermostat set including the gateway/relay box and cables, asking 60 EUR (bid-based)",
+   "summary": "Used Honeywell Home T6 thermostat set with gateway/relay box, cables included, asking 60 EUR (min bid).",
    "table_stand": false
   },
   "lon": 7.1768757974734,
@@ -14818,8 +14912,8 @@
   "seller_has_website": false,
   "seller_verified": false,
   "source": "marktplaats",
-  "title": "Honeywell Home Slimme T6 smart Thermostaat T6R",
-  "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2460492782-honeywell-home-slimme-t6-smart-thermostaat-t6r"
+  "title": "Honeywell Home Slimme T6 smart Thermostaat",
+  "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2460492782-honeywell-home-slimme-t6-smart-thermostaat"
  },
  {
   "active": true,
@@ -14849,7 +14943,7 @@
     "price far below market: check carefully (scam/stolen/defect?)"
    ],
    "label": "great deal",
-   "pct": 67.8
+   "pct": 68.3
   },
   "description": "Te koop: een Honeywell Home thermostaat, ideaal voor het regelen van de temperatuur in uw huis. Het apparaat is in goede staat en wordt geleverd met de bijbehorende kabel. Perfect voor wie op zoek is naar een betrouwbare en gebruiksvriendelijke thermostaat. ... ... ... ... ... ... ... ... ... ... ... ... Haaren 4x bekeken 0x bewaard Sinds 1 nov. '26",
   "details_version": 2,
@@ -14857,22 +14951,22 @@
   "fair": {
    "comps": [
     {
-     "adjusted": 147,
+     "adjusted": 149,
      "id": "marktplaats:m2456502142",
      "price": 165
     },
     {
-     "adjusted": 150,
+     "adjusted": 152,
      "id": "marktplaats:m2439211713",
      "price": 150
     },
     {
-     "adjusted": 60,
+     "adjusted": 61,
      "id": "marktplaats:m2447291319",
      "price": 60
     },
     {
-     "adjusted": 85,
+     "adjusted": 86,
      "id": "marktplaats:m2448829475",
      "price": 85
     },
@@ -14882,17 +14976,17 @@
      "price": 30
     },
     {
-     "adjusted": 100,
+     "adjusted": 102,
      "id": "marktplaats:m2455205211",
      "price": 100
     }
    ],
    "confidence": "high",
-   "high": 100.0,
-   "low": 79.0,
+   "high": 102.0,
+   "low": 80.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 93.0
+   "price": 95.0
   },
   "first_seen": "2026-11-01",
   "full_description": true,
@@ -15278,7 +15372,7 @@
   "deal": {
    "flags": [],
    "label": "good deal",
-   "pct": 10.2
+   "pct": 11.5
   },
   "description": "Nieuwe zit nog de verpakking Honeywell Home T6R slimme thermostaat. Draadloos programmeerbaar voor verwarmingssystemen en cv-ketels (incl. OpenTherm®). Werkt met Alexa, Google Assistant en Apple HomeKit. ... ... ... ... ... ... ... ... ... ... ... ... Eerbeek 17x bekeken 1x bewaard Sinds 1 nov. '26",
   "details_version": 2,
@@ -15301,12 +15395,12 @@
      "price": 65
     },
     {
-     "adjusted": 111,
+     "adjusted": 112,
      "id": "marktplaats:m2460267643",
      "price": 110
     },
     {
-     "adjusted": 228,
+     "adjusted": 226,
      "id": "marktplaats:m2447079639",
      "price": 200
     },
@@ -15318,10 +15412,10 @@
    ],
    "confidence": "high",
    "high": 155.0,
-   "low": 108.0,
+   "low": 110.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 139.0
+   "price": 141.0
   },
   "first_seen": "2026-11-01",
   "full_description": true,
@@ -15433,14 +15527,14 @@
      "price": 100
     },
     {
-     "adjusted": 131,
+     "adjusted": 130,
      "id": "marktplaats:m2455159770",
      "price": 175
     }
    ],
    "confidence": "high",
    "high": 111.0,
-   "low": 79.0,
+   "low": 78.0,
    "method": "comparables",
    "n_comps": 12,
    "price": 95.0
@@ -15571,5 +15665,682 @@
   "source": "marktplaats",
   "title": "Honeywell T4M Thermostaat - Zo goed als nieuw",
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2460603712-honeywell-t4m-thermostaat-zo-goed-als-nieuw"
+ },
+ {
+  "active": true,
+  "attrs": {
+   "condition": "used",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "t6r_wireless",
+   "model_assumed": false,
+   "original_box": false,
+   "quantity": 1,
+   "red_flags": [
+    "model not stated as T6 or T6R"
+   ],
+   "seller_type": "private",
+   "shipping": false,
+   "summary": "Wireless (draadloos) Honeywell Home thermostat, about 2 months old, complete, price not stated, Odoorn.",
+   "table_stand": false
+  },
+  "attrs_hash": "24ac018252ef360c",
+  "attrs_source": "claude",
+  "attrs_version": 1,
+  "city": "Odoorn",
+  "condition_raw": "Nieuw",
+  "country": "Nederland",
+  "description": "2 maand oud thermostaat. draadloos\nCompleet\nuit rookvrij huis ... ... ... ... ... ... ... ... ... ... ... ... Odoorn 15x bekeken 0x bewaard Sinds 1 nov. '26",
+  "details_version": 2,
+  "distance_km": 167.0,
+  "first_seen": "2026-11-01",
+  "full_description": true,
+  "id": "marktplaats:m2460632536",
+  "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/8bb671b4-fb06-4c7c-9764-ab6350d83221?rule=ecg_mp_eps$_82.jpg",
+  "kind": "new",
+  "last_seen": "2026-11-01",
+  "lat": 52.851399658175,
+  "llm_attrs": {
+   "condition": "used",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "original_box": false,
+   "quantity": 1,
+   "red_flags": [
+    "model not stated as T6 or T6R"
+   ],
+   "seller_type": "private",
+   "shipping": false,
+   "summary": "Wireless (draadloos) Honeywell Home thermostat, about 2 months old, complete, price not stated, Odoorn.",
+   "table_stand": false
+  },
+  "lon": 6.8499490881922,
+  "new_ad_at": "2026-11-01T16:51:29+00:00",
+  "new_ad_on": "2026-11-01",
+  "posted_at": "Vandaag",
+  "price_eur": null,
+  "price_history": [
+   [
+    "2026-11-01",
+    null
+   ]
+  ],
+  "price_type": "FAST_BID",
+  "rule_attrs": {
+   "condition": "new_open_box",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "t6r_wireless",
+   "original_box": false,
+   "quantity": 1,
+   "red_flags": [],
+   "seller_type": "private",
+   "shipping": false,
+   "summary": "",
+   "table_stand": false
+  },
+  "seller_has_website": false,
+  "seller_verified": false,
+  "source": "marktplaats",
+  "title": "honeywell home thermostaat",
+  "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2460632536-honeywell-home-thermostaat"
+ },
+ {
+  "active": true,
+  "attrs": {
+   "condition": "like_new",
+   "includes_receiver": false,
+   "is_item": false,
+   "model": "t6r_wireless",
+   "model_assumed": false,
+   "original_box": false,
+   "quantity": 1,
+   "red_flags": [],
+   "seller_type": "private",
+   "shipping": true,
+   "summary": "Loose display only for Honeywell Lyric T6R (no receiver box), asking 90 EUR fixed.",
+   "table_stand": false
+  },
+  "attrs_hash": "bc0cefb2a7a2eaeb",
+  "attrs_source": "claude",
+  "attrs_version": 1,
+  "city": "'s-Gravenhage",
+  "condition_raw": "Zo goed als nieuw",
+  "country": "Nederland",
+  "description": "Te koop: Losse display voor een Honeywell / Resideo T6R thermostaat. \n\n Dit betreft dus alleen de display ( niet het witte kastje).\n\nIn goede staat en online te registeren.\n\n Prijs is vast. \n Opsturen mogelijk, risico en kosten koper. ... ... ... ... ... ... ... ... ... ... ... ... 's-Gravenhage 12x bekeken 0x bewaard Sinds 1 nov. '26",
+  "details_version": 2,
+  "distance_km": 83.0,
+  "first_seen": "2026-11-01",
+  "full_description": true,
+  "id": "marktplaats:m2460635518",
+  "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/36acfc1c-5b49-499d-b448-c32db9349c27?rule=ecg_mp_eps$_82.jpg",
+  "kind": "used",
+  "last_seen": "2026-11-01",
+  "lat": 52.067559617198,
+  "llm_attrs": {
+   "condition": "like_new",
+   "includes_receiver": false,
+   "is_item": false,
+   "model": "t6r_wireless",
+   "original_box": false,
+   "quantity": 1,
+   "red_flags": [],
+   "seller_type": "private",
+   "shipping": true,
+   "summary": "Loose display only for Honeywell Lyric T6R (no receiver box), asking 90 EUR fixed.",
+   "table_stand": false
+  },
+  "lon": 4.2572731777889,
+  "new_ad_at": "2026-11-01T16:51:29+00:00",
+  "new_ad_on": "2026-11-01",
+  "posted_at": "Vandaag",
+  "price_eur": 90,
+  "price_history": [
+   [
+    "2026-11-01",
+    90
+   ]
+  ],
+  "price_type": "FIXED",
+  "rule_attrs": {
+   "condition": "like_new",
+   "includes_receiver": null,
+   "is_item": true,
+   "model": "t6r_wireless",
+   "original_box": false,
+   "quantity": 1,
+   "red_flags": [],
+   "seller_type": "private",
+   "shipping": true,
+   "summary": "",
+   "table_stand": false
+  },
+  "seller_has_website": false,
+  "seller_verified": false,
+  "source": "marktplaats",
+  "title": "Honeywell Lyric T6R - Display only",
+  "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2460635518-honeywell-lyric-t6r-display-only"
+ },
+ {
+  "active": true,
+  "attrs": {
+   "condition": "used",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "model_assumed": false,
+   "original_box": false,
+   "quantity": 2,
+   "red_flags": [],
+   "seller_type": "private",
+   "shipping": false,
+   "summary": "Set of Honeywell UCB615 and UCB01C valve actuators with brass valve (loose parts), min bid 90 EUR.",
+   "table_stand": false
+  },
+  "attrs_hash": "d1b2832d873dc0fa",
+  "attrs_source": "claude",
+  "attrs_version": 1,
+  "city": "Aardenburg",
+  "condition_raw": "Gebruikt",
+  "country": "Nederland",
+  "description": "Te koop: een set van twee Honeywell Home UCB615 en één UCB01C klep actuators, inclusief een messing klep. Deze componenten zijn ideaal voor verwarmings- en koelsystemen. Ze zijn gebruikt, maar verkeren in goede staat en functioneren naar behoren. Perfect voor vervanging of uitbreiding van uw bestaande systeem. ... ... ... ... ... ... ... ... ... ... ... ... Aardenburg 6x bekeken 0x bewaard Sinds 1 nov. '26",
+  "details_version": 2,
+  "distance_km": 137.0,
+  "first_seen": "2026-11-01",
+  "full_description": true,
+  "id": "marktplaats:m2460637745",
+  "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/e0fdaaf2-ade6-40ce-b39d-6238da6825ec?rule=ecg_mp_eps$_82.jpg",
+  "kind": "used",
+  "last_seen": "2026-11-01",
+  "lat": 51.27477841218,
+  "llm_attrs": {
+   "condition": "used",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "original_box": false,
+   "quantity": 2,
+   "red_flags": [],
+   "seller_type": "unknown",
+   "shipping": false,
+   "summary": "Set of Honeywell UCB615 and UCB01C valve actuators with brass valve (loose parts), min bid 90 EUR.",
+   "table_stand": false
+  },
+  "lon": 3.4387029013922,
+  "new_ad_at": "2026-11-01T16:51:29+00:00",
+  "new_ad_on": "2026-11-01",
+  "posted_at": "Vandaag",
+  "price_eur": 90,
+  "price_history": [
+   [
+    "2026-11-01",
+    90
+   ]
+  ],
+  "price_type": "MIN_BID",
+  "rule_attrs": {
+   "condition": "used",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "original_box": false,
+   "quantity": 6,
+   "red_flags": [],
+   "seller_type": "private",
+   "shipping": false,
+   "summary": "",
+   "table_stand": false
+  },
+  "seller_has_website": false,
+  "seller_verified": false,
+  "source": "marktplaats",
+  "title": "Honeywell Home UCB615 & UCB01C Klep Actuators",
+  "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2460637745-honeywell-home-ucb615-ucb01c-klep-actuators"
+ },
+ {
+  "active": true,
+  "attrs": {
+   "condition": "unknown",
+   "includes_receiver": null,
+   "is_item": true,
+   "model": "t6_wired",
+   "model_assumed": true,
+   "original_box": false,
+   "quantity": 1,
+   "red_flags": [],
+   "seller_type": "private",
+   "shipping": false,
+   "summary": "Honeywell T6 smart thermostat (wifi, app-controlled), no condition or price stated, Gennep.",
+   "table_stand": false
+  },
+  "attrs_hash": "e6e418c007d788de",
+  "attrs_source": "claude",
+  "attrs_version": 1,
+  "city": "Gennep",
+  "condition_raw": "",
+  "country": "Nederland",
+  "deal": {
+   "flags": [],
+   "label": "no price",
+   "pct": null
+  },
+  "description": "honeywell t6\nsmart thermostaat\nwifi\nbedienbaar met app op je telefoon ... ... ... ... ... ... ... ... ... ... ... ... Gennep 16x bekeken 4x bewaard Sinds 1 nov. '26",
+  "details_version": 2,
+  "distance_km": 47.0,
+  "fair": {
+   "comps": [
+    {
+     "adjusted": 30,
+     "id": "marktplaats:m2460504947",
+     "price": 30
+    },
+    {
+     "adjusted": 149,
+     "id": "marktplaats:m2456502142",
+     "price": 165
+    },
+    {
+     "adjusted": 152,
+     "id": "marktplaats:m2439211713",
+     "price": 150
+    },
+    {
+     "adjusted": 61,
+     "id": "marktplaats:m2447291319",
+     "price": 60
+    },
+    {
+     "adjusted": 86,
+     "id": "marktplaats:m2448829475",
+     "price": 85
+    },
+    {
+     "adjusted": 30,
+     "id": "marktplaats:m2452199644",
+     "price": 30
+    }
+   ],
+   "confidence": "low",
+   "high": 102.0,
+   "low": 51.0,
+   "method": "comparables",
+   "n_comps": 12,
+   "price": 91.0
+  },
+  "first_seen": "2026-11-01",
+  "full_description": true,
+  "id": "marktplaats:m2460664548",
+  "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/3543c2d6-b737-4a1e-b7eb-135cd83478ca?rule=ecg_mp_eps$_82.jpg",
+  "kind": "used",
+  "last_seen": "2026-11-01",
+  "lat": 51.694082466194,
+  "llm_attrs": {
+   "condition": "unknown",
+   "includes_receiver": null,
+   "is_item": true,
+   "model": "unknown",
+   "original_box": false,
+   "quantity": 1,
+   "red_flags": [],
+   "seller_type": "unknown",
+   "shipping": false,
+   "summary": "Honeywell T6 smart thermostat (wifi, app-controlled), no condition or price stated, Gennep.",
+   "table_stand": false
+  },
+  "lon": 5.9822590157475,
+  "new_ad_at": "2026-11-01T16:51:29+00:00",
+  "new_ad_on": "2026-11-01",
+  "posted_at": "Vandaag",
+  "price_eur": null,
+  "price_history": [
+   [
+    "2026-11-01",
+    null
+   ]
+  ],
+  "price_type": "FAST_BID",
+  "rule_attrs": {
+   "condition": "unknown",
+   "includes_receiver": null,
+   "is_item": true,
+   "model": "unknown",
+   "original_box": false,
+   "quantity": 4,
+   "red_flags": [],
+   "seller_type": "private",
+   "shipping": false,
+   "summary": "",
+   "table_stand": false
+  },
+  "seller_has_website": false,
+  "seller_verified": false,
+  "source": "marktplaats",
+  "title": "honeywell home t6 smart thermostaat wifi",
+  "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2460664548-honeywell-home-t6-smart-thermostaat-wifi"
+ },
+ {
+  "active": true,
+  "attrs": {
+   "condition": "like_new",
+   "includes_receiver": null,
+   "is_item": true,
+   "model": "t6_wired",
+   "model_assumed": true,
+   "original_box": false,
+   "quantity": 1,
+   "red_flags": [],
+   "seller_type": "private",
+   "shipping": false,
+   "summary": "Honeywell Home T6 Smart Thermostat in white, used about one year, working, asking 55 EUR fixed.",
+   "table_stand": false
+  },
+  "attrs_hash": "59df9917d34eb3ed",
+  "attrs_source": "claude",
+  "attrs_version": 1,
+  "city": "Leidschendam",
+  "condition_raw": "Zo goed als nieuw",
+  "country": "Nederland",
+  "deal": {
+   "flags": [
+    "price far below market: check carefully (scam/stolen/defect?)"
+   ],
+   "label": "great deal",
+   "pct": 40.2
+  },
+  "description": "Te koop aangeboden: Honeywell Home T6 Smart Thermostat.\nModerne en gebruiksvriendelijke slimme thermostaat van Honeywell. Geschikt voor het regelen en programmeren van de verwarming in huis.\nDe thermostaat is ongeveer één jaar gebruikt en wordt verkocht omdat deze overbodig is geworden.\n Specificaties: \n\n Merk: Honeywell Home Model: T6 Smart Thermostat Kleur: wit Slimme, programmeerbare thermostaat Bediening via touchscreen Bediening via smartphone-app mogelijk. \nVerkeert in nette gebruikte staat en functioneert naar behoren. ... ... ... ... ... ... ... ... ... ... ... ... Leidschendam 11x bekeken 0x bewaard Sinds 1 nov. '26",
+  "details_version": 2,
+  "distance_km": 78.0,
+  "fair": {
+   "comps": [
+    {
+     "adjusted": 150,
+     "id": "marktplaats:m2439211713",
+     "price": 150
+    },
+    {
+     "adjusted": 60,
+     "id": "marktplaats:m2447291319",
+     "price": 60
+    },
+    {
+     "adjusted": 85,
+     "id": "marktplaats:m2448829475",
+     "price": 85
+    },
+    {
+     "adjusted": 30,
+     "id": "marktplaats:m2452199644",
+     "price": 30
+    },
+    {
+     "adjusted": 100,
+     "id": "marktplaats:m2455205211",
+     "price": 100
+    },
+    {
+     "adjusted": 50,
+     "id": "marktplaats:m2456410275",
+     "price": 50
+    }
+   ],
+   "confidence": "high",
+   "high": 100.0,
+   "low": 76.0,
+   "method": "comparables",
+   "n_comps": 12,
+   "price": 92.0
+  },
+  "first_seen": "2026-11-01",
+  "full_description": true,
+  "id": "marktplaats:m2460702473",
+  "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/9c17243c-22b4-4c81-aed0-134b2fed78d9?rule=ecg_mp_eps$_82.jpg",
+  "kind": "used",
+  "last_seen": "2026-11-01",
+  "lat": 52.092545084756,
+  "llm_attrs": {
+   "condition": "like_new",
+   "includes_receiver": null,
+   "is_item": true,
+   "model": "unknown",
+   "original_box": false,
+   "quantity": 1,
+   "red_flags": [],
+   "seller_type": "private",
+   "shipping": false,
+   "summary": "Honeywell Home T6 Smart Thermostat in white, used about one year, working, asking 55 EUR fixed.",
+   "table_stand": false
+  },
+  "lon": 4.3801653564833,
+  "new_ad_at": "2026-11-01T16:51:29+00:00",
+  "new_ad_on": "2026-11-01",
+  "posted_at": "Vandaag",
+  "price_eur": 55,
+  "price_history": [
+   [
+    "2026-11-01",
+    55
+   ]
+  ],
+  "price_type": "FIXED",
+  "rule_attrs": {
+   "condition": "like_new",
+   "includes_receiver": null,
+   "is_item": true,
+   "model": "unknown",
+   "original_box": false,
+   "quantity": 1,
+   "red_flags": [],
+   "seller_type": "private",
+   "shipping": false,
+   "summary": "",
+   "table_stand": false
+  },
+  "seller_has_website": false,
+  "seller_verified": false,
+  "source": "marktplaats",
+  "title": "Honeywell Home T6 Smart Thermostaat – Wit",
+  "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2460702473-honeywell-home-t6-smart-thermostaat-wit"
+ },
+ {
+  "active": true,
+  "attrs": {
+   "condition": "like_new",
+   "includes_receiver": true,
+   "is_item": true,
+   "model": "t6r_wireless",
+   "model_assumed": false,
+   "original_box": false,
+   "quantity": 1,
+   "red_flags": [],
+   "seller_type": "private",
+   "shipping": true,
+   "summary": "Honeywell Home T6 thermostat with receiver (ontvanger), described as used but working, price not stated, bids via MP, shipping possible.",
+   "table_stand": false
+  },
+  "attrs_hash": "acea96d9c2e47e3f",
+  "attrs_source": "claude",
+  "attrs_version": 1,
+  "city": "Bergschenhoek",
+  "condition_raw": "Zo goed als nieuw",
+  "country": "Nederland",
+  "deal": {
+   "flags": [],
+   "label": "no price",
+   "pct": null
+  },
+  "description": "Te koop aangeboden: een\nHoneywell Home slimme thermostaat. Dit systeem is ideaal voor het regelen van de temperatuur in uw huis.\nDe set bestaat uit de thermostaat zelf en de bijbehorende ontvanger. Let op: de bedrading is aanwezig, maar dient mogelijk opnieuw aangesloten te worden. Het systeem is gebruikt, maar werkt nog perfect.\n\nbieden via MP\n\nOpsturen is mogelijk is KK ... ... ... ... ... ... ... ... ... ... ... ... Bergschenhoek 14x bekeken 1x bewaard Sinds 1 nov. '26",
+  "details_version": 2,
+  "distance_km": 64.0,
+  "fair": {
+   "comps": [
+    {
+     "adjusted": 45,
+     "id": "marktplaats:m2451956753",
+     "price": 45
+    },
+    {
+     "adjusted": 100,
+     "id": "marktplaats:m2455961152",
+     "price": 100
+    },
+    {
+     "adjusted": 90,
+     "id": "marktplaats:m2456732603",
+     "price": 90
+    },
+    {
+     "adjusted": 95,
+     "id": "marktplaats:m2458963849",
+     "price": 95
+    },
+    {
+     "adjusted": 100,
+     "id": "marktplaats:m2460060258",
+     "price": 100
+    },
+    {
+     "adjusted": 80,
+     "id": "marktplaats:m2460595756",
+     "price": 80
+    }
+   ],
+   "confidence": "high",
+   "high": 108.0,
+   "low": 78.0,
+   "method": "comparables",
+   "n_comps": 12,
+   "price": 94.0
+  },
+  "first_seen": "2026-11-01",
+  "full_description": true,
+  "id": "marktplaats:m2460705630",
+  "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/3ac5024e-b26b-4d38-8e83-72c4edfd0fc8?rule=ecg_mp_eps$_82.jpg",
+  "kind": "used",
+  "last_seen": "2026-11-01",
+  "lat": 51.993365111107,
+  "llm_attrs": {
+   "condition": "like_new",
+   "includes_receiver": true,
+   "is_item": true,
+   "model": "t6r_wireless",
+   "original_box": false,
+   "quantity": 1,
+   "red_flags": [],
+   "seller_type": "private",
+   "shipping": true,
+   "summary": "Honeywell Home T6 thermostat with receiver (ontvanger), described as used but working, price not stated, bids via MP, shipping possible.",
+   "table_stand": false
+  },
+  "lon": 4.5042075886534,
+  "new_ad_at": "2026-11-01T16:51:29+00:00",
+  "new_ad_on": "2026-11-01",
+  "posted_at": "Vandaag",
+  "price_eur": null,
+  "price_history": [
+   [
+    "2026-11-01",
+    null
+   ]
+  ],
+  "price_type": "FAST_BID",
+  "rule_attrs": {
+   "condition": "like_new",
+   "includes_receiver": true,
+   "is_item": true,
+   "model": "t6r_wireless",
+   "original_box": false,
+   "quantity": 1,
+   "red_flags": [],
+   "seller_type": "private",
+   "shipping": true,
+   "summary": "",
+   "table_stand": false
+  },
+  "seller_has_website": false,
+  "seller_verified": false,
+  "source": "marktplaats",
+  "title": "Honeywell Home T6 Slimme Thermostaat",
+  "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2460705630-honeywell-home-t6-slimme-thermostaat"
+ },
+ {
+  "active": true,
+  "attrs": {
+   "condition": "like_new",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "model_assumed": false,
+   "original_box": false,
+   "quantity": 1,
+   "red_flags": [
+    "seller says it did not work with their central heating system"
+   ],
+   "seller_type": "private",
+   "shipping": true,
+   "summary": "Generic Honeywell Home thermostat, described as nearly new, model not stated, min bid 70 EUR, Almere.",
+   "table_stand": false
+  },
+  "attrs_hash": "46bb6d5cdc351e1a",
+  "attrs_source": "claude",
+  "attrs_version": 1,
+  "city": "Almere",
+  "condition_raw": "Zo goed als nieuw",
+  "country": "Nederland",
+  "description": "Deze Honeywell Home thermostaat is zo goed als nieuw, aangezien deze praktisch nooit is gebruikt. Ik heb hem ooit gekocht, maar hij werkte helaas niet in combinatie met mijn CV-installatie. Daarom bied ik hem nu aan, in uitstekende staat en klaar voor een nieuw huis waar hij wel goed tot zijn recht komt.\n\nOphalen graag, bij verzenden kan ik alleen zaterdag, maandag, dinsdag en vrijdag op de post zetten. Kosten verzenden zijn voor de koper. ... ... ... ... ... ... ... ... ... ... ... ... Almere 8x bekeken 0x bewaard Sinds 1 nov. '26",
+  "details_version": 2,
+  "distance_km": 73.0,
+  "first_seen": "2026-11-01",
+  "full_description": true,
+  "id": "marktplaats:m2460720658",
+  "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/dbba7448-25d9-42dd-8ef5-bba0192182f2?rule=ecg_mp_eps$_82.jpg",
+  "kind": "used",
+  "last_seen": "2026-11-01",
+  "lat": 52.341410783506,
+  "llm_attrs": {
+   "condition": "like_new",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "original_box": false,
+   "quantity": 1,
+   "red_flags": [
+    "seller says it did not work with their central heating system"
+   ],
+   "seller_type": "private",
+   "shipping": true,
+   "summary": "Generic Honeywell Home thermostat, described as nearly new, model not stated, min bid 70 EUR, Almere.",
+   "table_stand": false
+  },
+  "lon": 5.2062386383244,
+  "new_ad_at": "2026-11-01T16:51:29+00:00",
+  "new_ad_on": "2026-11-01",
+  "posted_at": "Vandaag",
+  "price_eur": 70,
+  "price_history": [
+   [
+    "2026-11-01",
+    70
+   ]
+  ],
+  "price_type": "MIN_BID",
+  "rule_attrs": {
+   "condition": "like_new",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "original_box": false,
+   "quantity": 8,
+   "red_flags": [],
+   "seller_type": "private",
+   "shipping": true,
+   "summary": "",
+   "table_stand": false
+  },
+  "seller_has_website": false,
+  "seller_verified": false,
+  "source": "marktplaats",
+  "title": "Honeywell Home thermostaat - Zo goed als nieuw",
+  "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2460720658-honeywell-home-thermostaat-zo-goed-als-nieuw"
  }
 ]

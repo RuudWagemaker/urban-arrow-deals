@@ -1,5 +1,5 @@
 {
- "started_at": "2026-11-01T13:14:49+00:00",
+ "started_at": "2026-11-01T16:50:44+00:00",
  "sources": {
   "marktplaats": {
    "searches": [
@@ -7,8 +7,8 @@
      "query": "honeywell t6",
      "category": null,
      "pages": 1,
-     "listings": 88,
-     "total": 88,
+     "listings": 89,
+     "total": 89,
      "error": null
     },
     {
@@ -36,45 +36,19 @@
      "error": null
     }
    ],
-   "unique_listings": 134,
-   "description_debug": [
-    {
-     "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2457480587-honeywell-thermostaat",
-     "page_length": 104004,
-     "snippet_found_at": [],
-     "context": [],
-     "script_tags": [
-      "<script crossorigin=\"anonymous\" async=\"\" src=\"//www.hzcdn.io/bff/static/vendor/ecg-js-ga-tracking/index.c470d0fc.js\">",
-      "<script type=\"application/ld+json\">",
-      "<script type=\"application/ld+json\">",
-      "<script type=\"application/ld+json\">",
-      "<script>",
-      "<script>",
-      "<script crossorigin=\"anonymous\" src=\"//www.hzcdn.io/bff/static/vendor/sourcepoint-lib/index.de2ff0f0.js\">",
-      "<script defer=\"\" src=\"https://consent.marktplaats.nl/unified/wrapperMessagingWithoutDetection.js\">",
-      "<script>",
-      "<script>",
-      "<script>",
-      "<script>",
-      "<script>",
-      "<script>",
-      "<script id=\"intowowMP\">"
-     ],
-     "has_json_ld": true
-    }
-   ],
+   "unique_listings": 133,
    "complete": true
   }
  },
  "merge": {
-  "new": 4,
-  "updated": 130,
-  "price_changes": 0,
-  "removed": 5,
+  "new": 8,
+  "updated": 125,
+  "price_changes": 1,
+  "removed": 11,
   "relists": 0
  },
- "finished_at": "2026-11-01T13:15:28+00:00",
- "active_listings": 134,
- "active_items": 78,
+ "finished_at": "2026-11-01T16:51:46+00:00",
+ "active_listings": 133,
+ "active_items": 77,
  "llm_backend": "cli"
 }
