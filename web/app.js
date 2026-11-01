@@ -47,14 +47,14 @@
     },
     thermostat: {
       item: "thermostat", items: "thermostats", usedTab: "All ads", usedLabel: "", groupLabel: "Type",
-      groups: { t6r_wireless: "T6R (wireless)", t6_wired: "T6 (wired)", unknown: "Type unknown" },
+      groups: { t6r_wireless: "T6R (wireless)", t6_wired: "T6 (wired)" },
       groupOf: (l) => l.attrs.model || "unknown",
       hasYear: false, yearPanels: false, newTab: false,
       similarHow: "(same type, similar condition, receiver and extras)",
       chips(l) {
         const a = l.attrs || {}, c = [];
         if ((a.quantity || 1) > 1) c.push(a.quantity + "×");
-        c.push(T_MODEL[a.model] || "Type unknown");
+        c.push((T_MODEL[a.model] || "Type unknown") + (a.model_assumed ? " – assumed" : ""));
         if (T_COND[a.condition]) c.push(T_COND[a.condition]);
         if (a.includes_receiver === true) c.push("with receiver");
         if (a.includes_receiver === false) c.push("no receiver");

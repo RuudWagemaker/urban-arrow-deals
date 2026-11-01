@@ -122,6 +122,12 @@ def combine(rule_d: dict, llm_d: dict | None) -> dict:
     q = out.get("quantity") or 1
     out["quantity"] = q if 1 <= q <= 20 else 1
     out["is_item"] = bool(out.get("is_item"))
+    # Honeywell's naming: "T6" is the wired version, "T6R" the wireless one. An ad that only
+    # says "T6" (no wireless, no receiver) is treated as wired, and marked as an assumption.
+    out["model_assumed"] = False
+    if (out.get("model") or "unknown") == "unknown" and out["is_item"]:
+        out["model"] = "t6_wired"
+        out["model_assumed"] = True
     return out
 
 
@@ -195,7 +201,7 @@ def facts(l: dict) -> str:
     a = l.get("attrs") or {}
     bits = [
         f"{a['quantity']}×" if (a.get("quantity") or 1) > 1 else None,
-        MODEL_LABEL.get(a.get("model")),
+        MODEL_LABEL.get(a.get("model"), "") + (" (assumed)" if a.get("model_assumed") else "") or None,
         COND_LABEL.get(a.get("condition")),
         "with receiver" if a.get("includes_receiver") else "no receiver" if a.get("includes_receiver") is False else None,
         "table stand" if a.get("table_stand") else None,

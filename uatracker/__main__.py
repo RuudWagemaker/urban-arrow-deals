@@ -96,6 +96,11 @@ def enrich(listings: dict, pcfg: dict, p: Profile) -> None:
             l["attrs_version"] = p.extract_version
             l["attrs_source"] = "rules"
             l.pop("llm_attrs", None)
+        else:
+            # re-apply the combining rules, so rule changes reach ads Claude already read
+            l["attrs"] = p.combine(l["rule_attrs"], l.get("llm_attrs"))
+            if l.get("variant_hint") and l["attrs"].get("variant") == "unknown":
+                l["attrs"]["variant"] = l["variant_hint"]
         if l.get("active") and l.get("attrs_source") != "claude" and worth_reading(l, p.min_item_price):
             todo.append(l)
 

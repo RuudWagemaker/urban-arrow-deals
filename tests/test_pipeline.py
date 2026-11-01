@@ -288,3 +288,13 @@ def test_products_config_and_legacy_layout():
            "products": {"a": {"profile": "cargo_bike"}, "b": {"profile": "thermostat", "alerts": {"min_deal_pct": 15}}}}
     out = dict(products(cfg))
     assert out["b"]["alerts"] == {"min_deal_pct": 15, "max_distance_km": 120}
+
+
+def test_plain_t6_is_treated_as_wired():
+    from uatracker import profiles
+    p = profiles.get("thermostat")
+    plain = p.combine(p.rules(_t6("Honeywell Home T6 slimme thermostaat", "zo goed als nieuw", 80)), None)
+    assert plain["model"] == "t6_wired" and plain["model_assumed"]
+    wireless = p.combine(p.rules(_t6("Honeywell T6 met ontvanger", "", 90)), None)
+    assert wireless["model"] == "t6r_wireless" and not wireless["model_assumed"]
+    assert "assumed" in p.facts({"attrs": plain})
