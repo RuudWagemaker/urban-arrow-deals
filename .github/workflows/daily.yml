@@ -52,7 +52,9 @@ jobs:
         run: npm install -g @anthropic-ai/claude-code
 
       - name: Scan, analyse, build site
-        run: python -m uatracker run
+        # The Hetzner server is now the main scanner and sends the alerts (see deploy/).
+        # This GitHub copy keeps running as a backup without alerts, so nothing arrives twice.
+        run: python -m uatracker run --no-alerts
 
       - name: Save collected data
         run: |
