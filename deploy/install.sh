@@ -45,27 +45,30 @@ fi
 chown root:tracker /etc/deal-tracker "$ENVFILE"
 chmod 750 /etc/deal-tracker; chmod 640 "$ENVFILE"
 
-say "3/7 Website password and Caddy site"
+say "3/7 Caddy site"
+# Public by default. To put the site behind a password, run with PROTECT_SITE=1.
 mkdir -p "$SITES"
 PWFILE=/root/deal-tracker-site-password.txt
 if [ ! -f "$SITES/deals.caddy" ]; then
-  PASSWORD=$(python3 -c "import secrets,string; print(''.join(secrets.choice(string.ascii_letters+string.digits) for _ in range(16)))")
-  HASH=$(docker exec "$CADDY" caddy hash-password --plaintext "$PASSWORD")
-  cat > "$SITES/deals.caddy" <<EOF
-$HOSTNAME_SITE {
-	encode gzip
-	basic_auth {
-		ruud $HASH
-	}
-	reverse_proxy 127.0.0.1:8090
-}
-EOF
-  umask 077; printf 'user: ruud\npassword: %s\n' "$PASSWORD" > "$PWFILE"; umask 022
-  echo "created $SITES/deals.caddy (password saved in $PWFILE)"
+  if [ "${PROTECT_SITE:-0}" = 1 ]; then
+    PASSWORD=$(python3 -c "import secrets,string; print(''.join(secrets.choice(string.ascii_letters+string.digits) for _ in range(16)))")
+    HASH=$(docker exec "$CADDY" caddy hash-password --plaintext "$PASSWORD")
+    AUTH=$(printf '\tbasic_auth {\n\t\truud %s\n\t}\n' "$HASH")
+    umask 077; printf 'user: ruud\npassword: %s\n' "$PASSWORD" > "$PWFILE"; umask 022
+  else
+    AUTH=""
+  fi
+  {
+    echo "$HOSTNAME_SITE {"
+    printf '\tencode gzip\n'
+    [ -n "$AUTH" ] && printf '%s\n' "$AUTH"
+    printf '\treverse_proxy 127.0.0.1:8090\n}\n'
+  } > "$SITES/deals.caddy"
+  chmod 600 "$SITES/deals.caddy"
+  echo "created $SITES/deals.caddy$([ -n "$AUTH" ] && echo " (password saved in $PWFILE)")"
 else
   echo "already exists, keeping it"
 fi
-chmod 600 "$SITES/deals.caddy"   # holds the password hash; Caddy runs as root and can still read it
 
 say "4/7 Installing services"
 cp "$APP/deploy/deal-tracker-scan.service" "$APP/deploy/deal-tracker-scan.timer" \

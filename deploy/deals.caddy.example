@@ -1,9 +1,10 @@
-# Goes in /etc/caddy-sites/deals.caddy on the server (NOT in git: it holds the password hash).
-# Make the hash with:  docker exec deploy-caddy-1 caddy hash-password --plaintext 'your-password'
+# Goes in /etc/caddy-sites/deals.caddy on the server.
 deals.128-140-101-183.sslip.io {
 	encode gzip
-	basic_auth {
-		ruud PASTE_HASH_HERE
-	}
+	# Optional password (make the hash with:
+	#   docker exec deploy-caddy-1 caddy hash-password --plaintext 'your-password')
+	# basic_auth {
+	#	ruud PASTE_HASH_HERE
+	# }
 	reverse_proxy 127.0.0.1:8090
 }
