@@ -2,5 +2,7 @@ __pycache__/
 *.pyc
 .pytest_cache/
 site/
+site.new/
+site.old/
 .venv/
 data/*.tmp

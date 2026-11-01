@@ -42,7 +42,9 @@ def product_data(r: dict) -> dict:
 
 
 def build(results: list[dict], site_dir: Path = SITE_DIR) -> Path:
-    site_dir = Path(site_dir)
+    # Build next to the live site and swap at the end, so a web server never sees a half-built site.
+    final = Path(site_dir)
+    site_dir = final.with_name(final.name + ".new")
     if site_dir.exists():
         shutil.rmtree(site_dir)
     shutil.copytree(WEB_DIR, site_dir)
@@ -59,4 +61,11 @@ def build(results: list[dict], site_dir: Path = SITE_DIR) -> Path:
         })
     with open(site_dir / "products.json", "w", encoding="utf-8") as f:
         json.dump({"generated_at": now_iso(), "products": index}, f, ensure_ascii=False)
-    return site_dir
+    old = final.with_name(final.name + ".old")
+    if old.exists():
+        shutil.rmtree(old)
+    if final.exists():
+        final.rename(old)
+    site_dir.rename(final)
+    shutil.rmtree(old, ignore_errors=True)
+    return final
