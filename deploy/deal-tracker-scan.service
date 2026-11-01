@@ -1,0 +1,22 @@
+[Unit]
+Description=Deal tracker: scan Marktplaats, update data, site and alerts
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=tracker
+WorkingDirectory=/opt/deal-tracker/app
+# Secrets: CLAUDE_CODE_OAUTH_TOKEN, NTFY_TOPIC, SITE_URL (and optionally GMAIL_*)
+EnvironmentFile=/etc/deal-tracker/env
+Environment=TZ=Europe/Amsterdam
+Environment=UA_DATA_DIR=/opt/deal-tracker/data
+Environment=UA_SITE_DIR=/opt/deal-tracker/site
+Environment=PATH=/opt/deal-tracker/.local/bin:/usr/local/bin:/usr/bin:/bin
+Environment=HOME=/opt/deal-tracker
+# Pick up code changes from GitHub first ("-" = carry on with the current code if that fails)
+ExecStartPre=-/usr/bin/git -C /opt/deal-tracker/app pull --ff-only -q
+ExecStartPre=-/opt/deal-tracker/venv/bin/pip install -q -r /opt/deal-tracker/app/requirements.txt
+ExecStart=/opt/deal-tracker/venv/bin/python -m uatracker run
+TimeoutStartSec=45min
+Nice=10

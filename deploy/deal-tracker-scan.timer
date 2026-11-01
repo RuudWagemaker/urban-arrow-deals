@@ -1,0 +1,10 @@
+[Unit]
+Description=Deal tracker: scan every 20 minutes, 07:00-23:40 Dutch time
+
+[Timer]
+OnCalendar=*-*-* 07..23:00/20:00 Europe/Amsterdam
+RandomizedDelaySec=60
+Persistent=false
+
+[Install]
+WantedBy=timers.target

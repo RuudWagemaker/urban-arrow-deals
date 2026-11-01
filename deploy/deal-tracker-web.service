@@ -1,0 +1,11 @@
+[Unit]
+Description=Deal tracker website (local only; Caddy serves it to the outside with a password)
+After=network.target
+
+[Service]
+User=tracker
+ExecStart=/usr/bin/python3 -m http.server 8090 --bind 127.0.0.1 --directory /opt/deal-tracker/site
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
