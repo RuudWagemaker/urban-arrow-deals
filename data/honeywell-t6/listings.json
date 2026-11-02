@@ -106,7 +106,7 @@
   "id": "marktplaats:m2032579587",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/67bad5c6-d7e7-48b0-8bdc-d291dd91742f?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.959383793621,
   "llm_attrs": {
    "condition": "used",
@@ -124,7 +124,7 @@
   "lon": 4.5795310564418,
   "new_ad_at": "2026-11-01T09:18:06+00:00",
   "new_ad_on": "2026-11-01",
-  "posted_at": "Gisteren",
+  "posted_at": "Eergisteren",
   "price_eur": null,
   "price_history": [
    [
@@ -153,7 +153,7 @@
   "url": "https://www.marktplaats.nl/v/auto-onderdelen/dashboard-en-schakelaars/m2032579587-vw-t6-t6-1-airbag-airbagset-dashboard-alles-leverbaar"
  },
  {
-  "active": false,
+  "active": true,
   "attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -182,7 +182,7 @@
   "id": "marktplaats:m2245554757",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/55/551de3e9-8b84-409d-865c-036f2877fd49?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 53.003431513378,
   "llm_attrs": {
    "condition": "used",
@@ -209,7 +209,6 @@
    ]
   ],
   "price_type": "FIXED",
-  "removed_on": "2026-11-01",
   "rule_attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -259,7 +258,7 @@
   "id": "marktplaats:m2339299764",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/87/87c587fb-ef6e-4324-820e-076a0711a103?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.861138363485,
   "llm_attrs": {
    "condition": "used",
@@ -277,7 +276,7 @@
   "lon": 4.4336681829415,
   "new_ad_at": "2026-11-01T09:07:46+00:00",
   "new_ad_on": "2026-11-01",
-  "posted_at": "Eergisteren",
+  "posted_at": "30 okt 26",
   "price_eur": 798,
   "price_history": [
    [
@@ -380,7 +379,7 @@
   "id": "marktplaats:m2396591651",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/52b93c2b-8be4-491e-932c-c5b5022f96fe?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.074842908998,
   "llm_attrs": {
    "condition": "unknown",
@@ -456,7 +455,7 @@
   "id": "marktplaats:m2420804731",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/e92a4f52-59d3-4533-8e57-1a13b8089e0c?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.321693055348,
   "llm_attrs": {
    "condition": "like_new",
@@ -578,7 +577,7 @@
   "id": "marktplaats:m2424755689",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/331974fa-e983-4f0e-b35f-e90173c7277f?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.063066027679,
   "llm_attrs": {
    "condition": "unknown",
@@ -703,7 +702,7 @@
   "id": "marktplaats:m2428296309",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/3d0da3a7-c4e5-4725-b3b4-eb607978f99b?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.124231824713,
   "llm_attrs": {
    "condition": "like_new",
@@ -752,7 +751,7 @@
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2428296309-honeywell-t6-controler-unit"
  },
  {
-  "active": true,
+  "active": false,
   "attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -808,6 +807,7 @@
    ]
   ],
   "price_type": "FIXED",
+  "removed_on": "2026-11-02",
   "rule_attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -877,7 +877,7 @@
   "id": "marktplaats:m2434643411",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/3372e899-5e1c-48ad-b1ec-c4ca778b3b1c?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 50.885860713336,
   "llm_attrs": {
    "condition": "defect",
@@ -1001,7 +1001,7 @@
   "id": "marktplaats:m2439211713",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/f4477e4e-47e4-458d-99cb-0f4ddda78b35?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.97691536235,
   "llm_attrs": {
    "condition": "like_new",
@@ -1122,7 +1122,7 @@
   "id": "marktplaats:m2439257707",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/fd7653a8-5481-4571-819d-dac1c743a0b6?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 53.15793381827,
   "llm_attrs": {
    "condition": "unknown",
@@ -1212,7 +1212,7 @@
   "id": "marktplaats:m2439300258",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/15bfdeeb-a03e-4a87-acc9-28ce1ccd3f79?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.133042710845,
   "llm_attrs": {
    "condition": "defect",
@@ -1338,7 +1338,7 @@
   "id": "marktplaats:m2439334401",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/0c50e55a-5f07-4357-a13b-efe49bcaa80d?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.959800172865,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -1416,7 +1416,7 @@
   "id": "marktplaats:m2444309181",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/6a31a0b6-45ab-4484-b31f-b0e11d0a27b0?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.519624588404,
   "llm_attrs": {
    "condition": "used",
@@ -1537,7 +1537,7 @@
   "id": "marktplaats:m2447008173",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/0d1dbcf4-3042-4bec-8da5-df641ed0e7ee?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.313020858591,
   "llm_attrs": {
    "condition": "sealed_new",
@@ -1555,7 +1555,7 @@
   "lon": 4.6643852943777,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
   "new_ad_on": "2026-10-31",
-  "posted_at": "Eergisteren",
+  "posted_at": "30 okt 26",
   "price_eur": 155,
   "price_history": [
    [
@@ -1658,7 +1658,7 @@
   "id": "marktplaats:m2447079639",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/7004fe58-1002-415c-8f81-da665a8573b4?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.307946212124,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -1780,7 +1780,7 @@
   "id": "marktplaats:m2447291319",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/9c4294ad-f854-47e1-9f0d-05754b612059?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.236793465098,
   "llm_attrs": {
    "condition": "like_new",
@@ -1902,7 +1902,7 @@
   "id": "marktplaats:m2447453400",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/19b4cb61-b4c3-4041-a488-ee82385b8fbb?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.055062732137,
   "llm_attrs": {
    "condition": "used",
@@ -2023,7 +2023,7 @@
   "id": "marktplaats:m2448250038",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/975fb919-a96a-4c29-b87a-69f1c2ed423c?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.952571544823,
   "llm_attrs": {
    "condition": "sealed_new",
@@ -2221,7 +2221,7 @@
   "id": "marktplaats:m2448829475",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/1fe41a52-ce27-495d-a6fa-b1281a70f98d?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.372752845296,
   "llm_attrs": {
    "condition": "like_new",
@@ -2342,7 +2342,7 @@
   "id": "marktplaats:m2451137711",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/a2e4983b-227b-4279-b7f7-6a5b1ddbe717?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.378210198828,
   "llm_attrs": {
    "condition": "like_new",
@@ -2463,7 +2463,7 @@
   "id": "marktplaats:m2451172524",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/2d680d3a-7204-49d5-bfe8-e8271f14abaa?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.70654246719,
   "llm_attrs": {
    "condition": "used",
@@ -2584,7 +2584,7 @@
   "id": "marktplaats:m2451662606",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/d0fff5b0-263a-4d28-99a5-07342d2d71c8?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.374662122152,
   "llm_attrs": {
    "condition": "sealed_new",
@@ -2708,7 +2708,7 @@
   "id": "marktplaats:m2451956753",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/c8becae4-7d55-441a-967e-3b2358b7600f?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.925280161519,
   "llm_attrs": {
    "condition": "like_new",
@@ -2835,7 +2835,7 @@
   "id": "marktplaats:m2452199644",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/152024d8-6988-459e-9c37-baae9148347b?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 53.096876556435,
   "llm_attrs": {
    "condition": "like_new",
@@ -2913,7 +2913,7 @@
   "id": "marktplaats:m2452941687",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/603b08b8-1ecf-464a-88e4-420e07a486ce?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.528976532923,
   "llm_attrs": {
    "condition": "like_new",
@@ -2989,7 +2989,7 @@
   "id": "marktplaats:m2452968043",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/e4c4694f-014d-4032-a552-bd3b39697558?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.811777582722,
   "llm_attrs": {
    "condition": "like_new",
@@ -3114,7 +3114,7 @@
   "id": "marktplaats:m2453386625",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/c8cc0317-fbca-4464-9f85-8f69d3c6e2eb?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.819873699899,
   "llm_attrs": {
    "condition": "used",
@@ -3238,7 +3238,7 @@
   "id": "marktplaats:m2453741754",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/036483e1-c7dd-49ce-8ade-3eb7b4d2d806?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.539460703137,
   "llm_attrs": {
    "condition": "sealed_new",
@@ -3445,7 +3445,7 @@
   "id": "marktplaats:m2454667376",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/535e66fc-1b80-4019-b864-5c6b3b975fd8?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.372927212606,
   "llm_attrs": {
    "condition": "sealed_new",
@@ -3568,7 +3568,7 @@
   "id": "marktplaats:m2454813517",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/25fa4e6d-2521-4a1a-a196-49e973d64d5f?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.62677909838,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -3689,7 +3689,7 @@
   "id": "marktplaats:m2455063132",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/5bf87efd-6891-4443-928b-4f9aaff01cfa?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.913805173703,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -3811,7 +3811,7 @@
   "id": "marktplaats:m2455105558",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/b6a41568-09ea-4854-bc4a-128d6ab90e0f?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.586847573836,
   "llm_attrs": {
    "condition": "used",
@@ -3933,7 +3933,7 @@
   "id": "marktplaats:m2455156605",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/4a3d342c-7320-49c8-bcad-aa16e9a210ac?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.350970841261,
   "llm_attrs": {
    "condition": "sealed_new",
@@ -4176,7 +4176,7 @@
   "id": "marktplaats:m2455205211",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/d3d9466a-2551-49af-b7f0-3ee49c14fce0?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.112777001178,
   "llm_attrs": {
    "condition": "like_new",
@@ -4297,7 +4297,7 @@
   "id": "marktplaats:m2455243828",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/a63f079f-bc92-40fe-aec5-526cb3d7ec8e?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.160794723062,
   "llm_attrs": {
    "condition": "sealed_new",
@@ -4418,7 +4418,7 @@
   "id": "marktplaats:m2455262658",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/b51c3705-b8cb-48b4-a69a-e7ed787f2e04?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.817886293441,
   "llm_attrs": {
    "condition": "like_new",
@@ -4494,7 +4494,7 @@
   "id": "marktplaats:m2455407396",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/80e992f0-5f32-47d9-95b6-15de5549621b?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.038406679844,
   "llm_attrs": {
    "condition": "used",
@@ -4615,7 +4615,7 @@
   "id": "marktplaats:m2455898350",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/1c4fccdf-e558-44f6-84f1-aba4e3788e86?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.04953320755,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -4633,7 +4633,7 @@
   "lon": 4.2473333460758,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
   "new_ad_on": "2026-10-31",
-  "posted_at": "Gisteren",
+  "posted_at": "Eergisteren",
   "price_eur": 2000,
   "price_history": [
    [
@@ -4736,7 +4736,7 @@
   "id": "marktplaats:m2455961152",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/82d42769-28e2-418f-ae4b-b29f348e232a?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.819856118979,
   "llm_attrs": {
    "condition": "like_new",
@@ -4857,7 +4857,7 @@
   "id": "marktplaats:m2455974164",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/da8203c4-09c9-4e21-b226-eb71d3f33ad9?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.768875844441,
   "llm_attrs": {
    "condition": "like_new",
@@ -5058,7 +5058,7 @@
   "id": "marktplaats:m2456410275",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/9ec9cd9d-f239-4b15-af3d-06cd8fc126a5?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.963544246971,
   "llm_attrs": {
    "condition": "like_new",
@@ -5185,7 +5185,7 @@
   "id": "marktplaats:m2456502142",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/b4ab3136-2ad8-431f-b2e3-d7e5db4ec183?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 50.872300532968,
   "llm_attrs": {
    "condition": "used",
@@ -5309,7 +5309,7 @@
   "id": "marktplaats:m2456515851",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/d23fb5ef-9790-4e0e-8f3f-a5c5f32b3a4d?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 50.855953730793,
   "llm_attrs": {
    "condition": "sealed_new",
@@ -5513,7 +5513,7 @@
   "id": "marktplaats:m2456622754",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/528b192c-6899-4505-8f8e-b4c71d3af3d8?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.957330072293,
   "llm_attrs": {
    "condition": "like_new",
@@ -5560,7 +5560,7 @@
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2456622754-honeywell-lyric-t6"
  },
  {
-  "active": false,
+  "active": true,
   "attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -5589,7 +5589,7 @@
   "id": "marktplaats:m2456691598",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/168e71b2-80ab-4144-8817-df86533b2a59?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.006371274222,
   "llm_attrs": {
    "condition": "used",
@@ -5616,7 +5616,6 @@
    ]
   ],
   "price_type": "FAST_BID",
-  "removed_on": "2026-11-01",
   "rule_attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -5715,7 +5714,7 @@
   "id": "marktplaats:m2456732603",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/43b4f9f7-ed0d-4cf8-93a1-cb1f1c50dac5?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.536970488166,
   "llm_attrs": {
    "condition": "like_new",
@@ -5838,7 +5837,7 @@
   "id": "marktplaats:m2456898070",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/40e4cb33-7449-43fc-a851-392affb41561?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.296598786986,
   "llm_attrs": {
    "condition": "sealed_new",
@@ -5912,7 +5911,7 @@
   "id": "marktplaats:m2456966239",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/8cb9fb01-e5df-470f-a0ae-b9d4abe3fcfe?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.245844666608,
   "lon": 4.8219047736465,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
@@ -5975,7 +5974,7 @@
   "id": "marktplaats:m2456970021",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/e287fcfb-8141-4bff-8a23-604de1c32a31?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.650476604662,
   "llm_attrs": {
    "condition": "used",
@@ -6051,7 +6050,7 @@
   "id": "marktplaats:m2457031111",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/ac2c4157-ffb1-4a03-a427-6993cc09265d?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.650476604662,
   "llm_attrs": {
    "condition": "used",
@@ -6176,7 +6175,7 @@
   "id": "marktplaats:m2457269809",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/42076bdf-1c59-4129-8d9f-ddfd4d17a3ca?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 50.923356384068,
   "llm_attrs": {
    "condition": "like_new",
@@ -6331,7 +6330,7 @@
   "id": "marktplaats:m2457350013",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/a516e4fe-1119-4c66-ac71-7734df95ff74?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.63657099147,
   "llm_attrs": {
    "condition": "unknown",
@@ -6407,7 +6406,7 @@
   "id": "marktplaats:m2457479793",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/7146a0d6-18f5-4738-930b-38f9b261f35a?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 53.19977502355,
   "llm_attrs": {
    "condition": "like_new",
@@ -6454,7 +6453,7 @@
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/verwarming-en-radiatoren/m2457479793-honeywell-cv-module-voor-t6r-thermostaat"
  },
  {
-  "active": true,
+  "active": false,
   "attrs": {
    "condition": "unknown",
    "includes_receiver": null,
@@ -6514,6 +6513,7 @@
    ]
   ],
   "price_type": "FAST_BID",
+  "removed_on": "2026-11-02",
   "rule_attrs": {
    "condition": "unknown",
    "includes_receiver": null,
@@ -6563,7 +6563,7 @@
   "id": "marktplaats:m2457487457",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/cbc0e3a9-4174-4ba7-8be9-8fd5814f0665?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.355770758135,
   "llm_attrs": {
    "condition": "like_new",
@@ -6639,7 +6639,7 @@
   "id": "marktplaats:m2457588116",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/ff91433e-13db-484e-b13f-90db985ac84a?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.392276326837,
   "llm_attrs": {
    "condition": "like_new",
@@ -6766,7 +6766,7 @@
   "id": "marktplaats:m2457722079",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/b4cad2d9-0853-42be-add9-6242e6bcd6cf?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 53.006278727537,
   "llm_attrs": {
    "condition": "like_new",
@@ -6890,7 +6890,7 @@
   "id": "marktplaats:m2457733768",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/72daa45d-00af-41f6-8fce-6117f0d7f3cc?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 53.36008750439,
   "llm_attrs": {
    "condition": "used",
@@ -6937,7 +6937,7 @@
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2457733768-honeywell-t6-smartthermostaat"
  },
  {
-  "active": true,
+  "active": false,
   "attrs": {
    "condition": "like_new",
    "includes_receiver": null,
@@ -6993,6 +6993,7 @@
    ]
   ],
   "price_type": "FIXED",
+  "removed_on": "2026-11-02",
   "rule_attrs": {
    "condition": "like_new",
    "includes_receiver": null,
@@ -7087,7 +7088,7 @@
   "id": "marktplaats:m2457826133",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/9c69b627-8d47-4540-b4d4-1a4c38185fa5?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.42928495664,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -7209,7 +7210,7 @@
   "id": "marktplaats:m2457838308",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/1c8b6fee-cc5f-4e02-ba92-42eff3ea4d4c?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.865509742805,
   "llm_attrs": {
    "condition": "like_new",
@@ -7575,7 +7576,7 @@
   "id": "marktplaats:m2457967218",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/82cf827d-601f-4d9e-8e1f-c3689ada2630?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 53.225381909223,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -7970,7 +7971,7 @@
   "id": "marktplaats:m2458043961",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/8dc84a99-7968-41ee-97c5-f8058b284e5c?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.537990316935,
   "lon": 4.6936083194517,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
@@ -8031,7 +8032,7 @@
   "id": "marktplaats:m2458044521",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/0568481d-ceff-47e4-b916-1fb3cb25ec2b?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.314339251312,
   "lon": 5.3246316480658,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
@@ -8092,7 +8093,7 @@
   "id": "marktplaats:m2458081266",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/1757905f-866b-4f7f-a2a1-93d2c8ad7cb2?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.998983837282,
   "lon": 4.3250343057838,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
@@ -8208,7 +8209,7 @@
   "id": "marktplaats:m2458140709",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/68c685bc-70f5-4a00-8da9-1a98082f3032?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.272030670387,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -8415,7 +8416,7 @@
   "id": "marktplaats:m2458229586",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/1f6eab25-a602-4588-8f89-c13f43778601?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.962631838592,
   "llm_attrs": {
    "condition": "used",
@@ -8645,7 +8646,7 @@
   "id": "marktplaats:m2458401697",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/1008c449-b09c-4bc8-8bab-59c8f7697844?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.740225598155,
   "llm_attrs": {
    "condition": "used",
@@ -8721,7 +8722,7 @@
   "id": "marktplaats:m2458411364",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/ff39be1f-d983-45c4-bb37-6d8ad33c070a?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.238162472375,
   "llm_attrs": {
    "condition": "used",
@@ -8842,7 +8843,7 @@
   "id": "marktplaats:m2458436589",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/765b88b4-620b-4b87-b606-7ad320afff6e?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.38886184369,
   "llm_attrs": {
    "condition": "like_new",
@@ -8963,7 +8964,7 @@
   "id": "marktplaats:m2458437608",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/727372a4-badd-4950-abe8-34874c40aeb1?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.878110561006,
   "llm_attrs": {
    "condition": "used",
@@ -9084,7 +9085,7 @@
   "id": "marktplaats:m2458490128",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/8f923145-ea27-4e29-b499-7f20a26b53a6?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.087536875267,
   "llm_attrs": {
    "condition": "like_new",
@@ -9158,7 +9159,7 @@
   "id": "marktplaats:m2458499015",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/75460ffd-c80e-44fa-821f-daac17acae49?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.928804849788,
   "lon": 4.4779711547915,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
@@ -9266,7 +9267,7 @@
   "id": "marktplaats:m2458588986",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/2acc56f0-dc37-4d5b-9a87-39909d16694f?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.234647251446,
   "llm_attrs": {
    "condition": "like_new",
@@ -9388,7 +9389,7 @@
   "id": "marktplaats:m2458665654",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/f7481e02-4dc3-4a73-84c2-443c13d90b0c?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 50.942500738169,
   "llm_attrs": {
    "condition": "like_new",
@@ -9509,7 +9510,7 @@
   "id": "marktplaats:m2458777617",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/d0fcf7a7-33aa-4270-b840-1c4d8b57a4f4?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.263140094201,
   "llm_attrs": {
    "condition": "like_new",
@@ -9583,7 +9584,7 @@
   "id": "marktplaats:m2458885580",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/6cdec7a8-7b99-4a03-bdfa-9f39e5f9f3d5?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.714511183956,
   "lon": 5.2804942416903,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
@@ -9646,7 +9647,7 @@
   "id": "marktplaats:m2458903472",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/ecb28ca5-4c92-43db-a0fe-8548f19517a2?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.398397682351,
   "llm_attrs": {
    "condition": "used",
@@ -9966,7 +9967,7 @@
   "id": "marktplaats:m2459010460",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/2784ceda-ea1b-4dd9-884c-f8e7ef888f44?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.644252340768,
   "llm_attrs": {
    "condition": "used",
@@ -10209,7 +10210,7 @@
   "id": "marktplaats:m2459051245",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/62ed14ac-8711-47b3-a944-30f4eeac0f22?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.305986846918,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -10416,7 +10417,7 @@
   "id": "marktplaats:m2459116380",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/3fb607f4-81c6-4e16-ae6b-3ee02bfe7f25?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.165846758083,
   "llm_attrs": {
    "condition": "like_new",
@@ -10492,7 +10493,7 @@
   "id": "marktplaats:m2459154024",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/6b5c3a3d-fdac-4e76-a12e-fcb15ff62aec?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.916372912535,
   "llm_attrs": {
    "condition": "sealed_new",
@@ -10613,7 +10614,7 @@
   "id": "marktplaats:m2459325202",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/55370b4b-4512-482b-983f-027c75316f26?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.473268496216,
   "llm_attrs": {
    "condition": "used",
@@ -10811,7 +10812,7 @@
   "id": "marktplaats:m2459511147",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/df4fc8f3-22f0-4349-ac35-a7478405aeda?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.875097899186,
   "llm_attrs": {
    "condition": "like_new",
@@ -10887,7 +10888,7 @@
   "id": "marktplaats:m2459731380",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/b86f1a18-e772-4073-bdc0-1ca1822bbb01?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.487064306776,
   "llm_attrs": {
    "condition": "like_new",
@@ -10905,7 +10906,7 @@
   "lon": 4.2830408520005,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
   "new_ad_on": "2026-10-31",
-  "posted_at": "Eergisteren",
+  "posted_at": "30 okt 26",
   "price_eur": null,
   "price_history": [
    [
@@ -11008,7 +11009,7 @@
   "id": "marktplaats:m2459738258",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/759b4b41-6f9d-4163-8b78-c2b6818c6a59?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.866346550306,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -11026,7 +11027,7 @@
   "lon": 5.7578372756448,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
   "new_ad_on": "2026-10-31",
-  "posted_at": "Eergisteren",
+  "posted_at": "30 okt 26",
   "price_eur": 110,
   "price_history": [
    [
@@ -11286,7 +11287,7 @@
   "url": "https://www.marktplaats.nl/v/auto-onderdelen/carrosserie-en-plaatwerk/m2459858748-portier-2deurs-links-van-een-volkswagen-transporter-la7w"
  },
  {
-  "active": true,
+  "active": false,
   "attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -11342,6 +11343,7 @@
    ]
   ],
   "price_type": "SEE_DESCRIPTION",
+  "removed_on": "2026-11-02",
   "rule_attrs": {
    "condition": "like_new",
    "includes_receiver": null,
@@ -11439,7 +11441,7 @@
   "url": "https://www.marktplaats.nl/v/auto-onderdelen/carrosserie-en-plaatwerk/m2459859148-portier-2deurs-links-van-een-volkswagen-transporter-lr5t"
  },
  {
-  "active": true,
+  "active": false,
   "attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -11480,6 +11482,7 @@
    ]
   ],
   "price_type": "FIXED",
+  "removed_on": "2026-11-02",
   "rule_attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -11527,12 +11530,12 @@
   "id": "marktplaats:m2459859657",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/583da39d-eb0c-4d59-ad5a-696d20f2a61a?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 53.171328042582,
   "lon": 6.1783533711494,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
   "new_ad_on": "2026-10-31",
-  "posted_at": "Eergisteren",
+  "posted_at": "30 okt 26",
   "price_eur": 10,
   "price_history": [
    [
@@ -11588,12 +11591,12 @@
   "id": "marktplaats:m2459859733",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/84b15cf2-752b-4706-b04e-093f234d8172?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 53.171328042582,
   "lon": 6.1783533711494,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
   "new_ad_on": "2026-10-31",
-  "posted_at": "Eergisteren",
+  "posted_at": "30 okt 26",
   "price_eur": 10,
   "price_history": [
    [
@@ -11622,7 +11625,7 @@
   "url": "https://www.marktplaats.nl/v/auto-onderdelen/airco-en-verwarming/m2459859733-temperatuurvoeler-vw-transporter-t6-1k0907543e"
  },
  {
-  "active": true,
+  "active": false,
   "attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -11663,6 +11666,7 @@
    ]
   ],
   "price_type": "FIXED",
+  "removed_on": "2026-11-02",
   "rule_attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -11834,7 +11838,7 @@
   "id": "marktplaats:m2459909424",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/f4a94e04-7501-4a95-901f-74dcb92ed1bd?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.53617861514,
   "llm_attrs": {
    "condition": "used",
@@ -11852,7 +11856,7 @@
   "lon": 5.5117200605202,
   "new_ad_at": "2026-11-01T22:05:32+00:00",
   "new_ad_on": "2026-11-01",
-  "posted_at": "Eergisteren",
+  "posted_at": "30 okt 26",
   "price_eur": 450,
   "price_history": [
    [
@@ -11912,7 +11916,7 @@
   "id": "marktplaats:m2459930454",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/6801aa77-e360-4ac2-9be4-506fe322d8fd?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.632625988228,
   "llm_attrs": {
    "condition": "like_new",
@@ -11932,7 +11936,7 @@
   "lon": 4.7574061948651,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
   "new_ad_on": "2026-10-31",
-  "posted_at": "Eergisteren",
+  "posted_at": "30 okt 26",
   "price_eur": null,
   "price_history": [
    [
@@ -11990,7 +11994,7 @@
   "id": "marktplaats:m2459951883",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/b11726ed-0eaa-4838-a8ba-d55297487a35?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.63763210865,
   "llm_attrs": {
    "condition": "unknown",
@@ -12008,7 +12012,7 @@
   "lon": 5.0194145586597,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
   "new_ad_on": "2026-10-31",
-  "posted_at": "Eergisteren",
+  "posted_at": "30 okt 26",
   "price_eur": null,
   "price_history": [
    [
@@ -12064,12 +12068,12 @@
   "id": "marktplaats:m2459952700",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/8c1fe79a-e06f-4219-a0de-abd8cbe5d748?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 53.097682876482,
   "lon": 7.1378825150278,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
   "new_ad_on": "2026-10-31",
-  "posted_at": "Eergisteren",
+  "posted_at": "30 okt 26",
   "price_eur": 15,
   "price_history": [
    [
@@ -12295,7 +12299,7 @@
   "id": "marktplaats:m2459978458",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/1646742d-ea3d-4b7f-880b-8343416cb4ee?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.563982642122,
   "llm_attrs": {
    "condition": "used",
@@ -12313,7 +12317,7 @@
   "lon": 5.6394088039416,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
   "new_ad_on": "2026-10-31",
-  "posted_at": "Eergisteren",
+  "posted_at": "30 okt 26",
   "price_eur": 70,
   "price_history": [
    [
@@ -12416,7 +12420,7 @@
   "id": "marktplaats:m2459995371",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/6bdee7ce-283c-49c2-ad4d-c0d0510a58a2?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.313020858591,
   "llm_attrs": {
    "condition": "sealed_new",
@@ -12434,7 +12438,7 @@
   "lon": 4.6643852943777,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
   "new_ad_on": "2026-10-31",
-  "posted_at": "Eergisteren",
+  "posted_at": "30 okt 26",
   "price_eur": 155,
   "price_history": [
    [
@@ -12494,7 +12498,7 @@
   "id": "marktplaats:m2460002797",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/269706ee-f5be-49d8-b993-7af88c5c5871?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.856079679917,
   "llm_attrs": {
    "condition": "like_new",
@@ -12514,7 +12518,7 @@
   "lon": 4.8981959607684,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
   "new_ad_on": "2026-10-31",
-  "posted_at": "Eergisteren",
+  "posted_at": "30 okt 26",
   "price_eur": null,
   "price_history": [
    [
@@ -12617,7 +12621,7 @@
   "id": "marktplaats:m2460016671",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/124ea80b-bea4-4c65-a71a-8d866ea9905c?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.829242956793,
   "llm_attrs": {
    "condition": "like_new",
@@ -12635,7 +12639,7 @@
   "lon": 4.3134340529784,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
   "new_ad_on": "2026-10-31",
-  "posted_at": "Eergisteren",
+  "posted_at": "30 okt 26",
   "price_eur": 125,
   "price_history": [
    [
@@ -12738,7 +12742,7 @@
   "id": "marktplaats:m2460060258",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/c7539b63-2fb4-408a-a40b-ec1b898bb6fb?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 53.126200415702,
   "llm_attrs": {
    "condition": "like_new",
@@ -12756,7 +12760,7 @@
   "lon": 6.6611402434787,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
   "new_ad_on": "2026-10-31",
-  "posted_at": "Gisteren",
+  "posted_at": "Eergisteren",
   "price_eur": 100,
   "price_history": [
    [
@@ -12812,12 +12816,12 @@
   "id": "marktplaats:m2460106232",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/1586677b-edcd-4e1e-ad67-c711f4957822?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 50.878845104666,
   "lon": 5.981376243781,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
   "new_ad_on": "2026-10-31",
-  "posted_at": "Gisteren",
+  "posted_at": "Eergisteren",
   "price_eur": 22,
   "price_history": [
    [
@@ -12920,7 +12924,7 @@
   "id": "marktplaats:m2460107681",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/55defe48-d8bf-43cc-be54-5c9ef2567677?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 53.043330867324,
   "llm_attrs": {
    "condition": "used",
@@ -12938,7 +12942,7 @@
   "lon": 5.6534886465893,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
   "new_ad_on": "2026-10-31",
-  "posted_at": "Gisteren",
+  "posted_at": "Eergisteren",
   "price_eur": null,
   "price_history": [
    [
@@ -13041,7 +13045,7 @@
   "id": "marktplaats:m2460112407",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/db68c9a0-f729-4c05-9804-357ef82e473e?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 53.162598686443,
   "llm_attrs": {
    "condition": "used",
@@ -13059,7 +13063,7 @@
   "lon": 6.7601831380516,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
   "new_ad_on": "2026-10-31",
-  "posted_at": "Gisteren",
+  "posted_at": "Eergisteren",
   "price_eur": null,
   "price_history": [
    [
@@ -13285,7 +13289,7 @@
   "id": "marktplaats:m2460202276",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/b944c79c-cdf7-44c8-9ec7-14b9a78f639c?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.80953525406,
   "llm_attrs": {
    "condition": "like_new",
@@ -13303,7 +13307,7 @@
   "lon": 4.7116478610082,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
   "new_ad_on": "2026-10-31",
-  "posted_at": "Gisteren",
+  "posted_at": "Eergisteren",
   "price_eur": 125,
   "price_history": [
    [
@@ -13406,7 +13410,7 @@
   "id": "marktplaats:m2460210502",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/854a2445-cd6f-4c44-93c9-f3f62b7a9c6a?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.6600285367,
   "llm_attrs": {
    "condition": "like_new",
@@ -13424,7 +13428,7 @@
   "lon": 6.287235246027,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
   "new_ad_on": "2026-10-31",
-  "posted_at": "Gisteren",
+  "posted_at": "Eergisteren",
   "price_eur": null,
   "price_history": [
    [
@@ -13559,7 +13563,7 @@
   "id": "marktplaats:m2460235723",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/6cb3b7a2-bb7b-4314-a901-15f38d0c8321?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.633314892667,
   "llm_attrs": {
    "condition": "used",
@@ -13577,7 +13581,7 @@
   "lon": 4.7389118326677,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
   "new_ad_on": "2026-10-31",
-  "posted_at": "Gisteren",
+  "posted_at": "Eergisteren",
   "price_eur": null,
   "price_history": [
    [
@@ -13680,7 +13684,7 @@
   "id": "marktplaats:m2460239939",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/8a7cc293-d9fa-4eef-ac7c-28feeba9f119?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.959095730907,
   "llm_attrs": {
    "condition": "like_new",
@@ -13698,7 +13702,7 @@
   "lon": 5.9058019085429,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
   "new_ad_on": "2026-10-31",
-  "posted_at": "Gisteren",
+  "posted_at": "Eergisteren",
   "price_eur": 100,
   "price_history": [
    [
@@ -13754,12 +13758,12 @@
   "id": "marktplaats:m2460254467",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/6cfaae66-f62b-471f-9530-0934d24d1103?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.275929064352,
   "lon": 5.1774461609937,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
   "new_ad_on": "2026-10-31",
-  "posted_at": "Gisteren",
+  "posted_at": "Eergisteren",
   "price_eur": 19,
   "price_history": [
    [
@@ -13817,7 +13821,7 @@
   "id": "marktplaats:m2460266875",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/d87a7d09-62e9-44a8-810b-8f998f1bd1d2?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 53.171328042582,
   "llm_attrs": {
    "condition": "used",
@@ -13835,7 +13839,7 @@
   "lon": 6.1783533711494,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
   "new_ad_on": "2026-10-31",
-  "posted_at": "Gisteren",
+  "posted_at": "Eergisteren",
   "price_eur": 70,
   "price_history": [
    [
@@ -13893,7 +13897,7 @@
   "id": "marktplaats:m2460267229",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/8f407fb9-b0b3-4e1b-bb0d-5f0f83e5aa1f?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 53.171328042582,
   "llm_attrs": {
    "condition": "used",
@@ -13911,7 +13915,7 @@
   "lon": 6.1783533711494,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
   "new_ad_on": "2026-10-31",
-  "posted_at": "Gisteren",
+  "posted_at": "Eergisteren",
   "price_eur": 30,
   "price_history": [
    [
@@ -14015,7 +14019,7 @@
   "id": "marktplaats:m2460267643",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/a7c611b6-66b4-4d6d-acb5-47381054f586?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.459608802953,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -14033,7 +14037,7 @@
   "lon": 4.6211256338465,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
   "new_ad_on": "2026-10-31",
-  "posted_at": "Gisteren",
+  "posted_at": "Eergisteren",
   "price_eur": 110,
   "price_history": [
    [
@@ -14091,7 +14095,7 @@
   "id": "marktplaats:m2460270654",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/ed88504a-3ef3-4c9b-9d35-e3b53ad04119?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.515455504355,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -14109,7 +14113,7 @@
   "lon": 5.4952153894554,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
   "new_ad_on": "2026-10-31",
-  "posted_at": "Gisteren",
+  "posted_at": "Eergisteren",
   "price_eur": 199,
   "price_history": [
    [
@@ -14171,7 +14175,7 @@
   "id": "marktplaats:m2460291699",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/c76c41f2-7aa9-4445-a45a-886751521272?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 50.999712797917,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -14193,7 +14197,7 @@
   "lon": 5.9004006757043,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
   "new_ad_on": "2026-10-31",
-  "posted_at": "Gisteren",
+  "posted_at": "Eergisteren",
   "price_eur": 25,
   "price_history": [
    [
@@ -14358,7 +14362,7 @@
   "id": "marktplaats:m2460319065",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/4bbba050-a5da-44dd-9d17-3e43b19f1747?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.346441931805,
   "llm_attrs": {
    "condition": "like_new",
@@ -14376,7 +14380,7 @@
   "lon": 5.2565833603955,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
   "new_ad_on": "2026-10-31",
-  "posted_at": "Gisteren",
+  "posted_at": "Eergisteren",
   "price_eur": null,
   "price_history": [
    [
@@ -14434,7 +14438,7 @@
   "id": "marktplaats:m2460323521",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/1d5753b6-c171-4c5e-bf6a-6e22d1e6d8f6?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.667092346394,
   "llm_attrs": {
    "condition": "like_new",
@@ -14452,7 +14456,7 @@
   "lon": 4.7238659682054,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
   "new_ad_on": "2026-10-31",
-  "posted_at": "Gisteren",
+  "posted_at": "Eergisteren",
   "price_eur": 60,
   "price_history": [
    [
@@ -14485,7 +14489,7 @@
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2460323521-honeywell-bdr91-aan-uit-relais"
  },
  {
-  "active": false,
+  "active": true,
   "attrs": {
    "condition": "like_new",
    "includes_receiver": null,
@@ -14514,7 +14518,7 @@
   "id": "marktplaats:m2460342046",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/2753d6b7-d6e0-42ed-94b7-d26c268e5602?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 50.997821223442,
   "llm_attrs": {
    "condition": "like_new",
@@ -14532,7 +14536,7 @@
   "lon": 5.8910492395251,
   "new_ad_at": "2026-11-01T09:18:06+00:00",
   "new_ad_on": "2026-11-01",
-  "posted_at": "Gisteren",
+  "posted_at": "Eergisteren",
   "price_eur": 30,
   "price_history": [
    [
@@ -14541,7 +14545,6 @@
    ]
   ],
   "price_type": "MIN_BID",
-  "removed_on": "2026-11-01",
   "rule_attrs": {
    "condition": "like_new",
    "includes_receiver": null,
@@ -14562,7 +14565,7 @@
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2460342046-honeywell-thermostaat-zo-goed-als-nieuw"
  },
  {
-  "active": false,
+  "active": true,
   "attrs": {
    "condition": "like_new",
    "includes_receiver": null,
@@ -14593,7 +14596,7 @@
   "id": "marktplaats:m2460347886",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/043a1871-0fe8-45d3-a052-412e40a823bb?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 50.842083269875,
   "llm_attrs": {
    "condition": "like_new",
@@ -14613,7 +14616,7 @@
   "lon": 5.6553631365126,
   "new_ad_at": "2026-11-01T16:51:29+00:00",
   "new_ad_on": "2026-11-01",
-  "posted_at": "Gisteren",
+  "posted_at": "Eergisteren",
   "price_eur": null,
   "price_history": [
    [
@@ -14622,7 +14625,6 @@
    ]
   ],
   "price_type": "FAST_BID",
-  "removed_on": "2026-11-01",
   "rule_attrs": {
    "condition": "like_new",
    "includes_receiver": null,
@@ -14672,7 +14674,7 @@
   "id": "marktplaats:m2460350693",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/c9bcc1d3-68c4-4673-983c-9bfccb80c428?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.381808753354,
   "llm_attrs": {
    "condition": "like_new",
@@ -14748,7 +14750,7 @@
   "id": "marktplaats:m2460351487",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/202ea6e8-7248-4226-9237-969c07a08d43?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.941850950766,
   "llm_attrs": {
    "condition": "used",
@@ -14766,7 +14768,7 @@
   "lon": 4.3989596678826,
   "new_ad_at": "2026-11-01T09:07:46+00:00",
   "new_ad_on": "2026-11-01",
-  "posted_at": "Gisteren",
+  "posted_at": "Eergisteren",
   "price_eur": 190,
   "price_history": [
    [
@@ -14947,7 +14949,7 @@
   "id": "marktplaats:m2460492782",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/1c7b055a-a061-4f50-b993-a8da676f9954?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 53.197059617126,
   "llm_attrs": {
    "condition": "used",
@@ -14965,7 +14967,7 @@
   "lon": 7.1768757974734,
   "new_ad_at": "2026-11-01T09:18:06+00:00",
   "new_ad_on": "2026-11-01",
-  "posted_at": "Vandaag",
+  "posted_at": "Gisteren",
   "price_eur": 60,
   "price_history": [
    [
@@ -15071,7 +15073,7 @@
   "id": "marktplaats:m2460504947",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/ed7afe79-fb36-403f-b23d-8d79e073943f?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.612179111024,
   "llm_attrs": {
    "condition": "used",
@@ -15089,7 +15091,7 @@
   "lon": 5.2587004112327,
   "new_ad_at": "2026-11-01T09:42:21+00:00",
   "new_ad_on": "2026-11-01",
-  "posted_at": "Vandaag",
+  "posted_at": "Gisteren",
   "price_eur": 30,
   "price_history": [
    [
@@ -15195,7 +15197,7 @@
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2460532486-honeywell-home-t4r-draadloze-programmeerbare-thermostaat"
  },
  {
-  "active": true,
+  "active": false,
   "attrs": {
    "condition": "like_new",
    "includes_receiver": null,
@@ -15251,6 +15253,7 @@
    ]
   ],
   "price_type": "FAST_BID",
+  "removed_on": "2026-11-02",
   "rule_attrs": {
    "condition": "like_new",
    "includes_receiver": null,
@@ -15626,7 +15629,7 @@
   "id": "marktplaats:m2460595756",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/8da1b14c-0b6b-44cd-bc98-980ca74c4e64?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.434144591166,
   "llm_attrs": {
    "condition": "like_new",
@@ -15644,7 +15647,7 @@
   "lon": 5.4025942273179,
   "new_ad_at": "2026-11-01T12:43:12+00:00",
   "new_ad_on": "2026-11-01",
-  "posted_at": "Vandaag",
+  "posted_at": "Gisteren",
   "price_eur": 80,
   "price_history": [
    [
@@ -15702,7 +15705,7 @@
   "id": "marktplaats:m2460603712",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/2d54bfa1-b801-417b-b684-42336a393a5b?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.396803876874,
   "llm_attrs": {
    "condition": "like_new",
@@ -15720,7 +15723,7 @@
   "lon": 4.3309933178517,
   "new_ad_at": "2026-11-01T12:43:12+00:00",
   "new_ad_on": "2026-11-01",
-  "posted_at": "Vandaag",
+  "posted_at": "Gisteren",
   "price_eur": 75,
   "price_history": [
    [
@@ -15780,7 +15783,7 @@
   "id": "marktplaats:m2460632536",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/8bb671b4-fb06-4c7c-9764-ab6350d83221?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.851399658175,
   "llm_attrs": {
    "condition": "used",
@@ -15800,7 +15803,7 @@
   "lon": 6.8499490881922,
   "new_ad_at": "2026-11-01T16:51:29+00:00",
   "new_ad_on": "2026-11-01",
-  "posted_at": "Vandaag",
+  "posted_at": "Gisteren",
   "price_eur": null,
   "price_history": [
    [
@@ -15858,7 +15861,7 @@
   "id": "marktplaats:m2460635518",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/36acfc1c-5b49-499d-b448-c32db9349c27?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.067559617198,
   "llm_attrs": {
    "condition": "like_new",
@@ -15876,7 +15879,7 @@
   "lon": 4.2572731777889,
   "new_ad_at": "2026-11-01T16:51:29+00:00",
   "new_ad_on": "2026-11-01",
-  "posted_at": "Vandaag",
+  "posted_at": "Gisteren",
   "price_eur": 90,
   "price_history": [
    [
@@ -15934,7 +15937,7 @@
   "id": "marktplaats:m2460637745",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/e0fdaaf2-ade6-40ce-b39d-6238da6825ec?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.27477841218,
   "llm_attrs": {
    "condition": "used",
@@ -15952,7 +15955,7 @@
   "lon": 3.4387029013922,
   "new_ad_at": "2026-11-01T16:51:29+00:00",
   "new_ad_on": "2026-11-01",
-  "posted_at": "Vandaag",
+  "posted_at": "Gisteren",
   "price_eur": 90,
   "price_history": [
    [
@@ -16055,7 +16058,7 @@
   "id": "marktplaats:m2460664548",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/3543c2d6-b737-4a1e-b7eb-135cd83478ca?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.694082466194,
   "llm_attrs": {
    "condition": "unknown",
@@ -16073,7 +16076,7 @@
   "lon": 5.9822590157475,
   "new_ad_at": "2026-11-01T16:51:29+00:00",
   "new_ad_on": "2026-11-01",
-  "posted_at": "Vandaag",
+  "posted_at": "Gisteren",
   "price_eur": null,
   "price_history": [
    [
@@ -16178,7 +16181,7 @@
   "id": "marktplaats:m2460702473",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/9c17243c-22b4-4c81-aed0-134b2fed78d9?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.092545084756,
   "llm_attrs": {
    "condition": "like_new",
@@ -16196,7 +16199,7 @@
   "lon": 4.3801653564833,
   "new_ad_at": "2026-11-01T16:51:29+00:00",
   "new_ad_on": "2026-11-01",
-  "posted_at": "Vandaag",
+  "posted_at": "Gisteren",
   "price_eur": 55,
   "price_history": [
    [
@@ -16299,7 +16302,7 @@
   "id": "marktplaats:m2460705630",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/3ac5024e-b26b-4d38-8e83-72c4edfd0fc8?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.993365111107,
   "llm_attrs": {
    "condition": "like_new",
@@ -16317,7 +16320,7 @@
   "lon": 4.5042075886534,
   "new_ad_at": "2026-11-01T16:51:29+00:00",
   "new_ad_on": "2026-11-01",
-  "posted_at": "Vandaag",
+  "posted_at": "Gisteren",
   "price_eur": null,
   "price_history": [
    [
@@ -16377,7 +16380,7 @@
   "id": "marktplaats:m2460720658",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/dbba7448-25d9-42dd-8ef5-bba0192182f2?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.341410783506,
   "llm_attrs": {
    "condition": "like_new",
@@ -16397,7 +16400,7 @@
   "lon": 5.2062386383244,
   "new_ad_at": "2026-11-01T16:51:29+00:00",
   "new_ad_on": "2026-11-01",
-  "posted_at": "Vandaag",
+  "posted_at": "Gisteren",
   "price_eur": 70,
   "price_history": [
    [
@@ -16455,7 +16458,7 @@
   "id": "marktplaats:m2460756988",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/398488d5-3822-4329-b495-16320a9dc67f?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.920185450762,
   "llm_attrs": {
    "condition": "used",
@@ -16473,7 +16476,7 @@
   "lon": 4.490568869365,
   "new_ad_at": "2026-11-01T22:05:32+00:00",
   "new_ad_on": "2026-11-01",
-  "posted_at": "Vandaag",
+  "posted_at": "Gisteren",
   "price_eur": null,
   "price_history": [
    [
@@ -16576,7 +16579,7 @@
   "id": "marktplaats:m2460758104",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/20349206-3b8a-430d-923f-85b66ab03bf8?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.324946539959,
   "llm_attrs": {
    "condition": "like_new",
@@ -16697,7 +16700,7 @@
   "id": "marktplaats:m2460780338",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/6b225050-c147-474f-9616-b6e150581667?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 51.674423844455,
   "llm_attrs": {
    "condition": "like_new",
@@ -16715,7 +16718,7 @@
   "lon": 4.7862166057549,
   "new_ad_at": "2026-11-01T22:05:32+00:00",
   "new_ad_on": "2026-11-01",
-  "posted_at": "Vandaag",
+  "posted_at": "Gisteren",
   "price_eur": 150,
   "price_history": [
    [
@@ -16773,7 +16776,7 @@
   "id": "marktplaats:m2460796694",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/9783eb8c-ad16-46a3-aa03-ca46107928e5?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-01",
+  "last_seen": "2026-11-02",
   "lat": 52.360390331071,
   "llm_attrs": {
    "condition": "like_new",
@@ -16791,7 +16794,7 @@
   "lon": 4.9122996031808,
   "new_ad_at": "2026-11-01T22:05:32+00:00",
   "new_ad_on": "2026-11-01",
-  "posted_at": "Vandaag",
+  "posted_at": "Gisteren",
   "price_eur": 50,
   "price_history": [
    [
@@ -16818,5 +16821,309 @@
   "source": "marktplaats",
   "title": "Honeywell T4R Slimme Thermostaat",
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2460796694-honeywell-t4r-slimme-thermostaat"
+ },
+ {
+  "active": true,
+  "attrs": {
+   "condition": "used",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "model_assumed": false,
+   "original_box": false,
+   "quantity": 1,
+   "red_flags": [],
+   "seller_type": "dealer",
+   "shipping": false,
+   "summary": "VW Transporter T6 right running board (car part), not a Honeywell thermostat",
+   "table_stand": false
+  },
+  "attrs_hash": "969545f9ce011d22",
+  "attrs_source": "claude",
+  "attrs_version": 1,
+  "city": "Surhuisterveen",
+  "condition_raw": "Gebruikt",
+  "country": "Nederland",
+  "description": "Dit onderdeel is eenvoudig te bestellen op onze website via de website-link in deze advertentie.\n\nTreeplank rechts VW Transporter T6\nOnderdeelnummer: 7LA863736\nBouwjaar: 2020\n81628 km oud\n\n\n BM-Code: EXT324771 \n\n Cette pièce est facile à commander sur notre site Web via le lien du site Web dans cette annonce.\nThis part is easy to order on our website via the website link in this advertisement. \n Dieses Teil kann einfach auf unserer Website über den Website-Link in dieser Anzeige bestellt werden. \n\nBM Parts B.V. is gespecialiseerd in de verkoop van nieuwe en jong gebruikte originele onderdelen voor Audi, BMW, Mercedes, VW, Seat en Skoda.\nStaat uw onderdeel er niet bij of is het net verkocht? Neem dan contact met ons op, ons team staat altijd voor u klaar voor vragen of advies over een onderdeel.\n\n BM Parts B.V. \nStraat: Zoom 8\nPostcode: 9231 DX\nPlaats: Surhuisterveen (Friesland)\nTel: (+31) (0)512-366550\n Openingstijden: \nMa. t/m Vrij. 08:30u - 12:00u & 13:00u - 17:30u\nZa. 09:00 - 13:00u Website www.bm-parts.nl/onderdeel/324771/treeplank-rechts-vw-transporter-t6 ... ... ... ... ... ... ... ... ... ... ... ... Surhuisterveen 6x bekeken 0x bewaard Sinds 2 nov. '26",
+  "details_version": 2,
+  "distance_km": 175.0,
+  "first_seen": "2026-11-02",
+  "full_description": true,
+  "id": "marktplaats:m2460860698",
+  "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/598402b7-fb99-4156-8b88-7be6363bc5ea?rule=ecg_mp_eps$_82.jpg",
+  "kind": "used",
+  "last_seen": "2026-11-02",
+  "lat": 53.171328042582,
+  "llm_attrs": {
+   "condition": "unknown",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "original_box": false,
+   "quantity": 0,
+   "red_flags": [],
+   "seller_type": "dealer",
+   "shipping": false,
+   "summary": "VW Transporter T6 right running board (car part), not a Honeywell thermostat",
+   "table_stand": false
+  },
+  "lon": 6.1783533711494,
+  "new_ad_at": "2026-11-02T01:32:07+00:00",
+  "new_ad_on": "2026-11-02",
+  "posted_at": "Vandaag",
+  "price_eur": 25,
+  "price_history": [
+   [
+    "2026-11-02",
+    25
+   ]
+  ],
+  "price_type": "FIXED",
+  "rule_attrs": {
+   "condition": "used",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "original_box": false,
+   "quantity": 6,
+   "red_flags": [],
+   "seller_type": "dealer",
+   "shipping": false,
+   "summary": "",
+   "table_stand": false
+  },
+  "seller_has_website": false,
+  "seller_verified": true,
+  "source": "marktplaats",
+  "title": "Treeplank rechts VW Transporter T6 7LA863736",
+  "url": "https://www.marktplaats.nl/v/auto-onderdelen/carrosserie-en-plaatwerk/m2460860698-treeplank-rechts-vw-transporter-t6-7la863736"
+ },
+ {
+  "active": true,
+  "attrs": {
+   "condition": "used",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "model_assumed": false,
+   "original_box": false,
+   "quantity": 1,
+   "red_flags": [],
+   "seller_type": "dealer",
+   "shipping": false,
+   "summary": "VW Transporter T6 left window regulator (car part), not a Honeywell thermostat",
+   "table_stand": false
+  },
+  "attrs_hash": "91c8e7fc2ea4d0b6",
+  "attrs_source": "claude",
+  "attrs_version": 1,
+  "city": "Surhuisterveen",
+  "condition_raw": "Gebruikt",
+  "country": "Nederland",
+  "description": "Dit onderdeel is eenvoudig te bestellen op onze website via de website-link in deze advertentie.\n\nRaammechaniek links VW Transporter T6\nOnderdeelnummer: 7L1837729H\nBouwjaar: 2020\n81628 km oud\n\n\n BM-Code: INT324774 \n\n Cette pièce est facile à commander sur notre site Web via le lien du site Web dans cette annonce.\nThis part is easy to order on our website via the website link in this advertisement. \n Dieses Teil kann einfach auf unserer Website über den Website-Link in dieser Anzeige bestellt werden. \n\nBM Parts B.V. is gespecialiseerd in de verkoop van nieuwe en jong gebruikte originele onderdelen voor Audi, BMW, Mercedes, VW, Seat en Skoda.\nStaat uw onderdeel er niet bij of is het net verkocht? Neem dan contact met ons op, ons team staat altijd voor u klaar voor vragen of advies over een onderdeel.\n\n BM Parts B.V. \nStraat: Zoom 8\nPostcode: 9231 DX\nPlaats: Surhuisterveen (Friesland)\nTel: (+31) (0)512-366550\n Openingstijden: \nMa. t/m Vrij. 08:30u - 12:00u & 13:00u - 17:30u\nZa. 09:00 - 13:00u Website www.bm-parts.nl/onderdeel/324774/raammechaniek-links-vw-transporter-t6 ... ... ... ... ... ... ... ... ... ... ... ... Surhuisterveen 2x bekeken 0x bewaard Sinds 2 nov. '26",
+  "details_version": 2,
+  "distance_km": 175.0,
+  "first_seen": "2026-11-02",
+  "full_description": true,
+  "id": "marktplaats:m2460860732",
+  "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/b6d0faed-d2f6-48cf-a11a-9067a63ad3e3?rule=ecg_mp_eps$_82.jpg",
+  "kind": "used",
+  "last_seen": "2026-11-02",
+  "lat": 53.171328042582,
+  "llm_attrs": {
+   "condition": "unknown",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "original_box": false,
+   "quantity": 0,
+   "red_flags": [],
+   "seller_type": "dealer",
+   "shipping": false,
+   "summary": "VW Transporter T6 left window regulator (car part), not a Honeywell thermostat",
+   "table_stand": false
+  },
+  "lon": 6.1783533711494,
+  "new_ad_at": "2026-11-02T01:32:07+00:00",
+  "new_ad_on": "2026-11-02",
+  "posted_at": "Vandaag",
+  "price_eur": 50,
+  "price_history": [
+   [
+    "2026-11-02",
+    50
+   ]
+  ],
+  "price_type": "FIXED",
+  "rule_attrs": {
+   "condition": "used",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "original_box": false,
+   "quantity": 2,
+   "red_flags": [],
+   "seller_type": "dealer",
+   "shipping": false,
+   "summary": "",
+   "table_stand": false
+  },
+  "seller_has_website": false,
+  "seller_verified": true,
+  "source": "marktplaats",
+  "title": "Raammechaniek links VW Transporter T6 7L1837729H",
+  "url": "https://www.marktplaats.nl/v/auto-onderdelen/ruiten-en-toebehoren/m2460860732-raammechaniek-links-vw-transporter-t6-7l1837729h"
+ },
+ {
+  "active": true,
+  "attrs": {
+   "condition": "used",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "model_assumed": false,
+   "original_box": false,
+   "quantity": 1,
+   "red_flags": [],
+   "seller_type": "dealer",
+   "shipping": false,
+   "summary": "VW Transporter T6 handbrake (car part), not a Honeywell thermostat",
+   "table_stand": false
+  },
+  "attrs_hash": "a17f42b61794600a",
+  "attrs_source": "claude",
+  "attrs_version": 1,
+  "city": "Surhuisterveen",
+  "condition_raw": "Gebruikt",
+  "country": "Nederland",
+  "description": "Dit onderdeel is eenvoudig te bestellen op onze website via de website-link in deze advertentie.\n\nHandrem VW Transporter T6\nOnderdeelnummer: 7E1711301Q\nBouwjaar: 2020\n81628 km oud\n\n\n BM-Code: INT324891 \n\n Cette pièce est facile à commander sur notre site Web via le lien du site Web dans cette annonce.\nThis part is easy to order on our website via the website link in this advertisement. \n Dieses Teil kann einfach auf unserer Website über den Website-Link in dieser Anzeige bestellt werden. \n\nBM Parts B.V. is gespecialiseerd in de verkoop van nieuwe en jong gebruikte originele onderdelen voor Audi, BMW, Mercedes, VW, Seat en Skoda.\nStaat uw onderdeel er niet bij of is het net verkocht? Neem dan contact met ons op, ons team staat altijd voor u klaar voor vragen of advies over een onderdeel.\n\n BM Parts B.V. \nStraat: Zoom 8\nPostcode: 9231 DX\nPlaats: Surhuisterveen (Friesland)\nTel: (+31) (0)512-366550\n Openingstijden: \nMa. t/m Vrij. 08:30u - 12:00u & 13:00u - 17:30u\nZa. 09:00 - 13:00u Website www.bm-parts.nl/onderdeel/324891/handrem-vw-transporter-t6 ... ... ... ... ... ... ... ... ... ... ... ... Surhuisterveen 3x bekeken 0x bewaard Sinds 2 nov. '26",
+  "details_version": 2,
+  "distance_km": 175.0,
+  "first_seen": "2026-11-02",
+  "full_description": true,
+  "id": "marktplaats:m2460860806",
+  "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/f3b960d2-c3db-4127-95fc-e52a46f552b3?rule=ecg_mp_eps$_82.jpg",
+  "kind": "used",
+  "last_seen": "2026-11-02",
+  "lat": 53.171328042582,
+  "llm_attrs": {
+   "condition": "unknown",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "original_box": false,
+   "quantity": 0,
+   "red_flags": [],
+   "seller_type": "dealer",
+   "shipping": false,
+   "summary": "VW Transporter T6 handbrake (car part), not a Honeywell thermostat",
+   "table_stand": false
+  },
+  "lon": 6.1783533711494,
+  "new_ad_at": "2026-11-02T01:32:07+00:00",
+  "new_ad_on": "2026-11-02",
+  "posted_at": "Vandaag",
+  "price_eur": 45,
+  "price_history": [
+   [
+    "2026-11-02",
+    45
+   ]
+  ],
+  "price_type": "FIXED",
+  "rule_attrs": {
+   "condition": "used",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "original_box": false,
+   "quantity": 3,
+   "red_flags": [],
+   "seller_type": "dealer",
+   "shipping": false,
+   "summary": "",
+   "table_stand": false
+  },
+  "seller_has_website": false,
+  "seller_verified": true,
+  "source": "marktplaats",
+  "title": "Handrem VW Transporter T6 7E1711301Q",
+  "url": "https://www.marktplaats.nl/v/auto-onderdelen/overige-auto-onderdelen/m2460860806-handrem-vw-transporter-t6-7e1711301q"
+ },
+ {
+  "active": true,
+  "attrs": {
+   "condition": "used",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "model_assumed": false,
+   "original_box": false,
+   "quantity": 1,
+   "red_flags": [],
+   "seller_type": "dealer",
+   "shipping": false,
+   "summary": "VW Transporter T6 ABS pump (car part), not a Honeywell thermostat",
+   "table_stand": false
+  },
+  "attrs_hash": "690c199b3fdcb9e1",
+  "attrs_source": "claude",
+  "attrs_version": 1,
+  "city": "Surhuisterveen",
+  "condition_raw": "Gebruikt",
+  "country": "Nederland",
+  "description": "Dit onderdeel is eenvoudig te bestellen op onze website via de website-link in deze advertentie.\n\nOnderdeelnummer: 7LB14517A\nBouwjaar: 2020\nKilometerstand: 81628km\n\n\n BM-Code: EXT325286 \n\n Cette pièce est facile à commander sur notre site Web via le lien du site Web dans cette annonce.\nThis part is easy to order on our website via the website link in this advertisement. \n Dieses Teil kann einfach auf unserer Website über den Website-Link in dieser Anzeige bestellt werden. \n\nBM Parts B.V. is gespecialiseerd in de verkoop van nieuwe en jong gebruikte originele onderdelen voor Audi, BMW, Mercedes, VW, Seat en Skoda.\nStaat uw onderdeel er niet bij of is het net verkocht? Neem dan contact met ons op, ons team staat altijd voor u klaar voor vragen of advies over een onderdeel.\n\n BM Parts B.V. \nStraat: Zoom 8\nPostcode: 9231 DX\nPlaats: Surhuisterveen (Friesland)\nTel: (+31) (0)512-366550\n Openingstijden: \nMa. t/m Vrij. 08:30u - 12:00u & 13:00u - 17:30u\nZa. 09:00 - 13:00u Website www.bm-parts.nl/onderdeel/325286/abs-pomp-vw-transporter-t6 ... ... ... ... ... ... ... ... ... ... ... ... Surhuisterveen 5x bekeken 0x bewaard Sinds 2 nov. '26",
+  "details_version": 2,
+  "distance_km": 175.0,
+  "first_seen": "2026-11-02",
+  "full_description": true,
+  "id": "marktplaats:m2460862161",
+  "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/4443d368-e399-4e9c-acd4-dacc0bdb2e85?rule=ecg_mp_eps$_82.jpg",
+  "kind": "used",
+  "last_seen": "2026-11-02",
+  "lat": 53.171328042582,
+  "llm_attrs": {
+   "condition": "unknown",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "original_box": false,
+   "quantity": 0,
+   "red_flags": [],
+   "seller_type": "dealer",
+   "shipping": false,
+   "summary": "VW Transporter T6 ABS pump (car part), not a Honeywell thermostat",
+   "table_stand": false
+  },
+  "lon": 6.1783533711494,
+  "new_ad_at": "2026-11-02T01:32:07+00:00",
+  "new_ad_on": "2026-11-02",
+  "posted_at": "Vandaag",
+  "price_eur": 230,
+  "price_history": [
+   [
+    "2026-11-02",
+    230
+   ]
+  ],
+  "price_type": "FIXED",
+  "rule_attrs": {
+   "condition": "used",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "original_box": false,
+   "quantity": 5,
+   "red_flags": [],
+   "seller_type": "dealer",
+   "shipping": false,
+   "summary": "",
+   "table_stand": false
+  },
+  "seller_has_website": false,
+  "seller_verified": true,
+  "source": "marktplaats",
+  "title": "ABS pomp VW Transporter T6 7LB14517A",
+  "url": "https://www.marktplaats.nl/v/auto-onderdelen/remmen-en-aandrijving/m2460862161-abs-pomp-vw-transporter-t6-7lb14517a"
  }
 ]
