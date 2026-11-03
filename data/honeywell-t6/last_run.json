@@ -1,5 +1,5 @@
 {
- "started_at": "2026-11-03T14:18:55+00:00",
+ "started_at": "2026-11-03T21:50:18+00:00",
  "sources": {
   "marktplaats": {
    "searches": [
@@ -7,12 +7,20 @@
      "query": "honeywell t6",
      "category": null,
      "pages": 1,
-     "listings": 89,
-     "total": 89,
+     "listings": 92,
+     "total": 92,
      "error": null
     },
     {
      "query": "honeywell t6r",
+     "category": null,
+     "pages": 1,
+     "listings": 35,
+     "total": 35,
+     "error": null
+    },
+    {
+     "query": "lyric t6",
      "category": null,
      "pages": 1,
      "listings": 37,
@@ -20,35 +28,27 @@
      "error": null
     },
     {
-     "query": "lyric t6",
-     "category": null,
-     "pages": 1,
-     "listings": 36,
-     "total": 36,
-     "error": null
-    },
-    {
      "query": "t6r thermostaat",
      "category": null,
      "pages": 1,
-     "listings": 36,
-     "total": 36,
+     "listings": 34,
+     "total": 34,
      "error": null
     }
    ],
-   "unique_listings": 133,
+   "unique_listings": 130,
    "complete": true
   }
  },
  "merge": {
-  "new": 8,
-  "updated": 125,
-  "price_changes": 3,
-  "removed": 15,
+  "new": 9,
+  "updated": 121,
+  "price_changes": 0,
+  "removed": 18,
   "relists": 0
  },
- "finished_at": "2026-11-03T14:19:59+00:00",
- "active_listings": 133,
- "active_items": 82,
+ "finished_at": "2026-11-03T21:51:23+00:00",
+ "active_listings": 130,
+ "active_items": 84,
  "llm_backend": "cli"
 }
