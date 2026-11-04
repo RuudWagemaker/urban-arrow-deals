@@ -1,5 +1,5 @@
 {
- "started_at": "2026-11-03T21:50:18+00:00",
+ "started_at": "2026-11-04T02:22:02+00:00",
  "sources": {
   "marktplaats": {
    "searches": [
@@ -36,19 +36,19 @@
      "error": null
     }
    ],
-   "unique_listings": 130,
+   "unique_listings": 129,
    "complete": true
   }
  },
  "merge": {
-  "new": 9,
-  "updated": 121,
+  "new": 1,
+  "updated": 128,
   "price_changes": 0,
-  "removed": 18,
+  "removed": 9,
   "relists": 0
  },
- "finished_at": "2026-11-03T21:51:23+00:00",
- "active_listings": 130,
+ "finished_at": "2026-11-04T02:22:26+00:00",
+ "active_listings": 129,
  "active_items": 84,
  "llm_backend": "cli"
 }
