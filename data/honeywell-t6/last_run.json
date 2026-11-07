@@ -1,5 +1,5 @@
 {
- "started_at": "2026-11-07T01:57:46+00:00",
+ "started_at": "2026-11-07T13:05:00+00:00",
  "sources": {
   "marktplaats": {
    "searches": [
@@ -7,16 +7,16 @@
      "query": "honeywell t6",
      "category": null,
      "pages": 1,
-     "listings": 88,
-     "total": 88,
+     "listings": 87,
+     "total": 87,
      "error": null
     },
     {
      "query": "honeywell t6r",
      "category": null,
      "pages": 1,
-     "listings": 35,
-     "total": 35,
+     "listings": 36,
+     "total": 36,
      "error": null
     },
     {
@@ -31,24 +31,24 @@
      "query": "t6r thermostaat",
      "category": null,
      "pages": 1,
-     "listings": 34,
-     "total": 34,
+     "listings": 35,
+     "total": 35,
      "error": null
     }
    ],
-   "unique_listings": 124,
+   "unique_listings": 127,
    "complete": true
   }
  },
  "merge": {
-  "new": 2,
-  "updated": 122,
-  "price_changes": 0,
-  "removed": 5,
+  "new": 7,
+  "updated": 120,
+  "price_changes": 1,
+  "removed": 8,
   "relists": 0
  },
- "finished_at": "2026-11-07T01:58:09+00:00",
- "active_listings": 124,
- "active_items": 84,
+ "finished_at": "2026-11-07T13:05:58+00:00",
+ "active_listings": 127,
+ "active_items": 85,
  "llm_backend": "cli"
 }
