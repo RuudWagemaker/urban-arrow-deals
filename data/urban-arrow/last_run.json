@@ -1,5 +1,5 @@
 {
- "started_at": "2026-11-10T14:54:30+00:00",
+ "started_at": "2026-11-10T21:48:55+00:00",
  "sources": {
   "marktplaats": {
    "searches": [
@@ -21,18 +21,44 @@
     }
    ],
    "unique_listings": 997,
+   "description_debug": [
+    {
+     "url": "https://www.marktplaats.nl/v/watersport-en-boten/kitesurfen/m2464400495-regen-huif-urban-arrow",
+     "page_length": 105724,
+     "snippet_found_at": [],
+     "context": [],
+     "script_tags": [
+      "<script crossorigin=\"anonymous\" async=\"\" src=\"//www.hzcdn.io/bff/static/vendor/ecg-js-ga-tracking/index.ae79ae94.js\">",
+      "<script type=\"application/ld+json\">",
+      "<script type=\"application/ld+json\">",
+      "<script type=\"application/ld+json\">",
+      "<script>",
+      "<script>",
+      "<script crossorigin=\"anonymous\" src=\"//www.hzcdn.io/bff/static/vendor/sourcepoint-lib/index.de2ff0f0.js\">",
+      "<script defer=\"\" src=\"https://consent.marktplaats.nl/unified/wrapperMessagingWithoutDetection.js\">",
+      "<script>",
+      "<script>",
+      "<script>",
+      "<script>",
+      "<script>",
+      "<script>",
+      "<script id=\"intowowMP\">"
+     ],
+     "has_json_ld": true
+    }
+   ],
    "complete": true
   }
  },
  "merge": {
-  "new": 24,
-  "updated": 973,
+  "new": 17,
+  "updated": 980,
   "price_changes": 6,
-  "removed": 18,
-  "relists": 1
+  "removed": 17,
+  "relists": 0
  },
- "finished_at": "2026-11-10T14:56:20+00:00",
+ "finished_at": "2026-11-10T21:50:42+00:00",
  "active_listings": 997,
- "active_items": 301,
+ "active_items": 302,
  "llm_backend": "cli"
 }
