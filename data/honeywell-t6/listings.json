@@ -243,12 +243,12 @@
   "id": "marktplaats:m2186294160",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/9c/9c0549c1-5f14-476f-8b9f-28dcc703edce?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.735374790263,
   "lon": 6.4902572160662,
   "new_ad_at": "2026-11-08T13:29:35+00:00",
   "new_ad_on": "2026-11-08",
-  "posted_at": "Eergisteren",
+  "posted_at": "8 nov 26",
   "price_eur": 5,
   "price_history": [
    [
@@ -304,12 +304,12 @@
   "id": "marktplaats:m2186294198",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/11/11e03b8a-b871-40ff-9335-8f949eb98bdc?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.735374790263,
   "lon": 6.4902572160662,
   "new_ad_at": "2026-11-08T13:29:35+00:00",
   "new_ad_on": "2026-11-08",
-  "posted_at": "Eergisteren",
+  "posted_at": "8 nov 26",
   "price_eur": 5,
   "price_history": [
    [
@@ -444,7 +444,7 @@
   "id": "marktplaats:m2300199922",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/44/44d33532-1e72-47c4-bd90-2f00b87981bc?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.253881722533,
   "llm_attrs": {
    "condition": "unknown",
@@ -520,7 +520,7 @@
   "id": "marktplaats:m2321989804",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/6a/6ab9c788-dc91-469d-89b8-a602e27ec786?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.68971591239,
   "llm_attrs": {
    "condition": "unknown",
@@ -538,7 +538,7 @@
   "lon": 5.1562921081797,
   "new_ad_at": "2026-11-10T01:34:42+00:00",
   "new_ad_on": "2026-11-10",
-  "posted_at": "Gisteren",
+  "posted_at": "Eergisteren",
   "price_eur": null,
   "price_history": [
    [
@@ -681,7 +681,7 @@
      "price": 100
     },
     {
-     "adjusted": 155,
+     "adjusted": 156,
      "id": "marktplaats:m2454813517",
      "price": 130
     },
@@ -696,12 +696,12 @@
      "price": 95
     },
     {
-     "adjusted": 131,
+     "adjusted": 132,
      "id": "marktplaats:m2459738258",
      "price": 110
     },
     {
-     "adjusted": 149,
+     "adjusted": 150,
      "id": "marktplaats:m2461922868",
      "price": 125
     }
@@ -711,14 +711,14 @@
    "low": 120.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 149.0
+   "price": 150.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
   "id": "marktplaats:m2396591651",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/52b93c2b-8be4-491e-932c-c5b5022f96fe?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.074842908998,
   "llm_attrs": {
    "condition": "unknown",
@@ -794,7 +794,7 @@
   "id": "marktplaats:m2396940993",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/05cdf6c8-904c-4fe0-b73d-d6d209615c2d?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.168663495658,
   "llm_attrs": {
    "condition": "used",
@@ -812,7 +812,7 @@
   "lon": 5.4492766531263,
   "new_ad_at": "2026-11-08T13:29:35+00:00",
   "new_ad_on": "2026-11-08",
-  "posted_at": "Eergisteren",
+  "posted_at": "8 nov 26",
   "price_eur": 625,
   "price_history": [
    [
@@ -1024,7 +1024,7 @@
   "id": "marktplaats:m2420804731",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/e92a4f52-59d3-4533-8e57-1a13b8089e0c?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.321693055348,
   "llm_attrs": {
    "condition": "like_new",
@@ -1146,7 +1146,7 @@
   "id": "marktplaats:m2424755689",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/331974fa-e983-4f0e-b35f-e90173c7277f?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.063066027679,
   "llm_attrs": {
    "condition": "unknown",
@@ -1271,7 +1271,7 @@
   "id": "marktplaats:m2428296309",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/3d0da3a7-c4e5-4725-b3b4-eb607978f99b?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.124231824713,
   "llm_attrs": {
    "condition": "like_new",
@@ -1446,7 +1446,7 @@
   "id": "marktplaats:m2434643411",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/3372e899-5e1c-48ad-b1ec-c4ca778b3b1c?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 50.885860713336,
   "llm_attrs": {
    "condition": "defect",
@@ -1570,7 +1570,7 @@
   "id": "marktplaats:m2439211713",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/f4477e4e-47e4-458d-99cb-0f4ddda78b35?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.97691536235,
   "llm_attrs": {
    "condition": "like_new",
@@ -1691,7 +1691,7 @@
   "id": "marktplaats:m2439257707",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/fd7653a8-5481-4571-819d-dac1c743a0b6?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 53.15793381827,
   "llm_attrs": {
    "condition": "unknown",
@@ -1908,7 +1908,7 @@
   "id": "marktplaats:m2439334401",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/0c50e55a-5f07-4357-a13b-efe49bcaa80d?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.959800172865,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -1986,7 +1986,7 @@
   "id": "marktplaats:m2444309181",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/6a31a0b6-45ab-4484-b31f-b0e11d0a27b0?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.519624588404,
   "llm_attrs": {
    "condition": "used",
@@ -2057,7 +2057,7 @@
   "deal": {
    "flags": [],
    "label": "overpriced",
-   "pct": -18.5
+   "pct": -18.6
   },
   "description": "Nieuwe Honeywell Home T6R slimme thermostaat in zwarte editie, nog nieuw in doos. Deze draadloze thermostaat is eenvoudig via wifi te bedienen met je telefoon, waar je ook bent. De nieuwprijs bedraagt 185 euro, mijn vraagprijs is 155 euro. Ideaal voor comfort en energiebesparing in huis. ... ... ... ... ... ... ... ... ... ... ... ... Hoofddorp 219x bekeken 2x bewaard Sinds 26 sep. '26",
   "details_version": 2,
@@ -2179,7 +2179,7 @@
   "deal": {
    "flags": [],
    "label": "overpriced",
-   "pct": -51.4
+   "pct": -51.5
   },
   "description": "Nieuwe Honeywell Home T6R Slimme Thermostaat, draadloos programmeerbaar voor verwarmingssystemen en boilers (incl. OpenTherm). Werkt met Alexa, Google Assistant en Apple Home. Eenvoudig te installeren en te bedienen via de app. Ideaal voor een energiezuinig en comfortabel huis. ... ... ... ... ... ... ... ... ... ... ... ... Amsterdam 439x bekeken 8x bewaard Sinds 26 sep. '26",
   "details_version": 2,
@@ -2425,7 +2425,7 @@
   "deal": {
    "flags": [],
    "label": "a bit pricey",
-   "pct": -6.5
+   "pct": -6.4
   },
   "description": "Honywell T6R slimme thermostaat, draadloos. Gebruikte staat maar werkt nog naar behoren. ... ... ... ... ... ... ... ... ... ... ... ... Driebergen-Rijsenburg 100x bekeken 10x bewaard Sinds 27 sep. '26",
   "details_version": 2,
@@ -2475,7 +2475,7 @@
   "id": "marktplaats:m2447453400",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/19b4cb61-b4c3-4041-a488-ee82385b8fbb?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.055062732137,
   "llm_attrs": {
    "condition": "used",
@@ -2596,7 +2596,7 @@
   "id": "marktplaats:m2448250038",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/975fb919-a96a-4c29-b87a-69f1c2ed423c?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.952571544823,
   "llm_attrs": {
    "condition": "sealed_new",
@@ -2794,7 +2794,7 @@
   "id": "marktplaats:m2448829475",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/1fe41a52-ce27-495d-a6fa-b1281a70f98d?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.372752845296,
   "llm_attrs": {
    "condition": "like_new",
@@ -3236,7 +3236,7 @@
   "id": "marktplaats:m2451662606",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/d0fff5b0-263a-4d28-99a5-07342d2d71c8?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.374662122152,
   "llm_attrs": {
    "condition": "sealed_new",
@@ -3644,7 +3644,7 @@
   "id": "marktplaats:m2452968043",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/e4c4694f-014d-4032-a552-bd3b39697558?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.811777582722,
   "llm_attrs": {
    "condition": "like_new",
@@ -3719,7 +3719,7 @@
     "Ad contradicts itself: says boiler still works but also that it is already dismantled"
    ],
    "label": "overpriced",
-   "pct": -634.2
+   "pct": -633.2
   },
   "description": "Wegens de overstap naar een volledige warmtepomp bieden wij onze complete en perfect onderhouden cv-installatie aan.\n\n📦 Wat zit er allemaal in dit complete totaalpakket?\nU koopt in één klap een volledige, luxe installatie. Ideaal voor een complete woningrenovatie of verbouwing.\n\nIntergas Xtreme 36 CW5 hoogrendementsketel (2019, Hybrid Ready)\n\nHoneywell Home Lyric T6 Smart Thermostaat (Luxe Witte Uitvoering) – inclusief de verplichte Honeywell ketelmodule/ontvanger voor bij de ketel (OpenTherm)\n\nAutomatische Snelontluchter – hoogwaardige messing ontluchter die de installatie continu volledig luchtvrij houdt\n\nComplete Rookgasafvoer – inclusief de originele dakschoorsteen / dakdoorvoer en de aansluitpijp.\n\nExpansievat – inclusief de bijbehorende metalen ophangbeugel/montagebalk.\n\nHet toestel heeft op 13 oktober 2026 nog een volledige onderhoudsbeurt gehad door een erkend installatiebedrijf. Het officiële onderhoudsrapport en de servicesticker zijn uiteraard aanwezig. Altijd laag temperatuur gestookt, dus wisselaar is in topconditie. U koopt dus gegarandeerd een technisch 100% gekeurd, veilig en direct bedrijfsklaar toestel. De ketel is momenteel nog werkend te zien en wordt binnenkort professioneel gedemonteerd.\n\n💶 Prijs & Ophalen:\nDe complete set mag in één koop weg tegen een realistisch bod. Richtprijs voor de totale set is vanaf € 650,-.\n\nOp te halen in overleg direct na de professionele demontage door onze installateur Vanaf 30 oktober. Toestel is inmiddels gedemonteerd en af te halen.\nBij serieuze interesse of vragen, stuur gerust een bericht! ... ... ... ... ... ... ... ... ... ... ... ... Nijmegen 376x bekeken 12x bewaard Sinds 13 okt. '26",
   "details_version": 2,
@@ -3737,7 +3737,7 @@
      "price": 85
     },
     {
-     "adjusted": 161,
+     "adjusted": 162,
      "id": "marktplaats:m2458437608",
      "price": 135
     },
@@ -3894,7 +3894,7 @@
   "id": "marktplaats:m2453741754",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/036483e1-c7dd-49ce-8ade-3eb7b4d2d806?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.539460703137,
   "llm_attrs": {
    "condition": "sealed_new",
@@ -4051,7 +4051,7 @@
     "price far below typical retail for a new unit"
    ],
    "label": "great deal",
-   "pct": 38.7
+   "pct": 38.8
   },
   "description": "Te koop aangeboden- niet gebruikt , in verpakking ,\neen Honeywell T6 Smart Thermostaat. Dit is een programmeerbare thermostaat voor verwarmingssystemen en boilers, inclusief OpenTherm®. De thermostaat is compatibel met Alexa, Google Assistant en Apple Home. Let op: dit betreft alleen de thermostaat, de ontvanger is niet inbegrepen. ... ... ... ... ... ... ... ... ... ... ... ... Amsterdam 587x bekeken 10x bewaard Sinds 17 okt. '26",
   "details_version": 2,
@@ -4090,8 +4090,8 @@
     }
    ],
    "confidence": "high",
-   "high": 156.0,
-   "low": 122.0,
+   "high": 157.0,
+   "low": 123.0,
    "method": "comparables",
    "n_comps": 12,
    "price": 129.0
@@ -4101,7 +4101,7 @@
   "id": "marktplaats:m2454667376",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/535e66fc-1b80-4019-b864-5c6b3b975fd8?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.372927212606,
   "llm_attrs": {
    "condition": "sealed_new",
@@ -4214,7 +4214,7 @@
    ],
    "confidence": "high",
    "high": 130.0,
-   "low": 101.0,
+   "low": 100.0,
    "method": "comparables",
    "n_comps": 12,
    "price": 124.0
@@ -4224,7 +4224,7 @@
   "id": "marktplaats:m2454813517",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/25fa4e6d-2521-4a1a-a196-49e973d64d5f?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.62677909838,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -4663,7 +4663,7 @@
   "deal": {
    "flags": [],
    "label": "overpriced",
-   "pct": -26.9
+   "pct": -26.8
   },
   "description": "Te koop: onze goed werkende Honeywell Home T6R draadloze thermostaat. Fijne en slimme thermostaat die je makkelijk op afstand bedient via de app op je telefoon (of gewoon via het touchscreen op het apparaat zelf). Omdat deze uitvoering draadloos is, zet je hem eenvoudig neer waar je wilt op de handige standaard.\n\nIk heb hem alvast netjes teruggezet naar de fabrieksinstellingen , dus hij is helemaal klaar voor de volgende gebruiker!\n\n Wat zit erbij? \n\n\n Honeywell T6R thermostaat met standaard en stroomadapter Ketelmodule / ontvanger (voor aan/uit en OpenTherm) Handleiding \n (Let op: de originele doos zit er niet meer bij) \n\nWerkt top met Apple HomeKit, Google Assistant en Amazon Alexa.\n\nStuur gerust een berichtje als je vragen hebt! ... ... ... ... ... ... ... ... ... ... ... ... Wassenaar 100x bekeken 4x bewaard Sinds 18 okt. '26",
   "details_version": 2,
@@ -4681,7 +4681,7 @@
      "price": 45
     },
     {
-     "adjusted": 136,
+     "adjusted": 137,
      "id": "marktplaats:m2455961152",
      "price": 100
     },
@@ -4691,12 +4691,12 @@
      "price": 90
     },
     {
-     "adjusted": 129,
+     "adjusted": 130,
      "id": "marktplaats:m2458963849",
      "price": 95
     },
     {
-     "adjusted": 136,
+     "adjusted": 137,
      "id": "marktplaats:m2460060258",
      "price": 100
     }
@@ -4835,7 +4835,7 @@
   "id": "marktplaats:m2455205211",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/d3d9466a-2551-49af-b7f0-3ee49c14fce0?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.112777001178,
   "llm_attrs": {
    "condition": "like_new",
@@ -5078,7 +5078,7 @@
   "id": "marktplaats:m2455262658",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/b51c3705-b8cb-48b4-a69a-e7ed787f2e04?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.817886293441,
   "llm_attrs": {
    "condition": "like_new",
@@ -5154,7 +5154,7 @@
   "id": "marktplaats:m2455407396",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/80e992f0-5f32-47d9-95b6-15de5549621b?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.038406679844,
   "llm_attrs": {
    "condition": "used",
@@ -5275,7 +5275,7 @@
   "id": "marktplaats:m2455898350",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/1c4fccdf-e558-44f6-84f1-aba4e3788e86?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.04953320755,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -5518,7 +5518,7 @@
   "id": "marktplaats:m2455974164",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/da8203c4-09c9-4e21-b226-eb71d3f33ad9?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.768875844441,
   "llm_attrs": {
    "condition": "like_new",
@@ -5719,7 +5719,7 @@
   "id": "marktplaats:m2456410275",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/9ec9cd9d-f239-4b15-af3d-06cd8fc126a5?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.963544246971,
   "llm_attrs": {
    "condition": "like_new",
@@ -5796,7 +5796,7 @@
     "Gateway mentioned; model and wired/wireless unclear"
    ],
    "label": "overpriced",
-   "pct": -82.3
+   "pct": -82.2
   },
   "description": "Deze Honeywell Home T6 Smart Thermostat is nieuw en zit nog in de originele verpakking. Het is een programmeerbare thermostaat voor verwarmingssystemen en boilers, inclusief OpenTherm. De thermostaat biedt 7-daagse planning en locatiegebaseerde verwarmingsregeling. Hij werkt naadloos samen met Alexa, Google Assistant en Apple HomeKit, waardoor je je verwarming eenvoudig kunt bedienen via spraak of je smartphone. Alle benodigde accessoires, zoals de gateway en handleiding, zijn inbegrepen.\nSlechts één week gemonteerd en gebruikt voor te proberen ... ... ... ... ... ... ... ... ... ... ... ... Kerkrade 230x bekeken 0x bewaard Sinds 22 okt. '26",
   "details_version": 2,
@@ -5835,18 +5835,18 @@
     }
    ],
    "confidence": "high",
-   "high": 104.0,
+   "high": 105.0,
    "low": 82.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 90.0
+   "price": 91.0
   },
   "first_seen": "2026-10-31",
   "full_description": true,
   "id": "marktplaats:m2456502142",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/b4ab3136-2ad8-431f-b2e3-d7e5db4ec183?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 50.872300532968,
   "llm_attrs": {
    "condition": "used",
@@ -6502,7 +6502,7 @@
   "id": "marktplaats:m2456898070",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/40e4cb33-7449-43fc-a851-392affb41561?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.296598786986,
   "llm_attrs": {
    "condition": "sealed_new",
@@ -6576,7 +6576,7 @@
   "id": "marktplaats:m2456966239",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/8cb9fb01-e5df-470f-a0ae-b9d4abe3fcfe?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.245844666608,
   "lon": 4.8219047736465,
   "new_ad_at": "2026-10-31T21:55:27+00:00",
@@ -6639,7 +6639,7 @@
   "id": "marktplaats:m2456970021",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/e287fcfb-8141-4bff-8a23-604de1c32a31?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.650476604662,
   "llm_attrs": {
    "condition": "used",
@@ -6715,7 +6715,7 @@
   "id": "marktplaats:m2457031111",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/ac2c4157-ffb1-4a03-a427-6993cc09265d?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.650476604662,
   "llm_attrs": {
    "condition": "used",
@@ -7308,7 +7308,7 @@
   "id": "marktplaats:m2457588116",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/ff91433e-13db-484e-b13f-90db985ac84a?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.392276326837,
   "llm_attrs": {
    "condition": "like_new",
@@ -7385,7 +7385,7 @@
     "Seller states no warranty and no returns"
    ],
    "label": "overpriced",
-   "pct": -33.9
+   "pct": -33.7
   },
   "description": "Deze Honeywell Home T6R Smart thermostaat met WiFi-functionaliteit biedt geavanceerde temperatuurregeling voor uw huis. Het systeem bestaat uit een draadloze thermostaat en een ontvanger. Bedien de verwarming eenvoudig via de app op uw smartphone, waar u ook bent. Ideaal voor een comfortabel en energiezuinig huis. Het product is kort gebruikt (folie zit er nog op), maar werkt nog perfect.\nGeen garantie geen retour NB geen betaalverzoek ... ... ... ... ... ... ... ... ... ... ... ... IJlst 86x bekeken 6x bewaard Sinds 25 okt. '26",
   "details_version": 2,
@@ -7435,7 +7435,7 @@
   "id": "marktplaats:m2457722079",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/b4cad2d9-0853-42be-add9-6242e6bcd6cf?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 53.006278727537,
   "llm_attrs": {
    "condition": "like_new",
@@ -7559,7 +7559,7 @@
   "id": "marktplaats:m2457733768",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/72daa45d-00af-41f6-8fce-6117f0d7f3cc?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 53.36008750439,
   "llm_attrs": {
    "condition": "used",
@@ -7757,7 +7757,7 @@
   "id": "marktplaats:m2457826133",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/9c69b627-8d47-4540-b4d4-1a4c38185fa5?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.42928495664,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -7833,7 +7833,7 @@
   "deal": {
    "flags": [],
    "label": "great deal",
-   "pct": 25.1
+   "pct": 25.2
   },
   "description": "Te koop aangeboden: een goed werkende en nette Honeywell Lyric T6 slimme thermostaat, compleet met de bijbehorende ketelmodule (Receiver box) compleet in doos!\n\nDe thermostaat verkeert in nette staat en is uiteraard werkend gedemonteerd. Verkoop i.v.m. aanschaf nieuw systeem. ... ... ... ... ... ... ... ... ... ... ... ... Anna Paulowna 64x bekeken 3x bewaard Sinds 25 okt. '26",
   "details_version": 2,
@@ -7883,7 +7883,7 @@
   "id": "marktplaats:m2457838308",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/1c8b6fee-cc5f-4e02-ba92-42eff3ea4d4c?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.865509742805,
   "llm_attrs": {
    "condition": "like_new",
@@ -8857,7 +8857,7 @@
      "price": 135
     },
     {
-     "adjusted": 79,
+     "adjusted": 80,
      "id": "marktplaats:m2459978458",
      "price": 70
     },
@@ -8884,7 +8884,7 @@
   "id": "marktplaats:m2458140709",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/68c685bc-70f5-4a00-8da9-1a98082f3032?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.272030670387,
   "llm_attrs": {
    "condition": "used",
@@ -9094,7 +9094,7 @@
   "id": "marktplaats:m2458229586",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/7c563cd0-a70f-4c89-a425-483c25a61149?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.962631838592,
   "llm_attrs": {
    "condition": "used",
@@ -9328,7 +9328,7 @@
   "id": "marktplaats:m2458401697",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/1008c449-b09c-4bc8-8bab-59c8f7697844?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.740225598155,
   "llm_attrs": {
    "condition": "used",
@@ -9404,7 +9404,7 @@
   "id": "marktplaats:m2458411364",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/ff39be1f-d983-45c4-bb37-6d8ad33c070a?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.238162472375,
   "llm_attrs": {
    "condition": "used",
@@ -9525,7 +9525,7 @@
   "id": "marktplaats:m2458436589",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/765b88b4-620b-4b87-b606-7ad320afff6e?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.38886184369,
   "llm_attrs": {
    "condition": "like_new",
@@ -10336,7 +10336,7 @@
   "id": "marktplaats:m2458903472",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/ecb28ca5-4c92-43db-a0fe-8548f19517a2?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.398397682351,
   "llm_attrs": {
    "condition": "used",
@@ -10656,7 +10656,7 @@
   "id": "marktplaats:m2459010460",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/2784ceda-ea1b-4dd9-884c-f8e7ef888f44?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.644252340768,
   "llm_attrs": {
    "condition": "used",
@@ -10899,7 +10899,7 @@
   "id": "marktplaats:m2459051245",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/62ed14ac-8711-47b3-a944-30f4eeac0f22?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.305986846918,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -11106,7 +11106,7 @@
   "id": "marktplaats:m2459116380",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/3fb607f4-81c6-4e16-ae6b-3ee02bfe7f25?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.165846758083,
   "llm_attrs": {
    "condition": "like_new",
@@ -11304,7 +11304,7 @@
   "id": "marktplaats:m2459325202",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/55370b4b-4512-482b-983f-027c75316f26?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.473268496216,
   "llm_attrs": {
    "condition": "used",
@@ -13031,7 +13031,7 @@
   "deal": {
    "flags": [],
    "label": "good deal",
-   "pct": 13.5
+   "pct": 13.6
   },
   "description": "Deze Honeywell Lyric T6R is een geavanceerde slimme thermostaat die zorgt voor een comfortabel en energiezuinig huis. De thermostaat is draadloos en kan eenvoudig worden bediend via een app op uw smartphone, waar u ook bent. Het systeem is compleet met de bijbehorende AC/DC adapter (TR-VC001) en ontvanger, klaar voor installatie. Ideaal voor wie op zoek is naar moderne klimaatbeheersing met slimme functies zoals geofencing en planning. ... ... ... ... ... ... ... ... ... ... ... ... Swifterbant 45x bekeken 5x bewaard Sinds 30 okt. '26",
   "details_version": 2,
@@ -13153,7 +13153,7 @@
   "deal": {
    "flags": [],
    "label": "overpriced",
-   "pct": -18.5
+   "pct": -18.6
   },
   "description": "Nieuwe Honeywell Home T6R slimme thermostaat in zwarte editie, nog nieuw in doos. Deze draadloze thermostaat is eenvoudig via wifi te bedienen met je telefoon, waar je ook bent. De nieuwprijs bedraagt 185 euro, mijn vaste prijs is 155 euro. Ideaal voor comfort en energiebesparing in huis. Bedien de verwarming op afstand en bespaar op je energierekening. ... ... ... ... ... ... ... ... ... ... ... ... Hoofddorp 36x bekeken 2x bewaard Sinds 30 okt. '26",
   "details_version": 2,
@@ -13407,7 +13407,7 @@
   "id": "marktplaats:m2460016671",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/124ea80b-bea4-4c65-a71a-8d866ea9905c?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.829242956793,
   "llm_attrs": {
    "condition": "like_new",
@@ -14201,7 +14201,7 @@
   "id": "marktplaats:m2460210502",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/854a2445-cd6f-4c44-93c9-f3f62b7a9c6a?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.6600285367,
   "llm_attrs": {
    "condition": "like_new",
@@ -14354,7 +14354,7 @@
   "id": "marktplaats:m2460235723",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/6cb3b7a2-bb7b-4314-a901-15f38d0c8321?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.633314892667,
   "llm_attrs": {
    "condition": "used",
@@ -14475,7 +14475,7 @@
   "id": "marktplaats:m2460239939",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/8a7cc293-d9fa-4eef-ac7c-28feeba9f119?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.959095730907,
   "llm_attrs": {
    "condition": "like_new",
@@ -14802,7 +14802,7 @@
     }
    ],
    "confidence": "high",
-   "high": 186.0,
+   "high": 187.0,
    "low": 141.0,
    "method": "comparables",
    "n_comps": 12,
@@ -15163,7 +15163,7 @@
   "id": "marktplaats:m2460319065",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/4bbba050-a5da-44dd-9d17-3e43b19f1747?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.346441931805,
   "llm_attrs": {
    "condition": "like_new",
@@ -15239,7 +15239,7 @@
   "id": "marktplaats:m2460323521",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/1d5753b6-c171-4c5e-bf6a-6e22d1e6d8f6?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.667092346394,
   "llm_attrs": {
    "condition": "like_new",
@@ -15859,7 +15859,7 @@
   "deal": {
    "flags": [],
    "label": "great deal",
-   "pct": 25.4
+   "pct": 25.5
   },
   "description": "T6 smart home. E complete set van de Honeywell Home slimme thermostaat. Deze set bestaat uit de thermostaat zelf en de bijbehorende gateway/relaisbox. Ideaal voor het efficiënt regelen van je verwarming. De set is gebruikt, maar werkt nog perfect. Alle benodigde kabels zijn aanwezig voor installatie.\nWerkt prima. via kastje of via interner en app ... ... ... ... ... ... ... ... ... ... ... ... Nieuw Beerta 4x bekeken 0x bewaard Sinds 1 nov. '26",
   "details_version": 2,
@@ -15902,14 +15902,14 @@
    "low": 50.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 80.0
+   "price": 81.0
   },
   "first_seen": "2026-11-01",
   "full_description": true,
   "id": "marktplaats:m2460492782",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/1c7b055a-a061-4f50-b993-a8da676f9954?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 53.197059617126,
   "llm_attrs": {
    "condition": "used",
@@ -16178,7 +16178,7 @@
   "id": "marktplaats:m2460543601",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/689dfd4a-e5f1-44ba-bc6e-570a9208033c?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.637842089416,
   "llm_attrs": {
    "condition": "like_new",
@@ -16979,7 +16979,7 @@
   "id": "marktplaats:m2460637745",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/e0fdaaf2-ade6-40ce-b39d-6238da6825ec?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.27477841218,
   "llm_attrs": {
    "condition": "used",
@@ -17100,7 +17100,7 @@
   "id": "marktplaats:m2460664548",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/3543c2d6-b737-4a1e-b7eb-135cd83478ca?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.694082466194,
   "llm_attrs": {
    "condition": "unknown",
@@ -17223,7 +17223,7 @@
   "id": "marktplaats:m2460702473",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/9c17243c-22b4-4c81-aed0-134b2fed78d9?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.092545084756,
   "llm_attrs": {
    "condition": "like_new",
@@ -17696,7 +17696,7 @@
   "deal": {
    "flags": [],
    "label": "a bit pricey",
-   "pct": -6.0
+   "pct": -5.8
   },
   "description": "Beschrijving \n\nDe Honeywell Home T6R thermostaat is een slimme en draadloze thermostaat die je overal kan plaatsen. Een handige tafelstandaard met 230V voeding wordt meegeleverd. Deze slimme thermostaat is zowel geschikt voor aan/uit als modulerende cv-ketels, daarnaast ondersteunt hij het OpenTherm-protocol. Dit houdt in dat deze thermostaat met veel cv-ketels kan samenwerken.\n\nDeze thermostaat heeft een fraai design dat modern oogt. Je bedient de thermostaat via het touchscreen display, dat verder duidelijk afleesbaar is en verlichting heeft. Verder wordt deze thermostaat geleverd met een module die je bij de cv-ketel plaatst. Deze ketelmodule werkt op netstroom.\nSlim aansturen met de Honeywell Home-app\nMet de gratis Honeywell Home-app (voorheen Lyric app) sta je altijd in contact met de Honeywell T6R thermostaat. Met deze app kan je op elk moment de instellingen van de thermostaat wijzigen. Is iemand bijvoorbeeld onverwachts later thuis, dan stel je gemakkelijk in dat de thermostaat op een later tijdstip moet verwarmen.\n\nOok ontvang je slimme notificaties via de app; bijvoorbeeld bij extreem hoge of lage temperaturen in de woning.\n\nAls de T6R thermostaat met de Honeywell Home-app verbonden is, kun je gebruik maken van geofencing. Dit is locatiegebaseerde temperatuurinstelling. Hierdoor schakelt de thermostaat je warmtebron automatisch in of uit als je binnen een bepaalde straal van huis bent. Verder is de thermostaat zelflerend, na verloop van tijd leert de thermostaat hoe lang het duurt voor je verwarmingssysteem om de gewenste temperatuur te bereiken. Ideaal om energiekosten te besparen.\n\n Waarom een draadloze thermostaat? \nKoop een draadloze thermostaat wanneer je geen nieuwe kabels wilt trekken of bestaande bedrading wilt aanpassen. Dankzij de draadloze verbinding plaats je de thermostaat eenvoudig op de meest geschikte plek in huis, zonder ingrijpende installatie. ... ... ... ... ... ... ... ... ... ... ... ... Made 55x bekeken 0x bewaard Sinds 1 nov. '26",
   "details_version": 2,
@@ -17714,7 +17714,7 @@
      "price": 45
     },
     {
-     "adjusted": 136,
+     "adjusted": 137,
      "id": "marktplaats:m2455961152",
      "price": 100
     },
@@ -17724,29 +17724,29 @@
      "price": 90
     },
     {
-     "adjusted": 129,
+     "adjusted": 130,
      "id": "marktplaats:m2458963849",
      "price": 95
     },
     {
-     "adjusted": 136,
+     "adjusted": 137,
      "id": "marktplaats:m2460060258",
      "price": 100
     }
    ],
    "confidence": "high",
    "high": 170.0,
-   "low": 125.0,
+   "low": 126.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 141.0
+   "price": 142.0
   },
   "first_seen": "2026-11-01",
   "full_description": true,
   "id": "marktplaats:m2460780338",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/6b225050-c147-474f-9616-b6e150581667?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.674423844455,
   "llm_attrs": {
    "condition": "like_new",
@@ -18559,7 +18559,7 @@
     "price far below market: check carefully (scam/stolen/defect?)"
    ],
    "label": "great deal",
-   "pct": 50.6
+   "pct": 50.7
   },
   "description": "Aangeboden: een Honeywell Home T6 slimme thermostaat. Dit systeem bestaat uit een thermostaat en een draadloze ontvanger, waarmee u uw verwarming eenvoudig en efficiënt kunt regelen, zelfs op afstand via een app. Hij blijft over bij een verhuizing en zou nog goed moeten werken. ... ... ... ... ... ... ... ... ... ... ... ... Houten 29x bekeken 4x bewaard Sinds 2 nov. '26",
   "details_version": 2,
@@ -18758,7 +18758,7 @@
   "deal": {
    "flags": [],
    "label": "overpriced",
-   "pct": -27.1
+   "pct": -27.0
   },
   "description": "Aangeboden: een zo goed als nieuwe Honeywell Lyric T6 Slimme Thermostaat. Dit programmeerbare thermostaatsysteem is ideaal voor het efficiënt regelen van de temperatuur in huis. Het is compatibel met de meeste verwarmingssystemen en cv-ketels (aan/uit en OpenTherm). Bedien de thermostaat eenvoudig via de Lyric App op uw smartphone, waar u ook bent. De set is compleet met de thermostaat zelf, de ontvanger en de benodigde kabels, en wordt geleverd in de originele verpakking. Perfect voor wie op zoek is naar comfort en energiebesparing. ... ... ... ... ... ... ... ... ... ... ... ... Almere 9x bekeken 0x bewaard Sinds 2 nov. '26",
   "details_version": 2,
@@ -19253,7 +19253,7 @@
     }
    ],
    "confidence": "high",
-   "high": 186.0,
+   "high": 187.0,
    "low": 135.0,
    "method": "comparables",
    "n_comps": 12,
@@ -19386,7 +19386,7 @@
   "id": "marktplaats:m2461059509",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/674b3fe1-707b-4179-876e-03cf4d1522c4?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.314134337591,
   "llm_attrs": {
    "condition": "like_new",
@@ -19598,7 +19598,7 @@
      "price": 100
     },
     {
-     "adjusted": 155,
+     "adjusted": 156,
      "id": "marktplaats:m2454813517",
      "price": 130
     },
@@ -19613,12 +19613,12 @@
      "price": 95
     },
     {
-     "adjusted": 131,
+     "adjusted": 132,
      "id": "marktplaats:m2459738258",
      "price": 110
     },
     {
-     "adjusted": 149,
+     "adjusted": 150,
      "id": "marktplaats:m2461922868",
      "price": 125
     }
@@ -19628,7 +19628,7 @@
    "low": 120.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 149.0
+   "price": 150.0
   },
   "first_seen": "2026-11-02",
   "full_description": true,
@@ -19763,7 +19763,7 @@
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2461089458-honeywell-thermostaat"
  },
  {
-  "active": false,
+  "active": true,
   "attrs": {
    "condition": "like_new",
    "includes_receiver": null,
@@ -19792,7 +19792,7 @@
   "id": "marktplaats:m2461119205",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/1ce82d19-973d-4674-9d76-7e877657ccbc?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.069333028787,
   "llm_attrs": {
    "condition": "like_new",
@@ -19819,7 +19819,6 @@
    ]
   ],
   "price_type": "FAST_BID",
-  "removed_on": "2026-11-10",
   "rule_attrs": {
    "condition": "like_new",
    "includes_receiver": null,
@@ -19914,7 +19913,7 @@
   "id": "marktplaats:m2461141385",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/56875b74-0da7-4d1a-92ab-60968d68ebe5?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 53.336239653743,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -20291,7 +20290,7 @@
   "id": "marktplaats:m2461188772",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/ab2a2dec-58b0-49b8-ab05-eed21fedf1a3?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 53.238188169559,
   "llm_attrs": {
    "condition": "like_new",
@@ -20718,7 +20717,7 @@
   "id": "marktplaats:m2461346311",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/fee132fa-4c4c-4423-86b0-8a8363e0ce11?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 53.357501361084,
   "llm_attrs": {
    "condition": "like_new",
@@ -20793,7 +20792,7 @@
     "description contains no details beyond the title"
    ],
    "label": "good deal",
-   "pct": 9.2
+   "pct": 9.1
   },
   "description": "Honeywell T6R (draadloos) Smart Thermostaat (geheel nieuw) (m2461365077) — Thermostaten — Marktplaats Help en info Voorwaarden Veiligheidscentrum Berichten Meldingen Inloggen Plaats advertentie Terug Home Doe-het-zelf en Verbouw Thermostaten Advertentie m2461365077",
   "details_version": 2,
@@ -21193,7 +21192,7 @@
   "deal": {
    "flags": [],
    "label": "good deal",
-   "pct": 12.1
+   "pct": 12.0
   },
   "description": "Te koop aangeboden: een gebruikte Honeywell T6 slimme thermostaat (model T6H600WF1015). Deze thermostaat is ideaal voor het efficiënt regelen van de temperatuur in huis en kan worden bediend via een app op uw smartphone. De thermostaat is in goede staat en werkt naar behoren. Perfect voor wie zijn huis slimmer wil maken en energie wil besparen. ... ... ... ... ... ... ... ... ... ... ... ... Amersfoort 33x bekeken 2x bewaard Sinds 3 nov. '26",
   "details_version": 2,
@@ -21243,7 +21242,7 @@
   "id": "marktplaats:m2461455256",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/b4fdb6ed-3fb6-43f6-ac98-787c560c5a2e?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.182566249743,
   "llm_attrs": {
    "condition": "used",
@@ -21391,7 +21390,7 @@
   "deal": {
    "flags": [],
    "label": "overpriced",
-   "pct": -36.7
+   "pct": -36.6
   },
   "description": "Te koop: een gloednieuwe Honeywell Home T6R draadloze slimme thermostaat. Dit model, T6H700RW4011, is nog in de originele verpakking en is ideaal voor het efficiënt regelen van uw huisverwarming. De thermostaat is eenvoudig te installeren en te bedienen via een app, waardoor u altijd en overal controle heeft over uw binnenklimaat. Perfect voor wie op zoek is naar comfort en energiebesparing. exclusief muurontvanger voor de ketel. ... ... ... ... ... ... ... ... ... ... ... ... Lutjebroek 25x bekeken 0x bewaard Sinds 3 nov. '26",
   "details_version": 2,
@@ -21424,7 +21423,7 @@
      "price": 150
     },
     {
-     "adjusted": 221,
+     "adjusted": 222,
      "id": "marktplaats:m2447079639",
      "price": 200
     }
@@ -21441,7 +21440,7 @@
   "id": "marktplaats:m2461486115",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/37c10e46-3f87-4a92-aede-e30f6a2390ee?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.700268744328,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -21551,7 +21550,7 @@
     }
    ],
    "confidence": "high",
-   "high": 186.0,
+   "high": 187.0,
    "low": 135.0,
    "method": "comparables",
    "n_comps": 12,
@@ -21688,7 +21687,7 @@
   "id": "marktplaats:m2461542049",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/ce8fa946-9b1a-420a-9b5a-17cdd3c72e52?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.588716974205,
   "llm_attrs": {
    "condition": "like_new",
@@ -22055,7 +22054,7 @@
   "id": "marktplaats:m2461578424",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/7a7fcf91-3de7-448e-bb16-45bca4cbcd2b?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.125233386339,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -22248,7 +22247,7 @@
   "deal": {
    "flags": [],
    "label": "overpriced",
-   "pct": -51.4
+   "pct": -51.5
   },
   "description": "Honeywell home t6r smart thermostaat y6h910rw4013. Thermostaat is over ivm dubbel besteld. ... ... ... ... ... ... ... ... ... ... ... ... Groningen 10x bekeken 0x bewaard Sinds 4 nov. '26",
   "details_version": 2,
@@ -22298,7 +22297,7 @@
   "id": "marktplaats:m2461738729",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/bed9bce4-12a7-42a1-b5f4-d330285631b2?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 53.221889478556,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -22592,7 +22591,7 @@
   "id": "marktplaats:m2461808950",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/551ff546-54e7-419d-9399-0d85b32c73d5?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.067559617198,
   "llm_attrs": {
    "condition": "defect",
@@ -22796,7 +22795,7 @@
   "id": "marktplaats:m2461824544",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/915c9294-dbe2-495c-bbb7-4c56ab6193d8?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.492138854897,
   "llm_attrs": {
    "condition": "like_new",
@@ -23303,7 +23302,7 @@
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2461922868-honeywell-t6-ongebruikt-bedraad-slimme-thermostaat"
  },
  {
-  "active": true,
+  "active": false,
   "attrs": {
    "condition": "like_new",
    "includes_receiver": null,
@@ -23363,6 +23362,7 @@
    ]
   ],
   "price_type": "MIN_BID",
+  "removed_on": "2026-11-11",
   "rule_attrs": {
    "condition": "like_new",
    "includes_receiver": null,
@@ -23539,7 +23539,7 @@
   "id": "marktplaats:m2461984811",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/fa15295d-9d8e-4920-b25a-7bf78f01cd46?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.911556403386,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -23660,7 +23660,7 @@
   "id": "marktplaats:m2462083814",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/0ae33b3b-c00b-427e-b00f-a216d1e874f8?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.465533494516,
   "llm_attrs": {
    "condition": "used",
@@ -23678,7 +23678,7 @@
   "lon": 6.5631040507973,
   "new_ad_at": "2026-11-05T14:43:36+00:00",
   "new_ad_on": "2026-11-05",
-  "posted_at": "Eergisteren",
+  "posted_at": "8 nov 26",
   "price_eur": 80,
   "price_history": [
    [
@@ -24109,7 +24109,7 @@
   "id": "marktplaats:m2462109397",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/4a7d3a9b-5013-49c9-aa12-0706bcda42b0?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.296854484339,
   "llm_attrs": {
    "condition": "used",
@@ -24129,7 +24129,7 @@
   "lon": 6.8149944361928,
   "new_ad_at": "2026-11-05T14:43:36+00:00",
   "new_ad_on": "2026-11-05",
-  "posted_at": "Eergisteren",
+  "posted_at": "8 nov 26",
   "price_eur": 39,
   "price_history": [
    [
@@ -24232,7 +24232,7 @@
   "id": "marktplaats:m2462123620",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/79bdd6ef-3a39-4a1f-b53e-0e17c08e387a?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.656773226289,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -25150,7 +25150,7 @@
   "id": "marktplaats:m2462465805",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/4c4c594b-053d-4c88-a781-719b4d4d8485?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.412071361835,
   "llm_attrs": {
    "condition": "like_new",
@@ -25350,7 +25350,7 @@
   "id": "marktplaats:m2462483233",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/55cabff8-0da8-48a8-9be5-abcb5b89218e?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.508340413177,
   "llm_attrs": {
    "condition": "used",
@@ -25503,7 +25503,7 @@
   "id": "marktplaats:m2462540936",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/c378701f-b020-4638-82eb-399710e9371f?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.023641575357,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -25628,7 +25628,7 @@
   "id": "marktplaats:m2462572407",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/0e7e1576-4993-4257-85e3-12dadb5b8a19?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.988686166756,
   "llm_attrs": {
    "condition": "like_new",
@@ -25706,7 +25706,7 @@
   "id": "marktplaats:m2462581682",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/9d33fd3b-cf23-435d-99e5-54a27377dbba?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.982998890967,
   "llm_attrs": {
    "condition": "unknown",
@@ -25856,7 +25856,7 @@
   "deal": {
    "flags": [],
    "label": "overpriced",
-   "pct": -56.5
+   "pct": -56.4
   },
   "description": "Vrijwel nieuw Honeywell Home T6 Slimme Thermostaat.\nAankoopdatum 15-4-26 ivm tijdelijke voorziening. Recent vervangen voor compleet homesysteem met ruimteregeling.\n\nprogrammeerbaar voor verwarmingssystemen en boilers (incl. OpenTherm®). Voorzien van draadloze connectiviteit, 7-daagse planning en locatiegebaseerde verwarmingsregeling. Werkt met Alexa, Google Assistant en Apple Home. Model: Y6H910WF4032. Compleet in originele verpakking. ... ... ... ... ... ... ... ... ... ... ... ... Boxtel 13x bekeken 1x bewaard Sinds 6 nov. '26",
   "details_version": 2,
@@ -25906,7 +25906,7 @@
   "id": "marktplaats:m2462615041",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/5848716d-bf2d-4ad5-9805-737aa8a173f4?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.581847329598,
   "llm_attrs": {
    "condition": "like_new",
@@ -26017,7 +26017,7 @@
    ],
    "confidence": "high",
    "high": 130.0,
-   "low": 101.0,
+   "low": 100.0,
    "method": "comparables",
    "n_comps": 12,
    "price": 124.0
@@ -26027,7 +26027,7 @@
   "id": "marktplaats:m2462616124",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/66d90260-8a8e-4f79-971e-17ab24a33aa9?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.456178855072,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -26148,7 +26148,7 @@
   "id": "marktplaats:m2462628744",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/372335f3-9aaf-4779-9ee6-611472289b3b?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 53.223249083145,
   "llm_attrs": {
    "condition": "like_new",
@@ -26269,7 +26269,7 @@
   "id": "marktplaats:m2462642105",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/2f5a0c23-d80a-458c-8fa1-9de6cfbc54b5?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.568686719565,
   "llm_attrs": {
    "condition": "like_new",
@@ -26519,7 +26519,7 @@
   "id": "marktplaats:m2462686616",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/130f9076-4b7a-4b06-a234-549b95fd0c69?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.63763210865,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -26595,7 +26595,7 @@
   "id": "marktplaats:m2462711827",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/60ac96a6-b17c-4a62-975a-79ecc817f049?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.056568259475,
   "llm_attrs": {
    "condition": "like_new",
@@ -26720,7 +26720,7 @@
   "id": "marktplaats:m2462758817",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/2e4a2857-b569-4eaa-a2bc-9e6b82b9f326?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.533200974411,
   "llm_attrs": {
    "condition": "like_new",
@@ -26738,7 +26738,7 @@
   "lon": 5.9325770636179,
   "new_ad_at": "2026-11-07T01:58:06+00:00",
   "new_ad_on": "2026-11-07",
-  "posted_at": "Gisteren",
+  "posted_at": "Eergisteren",
   "price_eur": 120,
   "price_history": [
    [
@@ -26889,7 +26889,7 @@
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2462829064-honeywell-home-t6r-slimme-thermostaat-nieuw-in-doos"
  },
  {
-  "active": true,
+  "active": false,
   "attrs": {
    "condition": "sealed_new",
    "includes_receiver": null,
@@ -26945,6 +26945,7 @@
    ]
   ],
   "price_type": "FAST_BID",
+  "removed_on": "2026-11-11",
   "rule_attrs": {
    "condition": "new_open_box",
    "includes_receiver": null,
@@ -26989,7 +26990,7 @@
   "deal": {
    "flags": [],
    "label": "great deal",
-   "pct": 32.1
+   "pct": 32.2
   },
   "description": "Te koop: een goed werkende Honeywell Home draadloze thermostaat. Ideaal voor het eenvoudig regelen van de temperatuur in huis. De set bestaat uit de thermostaat en een ontvanger met stekker. Eenvoudig te installeren en te bedienen. Perfect voor een comfortabel binnenklimaat. ... ... ... ... ... ... ... ... ... ... ... ... Heemskerk 19x bekeken 1x bewaard Sinds 7 nov. '26",
   "details_version": 2,
@@ -27087,7 +27088,7 @@
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2462858009-honeywell-home-draadloze-thermostaat"
  },
  {
-  "active": true,
+  "active": false,
   "attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -27147,6 +27148,7 @@
    ]
   ],
   "price_type": "MIN_BID",
+  "removed_on": "2026-11-11",
   "rule_attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -27241,7 +27243,7 @@
   "id": "marktplaats:m2462959748",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/b01c4407-027a-4de6-9cce-7acf54b888f9?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.184031955125,
   "llm_attrs": {
    "condition": "like_new",
@@ -27312,7 +27314,7 @@
   "deal": {
    "flags": [],
    "label": "fair price",
-   "pct": -4.3
+   "pct": -4.2
   },
   "description": "Een zo goed als nieuwe Honeywell Lyric T6 Slimme Thermostaat (bedraad). Dit programmeerbare thermostaatsysteem is ideaal voor het efficiënt regelen van de temperatuur in huis. Het is compatibel met de meeste verwarmingssystemen en cv-ketels (aan/uit en OpenTherm). Bedien de thermostaat eenvoudig via de Lyric App op uw smartphone, waar u ook bent. De set is compleet met de thermostaat zelf, de ontvanger en de benodigde kabels, en wordt geleverd in de originele verpakking. Perfect voor wie op zoek is naar comfort en energiebesparing. ... ... ... ... ... ... ... ... ... ... ... ... Oirschot 44x bekeken 0x bewaard Sinds 7 nov. '26",
   "details_version": 2,
@@ -27362,7 +27364,7 @@
   "id": "marktplaats:m2462987054",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/0b6f3caf-05a2-482d-8280-c635b42e9c64?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.516684930536,
   "llm_attrs": {
    "condition": "like_new",
@@ -27472,7 +27474,7 @@
     }
    ],
    "confidence": "high",
-   "high": 186.0,
+   "high": 187.0,
    "low": 135.0,
    "method": "comparables",
    "n_comps": 12,
@@ -27605,7 +27607,7 @@
   "id": "marktplaats:m2463053325",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/10d5c7a0-3724-4ab9-9c43-3cb26276e6ce?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.362776759681,
   "llm_attrs": {
    "condition": "like_new",
@@ -27681,7 +27683,7 @@
   "id": "marktplaats:m2463057724",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/73cf79a2-6482-4796-8156-ef353abc093d?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.428555800081,
   "llm_attrs": {
    "condition": "unknown",
@@ -27802,7 +27804,7 @@
   "id": "marktplaats:m2463087176",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/f4183079-7578-45c8-96c4-4af248faedfe?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.471079949489,
   "llm_attrs": {
    "condition": "unknown",
@@ -28172,7 +28174,7 @@
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2463119247-honeywell-home-slimme-thermostaat-set"
  },
  {
-  "active": true,
+  "active": false,
   "attrs": {
    "condition": "like_new",
    "includes_receiver": null,
@@ -28232,6 +28234,7 @@
    ]
   ],
   "price_type": "FIXED",
+  "removed_on": "2026-11-11",
   "rule_attrs": {
    "condition": "like_new",
    "includes_receiver": null,
@@ -28316,7 +28319,7 @@
    ],
    "confidence": "high",
    "high": 131.0,
-   "low": 101.0,
+   "low": 100.0,
    "method": "comparables",
    "n_comps": 12,
    "price": 125.0
@@ -28326,7 +28329,7 @@
   "id": "marktplaats:m2463194336",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/9dddd4ed-00d6-4c5b-bc9a-c3f0eb9234f6?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.286920423321,
   "llm_attrs": {
    "condition": "unknown",
@@ -28344,7 +28347,7 @@
   "lon": 3.8332777883581,
   "new_ad_at": "2026-11-07T23:39:53+00:00",
   "new_ad_on": "2026-11-08",
-  "posted_at": "Vandaag",
+  "posted_at": "Gisteren",
   "price_eur": 150,
   "price_history": [
    [
@@ -28373,7 +28376,7 @@
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2463194336-honeywell-home-t6-smart-thermostaat"
  },
  {
-  "active": false,
+  "active": true,
   "attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -28402,7 +28405,7 @@
   "id": "marktplaats:m2463204649",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/ef51c02e-6b53-44d8-88fa-a5a01b73bb30?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.982016764495,
   "llm_attrs": {
    "condition": "used",
@@ -28420,7 +28423,7 @@
   "lon": 4.4545298849525,
   "new_ad_at": "2026-11-08T23:45:25+00:00",
   "new_ad_on": "2026-11-09",
-  "posted_at": "Eergisteren",
+  "posted_at": "8 nov 26",
   "price_eur": 39,
   "price_history": [
    [
@@ -28429,7 +28432,6 @@
    ]
   ],
   "price_type": "FIXED",
-  "removed_on": "2026-11-10",
   "rule_attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -28556,7 +28558,7 @@
   "deal": {
    "flags": [],
    "label": "overpriced",
-   "pct": -46.1
+   "pct": -45.9
   },
   "description": "Deze Honeywell T6 slimme thermostaat is zo goed als nieuw, slechts twee dagen gebruikt. De thermostaat verkeert in perfecte staat en wordt geleverd in de originele verpakking met alle toebehoren. Ideaal voor wie op zoek is naar een geavanceerde en energiezuinige oplossing voor huisverwarming. De bedrade ophangplaats in huis was niet ideaal (door werking zon en glas) dus zijn overgestapt op de TR6, de onbedrade versie. Set is compleet met alle bevestigingsmaterialen en handleiding. ... ... ... ... ... ... ... ... ... ... ... ... 's-Gravenhage 25x bekeken 2x bewaard Sinds 8 nov. '26",
   "details_version": 2,
@@ -28606,7 +28608,7 @@
   "id": "marktplaats:m2463259416",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/8e60a38d-36f0-4aa9-8e8e-a7beb8889043?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.092826988454,
   "llm_attrs": {
    "condition": "like_new",
@@ -28624,7 +28626,7 @@
   "lon": 4.3060162585192,
   "new_ad_at": "2026-11-08T13:29:35+00:00",
   "new_ad_on": "2026-11-08",
-  "posted_at": "Eergisteren",
+  "posted_at": "8 nov 26",
   "price_eur": 140,
   "price_history": [
    [
@@ -28727,7 +28729,7 @@
   "id": "marktplaats:m2463267901",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/c0ed9c30-32af-4391-bbdf-ce9ef23b93c4?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.32033262621,
   "llm_attrs": {
    "condition": "like_new",
@@ -28745,7 +28747,7 @@
   "lon": 5.6785050791005,
   "new_ad_at": "2026-11-08T13:29:35+00:00",
   "new_ad_on": "2026-11-08",
-  "posted_at": "Eergisteren",
+  "posted_at": "8 nov 26",
   "price_eur": null,
   "price_history": [
    [
@@ -28803,7 +28805,7 @@
   "id": "marktplaats:m2463306426",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/9f4063e8-35b9-4854-acbf-a5525cd94a3f?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.040157998589,
   "llm_attrs": {
    "condition": "used",
@@ -28821,7 +28823,7 @@
   "lon": 5.0750988383575,
   "new_ad_at": "2026-11-08T13:29:35+00:00",
   "new_ad_on": "2026-11-08",
-  "posted_at": "Eergisteren",
+  "posted_at": "8 nov 26",
   "price_eur": 200,
   "price_history": [
    [
@@ -28874,7 +28876,7 @@
   "deal": {
    "flags": [],
    "label": "fair price",
-   "pct": -2.2
+   "pct": -2.3
   },
   "description": "Te koop aangeboden: een Honeywell Home T6 thermostaat. Dit is een geavanceerde, programmeerbare thermostaat die je helpt energie te besparen en je huis comfortabel te houden. De thermostaat is eenvoudig te bedienen via de app op je smartphone, tablet of direct op het apparaat zelf. Het systeem bestaat uit de thermostaat en een internetgateway. Ideaal voor wie op zoek is naar een slimme oplossing voor temperatuurregeling.\nDe thermostaat is nooit gebruikt, Wij hebben na de installatie een draadloos model gekocht. ... ... ... ... ... ... ... ... ... ... ... ... Leusden 16x bekeken 0x bewaard Sinds 8 nov. '26",
   "details_version": 2,
@@ -28924,7 +28926,7 @@
   "id": "marktplaats:m2463327196",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/2e27543f-2be5-4964-aad7-d7b7754ed0e2?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.131660527285,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -29045,7 +29047,7 @@
   "id": "marktplaats:m2463332831",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/6105b76d-52d4-40ba-9ac7-79a0c3f65dd9?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.001515587948,
   "llm_attrs": {
    "condition": "like_new",
@@ -29063,7 +29065,7 @@
   "lon": 4.5255693968887,
   "new_ad_at": "2026-11-08T13:29:35+00:00",
   "new_ad_on": "2026-11-08",
-  "posted_at": "Eergisteren",
+  "posted_at": "8 nov 26",
   "price_eur": 100,
   "price_history": [
    [
@@ -29230,7 +29232,7 @@
   "id": "marktplaats:m2463356978",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/20fa3995-3aec-41ae-8b77-6082c1a6c125?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.339192285458,
   "llm_attrs": {
    "condition": "used",
@@ -29301,7 +29303,7 @@
   "deal": {
    "flags": [],
    "label": "good deal",
-   "pct": 11.9
+   "pct": 12.0
   },
   "description": "Zo goed als nieuwe Honeywell t6r smart thermostaat.\n\nGoedwerkend inclusief doos ... ... ... ... ... ... ... ... ... ... ... ... Standdaarbuiten 14x bekeken 1x bewaard Sinds 8 nov. '26",
   "details_version": 2,
@@ -29351,7 +29353,7 @@
   "id": "marktplaats:m2463360105",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/8d122aa3-9f79-44e8-9fbb-006c308eb290?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.6110591919,
   "llm_attrs": {
    "condition": "like_new",
@@ -29462,7 +29464,7 @@
    ],
    "confidence": "high",
    "high": 131.0,
-   "low": 101.0,
+   "low": 100.0,
    "method": "comparables",
    "n_comps": 12,
    "price": 125.0
@@ -29472,7 +29474,7 @@
   "id": "marktplaats:m2463364698",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/fa8097dc-5b5a-4a20-b5bd-6395ca5266dc?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.361399685693,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -29490,7 +29492,7 @@
   "lon": 4.8266120513993,
   "new_ad_at": "2026-11-08T13:29:35+00:00",
   "new_ad_on": "2026-11-08",
-  "posted_at": "Eergisteren",
+  "posted_at": "8 nov 26",
   "price_eur": 130,
   "price_history": [
    [
@@ -29593,7 +29595,7 @@
   "id": "marktplaats:m2463378972",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/2aac2a01-ef10-48d2-9ab5-23d93c082857?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.448765927011,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -29611,7 +29613,7 @@
   "lon": 5.768243474092,
   "new_ad_at": "2026-11-08T13:29:35+00:00",
   "new_ad_on": "2026-11-08",
-  "posted_at": "Eergisteren",
+  "posted_at": "8 nov 26",
   "price_eur": 140,
   "price_history": [
    [
@@ -29714,7 +29716,7 @@
   "id": "marktplaats:m2463384814",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/c1e82ca5-cedc-4159-a337-a7a8cc661085?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.94366702448,
   "llm_attrs": {
    "condition": "used",
@@ -29732,7 +29734,7 @@
   "lon": 5.8759319410303,
   "new_ad_at": "2026-11-08T13:29:35+00:00",
   "new_ad_on": "2026-11-08",
-  "posted_at": "Eergisteren",
+  "posted_at": "8 nov 26",
   "price_eur": 135,
   "price_history": [
    [
@@ -29835,7 +29837,7 @@
   "id": "marktplaats:m2463407447",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/f9a7bea5-034b-4fca-ae89-94bb301bda30?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.956438800099,
   "llm_attrs": {
    "condition": "like_new",
@@ -30031,12 +30033,12 @@
   "id": "marktplaats:m2463440963",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/91fa052d-b262-4edb-b2f1-1357f9e89aaa?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.368643117119,
   "lon": 4.9061324595944,
   "new_ad_at": "2026-11-08T18:52:53+00:00",
   "new_ad_on": "2026-11-08",
-  "posted_at": "Eergisteren",
+  "posted_at": "8 nov 26",
   "price_eur": 15,
   "price_history": [
    [
@@ -30417,7 +30419,7 @@
   "id": "marktplaats:m2463545708",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/9659c2eb-fe08-4dc4-9796-526be6648efb?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.955694404119,
   "llm_attrs": {
    "condition": "used",
@@ -30437,7 +30439,7 @@
   "lon": 5.8689273738312,
   "new_ad_at": "2026-11-08T18:52:53+00:00",
   "new_ad_on": "2026-11-08",
-  "posted_at": "Eergisteren",
+  "posted_at": "8 nov 26",
   "price_eur": 30,
   "price_history": [
    [
@@ -30617,7 +30619,7 @@
   "id": "marktplaats:m2463597088",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/852ba2a5-12c4-41d8-8cd8-6cf5dae4d4e5?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.326831016898,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -30635,7 +30637,7 @@
   "lon": 4.5925272759917,
   "new_ad_at": "2026-11-08T23:45:25+00:00",
   "new_ad_on": "2026-11-09",
-  "posted_at": "Eergisteren",
+  "posted_at": "8 nov 26",
   "price_eur": 100,
   "price_history": [
    [
@@ -30738,7 +30740,7 @@
   "id": "marktplaats:m2463605113",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/3518311f-a3d5-489d-bf97-14c01b7aa9a9?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.637536303353,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -30756,7 +30758,7 @@
   "lon": 5.0337375463506,
   "new_ad_at": "2026-11-08T23:45:25+00:00",
   "new_ad_on": "2026-11-09",
-  "posted_at": "Eergisteren",
+  "posted_at": "8 nov 26",
   "price_eur": 125,
   "price_history": [
    [
@@ -30814,7 +30816,7 @@
   "id": "marktplaats:m2463639168",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/bab6a3cf-0508-400e-9add-93b8c7691450?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.540906133544,
   "llm_attrs": {
    "condition": "unknown",
@@ -30832,7 +30834,7 @@
   "lon": 6.0594943977949,
   "new_ad_at": "2026-11-09T16:25:22+00:00",
   "new_ad_on": "2026-11-09",
-  "posted_at": "Eergisteren",
+  "posted_at": "8 nov 26",
   "price_eur": 40,
   "price_history": [
    [
@@ -30890,7 +30892,7 @@
   "id": "marktplaats:m2463649912",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/3356e51a-1cfa-4b58-b368-43c8a8fef2da?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.243984448638,
   "llm_attrs": {
    "condition": "used",
@@ -30908,7 +30910,7 @@
   "lon": 6.7929082030768,
   "new_ad_at": "2026-11-08T23:45:25+00:00",
   "new_ad_on": "2026-11-09",
-  "posted_at": "Eergisteren",
+  "posted_at": "8 nov 26",
   "price_eur": 485,
   "price_history": [
    [
@@ -31088,7 +31090,7 @@
   "id": "marktplaats:m2463699443",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/06241dd9-9eef-4074-8724-e099593df4d0?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.916011330126,
   "llm_attrs": {
    "condition": "unknown",
@@ -31106,7 +31108,7 @@
   "lon": 4.5586454777507,
   "new_ad_at": "2026-11-09T16:25:22+00:00",
   "new_ad_on": "2026-11-09",
-  "posted_at": "Gisteren",
+  "posted_at": "Eergisteren",
   "price_eur": 25,
   "price_history": [
    [
@@ -31209,7 +31211,7 @@
   "id": "marktplaats:m2463751044",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/662a3dc0-5c82-42dc-9ef6-da68daee499a?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.963664721687,
   "llm_attrs": {
    "condition": "like_new",
@@ -31227,7 +31229,7 @@
   "lon": 5.1576535079433,
   "new_ad_at": "2026-11-09T16:25:22+00:00",
   "new_ad_on": "2026-11-09",
-  "posted_at": "Gisteren",
+  "posted_at": "Eergisteren",
   "price_eur": 85,
   "price_history": [
    [
@@ -31280,7 +31282,7 @@
   "deal": {
    "flags": [],
    "label": "good deal",
-   "pct": 7.0
+   "pct": 7.2
   },
   "description": "Te koop aangeboden een nieuw in doos\nHoneywell T6 R deaadloos wifi thermostaat.\n\nIk had er 2 gekocht uiteindelijk alleen bij mij thuis aangesloten, 2 de is overbodig en mag weg.\n\nNieuwprijs is €225,-\n\nDraadloze slimme thermostaat met verplaatsbare standaard (230V voeding)\nInclusief universele ketelmodule (aan/uit en OpenTherm, 24–230V)\nRaadpleeg de aansluittabel voor compatibiliteit met jouw cv-ketel\nLocatiegebaseerde temperatuurinstelling (geofencing) voor comfort en energiebesparing\nProgrammeerbaar: 7-, 5/2- of 1-daags schema met tot 6 perioden per dag\nCompatibel met Apple HomeKit, Google Assistant en Amazon Alexa\n\nMoet niet weg, mag weg.\n\nGroet,\nTarik ... ... ... ... ... ... ... ... ... ... ... ... Heteren 20x bekeken 0x bewaard Sinds 9 nov. '26",
   "details_version": 2,
@@ -31293,22 +31295,22 @@
      "price": 110
     },
     {
-     "adjusted": 204,
+     "adjusted": 205,
      "id": "marktplaats:m2461052534",
      "price": 150
     },
     {
-     "adjusted": 204,
+     "adjusted": 205,
      "id": "marktplaats:m2461522831",
      "price": 150
     },
     {
-     "adjusted": 204,
+     "adjusted": 205,
      "id": "marktplaats:m2463010459",
      "price": 150
     },
     {
-     "adjusted": 309,
+     "adjusted": 310,
      "id": "marktplaats:m2447079639",
      "price": 200
     },
@@ -31319,18 +31321,18 @@
     }
    ],
    "confidence": "high",
-   "high": 256.0,
+   "high": 257.0,
    "low": 194.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 204.0
+   "price": 205.0
   },
   "first_seen": "2026-11-09",
   "full_description": true,
   "id": "marktplaats:m2463797867",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/7872ccea-f99c-4f16-b4bc-84fd7f388ace?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.958727706856,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -31409,7 +31411,7 @@
   "id": "marktplaats:m2463804680",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/372d959e-77d3-4537-a847-70bd2ece3d15?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 53.346052608458,
   "llm_attrs": {
    "condition": "unknown",
@@ -31430,7 +31432,7 @@
   "lon": 5.816590288825,
   "new_ad_at": "2026-11-09T16:25:22+00:00",
   "new_ad_on": "2026-11-09",
-  "posted_at": "Gisteren",
+  "posted_at": "Eergisteren",
   "price_eur": null,
   "price_history": [
    [
@@ -31533,7 +31535,7 @@
   "id": "marktplaats:m2463815601",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/3c62ada9-8f65-4ac5-915b-547733209bf0?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.927641122793,
   "llm_attrs": {
    "condition": "like_new",
@@ -31551,7 +31553,7 @@
   "lon": 6.3504699214782,
   "new_ad_at": "2026-11-09T16:25:22+00:00",
   "new_ad_on": "2026-11-09",
-  "posted_at": "Gisteren",
+  "posted_at": "Eergisteren",
   "price_eur": 145,
   "price_history": [
    [
@@ -31726,7 +31728,7 @@
   "deal": {
    "flags": [],
    "label": "overpriced",
-   "pct": -25.7
+   "pct": -25.6
   },
   "description": "Te koop: Nog ren nieuwe Honeywell Home T6R slimme thermostaat ongebruikt. Deze draadloze programmeerbare thermostaat is ideaal voor het regelen van je verwarmingssysteem en boilers. Hij is compatibel met OpenTherm en werkt samen met Google Assistant en Amazon Alexa. De thermostaat is slechts kort gebruikt en verkeert in uitstekende staat, compleet met originele verpakking. ... ... ... ... ... ... ... ... ... ... ... ... Assen 18x bekeken 1x bewaard Sinds 9 nov. '26",
   "details_version": 2,
@@ -31765,7 +31767,7 @@
     }
    ],
    "confidence": "high",
-   "high": 135.0,
+   "high": 136.0,
    "low": 94.0,
    "method": "comparables",
    "n_comps": 12,
@@ -31776,7 +31778,7 @@
   "id": "marktplaats:m2463824099",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/18202f90-eec9-4a53-a9cf-5d0ff434ce5e?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.992880944795,
   "llm_attrs": {
    "condition": "like_new",
@@ -31794,7 +31796,7 @@
   "lon": 6.5806178878506,
   "new_ad_at": "2026-11-09T16:25:22+00:00",
   "new_ad_on": "2026-11-09",
-  "posted_at": "Gisteren",
+  "posted_at": "Eergisteren",
   "price_eur": 140,
   "price_history": [
    [
@@ -31839,10 +31841,10 @@
    "red_flags": [],
    "seller_type": "private",
    "shipping": false,
-   "summary": "Honeywell Home T6R wireless WiFi thermostat (T6H700RW4011), sold as shown, asking 100.",
+   "summary": "Honeywell Home T6R wireless smart thermostat (T6H700RW4011), 'zo goed als nieuw'; asking price 85 in listing header but description says €100.",
    "table_stand": false
   },
-  "attrs_hash": "a4f0010a317ef87a",
+  "attrs_hash": "63945a508cc49c90",
   "attrs_source": "claude",
   "attrs_version": 1,
   "city": "Rotterdam",
@@ -31850,8 +31852,8 @@
   "country": "Nederland",
   "deal": {
    "flags": [],
-   "label": "fair price",
-   "pct": 0.0
+   "label": "great deal",
+   "pct": 15.0
   },
   "description": "Honeywell Home T6R Smart Thermostat – Draadloos – Wifi\n\nTe koop aangeboden: Honeywell Home T6R Smart Thermostat (Resideo), model T6H700RW4011.\n\nEen stijlvolle en slimme draadloze thermostaat waarmee je eenvoudig de temperatuur in huis kunt regelen.\n\nEigenschappen:\n\n Draadloze slimme thermostaat Wifi-verbinding Bediening via de Honeywell Home-app Modern touchscreen Programmeerbare temperatuurregeling Geschikt voor diverse verwarmingssystemen Compact en stijlvol design \nWordt verkocht zoals afgebeeld op de foto’s.\n\nVraagprijs: €100\n\nBij interesse graag een berichtje! ... ... ... ... ... ... ... ... ... ... ... ... Rotterdam 14x bekeken 0x bewaard Sinds 9 nov. '26",
   "details_version": 2,
@@ -31901,7 +31903,7 @@
   "id": "marktplaats:m2463862685",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/2362f3f8-925f-4791-a439-48282c22a13d?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.87159342434,
   "llm_attrs": {
    "condition": "like_new",
@@ -31913,18 +31915,22 @@
    "red_flags": [],
    "seller_type": "unknown",
    "shipping": false,
-   "summary": "Honeywell Home T6R wireless WiFi thermostat (T6H700RW4011), sold as shown, asking 100.",
+   "summary": "Honeywell Home T6R wireless smart thermostat (T6H700RW4011), 'zo goed als nieuw'; asking price 85 in listing header but description says €100.",
    "table_stand": false
   },
   "lon": 4.4656765373173,
   "new_ad_at": "2026-11-09T16:25:22+00:00",
   "new_ad_on": "2026-11-09",
-  "posted_at": "Gisteren",
-  "price_eur": 100,
+  "posted_at": "Eergisteren",
+  "price_eur": 85,
   "price_history": [
    [
     "2026-11-09",
     100
+   ],
+   [
+    "2026-11-11",
+    85
    ]
   ],
   "price_type": "FIXED",
@@ -31979,7 +31985,7 @@
   "id": "marktplaats:m2463928376",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/1a972554-affe-4d4c-a411-199a4f5ca46a?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.070852083186,
   "llm_attrs": {
    "condition": "like_new",
@@ -31999,7 +32005,7 @@
   "lon": 4.2675219195133,
   "new_ad_at": "2026-11-10T01:34:42+00:00",
   "new_ad_on": "2026-11-10",
-  "posted_at": "Gisteren",
+  "posted_at": "Eergisteren",
   "price_eur": null,
   "price_history": [
    [
@@ -32026,6 +32032,90 @@
   "source": "marktplaats",
   "title": "Honeywell Home Thermostaat",
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2463928376-honeywell-home-thermostaat"
+ },
+ {
+  "active": true,
+  "attrs": {
+   "condition": "used",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "t6_wired",
+   "model_assumed": false,
+   "original_box": false,
+   "quantity": 1,
+   "red_flags": [
+    "display possibly replaced, unclear condition",
+    "model not specified, no T6/T6R mentioned",
+    "vague description, price set as minimum bid"
+   ],
+   "seller_type": "private",
+   "shipping": false,
+   "summary": "Used Honeywell Home smart thermostat set with gateway, model not stated (not confirmed as T6/T6R); possibly new display on the device.",
+   "table_stand": false
+  },
+  "attrs_hash": "693d049f5a10fd03",
+  "attrs_source": "claude",
+  "attrs_version": 1,
+  "city": "IJsselmuiden",
+  "condition_raw": "Gebruikt",
+  "country": "Nederland",
+  "description": "Aangeboden: een complete set van Honeywell Home, bestaande uit een slimme thermostaat en een gateway. Deze set is ideaal voor het efficiënt regelen van de temperatuur in uw huis, wat kan leiden tot energiebesparing. De thermostaat is gebruiksvriendelijk en kan via een app worden bediend. mogelijk nieuw display op zwarte apparaat, zie foto. Alle benodigde kabels en de voedingsadapter zijn inbegrepen. ... ... ... ... ... ... ... ... ... ... ... ... IJsselmuiden 32x bekeken 2x bewaard Sinds 9 nov. '26",
+  "details_version": 2,
+  "distance_km": 106.0,
+  "first_seen": "2026-11-11",
+  "full_description": true,
+  "id": "marktplaats:m2463953226",
+  "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/4175a01e-c372-4207-9d09-dad1987d70f8?rule=ecg_mp_eps$_82.jpg",
+  "kind": "used",
+  "last_seen": "2026-11-11",
+  "lat": 52.565457721689,
+  "llm_attrs": {
+   "condition": "used",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "unknown",
+   "original_box": false,
+   "quantity": 1,
+   "red_flags": [
+    "model not specified, no T6/T6R mentioned",
+    "display possibly replaced, unclear condition",
+    "vague description, price set as minimum bid"
+   ],
+   "seller_type": "unknown",
+   "shipping": false,
+   "summary": "Used Honeywell Home smart thermostat set with gateway, model not stated (not confirmed as T6/T6R); possibly new display on the device.",
+   "table_stand": false
+  },
+  "lon": 5.9275338480841,
+  "new_ad_at": "2026-11-11T01:58:01+00:00",
+  "new_ad_on": "2026-11-11",
+  "posted_at": "Eergisteren",
+  "price_eur": null,
+  "price_history": [
+   [
+    "2026-11-11",
+    null
+   ]
+  ],
+  "price_type": "MIN_BID",
+  "rule_attrs": {
+   "condition": "used",
+   "includes_receiver": null,
+   "is_item": false,
+   "model": "t6_wired",
+   "original_box": false,
+   "quantity": 2,
+   "red_flags": [],
+   "seller_type": "private",
+   "shipping": false,
+   "summary": "",
+   "table_stand": false
+  },
+  "seller_has_website": false,
+  "seller_verified": false,
+  "source": "marktplaats",
+  "title": "Honeywell Home Slimme Thermostaat met Gateway",
+  "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2463953226-honeywell-home-slimme-thermostaat-met-gateway"
  },
  {
   "active": true,
@@ -32108,7 +32198,7 @@
   "id": "marktplaats:m2463995402",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/c1566f94-496c-4757-878b-fc1dea284e0e?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 50.893231766293,
   "llm_attrs": {
    "condition": "like_new",
@@ -32129,7 +32219,7 @@
   "lon": 6.0559100562695,
   "new_ad_at": "2026-11-10T01:34:42+00:00",
   "new_ad_on": "2026-11-10",
-  "posted_at": "Gisteren",
+  "posted_at": "Eergisteren",
   "price_eur": null,
   "price_history": [
    [
@@ -32236,7 +32326,7 @@
   "id": "marktplaats:m2464006959",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/67113b92-2ff7-4bd9-841d-1ce98895204c?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.500674859167,
   "llm_attrs": {
    "condition": "used",
@@ -32256,7 +32346,7 @@
   "lon": 5.373325670903,
   "new_ad_at": "2026-11-10T01:34:42+00:00",
   "new_ad_on": "2026-11-10",
-  "posted_at": "Gisteren",
+  "posted_at": "Eergisteren",
   "price_eur": null,
   "price_history": [
    [
@@ -32359,7 +32449,7 @@
   "id": "marktplaats:m2464011168",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/51263799-8385-4481-9831-c16725417f30?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.273769083985,
   "llm_attrs": {
    "condition": "like_new",
@@ -32377,7 +32467,7 @@
   "lon": 4.9744531981827,
   "new_ad_at": "2026-11-10T01:34:42+00:00",
   "new_ad_on": "2026-11-10",
-  "posted_at": "Gisteren",
+  "posted_at": "Eergisteren",
   "price_eur": 110,
   "price_history": [
    [
@@ -32406,7 +32496,7 @@
   "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2464011168-honeywell-home-t6-slimme-thermostaat-ketelmodule-nieuw"
  },
  {
-  "active": true,
+  "active": false,
   "attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -32447,6 +32537,7 @@
    ]
   ],
   "price_type": "FIXED",
+  "removed_on": "2026-11-11",
   "rule_attrs": {
    "condition": "used",
    "includes_receiver": null,
@@ -32494,12 +32585,12 @@
   "id": "marktplaats:m2464023560",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/0647296d-6478-4abe-b413-001ec174a52c?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 53.171328042582,
   "lon": 6.1783533711494,
   "new_ad_at": "2026-11-10T21:51:24+00:00",
   "new_ad_on": "2026-11-10",
-  "posted_at": "Gisteren",
+  "posted_at": "Eergisteren",
   "price_eur": 15,
   "price_history": [
    [
@@ -32596,7 +32687,7 @@
    ],
    "confidence": "high",
    "high": 131.0,
-   "low": 101.0,
+   "low": 100.0,
    "method": "comparables",
    "n_comps": 12,
    "price": 125.0
@@ -32606,7 +32697,7 @@
   "id": "marktplaats:m2464049661",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/0c993eba-03b0-442e-9dfc-799cd78673da?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.068285786354,
   "llm_attrs": {
    "condition": "unknown",
@@ -32626,7 +32717,7 @@
   "lon": 5.0992137954396,
   "new_ad_at": "2026-11-10T01:34:42+00:00",
   "new_ad_on": "2026-11-10",
-  "posted_at": "Vandaag",
+  "posted_at": "Gisteren",
   "price_eur": 130,
   "price_history": [
    [
@@ -32729,7 +32820,7 @@
   "id": "marktplaats:m2464099378",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/48b06a78-2520-4f85-84a3-a12432e27e43?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.298554823408,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -32747,7 +32838,7 @@
   "lon": 5.2657602414354,
   "new_ad_at": "2026-11-10T14:57:10+00:00",
   "new_ad_on": "2026-11-10",
-  "posted_at": "Vandaag",
+  "posted_at": "Gisteren",
   "price_eur": null,
   "price_history": [
    [
@@ -33008,7 +33099,7 @@
   "id": "marktplaats:m2464125561",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/7a8ecf28-d7a7-481a-b508-9b7ccc16309b?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.586470312703,
   "llm_attrs": {
    "condition": "like_new",
@@ -33028,7 +33119,7 @@
   "lon": 6.2765877386578,
   "new_ad_at": "2026-11-10T14:57:10+00:00",
   "new_ad_on": "2026-11-10",
-  "posted_at": "Vandaag",
+  "posted_at": "Gisteren",
   "price_eur": null,
   "price_history": [
    [
@@ -33131,7 +33222,7 @@
   "id": "marktplaats:m2464141099",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/09579014-b092-42f4-b0e4-bd67b5b2c476?rule=ecg_mp_eps$_82.jpg",
   "kind": "new",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.603165929334,
   "llm_attrs": {
    "condition": "new_open_box",
@@ -33149,7 +33240,7 @@
   "lon": 6.4510884551459,
   "new_ad_at": "2026-11-10T14:57:10+00:00",
   "new_ad_on": "2026-11-10",
-  "posted_at": "Vandaag",
+  "posted_at": "Gisteren",
   "price_eur": null,
   "price_history": [
    [
@@ -33207,7 +33298,7 @@
   "id": "marktplaats:m2464176909",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/dafc22b7-9723-46f5-9b10-bac0e87f8463?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.339742926003,
   "llm_attrs": {
    "condition": "used",
@@ -33225,7 +33316,7 @@
   "lon": 4.8940905043373,
   "new_ad_at": "2026-11-10T14:57:10+00:00",
   "new_ad_on": "2026-11-10",
-  "posted_at": "Vandaag",
+  "posted_at": "Gisteren",
   "price_eur": 99,
   "price_history": [
    [
@@ -33450,7 +33541,7 @@
   "id": "marktplaats:m2464239421",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/77780219-dd2d-4287-a6a6-4eabcc76ece9?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 53.221689831182,
   "llm_attrs": {
    "condition": "used",
@@ -33521,7 +33612,7 @@
   "deal": {
    "flags": [],
    "label": "a bit pricey",
-   "pct": -9.4
+   "pct": -9.3
   },
   "description": "Te koop: Honeywell Home (Lyric) T6 slimme thermostaat, bedrade versie in zwart (model Y6H810WF1005). Hij werkt perfect en is in goede staat.\n\nInbegrepen:\n- T6 thermostaat met wandplaat\n- Ketelmodule (ontvanger)\n- Originele doos\n- Handleiding en installatie-instructies\n\nEigenschappen:\n- Geschikt voor OpenTherm en aan/uit-ketels\n- Bediening via de Honeywell Home app, met 7-daags schema en geofencing (verwarming op basis van locatie)\n- Werkt met Apple HomeKit, Google Assistant en Amazon Alexa\n\nLet op: aan de achterkant en zijrand zitten wat lichte verfspatjes van het schilderen. Die gaan er waarschijnlijk zo af en zijn niet te zien als hij aan de muur hangt (zie foto's).\n\nOphalen in Heemskerk of verzenden, de verzendkosten zijn voor de koper. ... ... ... ... ... ... ... ... ... ... ... ... Heemskerk 32x bekeken 1x bewaard Sinds 10 nov. '26",
   "details_version": 2,
@@ -33564,14 +33655,14 @@
    "low": 82.0,
    "method": "comparables",
    "n_comps": 12,
-   "price": 90.0
+   "price": 91.0
   },
   "first_seen": "2026-11-10",
   "full_description": true,
   "id": "marktplaats:m2464286171",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/f77f821a-16be-49e3-b72e-bff5a923ad1a?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.511683994488,
   "llm_attrs": {
    "condition": "used",
@@ -33650,7 +33741,7 @@
   "id": "marktplaats:m2464306312",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/66618f92-ac2a-4595-a5fd-2c21f5ee281b?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.309963667798,
   "llm_attrs": {
    "condition": "like_new",
@@ -33671,7 +33762,7 @@
   "lon": 5.6126848645579,
   "new_ad_at": "2026-11-10T21:51:24+00:00",
   "new_ad_on": "2026-11-10",
-  "posted_at": "Vandaag",
+  "posted_at": "Gisteren",
   "price_eur": 25,
   "price_history": [
    [
@@ -33778,7 +33869,7 @@
   "id": "marktplaats:m2464328719",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/75a8bcc6-b7a6-4dae-9a4e-fb8790a366dc?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 53.100073079728,
   "llm_attrs": {
    "condition": "like_new",
@@ -33798,7 +33889,7 @@
   "lon": 6.1156303592994,
   "new_ad_at": "2026-11-10T21:51:24+00:00",
   "new_ad_on": "2026-11-10",
-  "posted_at": "Vandaag",
+  "posted_at": "Gisteren",
   "price_eur": null,
   "price_history": [
    [
@@ -33907,7 +33998,7 @@
   "id": "marktplaats:m2464336093",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/014c771f-4abb-46d7-974e-19bb948f0624?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 52.674446860082,
   "llm_attrs": {
    "condition": "used",
@@ -33928,7 +34019,7 @@
   "lon": 4.7594721260324,
   "new_ad_at": "2026-11-10T21:51:24+00:00",
   "new_ad_on": "2026-11-10",
-  "posted_at": "Vandaag",
+  "posted_at": "Gisteren",
   "price_eur": 100,
   "price_history": [
    [
@@ -33984,10 +34075,11 @@
   "details_version": 2,
   "distance_km": 37.0,
   "first_seen": "2026-11-10",
+  "full_description": false,
   "id": "marktplaats:m2464344143",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/84b16d38-3e8b-4ef4-8749-6b6a62b498da?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.355770758135,
   "llm_attrs": {
    "condition": "unknown",
@@ -34007,7 +34099,7 @@
   "lon": 5.3250127680472,
   "new_ad_at": "2026-11-10T21:51:24+00:00",
   "new_ad_on": "2026-11-10",
-  "posted_at": "Vandaag",
+  "posted_at": "Gisteren",
   "price_eur": 25,
   "price_history": [
    [
@@ -34067,7 +34159,7 @@
   "id": "marktplaats:m2464371002",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/ee312e85-1fbc-4ea5-9922-c70c3f1e3c5b?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 51.856079679917,
   "llm_attrs": {
    "condition": "like_new",
@@ -34087,7 +34179,7 @@
   "lon": 4.8981959607684,
   "new_ad_at": "2026-11-10T21:51:24+00:00",
   "new_ad_on": "2026-11-10",
-  "posted_at": "Vandaag",
+  "posted_at": "Gisteren",
   "price_eur": null,
   "price_history": [
    [
@@ -34150,7 +34242,7 @@
   "id": "marktplaats:m2464376265",
   "image": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/d4144c1e-18f3-4505-9661-c1a024ffcae8?rule=ecg_mp_eps$_82.jpg",
   "kind": "used",
-  "last_seen": "2026-11-10",
+  "last_seen": "2026-11-11",
   "lat": 50.927079839032,
   "llm_attrs": {
    "condition": "like_new",
@@ -34168,7 +34260,7 @@
   "lon": 5.9411047546907,
   "new_ad_at": "2026-11-10T21:51:24+00:00",
   "new_ad_on": "2026-11-10",
-  "posted_at": "Vandaag",
+  "posted_at": "Gisteren",
   "price_eur": 725,
   "price_history": [
    [

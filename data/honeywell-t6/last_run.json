@@ -1,5 +1,5 @@
 {
- "started_at": "2026-11-10T21:50:42+00:00",
+ "started_at": "2026-11-11T01:57:40+00:00",
  "sources": {
   "marktplaats": {
    "searches": [
@@ -36,45 +36,19 @@
      "error": null
     }
    ],
-   "unique_listings": 140,
-   "description_debug": [
-    {
-     "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/verwarming-en-radiatoren/m2464344143-honeywell-thermostaat",
-     "page_length": 103995,
-     "snippet_found_at": [],
-     "context": [],
-     "script_tags": [
-      "<script crossorigin=\"anonymous\" async=\"\" src=\"//www.hzcdn.io/bff/static/vendor/ecg-js-ga-tracking/index.ae79ae94.js\">",
-      "<script type=\"application/ld+json\">",
-      "<script type=\"application/ld+json\">",
-      "<script type=\"application/ld+json\">",
-      "<script>",
-      "<script>",
-      "<script crossorigin=\"anonymous\" src=\"//www.hzcdn.io/bff/static/vendor/sourcepoint-lib/index.de2ff0f0.js\">",
-      "<script defer=\"\" src=\"https://consent.marktplaats.nl/unified/wrapperMessagingWithoutDetection.js\">",
-      "<script>",
-      "<script>",
-      "<script>",
-      "<script>",
-      "<script>",
-      "<script>",
-      "<script id=\"intowowMP\">"
-     ],
-     "has_json_ld": true
-    }
-   ],
+   "unique_listings": 138,
    "complete": true
   }
  },
  "merge": {
-  "new": 8,
-  "updated": 132,
-  "price_changes": 0,
-  "removed": 11,
-  "relists": 1
+  "new": 1,
+  "updated": 137,
+  "price_changes": 1,
+  "removed": 5,
+  "relists": 0
  },
- "finished_at": "2026-11-10T21:51:40+00:00",
- "active_listings": 140,
+ "finished_at": "2026-11-11T01:58:09+00:00",
+ "active_listings": 138,
  "active_items": 94,
  "llm_backend": "cli"
 }
