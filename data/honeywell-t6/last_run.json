@@ -1,5 +1,5 @@
 {
- "started_at": "2026-11-11T22:43:38+00:00",
+ "started_at": "2026-11-12T15:19:34+00:00",
  "sources": {
   "marktplaats": {
    "searches": [
@@ -23,8 +23,8 @@
      "query": "lyric t6",
      "category": null,
      "pages": 1,
-     "listings": 40,
-     "total": 40,
+     "listings": 39,
+     "total": 39,
      "error": null
     },
     {
@@ -36,19 +36,19 @@
      "error": null
     }
    ],
-   "unique_listings": 140,
+   "unique_listings": 141,
    "complete": true
   }
  },
  "merge": {
-  "new": 5,
-  "updated": 135,
-  "price_changes": 2,
-  "removed": 13,
+  "new": 10,
+  "updated": 131,
+  "price_changes": 1,
+  "removed": 11,
   "relists": 0
  },
- "finished_at": "2026-11-11T22:44:23+00:00",
- "active_listings": 140,
+ "finished_at": "2026-11-12T15:20:42+00:00",
+ "active_listings": 141,
  "active_items": 93,
  "llm_backend": "cli"
 }
