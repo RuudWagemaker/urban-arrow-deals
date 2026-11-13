@@ -1,5 +1,5 @@
 {
- "started_at": "2026-11-13T02:40:21+00:00",
+ "started_at": "2026-11-13T14:36:41+00:00",
  "sources": {
   "marktplaats": {
    "searches": [
@@ -7,32 +7,58 @@
      "query": "urban arrow",
      "category": null,
      "pages": 10,
-     "listings": 990,
-     "total": 990,
+     "listings": 998,
+     "total": 998,
      "error": null
     },
     {
      "query": "urbanarrow",
      "category": null,
      "pages": 1,
-     "listings": 20,
-     "total": 20,
+     "listings": 21,
+     "total": 21,
      "error": null
     }
    ],
-   "unique_listings": 992,
+   "unique_listings": 1000,
+   "description_debug": [
+    {
+     "url": "https://www.marktplaats.nl/v/fietsen-en-brommers/fietsen-bakfietsen/m2465310306-urban-arrow-2022",
+     "page_length": 103522,
+     "snippet_found_at": [],
+     "context": [],
+     "script_tags": [
+      "<script crossorigin=\"anonymous\" async=\"\" src=\"//www.hzcdn.io/bff/static/vendor/ecg-js-ga-tracking/index.222b94ba.js\">",
+      "<script type=\"application/ld+json\">",
+      "<script type=\"application/ld+json\">",
+      "<script type=\"application/ld+json\">",
+      "<script>",
+      "<script>",
+      "<script crossorigin=\"anonymous\" src=\"//www.hzcdn.io/bff/static/vendor/sourcepoint-lib/index.5dec4230.js\">",
+      "<script defer=\"\" src=\"https://consent.marktplaats.nl/unified/wrapperMessagingWithoutDetection.js\">",
+      "<script>",
+      "<script>",
+      "<script>",
+      "<script>",
+      "<script>",
+      "<script>",
+      "<script id=\"intowowMP\">"
+     ],
+     "has_json_ld": true
+    }
+   ],
    "complete": true
   }
  },
  "merge": {
-  "new": 1,
-  "updated": 991,
-  "price_changes": 1,
-  "removed": 2,
-  "relists": 0
+  "new": 27,
+  "updated": 973,
+  "price_changes": 11,
+  "removed": 19,
+  "relists": 1
  },
- "finished_at": "2026-11-13T02:41:13+00:00",
- "active_listings": 992,
- "active_items": 306,
+ "finished_at": "2026-11-13T14:38:55+00:00",
+ "active_listings": 1000,
+ "active_items": 313,
  "llm_backend": "cli"
 }
