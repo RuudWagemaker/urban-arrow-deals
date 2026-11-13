@@ -1,5 +1,5 @@
 {
- "started_at": "2026-11-12T22:16:54+00:00",
+ "started_at": "2026-11-13T02:41:13+00:00",
  "sources": {
   "marktplaats": {
    "searches": [
@@ -7,8 +7,8 @@
      "query": "honeywell t6",
      "category": null,
      "pages": 1,
-     "listings": 95,
-     "total": 95,
+     "listings": 94,
+     "total": 94,
      "error": null
     },
     {
@@ -23,8 +23,8 @@
      "query": "lyric t6",
      "category": null,
      "pages": 1,
-     "listings": 39,
-     "total": 39,
+     "listings": 38,
+     "total": 38,
      "error": null
     },
     {
@@ -36,19 +36,19 @@
      "error": null
     }
    ],
-   "unique_listings": 136,
+   "unique_listings": 138,
    "complete": true
   }
  },
  "merge": {
-  "new": 9,
-  "updated": 127,
+  "new": 1,
+  "updated": 137,
   "price_changes": 0,
-  "removed": 16,
-  "relists": 1
+  "removed": 6,
+  "relists": 0
  },
- "finished_at": "2026-11-12T22:17:58+00:00",
- "active_listings": 136,
- "active_items": 91,
+ "finished_at": "2026-11-13T02:41:35+00:00",
+ "active_listings": 138,
+ "active_items": 90,
  "llm_backend": "cli"
 }
