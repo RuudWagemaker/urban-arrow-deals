@@ -1,5 +1,5 @@
 {
- "started_at": "2026-11-14T02:28:55+00:00",
+ "started_at": "2026-11-14T13:34:52+00:00",
  "sources": {
   "marktplaats": {
    "searches": [
@@ -7,48 +7,74 @@
      "query": "honeywell t6",
      "category": null,
      "pages": 2,
-     "listings": 101,
-     "total": 101,
+     "listings": 103,
+     "total": 103,
      "error": null
     },
     {
      "query": "honeywell t6r",
      "category": null,
      "pages": 1,
-     "listings": 34,
-     "total": 34,
+     "listings": 35,
+     "total": 35,
      "error": null
     },
     {
      "query": "lyric t6",
      "category": null,
      "pages": 1,
-     "listings": 39,
-     "total": 39,
+     "listings": 41,
+     "total": 41,
      "error": null
     },
     {
      "query": "t6r thermostaat",
      "category": null,
      "pages": 1,
-     "listings": 34,
-     "total": 34,
+     "listings": 35,
+     "total": 35,
      "error": null
     }
    ],
-   "unique_listings": 132,
+   "unique_listings": 137,
+   "description_debug": [
+    {
+     "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2465640923-honeywell-draadloze-thermostaat",
+     "page_length": 101460,
+     "snippet_found_at": [],
+     "context": [],
+     "script_tags": [
+      "<script crossorigin=\"anonymous\" async=\"\" src=\"//www.hzcdn.io/bff/static/vendor/ecg-js-ga-tracking/index.222b94ba.js\">",
+      "<script type=\"application/ld+json\">",
+      "<script type=\"application/ld+json\">",
+      "<script type=\"application/ld+json\">",
+      "<script>",
+      "<script>",
+      "<script crossorigin=\"anonymous\" src=\"//www.hzcdn.io/bff/static/vendor/sourcepoint-lib/index.5dec4230.js\">",
+      "<script defer=\"\" src=\"https://consent.marktplaats.nl/unified/wrapperMessagingWithoutDetection.js\">",
+      "<script>",
+      "<script>",
+      "<script>",
+      "<script>",
+      "<script>",
+      "<script>",
+      "<script id=\"intowowMP\">"
+     ],
+     "has_json_ld": true
+    }
+   ],
    "complete": true
   }
  },
  "merge": {
-  "new": 2,
-  "updated": 130,
+  "new": 15,
+  "updated": 122,
   "price_changes": 0,
-  "removed": 7,
+  "removed": 13,
   "relists": 0
  },
- "finished_at": "2026-11-14T02:29:15+00:00",
- "active_listings": 132,
- "active_items": 96,
+ "finished_at": "2026-11-14T13:36:24+00:00",
+ "active_listings": 137,
+ "active_items": 102,
  "llm_backend": "cli"
 }
