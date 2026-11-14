@@ -1,5 +1,5 @@
 {
- "started_at": "2026-11-14T13:34:52+00:00",
+ "started_at": "2026-11-14T19:13:42+00:00",
  "sources": {
   "marktplaats": {
    "searches": [
@@ -15,32 +15,32 @@
      "query": "honeywell t6r",
      "category": null,
      "pages": 1,
-     "listings": 35,
-     "total": 35,
+     "listings": 37,
+     "total": 37,
      "error": null
     },
     {
      "query": "lyric t6",
      "category": null,
      "pages": 1,
-     "listings": 41,
-     "total": 41,
+     "listings": 42,
+     "total": 42,
      "error": null
     },
     {
      "query": "t6r thermostaat",
      "category": null,
      "pages": 1,
-     "listings": 35,
-     "total": 35,
+     "listings": 37,
+     "total": 37,
      "error": null
     }
    ],
-   "unique_listings": 137,
+   "unique_listings": 138,
    "description_debug": [
     {
-     "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2465640923-honeywell-draadloze-thermostaat",
-     "page_length": 101460,
+     "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2465745749-honeywell-lyric-t6r-slimme-thermostaat-zwart-draadloze",
+     "page_length": 112048,
      "snippet_found_at": [],
      "context": [],
      "script_tags": [
@@ -67,14 +67,14 @@
   }
  },
  "merge": {
-  "new": 15,
-  "updated": 122,
+  "new": 8,
+  "updated": 130,
   "price_changes": 0,
-  "removed": 13,
-  "relists": 0
+  "removed": 10,
+  "relists": 1
  },
- "finished_at": "2026-11-14T13:36:24+00:00",
- "active_listings": 137,
- "active_items": 102,
+ "finished_at": "2026-11-14T19:14:39+00:00",
+ "active_listings": 138,
+ "active_items": 104,
  "llm_backend": "cli"
 }
