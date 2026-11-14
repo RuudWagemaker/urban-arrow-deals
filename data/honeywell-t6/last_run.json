@@ -1,5 +1,5 @@
 {
- "started_at": "2026-11-14T19:13:42+00:00",
+ "started_at": "2026-11-14T23:57:24+00:00",
  "sources": {
   "marktplaats": {
    "searches": [
@@ -36,45 +36,19 @@
      "error": null
     }
    ],
-   "unique_listings": 138,
-   "description_debug": [
-    {
-     "url": "https://www.marktplaats.nl/v/doe-het-zelf-en-verbouw/thermostaten/m2465745749-honeywell-lyric-t6r-slimme-thermostaat-zwart-draadloze",
-     "page_length": 112048,
-     "snippet_found_at": [],
-     "context": [],
-     "script_tags": [
-      "<script crossorigin=\"anonymous\" async=\"\" src=\"//www.hzcdn.io/bff/static/vendor/ecg-js-ga-tracking/index.222b94ba.js\">",
-      "<script type=\"application/ld+json\">",
-      "<script type=\"application/ld+json\">",
-      "<script type=\"application/ld+json\">",
-      "<script>",
-      "<script>",
-      "<script crossorigin=\"anonymous\" src=\"//www.hzcdn.io/bff/static/vendor/sourcepoint-lib/index.5dec4230.js\">",
-      "<script defer=\"\" src=\"https://consent.marktplaats.nl/unified/wrapperMessagingWithoutDetection.js\">",
-      "<script>",
-      "<script>",
-      "<script>",
-      "<script>",
-      "<script>",
-      "<script>",
-      "<script id=\"intowowMP\">"
-     ],
-     "has_json_ld": true
-    }
-   ],
+   "unique_listings": 141,
    "complete": true
   }
  },
  "merge": {
-  "new": 8,
-  "updated": 130,
+  "new": 2,
+  "updated": 139,
   "price_changes": 0,
-  "removed": 10,
-  "relists": 1
+  "removed": 7,
+  "relists": 0
  },
- "finished_at": "2026-11-14T19:14:39+00:00",
- "active_listings": 138,
- "active_items": 104,
+ "finished_at": "2026-11-14T23:57:55+00:00",
+ "active_listings": 141,
+ "active_items": 102,
  "llm_backend": "cli"
 }
