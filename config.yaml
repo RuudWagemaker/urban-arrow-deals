@@ -62,26 +62,3 @@ products:
       tender: 8500
       cargo: 8000
       other: 7000
-
-  honeywell-t6:
-    name: Honeywell T6
-    profile: thermostat
-    max_distance_km: 99999  # thermostats are often shipped, so show all of the Netherlands
-    marktplaats:
-      enabled: true
-      host: "https://www.marktplaats.nl"
-      queries: ["honeywell t6", "honeywell t6r", "lyric t6", "t6r thermostaat"]
-      category_l1: null
-      page_size: 100
-      max_pages_per_query: 3
-      fetch_details: true
-      max_detail_fetches_per_run: 150
-      delay_seconds: [2.0, 5.0]
-    # Rough Dutch shop prices for a new unit, in EUR (starting point only; adjust if you know better).
-    msrp_estimate:
-      t6_wired: 150
-      t6r_wireless: 200
-      unknown: 175
-    alerts:
-      min_deal_pct: 15        # small amounts: only alert on clearly good deals
-      max_distance_km: 99999  # shipping is common

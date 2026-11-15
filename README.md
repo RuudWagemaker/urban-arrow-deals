@@ -1,8 +1,8 @@
 # Deal Tracker
 
 Tracks Marktplaats ads for the products you follow and estimates a fair price for every
-listing. It currently follows **Urban Arrow** cargo bikes and the **Honeywell T6** smart
-thermostat, with one website and a product switcher. It runs on GitHub for free:
+listing. It currently follows **Urban Arrow** cargo bikes. More products can be added in
+`config.yaml`; with more than one, the website shows a product switcher. It runs on GitHub for free:
 
 ```
 every 20 minutes, 07:00–23:40, on the Hetzner server (see deploy/), for every product in config.yaml
@@ -22,7 +22,7 @@ extracts from an ad and how ads are compared:
 | Profile | Used for | Compared on |
 |---|---|---|
 | `cargo_bike` | Urban Arrow | variant, age, motor, battery, mileage, extras, dealer |
-| `thermostat` | Honeywell T6 | T6 (wired) or T6R (wireless), condition (sealed → used), receiver, stand, box; per unit for multi-packs |
+| `thermostat` | (Honeywell T6, not active) | T6 (wired) or T6R (wireless), condition (sealed → used), receiver, stand, box; per unit for multi-packs |
 
 To follow another product of a kind that already has a profile, copy a product block in
 `config.yaml` and change its name, searches and list prices. A new kind of product needs a
@@ -109,8 +109,7 @@ between about 07:00 and 23:00 Dutch time.
 ## Settings (`config.yaml`)
 
 - `home` – Den Bosch is set. Distance is calculated from here.
-- `alerts` – default alert thresholds; each product can override them (the Honeywell T6
-  alerts at 15% below fair price, anywhere in the country, since thermostats are shipped).
+- `alerts` – default alert thresholds; each product can override them.
 - Per product, under `products:`
   - `marktplaats.queries` – the searches to run.
   - `new_item_pages` – product pages of shops selling the item new (any web shop with
