@@ -20,6 +20,7 @@
       </div>
       <nav class="tabs" role="tablist">
         <button role="tab" data-tab="today" aria-selected="true">Today <span id="today-count" class="count"></span></button>
+        <button role="tab" data-tab="nearby" aria-selected="false">Nearby <span id="nearby-count" class="count"></span></button>
         <button role="tab" data-tab="used" aria-selected="false" id="used-tab">Second-hand</button>
         <button role="tab" data-tab="new" aria-selected="false" id="new-tab">New</button>
         <button role="tab" data-tab="market" aria-selected="false">Market</button>
@@ -48,6 +49,11 @@
       </div>
       <p id="today-note" class="muted small"></p>
       <div id="today-list" class="list"></div>
+    </section>
+
+    <section id="tab-nearby" class="tab" hidden>
+      <p class="muted small" id="nearby-note">New ads found today within 40 km of home, newest first.</p>
+      <div id="nearby-list" class="list"></div>
     </section>
 
     <section id="tab-used" class="tab" hidden>

@@ -249,18 +249,16 @@
   };
   const timeOf = (l) => l.new_ad_at ? new Date(l.new_ad_at).toLocaleTimeString("nl-NL", { hour: "2-digit", minute: "2-digit" }) : "";
   let todayDays = 0;
-  function renderToday() {
-    const days = todayDays;
-    const from = days === 1 ? shiftDay(DATA.today, 1) : shiftDay(DATA.today, days);
-    const to = days === 1 ? shiftDay(DATA.today, 1) : DATA.today;
-    const maxKm = +$("#today-dist").value;
-    const gone = $("#today-gone").checked;
+  const NEARBY_KM = 40;
+  const SCAN_NOTE = "Scans run every 20 minutes between 07:00 and 23:40.";
+
+  // New ads between two days, grouped per day, newest first. Returns the number of ads.
+  function renderNewAds(list, { from, to, maxKm, gone, knownDistanceOnly = false }) {
     const all = [...DATA.used.map((l) => [l, "used"]), ...DATA.new.map((l) => [l, "new"])];
     const rows = all.filter(([l]) => adDay(l) >= from && adDay(l) <= to && (gone || l.active) &&
-      (l.distance_km == null || l.distance_km <= maxKm));
+      (l.distance_km == null ? !knownDistanceOnly : l.distance_km <= maxKm));
     rows.sort(([a], [b]) => adDay(b).localeCompare(adDay(a)) || (b.new_ad_at || "").localeCompare(a.new_ad_at || "") ||
       ((b.deal?.pct ?? -999) - (a.deal?.pct ?? -999)));
-    const list = $("#today-list");
     const out = [];
     let cur = null;
     for (const [l, mode] of rows) {
@@ -278,13 +276,36 @@
       out.push(c);
     }
     list.replaceChildren(...out);
-    if (!rows.length) list.innerHTML = `<div class="empty">No new ${esc(DATA.name)} ads ${days === 0 ? "yet today" : days === 1 ? "yesterday" : "in the last 7 days"} within ${maxKm >= 99999 ? "any distance" : maxKm + " km"}. Scans run every 2 hours between about 07:00 and 23:00.</div>`;
+    return rows.length;
+  }
+
+  function renderToday() {
+    const days = todayDays;
+    const from = days === 1 ? shiftDay(DATA.today, 1) : shiftDay(DATA.today, days);
+    const to = days === 1 ? shiftDay(DATA.today, 1) : DATA.today;
+    const maxKm = +$("#today-dist").value;
+    const gone = $("#today-gone").checked;
+    const list = $("#today-list");
+    const n = renderNewAds(list, { from, to, maxKm, gone });
+    if (!n) list.innerHTML = `<div class="empty">No new ${esc(DATA.name)} ads ${days === 0 ? "yet today" : days === 1 ? "yesterday" : "in the last 7 days"} within ${maxKm >= 99999 ? "any distance" : maxKm + " km"}. ${SCAN_NOTE}</div>`;
     const first = DATA.tracking_since;
     $("#today-note").textContent = from <= first && first <= to
       ? `${dayName(first)} was the tracker's first day, so every ad found then counts as new.` : "";
     store.set("today:" + DATA.id, { dist: $("#today-dist").value, gone });
     store.set("todayDays", days);
   }
+
+  // Today's new ads close to home: a quick "what can I go and look at today" list.
+  function renderNearby() {
+    const list = $("#nearby-list");
+    const n = renderNewAds(list, { from: DATA.today, to: DATA.today, maxKm: NEARBY_KM, gone: true, knownDistanceOnly: true });
+    if (!n) list.innerHTML = `<div class="empty">No new ${esc(DATA.name)} ads within ${NEARBY_KM} km yet today. ${SCAN_NOTE}</div>`;
+    $("#nearby-note").textContent = `New ads found today within ${NEARBY_KM} km of ${DATA.home?.name || "home"}, newest first. Sold ones are shown faded.`;
+    const active = [...DATA.used, ...DATA.new].filter((l) => l.active && adDay(l) === DATA.today &&
+      l.distance_km != null && l.distance_km <= NEARBY_KM).length;
+    $("#nearby-count").textContent = active ? String(active) : "";
+  }
+
   const periodButtons = document.querySelectorAll(".seg[aria-label=Period] button");
   periodButtons.forEach((b) => b.addEventListener("click", () => {
     todayDays = +b.dataset.days;
@@ -403,6 +424,7 @@
     $("#today-gone").checked = st.gone !== false;
     resetMarket();
     renderToday();
+    renderNearby();
     renderUsed();
     renderNew();
     if (!$("#tab-market").hidden) renderMarket();

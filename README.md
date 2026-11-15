@@ -5,7 +5,7 @@ listing. It currently follows **Urban Arrow** cargo bikes and the **Honeywell T6
 thermostat, with one website and a product switcher. It runs on GitHub for free:
 
 ```
-every 2 hours, 07:00–23:00 (GitHub Actions), for every product in config.yaml
+every 20 minutes, 07:00–23:40, on the Hetzner server (see deploy/), for every product in config.yaml
   → Marktplaats search (+ optional shop pages for new items, + optional 2dehands.be)
   → Claude Haiku 5.5 reads each new ad → the product's details (bike: variant, year, motor,
     battery, km...; thermostat: T6 or T6R, condition, receiver, box...) and red flags
@@ -31,6 +31,7 @@ new profile in `uatracker/profiles/`.
 ## What you get (per product)
 
 - **Today tab:** the ads that appeared today, yesterday or in the last 7 days.
+- **Nearby tab:** today's new ads within 40 km of home.
 - **Second-hand tab** ("All ads" for thermostats): every listing with its asking price, a fair-price range and a label
   (great deal / good deal / fair price / a bit pricey / overpriced). It also shows distance
   from Den Bosch, price drops and warning signs. Under "Details" you can see which similar
