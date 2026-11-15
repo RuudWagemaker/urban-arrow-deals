@@ -1,5 +1,5 @@
 {
- "started_at": "2026-11-14T23:56:04+00:00",
+ "started_at": "2026-11-15T13:13:44+00:00",
  "sources": {
   "marktplaats": {
    "searches": [
@@ -7,8 +7,8 @@
      "query": "urban arrow",
      "category": null,
      "pages": 10,
-     "listings": 996,
-     "total": 996,
+     "listings": 997,
+     "total": 997,
      "error": null
     },
     {
@@ -20,19 +20,19 @@
      "error": null
     }
    ],
-   "unique_listings": 998,
+   "unique_listings": 999,
    "complete": true
   }
  },
  "merge": {
-  "new": 5,
-  "updated": 993,
+  "new": 24,
+  "updated": 975,
   "price_changes": 7,
-  "removed": 11,
-  "relists": 0
+  "removed": 23,
+  "relists": 2
  },
- "finished_at": "2026-11-14T23:57:24+00:00",
- "active_listings": 998,
- "active_items": 317,
+ "finished_at": "2026-11-15T13:15:26+00:00",
+ "active_listings": 999,
+ "active_items": 315,
  "llm_backend": "cli"
 }
