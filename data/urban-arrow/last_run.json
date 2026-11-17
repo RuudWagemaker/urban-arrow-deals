@@ -1,5 +1,5 @@
 {
- "started_at": "2026-11-16T15:49:06+00:00",
+ "started_at": "2026-11-17T00:15:28+00:00",
  "sources": {
   "marktplaats": {
    "searches": [
@@ -7,8 +7,8 @@
      "query": "urban arrow",
      "category": null,
      "pages": 11,
-     "listings": 1004,
-     "total": 1004,
+     "listings": 1001,
+     "total": 1001,
      "error": null
     },
     {
@@ -20,45 +20,19 @@
      "error": null
     }
    ],
-   "unique_listings": 1007,
-   "description_debug": [
-    {
-     "url": "https://www.marktplaats.nl/v/kinderen-en-baby-s/autostoeltjes/m2466474028-adaptor-maxi-cosi-urban-arrow",
-     "page_length": 109796,
-     "snippet_found_at": [],
-     "context": [],
-     "script_tags": [
-      "<script crossorigin=\"anonymous\" async=\"\" src=\"//www.hzcdn.io/bff/static/vendor/ecg-js-ga-tracking/index.222b94ba.js\">",
-      "<script type=\"application/ld+json\">",
-      "<script type=\"application/ld+json\">",
-      "<script type=\"application/ld+json\">",
-      "<script>",
-      "<script>",
-      "<script crossorigin=\"anonymous\" src=\"//www.hzcdn.io/bff/static/vendor/sourcepoint-lib/index.5dec4230.js\">",
-      "<script defer=\"\" src=\"https://consent.marktplaats.nl/unified/wrapperMessagingWithoutDetection.js\">",
-      "<script>",
-      "<script>",
-      "<script>",
-      "<script>",
-      "<script>",
-      "<script>",
-      "<script id=\"intowowMP\">"
-     ],
-     "has_json_ld": true
-    }
-   ],
+   "unique_listings": 1004,
    "complete": true
   }
  },
  "merge": {
-  "new": 21,
-  "updated": 986,
+  "new": 14,
+  "updated": 990,
   "price_changes": 10,
-  "removed": 19,
+  "removed": 17,
   "relists": 0
  },
- "finished_at": "2026-11-16T15:51:21+00:00",
- "active_listings": 1007,
- "active_items": 311,
+ "finished_at": "2026-11-17T00:17:34+00:00",
+ "active_listings": 1004,
+ "active_items": 307,
  "llm_backend": "cli"
 }
