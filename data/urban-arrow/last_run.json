@@ -1,5 +1,5 @@
 {
- "started_at": "2026-11-17T23:30:47+00:00",
+ "started_at": "2026-11-18T15:41:29+00:00",
  "sources": {
   "marktplaats": {
    "searches": [
@@ -7,8 +7,8 @@
      "query": "urban arrow",
      "category": null,
      "pages": 10,
-     "listings": 987,
-     "total": 987,
+     "listings": 983,
+     "total": 983,
      "error": null
     },
     {
@@ -20,19 +20,45 @@
      "error": null
     }
    ],
-   "unique_listings": 990,
+   "unique_listings": 986,
+   "description_debug": [
+    {
+     "url": "https://www.marktplaats.nl/v/watersport-en-boten/kitesurfen/m2467205917-urban-arrow-regenhuif-nieuw",
+     "page_length": 105945,
+     "snippet_found_at": [],
+     "context": [],
+     "script_tags": [
+      "<script crossorigin=\"anonymous\" async=\"\" src=\"//www.hzcdn.io/bff/static/vendor/ecg-js-ga-tracking/index.294ca1fc.js\">",
+      "<script type=\"application/ld+json\">",
+      "<script type=\"application/ld+json\">",
+      "<script type=\"application/ld+json\">",
+      "<script>",
+      "<script>",
+      "<script crossorigin=\"anonymous\" src=\"//www.hzcdn.io/bff/static/vendor/sourcepoint-lib/index.5dec4230.js\">",
+      "<script defer=\"\" src=\"https://consent.marktplaats.nl/unified/wrapperMessagingWithoutDetection.js\">",
+      "<script>",
+      "<script>",
+      "<script>",
+      "<script>",
+      "<script>",
+      "<script>",
+      "<script id=\"intowowMP\">"
+     ],
+     "has_json_ld": true
+    }
+   ],
    "complete": true
   }
  },
  "merge": {
-  "new": 3,
-  "updated": 987,
-  "price_changes": 6,
-  "removed": 10,
-  "relists": 0
+  "new": 24,
+  "updated": 962,
+  "price_changes": 5,
+  "removed": 28,
+  "relists": 2
  },
- "finished_at": "2026-11-17T23:31:44+00:00",
- "active_listings": 990,
- "active_items": 300,
+ "finished_at": "2026-11-18T15:43:24+00:00",
+ "active_listings": 986,
+ "active_items": 297,
  "llm_backend": "cli"
 }
