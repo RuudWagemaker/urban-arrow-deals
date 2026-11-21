@@ -1,5 +1,5 @@
 {
- "started_at": "2026-11-21T14:40:28+00:00",
+ "started_at": "2026-11-21T21:39:51+00:00",
  "sources": {
   "marktplaats": {
    "searches": [
@@ -7,8 +7,8 @@
      "query": "urban arrow",
      "category": null,
      "pages": 11,
-     "listings": 1002,
-     "total": 1002,
+     "listings": 1007,
+     "total": 1007,
      "error": null
     },
     {
@@ -20,45 +20,19 @@
      "error": null
     }
    ],
-   "unique_listings": 1004,
-   "description_debug": [
-    {
-     "url": "https://www.marktplaats.nl/v/fietsen-en-brommers/fietsen-bakfietsen/m2468269617-urban-arrow-family-active-line-plus-with-original-accesories",
-     "page_length": 104792,
-     "snippet_found_at": [],
-     "context": [],
-     "script_tags": [
-      "<script crossorigin=\"anonymous\" async=\"\" src=\"//www.hzcdn.io/bff/static/vendor/ecg-js-ga-tracking/index.294ca1fc.js\">",
-      "<script async=\"\" src=\"https://securepubads.g.doubleclick.net/tag/js/gpt.js\">",
-      "<script async=\"\" src=\"https://marktplaats-cdn.relevant-digital.com/static/tags/6ae331ec9a43f76f900b23ca.js\">",
-      "<script type=\"application/ld+json\">",
-      "<script type=\"application/ld+json\">",
-      "<script type=\"application/ld+json\">",
-      "<script>",
-      "<script>",
-      "<script crossorigin=\"anonymous\" src=\"//www.hzcdn.io/bff/static/vendor/sourcepoint-lib/index.5dec4230.js\">",
-      "<script defer=\"\" src=\"https://consent.marktplaats.nl/unified/wrapperMessagingWithoutDetection.js\">",
-      "<script>",
-      "<script>",
-      "<script>",
-      "<script>",
-      "<script>"
-     ],
-     "has_json_ld": true
-    }
-   ],
+   "unique_listings": 1009,
    "complete": true
   }
  },
  "merge": {
-  "new": 49,
-  "updated": 955,
-  "price_changes": 12,
-  "removed": 28,
-  "relists": 12
+  "new": 14,
+  "updated": 995,
+  "price_changes": 6,
+  "removed": 9,
+  "relists": 2
  },
- "finished_at": "2026-11-21T14:43:57+00:00",
- "active_listings": 1004,
- "active_items": 302,
+ "finished_at": "2026-11-21T21:41:53+00:00",
+ "active_listings": 1009,
+ "active_items": 308,
  "llm_backend": "cli"
 }
