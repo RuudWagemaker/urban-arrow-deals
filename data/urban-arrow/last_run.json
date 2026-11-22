@@ -1,5 +1,5 @@
 {
- "started_at": "2026-11-21T21:39:51+00:00",
+ "started_at": "2026-11-22T02:14:55+00:00",
  "sources": {
   "marktplaats": {
    "searches": [
@@ -25,13 +25,13 @@
   }
  },
  "merge": {
-  "new": 14,
-  "updated": 995,
-  "price_changes": 6,
-  "removed": 9,
-  "relists": 2
+  "new": 0,
+  "updated": 1009,
+  "price_changes": 1,
+  "removed": 0,
+  "relists": 0
  },
- "finished_at": "2026-11-21T21:41:53+00:00",
+ "finished_at": "2026-11-22T02:15:52+00:00",
  "active_listings": 1009,
  "active_items": 308,
  "llm_backend": "cli"
