@@ -1,5 +1,5 @@
 {
- "started_at": "2026-11-23T02:46:16+00:00",
+ "started_at": "2026-11-23T18:11:03+00:00",
  "sources": {
   "marktplaats": {
    "searches": [
@@ -7,8 +7,8 @@
      "query": "urban arrow",
      "category": null,
      "pages": 11,
-     "listings": 1019,
-     "total": 1019,
+     "listings": 1017,
+     "total": 1017,
      "error": null
     },
     {
@@ -20,19 +20,45 @@
      "error": null
     }
    ],
-   "unique_listings": 1021,
+   "unique_listings": 1019,
+   "description_debug": [
+    {
+     "url": "https://www.marktplaats.nl/v/fietsen-en-brommers/fietsen-bakfietsen/m2469194284-urban-arrow",
+     "page_length": 103008,
+     "snippet_found_at": [],
+     "context": [],
+     "script_tags": [
+      "<script crossorigin=\"anonymous\" async=\"\" src=\"//www.hzcdn.io/bff/static/vendor/ecg-js-ga-tracking/index.294ca1fc.js\">",
+      "<script async=\"\" src=\"https://securepubads.g.doubleclick.net/tag/js/gpt.js\">",
+      "<script async=\"\" src=\"https://marktplaats-cdn.relevant-digital.com/static/tags/6ae331ec9a43f76f900b23ca.js\">",
+      "<script type=\"application/ld+json\">",
+      "<script type=\"application/ld+json\">",
+      "<script type=\"application/ld+json\">",
+      "<script>",
+      "<script>",
+      "<script crossorigin=\"anonymous\" src=\"//www.hzcdn.io/bff/static/vendor/sourcepoint-lib/index.3514728e.js\">",
+      "<script defer=\"\" src=\"https://consent.marktplaats.nl/unified/wrapperMessagingWithoutDetection.js\">",
+      "<script>",
+      "<script>",
+      "<script>",
+      "<script>",
+      "<script>"
+     ],
+     "has_json_ld": true
+    }
+   ],
    "complete": true
   }
  },
  "merge": {
-  "new": 0,
-  "updated": 1021,
-  "price_changes": 0,
-  "removed": 1,
-  "relists": 0
+  "new": 31,
+  "updated": 988,
+  "price_changes": 14,
+  "removed": 33,
+  "relists": 2
  },
- "finished_at": "2026-11-23T02:47:06+00:00",
- "active_listings": 1021,
- "active_items": 316,
+ "finished_at": "2026-11-23T18:13:30+00:00",
+ "active_listings": 1019,
+ "active_items": 314,
  "llm_backend": "cli"
 }
