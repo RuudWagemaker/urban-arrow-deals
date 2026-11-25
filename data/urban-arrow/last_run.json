@@ -1,5 +1,5 @@
 {
- "started_at": "2026-11-25T02:30:54+00:00",
+ "started_at": "2026-11-25T17:15:57+00:00",
  "sources": {
   "marktplaats": {
    "searches": [
@@ -7,32 +7,58 @@
      "query": "urban arrow",
      "category": null,
      "pages": 11,
-     "listings": 1016,
-     "total": 1016,
+     "listings": 1021,
+     "total": 1021,
      "error": null
     },
     {
      "query": "urbanarrow",
      "category": null,
      "pages": 1,
-     "listings": 20,
-     "total": 20,
+     "listings": 21,
+     "total": 21,
      "error": null
     }
    ],
-   "unique_listings": 1018,
+   "unique_listings": 1023,
+   "description_debug": [
+    {
+     "url": "https://www.marktplaats.nl/v/fietsen-en-brommers/fietsaccessoires-fietskleding/m2470069051-urban-arrow-poncho",
+     "page_length": 105825,
+     "snippet_found_at": [],
+     "context": [],
+     "script_tags": [
+      "<script crossorigin=\"anonymous\" async=\"\" src=\"//www.hzcdn.io/bff/static/vendor/ecg-js-ga-tracking/index.294ca1fc.js\">",
+      "<script async=\"\" src=\"https://securepubads.g.doubleclick.net/tag/js/gpt.js\">",
+      "<script async=\"\" src=\"https://marktplaats-cdn.relevant-digital.com/static/tags/6ae331ec9a43f76f900b23ca.js\">",
+      "<script type=\"application/ld+json\">",
+      "<script type=\"application/ld+json\">",
+      "<script type=\"application/ld+json\">",
+      "<script>",
+      "<script>",
+      "<script crossorigin=\"anonymous\" src=\"//www.hzcdn.io/bff/static/vendor/sourcepoint-lib/index.3514728e.js\">",
+      "<script defer=\"\" src=\"https://consent.marktplaats.nl/unified/wrapperMessagingWithoutDetection.js\">",
+      "<script>",
+      "<script>",
+      "<script>",
+      "<script>",
+      "<script>"
+     ],
+     "has_json_ld": true
+    }
+   ],
    "complete": true
   }
  },
  "merge": {
-  "new": 7,
-  "updated": 1011,
-  "price_changes": 5,
-  "removed": 9,
-  "relists": 0
+  "new": 32,
+  "updated": 991,
+  "price_changes": 8,
+  "removed": 27,
+  "relists": 2
  },
- "finished_at": "2026-11-25T02:32:30+00:00",
- "active_listings": 1018,
- "active_items": 321,
+ "finished_at": "2026-11-25T17:18:36+00:00",
+ "active_listings": 1023,
+ "active_items": 324,
  "llm_backend": "cli"
 }
